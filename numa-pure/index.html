@@ -190,6 +190,8 @@ p{margin:0}
 .cat .arr{flex:none;width:44px;height:44px;border-radius:50%;background:rgb(253 251 247 / .92);color:var(--brown-deep);display:grid;place-items:center;transform:scale(.85) rotate(-45deg);transition:transform .6s var(--ease),background-color .4s}
 .cat:hover .arr{transform:none;background:#fff}
 .cat .arr svg{width:18px;height:18px}
+@media (max-width:599px){.cat h3{font-size:1.15rem}.cat small{font-size:.72rem}.cat:not(.big) .arr{display:none}.cat-body{padding:14px}}
+@media (max-width:899px){.scroll-cue{display:none}}
 .js .clip{clip-path:inset(100% 0 0 0 round var(--radius));transition:clip-path 1.3s var(--ease-io);transition-delay:calc(var(--i,0)*100ms)}
 .js .clip.is-in{clip-path:inset(0 round var(--radius))}
 
