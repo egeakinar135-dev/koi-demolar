@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>urvedigital® — Yaratıcı Ajans | Marka Filmi &amp; İçerik Prodüksiyonu</title>
+<meta name="description" content="İstanbul merkezli yaratıcı ajans urvedigital; marka filmi, video prodüksiyon, aftermovie ve sosyal medya içerik üretiminde strateji, tasarım ve yaratıcılığı bir araya getirir.">
+<meta property="og:title" content="urvedigital® — Görüyoruz. Görünür kılıyoruz.">
+<meta property="og:description" content="Marka filmi, video prodüksiyon ve sosyal medya içerikleri. İstanbul · worldwide.">
+<meta property="og:image" content="gorseller/og.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M44 14A22 22 0 1 0 54 30' fill='none' stroke='%23F5F5F2' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M40 24A11 11 0 1 0 43 33' fill='none' stroke='%23F5F5F2' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"urvedigital","url":"https://urvedigital.com.tr","logo":"https://urvedigital.com.tr/logo.png","email":"merhaba@urvedigital.com.tr","description":"İstanbul merkezli yaratıcı ajans: marka filmi, video prodüksiyon ve sosyal medya içerik üretimi.","address":{"@type":"PostalAddress","addressLocality":"İstanbul","addressCountry":"TR"},"sameAs":["https://www.instagram.com/urvedigital","https://www.linkedin.com/company/urve-digital/"]}</script>
+<style>
+:root{
+  --bg:#0A0A0A; --bg-2:#111111; --bg-3:#181818; --text:#F5F5F2; --muted:rgb(245 245 242 / .56); --faint:rgb(245 245 242 / .12);
+  --paper:#EDEDE8; --ink:#0A0A0A; --ink-muted:rgb(10 10 10 / .6); --ink-line:rgb(10 10 10 / .14);
+  --rec:#FF3B2F;
+  --ease:cubic-bezier(.16,1,.3,1); --ease-io:cubic-bezier(.76,0,.24,1);
+  --header-h:64px; --pad:clamp(16px,4vw,48px);
+  --sans:'Sora',system-ui,sans-serif; --serif:'Instrument Serif',Georgia,serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (min-width:960px){:root{--header-h:80px}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:var(--header-h);-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font:300 1rem/1.7 var(--sans);overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.04em;line-height:1.08;text-wrap:balance}
+em.s,h1 em,h2 em{font:italic 400 1.08em/1 var(--serif);letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--text);color:var(--bg)}
+.wrap{padding-inline:var(--pad)}
+.section{padding-block:clamp(88px,13vw,180px)}
+.label{display:inline-flex;align-items:center;gap:10px;font:400 .7rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.label .n{color:var(--text)}
+.paper{background:var(--paper);color:var(--ink)}
+.paper .label{color:var(--ink-muted)}.paper .label .n{color:var(--ink)}
+
+/* ---------- preloader ---------- */
+.loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center;transition:clip-path 1.1s var(--ease-io)}
+.loader.out{clip-path:inset(0 0 100% 0)}
+.loader{animation:safety 0s 5s forwards}
+@keyframes safety{to{visibility:hidden;opacity:0}}
+.loader svg{width:74px;height:74px}
+.loader svg path{fill:none;stroke:var(--text);stroke-width:5;stroke-linecap:round;stroke-dasharray:160;stroke-dashoffset:160;animation:draw 1.4s var(--ease) forwards}
+.loader svg path+path{animation-delay:.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.loader .cnt{position:absolute;right:var(--pad);bottom:var(--pad);font:400 clamp(3rem,10vw,7rem)/1 var(--mono);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.loader .cap{position:absolute;left:var(--pad);bottom:var(--pad);font:400 .72rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+html:not(.js) .loader{display:none}
+
+/* ---------- cursor ---------- */
+.cur{position:fixed;left:0;top:0;z-index:150;pointer-events:none;display:none}
+.cur i{position:absolute;left:-4px;top:-4px;width:8px;height:8px;border-radius:50%;background:var(--text);mix-blend-mode:difference}
+.cur b{position:absolute;left:-44px;top:-44px;width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:var(--text);color:var(--bg);font:500 .68rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;transform:scale(0);transition:transform .45s var(--ease)}
+.cur.big b{transform:scale(1)}
+.cur.big i{opacity:0}
+@media (hover:hover) and (pointer:fine){.cur{display:block}}
+
+/* ---------- header ---------- */
+.progress{position:fixed;left:0;top:0;z-index:90;height:2px;width:100%;background:var(--text);transform-origin:0 50%;transform:scaleX(0)}
+.header{position:fixed;inset:0 0 auto;z-index:60;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:16px;padding-inline:var(--pad);mix-blend-mode:difference;color:#fff;transition:transform .5s var(--ease)}
+.header.hide{transform:translateY(-100%)}
+.brand{display:flex;align-items:center;min-width:0}
+.brand img{height:20px;width:auto;filter:invert(1)}
+@media (min-width:960px){.brand img{height:24px}}
+.nav{display:none;gap:clamp(20px,2.6vw,40px);font:400 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.nav a{position:relative;padding:8px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hcta{display:none;align-items:center;gap:10px;font:400 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border:1px solid currentColor;border-radius:999px;transition:background .3s,color .3s}
+.hcta:hover{background:#fff;color:#000}
+.hcta i{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.6s steps(2,start) infinite}
+.burger{position:relative;width:48px;height:48px;display:grid;place-items:center;z-index:70}
+.burger i{position:absolute;width:24px;height:1.5px;background:currentColor;transition:transform .5s var(--ease)}
+.burger i:first-child{transform:translateY(-4px)}.burger i:last-child{transform:translateY(4px)}
+.menu-open .burger i:first-child{transform:rotate(45deg)}.menu-open .burger i:last-child{transform:rotate(-45deg)}
+@media (min-width:960px){.nav,.hcta{display:flex}.burger{display:none}}
+.mnav{position:fixed;inset:0;z-index:55;background:var(--text);color:var(--bg);display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--header-h) + 20px) var(--pad) calc(32px + env(safe-area-inset-bottom));clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease-io)}
+.menu-open .mnav{clip-path:inset(0)}
+.menu-open{overflow:hidden}
+.mnav a{display:block;overflow:hidden;font:600 clamp(2.6rem,12vw,4.4rem)/1.1 var(--sans);letter-spacing:-.05em}
+.mnav a span{display:block;transform:translateY(105%);transition:transform .8s var(--ease)}
+.menu-open .mnav a span{transform:none;transition-delay:calc(var(--i) * 60ms + .25s)}
+.mnav small{margin-top:26px;font:400 .72rem/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--header-h) + 20px) var(--pad) clamp(24px,4vw,44px);overflow:hidden}
+.reel{position:absolute;inset:0;overflow:hidden}
+.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.4s ease,transform 6s linear;filter:grayscale(.25) contrast(1.05) brightness(.7)}
+.reel img.on{opacity:1;transform:scale(1)}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(10 10 10 / .55),rgb(10 10 10 / .15) 35%,rgb(10 10 10 / .85) 88%),radial-gradient(120% 80% at 50% 50%,transparent 40%,rgb(10 10 10 / .6))}
+.grain{position:absolute;inset:-50%;z-index:1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-6%,1%)}80%{transform:translate(5%,4%)}100%{transform:translate(0,0)}}
+.vf{position:absolute;inset:calc(var(--header-h) + 8px) var(--pad) clamp(18px,3vw,32px);z-index:2;pointer-events:none;font:400 .68rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.vf .c{position:absolute;width:26px;height:26px;border-color:rgb(245 245 242 / .7);border-style:solid;border-width:0}
+.vf .c1{left:0;top:0;border-left-width:1.5px;border-top-width:1.5px}.vf .c2{right:0;top:0;border-right-width:1.5px;border-top-width:1.5px}
+.vf .c3{left:0;bottom:0;border-left-width:1.5px;border-bottom-width:1.5px}.vf .c4{right:0;bottom:0;border-right-width:1.5px;border-bottom-width:1.5px}
+.vf .rec{position:absolute;left:38px;top:8px;display:flex;align-items:center;gap:8px}
+.vf .rec i{width:9px;height:9px;border-radius:50%;background:var(--rec);box-shadow:0 0 12px var(--rec);animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.vf .tc{position:absolute;right:38px;top:8px;font-variant-numeric:tabular-nums}
+.vf .meta{position:absolute;left:50%;top:8px;transform:translateX(-50%);color:var(--muted)}
+.vf .cross{position:absolute;left:50%;top:44%;width:22px;height:22px;margin:-11px 0 0 -11px;opacity:.5}
+.vf .cross::before,.vf .cross::after{content:"";position:absolute;background:var(--text)}
+.vf .cross::before{left:50%;top:0;bottom:0;width:1px}.vf .cross::after{top:50%;left:0;right:0;height:1px}
+@media (max-width:900px){.vf .meta,.vf .cross{display:none}}
+.vf .c3,.vf .c4{display:none}
+.hero-in{position:relative;z-index:3}
+.hero .label{margin-bottom:clamp(14px,2vw,22px);color:var(--text)}
+.hero h1{font-size:clamp(3rem,11.6vw,11rem);line-height:.98;letter-spacing:-.06em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(110%);transition:transform 1.2s var(--ease);transition-delay:calc(var(--i) * 110ms + .1s)}
+.go .hero h1 .ln>span{transform:none}
+.hero-foot{display:grid;gap:22px;margin-top:clamp(22px,3vw,40px);padding-top:20px;border-top:1px solid var(--faint)}
+@media (min-width:820px){.hero-foot{grid-template-columns:1fr auto auto;align-items:end;gap:40px}.scroll-cue{display:flex}}
+.hero-foot p{max-width:42ch;color:var(--muted);font-size:clamp(.95rem,1.3vw,1.05rem)}
+.hero-foot p b{color:var(--text);font-weight:400}
+.fade{opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.go .fade{opacity:1;transform:none}
+html:not(.js) .fade,html:not(.js) .hero h1 .ln>span{opacity:1;transform:none}
+.scroll-cue{display:none;align-items:center;gap:12px;font:400 .68rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.scroll-cue i{position:relative;width:1px;height:40px;background:var(--faint);overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--text);animation:cue 2s var(--ease-io) infinite}
+@keyframes cue{to{top:100%}}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 10px 0 26px;border-radius:999px;background:var(--text);color:var(--bg);font:500 .92rem/1 var(--sans);letter-spacing:-.01em;overflow:hidden;isolation:isolate;will-change:transform}
+.btn .ar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--bg);color:var(--text);overflow:hidden}
+.btn .ar span{display:block;transition:transform .5s var(--ease)}
+.btn:hover .ar span{animation:arr .6s var(--ease)}
+@keyframes arr{49%{transform:translate(120%,-120%)}50%{transform:translate(-120%,120%)}100%{transform:none}}
+.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px rgb(245 245 242 / .3)}
+.btn.ghost .ar{background:var(--text);color:var(--bg)}
+.paper .btn{background:var(--ink);color:var(--paper)}.paper .btn .ar{background:var(--paper);color:var(--ink)}
+
+/* ---------- marquee ---------- */
+.mq{overflow:hidden;border-block:1px solid var(--faint);padding:22px 0;white-space:nowrap}
+.mq .tr{display:inline-flex;animation:marq 38s linear infinite}
+.mq span{display:inline-flex;align-items:center;gap:32px;padding-right:32px;font:600 clamp(1.8rem,4.6vw,3.6rem)/1 var(--sans);letter-spacing:-.05em}
+.mq span:nth-child(even){font:italic 400 clamp(2rem,5vw,4rem)/1 var(--serif);letter-spacing:-.01em;color:var(--muted)}
+.mq span::after{content:"";width:.34em;height:.34em;border-radius:50%;border:2px solid currentColor}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- manifesto ---------- */
+.mani{position:relative}
+.mani-grid{display:grid;gap:34px}
+@media (min-width:960px){.mani-grid{grid-template-columns:220px 1fr;gap:60px}}
+.mani p.big{font:500 clamp(1.9rem,4.8vw,4.3rem)/1.14 var(--sans);letter-spacing:-.045em}
+.mani p.big .w{opacity:.14;transition:opacity .35s linear}
+.mani p.big .w.lit{opacity:1}
+.mani p.big em{font:italic 400 1.1em/1 var(--serif);letter-spacing:-.01em}
+.sign{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.sign>span{padding:10px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--ink-line);font:400 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- works ---------- */
+.w-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px 40px;margin-bottom:clamp(30px,4vw,56px)}
+.w-head h2{font-size:clamp(2.8rem,8vw,7.4rem);letter-spacing:-.06em}
+.w-head h2 sup{font:400 .9rem/1 var(--mono);letter-spacing:0;vertical-align:top;margin-left:8px;color:var(--muted)}
+.filters{display:flex;gap:6px;padding:5px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--faint)}
+.filters button{padding:10px 16px;border-radius:999px;font:400 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:background .35s,color .35s}
+.filters button[aria-pressed=true]{background:var(--text);color:var(--bg)}
+.grid{display:grid;grid-template-columns:1fr;gap:clamp(10px,1.2vw,16px)}
+@media (min-width:760px){.grid{grid-template-columns:repeat(6,1fr);grid-auto-flow:dense}}
+.work{position:relative;display:block;width:100%;text-align:left;cursor:none}
+@media not (pointer:fine){.work{cursor:pointer}}
+.work .fr{display:block;position:relative;overflow:hidden;background:var(--bg-3);clip-path:inset(0);transition:clip-path .9s var(--ease)}
+.work:hover .fr{clip-path:inset(10px round 6px)}
+.work img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.4s var(--ease),filter .8s}
+.work:hover img{transform:scale(1.08)}
+.work.h .fr{aspect-ratio:16/9}.work.v .fr{aspect-ratio:9/13}
+@media (min-width:760px){.work.h{grid-column:span 4}.work.v{grid-column:span 2}.work.v .fr{aspect-ratio:auto;height:calc((100vw - 2 * var(--pad) + 16px) / 6 * 4 * 9 / 16 - 12px)}.work.v img{object-position:50% 30%}.work.feat{grid-column:span 6}.work.feat .fr{aspect-ratio:21/9}}
+.next{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:clamp(20px,2.4vw,32px);background:var(--text);color:var(--bg);min-height:260px;transition:background .5s}
+@media (min-width:760px){.next{grid-column:span 2}}
+.next:hover{background:#fff}
+.next b{font:600 clamp(1.6rem,2.6vw,2.4rem)/1.05 var(--sans);letter-spacing:-.05em}
+.next b em{display:block}
+.next span{display:flex;justify-content:space-between;align-items:center;font:400 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.next span i{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--bg);color:var(--text);font-style:normal;font-size:1.2rem;transition:transform .6s var(--ease)}
+.next:hover span i{transform:rotate(45deg)}
+.work .meta{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font:400 .72rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.work h3{margin-top:6px;font-size:clamp(1.3rem,2.2vw,1.9rem);font-weight:500;letter-spacing:-.035em}
+.work h3 em{color:var(--muted)}
+.work .pl{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgb(10 10 10 / .6);backdrop-filter:blur(10px);font:400 .66rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.work .pl i{width:0;height:0;border-left:7px solid currentColor;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.work.gone{display:none}
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .clip{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s var(--ease-io);transition-delay:var(--d,0s)}
+.js .clip.in{clip-path:inset(0)}
+
+/* ---------- featured film ---------- */
+.film{position:relative;height:clamp(560px,100svh,960px);overflow:hidden;display:flex;align-items:flex-end}
+.film .bgw{position:absolute;inset:0;overflow:hidden}
+.film .bgw img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;filter:brightness(.62);will-change:transform}
+.film .mask{position:absolute;inset:0;background:var(--bg);clip-path:inset(0 0 0 0);transition:none;z-index:1}
+.film::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgb(10 10 10 / .92),transparent 60%);pointer-events:none}
+.film .in{position:relative;z-index:2;width:100%;padding:0 var(--pad) clamp(28px,5vw,64px);display:grid;gap:24px}
+@media (min-width:900px){.film .in{grid-template-columns:1fr auto;align-items:end}}
+.film h2{font-size:clamp(2.6rem,8vw,7.6rem);letter-spacing:-.06em}
+.film p{max-width:48ch;margin-top:16px;color:var(--muted)}
+.film .credits{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:22px;font:400 .72rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.film .credits b{display:block;color:var(--text);font-weight:400}
+.bigplay{position:relative;display:grid;place-items:center;width:clamp(110px,14vw,170px);aspect-ratio:1;border-radius:50%;justify-self:start}
+.bigplay svg.t{position:absolute;inset:0;width:100%;height:100%;animation:spin 16s linear infinite}
+.bigplay svg.t text{fill:var(--text);font:400 8.6px var(--mono);letter-spacing:3.2px}
+.bigplay .dot{display:grid;place-items:center;width:52%;aspect-ratio:1;border-radius:50%;background:var(--text);color:var(--bg);transition:transform .5s var(--ease)}
+.bigplay:hover .dot{transform:scale(1.12)}
+.bigplay .dot i{margin-left:5px;border-left:16px solid currentColor;border-top:10px solid transparent;border-bottom:10px solid transparent}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- services ---------- */
+.svc-head{display:grid;gap:22px;margin-bottom:clamp(30px,4vw,60px)}
+@media (min-width:960px){.svc-head{grid-template-columns:1fr 1fr;align-items:end}}
+.svc-head h2{font-size:clamp(2.6rem,7vw,6.2rem);letter-spacing:-.06em}
+.svc-head p{max-width:46ch;color:var(--ink-muted);justify-self:end}
+.svcs{border-top:1px solid var(--ink-line)}
+.srv{position:relative;border-bottom:1px solid var(--ink-line)}
+.srv button{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;width:100%;padding:clamp(20px,3vw,34px) 0;text-align:left}
+@media (min-width:760px){.srv button{grid-template-columns:90px 1fr 1fr auto}}
+.srv .no{font:400 .74rem/1 var(--mono);letter-spacing:.12em;color:var(--ink-muted)}
+.srv h3{font-size:clamp(1.7rem,4.4vw,3.6rem);font-weight:600;letter-spacing:-.05em;transition:transform .6s var(--ease),font-style .3s}
+.srv:hover h3{transform:translateX(14px)}
+.srv .tags{display:none;font:400 .74rem/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted)}
+@media (min-width:760px){.srv .tags{display:block}}
+.srv .pm{position:relative;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--ink-line);transition:background .4s,transform .6s var(--ease)}
+.srv .pm::before,.srv .pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;margin:-.75px 0 0 -7px;background:var(--ink);transition:transform .5s var(--ease),background .3s}
+.srv .pm::after{transform:rotate(90deg)}
+.srv.open .pm{background:var(--ink);transform:rotate(180deg)}
+.srv.open .pm::before,.srv.open .pm::after{background:var(--paper)}
+.srv.open .pm::after{transform:rotate(0)}
+.srv .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--ease)}
+.srv.open .body{grid-template-rows:1fr}
+.srv .body>div{overflow:hidden}
+.srv .body .in{display:grid;gap:18px;padding:0 0 30px}
+@media (min-width:760px){.srv .body .in{grid-template-columns:90px 1fr 1fr;padding-bottom:40px}.srv .body .in::before{content:""}}
+.srv .body p{max-width:52ch;color:var(--ink-muted)}
+.srv .body ul{display:flex;flex-wrap:wrap;gap:8px;align-content:start}
+.srv .body li{padding:8px 14px;border-radius:999px;background:rgb(10 10 10 / .06);font-size:.84rem}
+.srv .thumb{display:block;margin-top:4px;border-radius:6px;overflow:hidden;aspect-ratio:16/9;max-width:420px}
+.srv .thumb img{width:100%;height:100%;object-fit:cover}
+@media (hover:hover) and (pointer:fine){.srv .thumb{display:none}}
+.float{position:fixed;left:0;top:0;z-index:40;width:300px;aspect-ratio:4/3;border-radius:6px;overflow:hidden;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-6deg);transition:opacity .35s,transform .55s var(--ease)}
+.float.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+.float img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
+.float img.on{opacity:1}
+@media not ((hover:hover) and (pointer:fine)){.float{display:none}}
+
+/* ---------- process ---------- */
+.proc h2{font-size:clamp(2.4rem,6.6vw,5.6rem);letter-spacing:-.06em;margin-bottom:clamp(34px,5vw,70px)}
+.steps{display:grid;gap:1px;background:var(--faint);border-block:1px solid var(--faint)}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;padding:clamp(26px,3vw,40px) clamp(16px,2vw,28px) clamp(30px,4vw,56px);background:var(--bg);overflow:hidden;transition:background .5s}
+.step:hover{background:var(--bg-2)}
+.step .k{font:400 .72rem/1 var(--mono);letter-spacing:.14em;color:var(--muted)}
+.step h3{margin-top:clamp(40px,6vw,90px);font-size:clamp(1.9rem,3.2vw,2.8rem);letter-spacing:-.05em}
+.step h3 em{display:block;font:italic 400 1.08em/1.1 var(--serif);letter-spacing:-.01em;color:var(--muted)}
+.step p{margin-top:14px;color:var(--muted);font-size:.95rem}
+.step .bar{position:absolute;left:0;top:0;height:2px;width:100%;background:var(--text);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease);transition-delay:var(--d,0s)}
+.step.in .bar{transform:scaleX(1)}
+
+/* ---------- clients ---------- */
+.clients{padding-block:clamp(60px,8vw,110px);border-top:1px solid var(--faint)}
+.clients .label{margin-bottom:28px}
+.cl{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--faint);border-left:1px solid var(--faint)}
+@media (min-width:760px){.cl{grid-template-columns:repeat(3,1fr)}}
+.cl li{position:relative;display:grid;place-items:center;min-height:clamp(96px,12vw,150px);padding:18px;border-right:1px solid var(--faint);border-bottom:1px solid var(--faint);text-align:center;overflow:hidden}
+.cl li b{font:600 clamp(1.05rem,2.2vw,1.7rem)/1.1 var(--sans);letter-spacing:-.04em;transition:transform .6s var(--ease)}
+.cl li small{position:absolute;bottom:14px;font:400 .62rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateY(8px);transition:opacity .4s,transform .5s var(--ease)}
+.cl li::before{content:"";position:absolute;inset:0;background:var(--bg-2);transform:scaleY(0);transform-origin:bottom;transition:transform .6s var(--ease);z-index:-1}
+.cl li:hover::before{transform:scaleY(1)}
+.cl li:hover b{transform:translateY(-8px)}
+.cl li:hover small{opacity:1;transform:none}
+.cl li{isolation:isolate}
+
+/* ---------- contact ---------- */
+.contact{position:relative;overflow:hidden}
+.cta-big{display:block;font-size:clamp(3.4rem,14vw,14rem);font-weight:600;letter-spacing:-.07em;line-height:.95}
+.cta-big em{display:inline-block}
+.cta-big .arr{display:inline-block;transition:transform .7s var(--ease)}
+.cta-big:hover .arr{transform:translate(.08em,-.08em) rotate(0)}
+.cta-grid{display:grid;gap:40px;margin-top:clamp(40px,6vw,80px)}
+@media (min-width:980px){.cta-grid{grid-template-columns:1fr 1.15fr;gap:80px}}
+.cinfo{display:grid;gap:26px;align-content:start}
+.cinfo a.mail{font:500 clamp(1.3rem,3vw,2.2rem)/1.2 var(--sans);letter-spacing:-.04em;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:4px;justify-self:start;transition:background-size .6s var(--ease)}
+.cinfo a.mail:hover{background-size:0 1px;background-position:100% 100%}
+.cinfo .row{display:flex;flex-wrap:wrap;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--ink-line);font:400 .76rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:background .35s,color .35s}
+.chip:hover{background:var(--ink);color:var(--paper)}
+.chip svg{width:16px;height:16px}
+.brief{padding:clamp(22px,3vw,38px);border-radius:10px;background:var(--ink);color:var(--text)}
+.brief h3{font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.04em}
+.brief .q{margin-top:22px}
+.brief .q>span{display:block;margin-bottom:10px;font:400 .7rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts b{display:inline-flex;padding:11px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px rgb(245 245 242 / .22);font-weight:400;font-size:.88rem;transition:background .3s,color .3s,box-shadow .3s}
+.opts input:checked+b{background:var(--text);color:var(--bg);box-shadow:none}
+.opts input:focus-visible+b{outline:2px solid var(--text);outline-offset:2px}
+.brief .f{display:grid;gap:10px;margin-top:22px}
+@media (min-width:560px){.brief .f{grid-template-columns:1fr 1fr}}
+.brief input[type=text],.brief input[type=email],.brief textarea{width:100%;padding:14px 0;border:0;border-bottom:1px solid rgb(245 245 242 / .22);background:transparent;color:var(--text);font:300 1rem/1.4 var(--sans);outline:none;transition:border-color .3s}
+.brief textarea{grid-column:1/-1;min-height:90px;resize:vertical}
+.brief input:focus,.brief textarea:focus{border-color:var(--text)}
+.brief ::placeholder{color:rgb(245 245 242 / .4)}
+.brief .send{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:26px}
+.brief .send small{font:400 .68rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.brief .btn{background:var(--text);color:var(--bg)}.brief .btn .ar{background:var(--bg);color:var(--text)}
+
+/* ---------- footer ---------- */
+.footer{position:relative;padding:clamp(40px,6vw,70px) var(--pad) 0;overflow:hidden;border-top:1px solid var(--faint)}
+.frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font:400 .72rem/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.frow a:hover{color:var(--text)}
+.frow .ghost{color:var(--text)}
+.giant{margin-top:clamp(30px,5vw,60px);display:flex;justify-content:center;transform:translateY(22%)}
+.giant img{width:100%;max-width:none;filter:invert(1);opacity:.95}
+.top{position:fixed;right:var(--pad);bottom:calc(20px + env(safe-area-inset-bottom));z-index:50;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--text);color:var(--bg);font-size:1.1rem;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .5s var(--ease)}
+.top.show{opacity:1;transform:none}
+.menu-open .top{opacity:0}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:180;display:grid;place-items:center;padding:clamp(12px,4vw,48px);visibility:hidden}
+.modal .bg{position:absolute;inset:0;background:rgb(10 10 10 / .94);opacity:0;transition:opacity .5s}
+.modal .box{position:relative;width:min(100%,1200px);transform:translateY(40px) scale(.97);opacity:0;transition:transform .7s var(--ease),opacity .5s}
+.modal.open{visibility:visible}
+.modal.open .bg{opacity:1}
+.modal.open .box{transform:none;opacity:1}
+.modal .scr{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+.modal.v .box{width:min(100%,440px)}
+.modal.v .scr{aspect-ratio:9/16;max-height:78svh;margin-inline:auto}
+.modal.ig .scr{background:#fff}
+.modal iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal .top-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;font:400 .72rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.modal .top-row b{font:500 1rem/1.3 var(--sans);letter-spacing:-.02em;text-transform:none}
+.modal .x{width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1px rgb(245 245 242 / .3);font-size:1.1rem;flex:none}
+.modal .src{display:inline-block;margin-top:12px;font:400 .7rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.modal .src:hover{color:var(--text)}
+
+.toast{position:fixed;left:50%;bottom:24px;z-index:190;max-width:calc(100% - 32px);padding:14px 20px;border-radius:999px;background:var(--text);color:var(--bg);font-size:.9rem;transform:translate(-50%,30px);opacity:0;transition:opacity .3s,transform .5s var(--ease)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.fade,.hero h1 .ln>span{opacity:1!important;transform:none!important}
+  .js .clip{clip-path:none!important}.loader{display:none}.grain{display:none}
+  .mani p.big .w{opacity:1!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ring" viewBox="0 0 64 64"><path d="M44 12A22 22 0 1 0 55 30" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M40 23A11 11 0 1 0 43 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="li" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.6 10.5v6.2M7.6 7.4v.1M11.4 16.7v-6.2m0 2.2c0-1.2 1-2.4 2.6-2.4 1.8 0 2.4 1.1 2.4 2.9v3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <svg viewBox="0 0 64 64"><path d="M44 12A22 22 0 1 0 55 30"/><path d="M40 23A11 11 0 1 0 43 33"/></svg>
+  <span class="cap">urvedigital® — İstanbul · <span lang="en">worldwide</span></span>
+  <span class="cnt" id="cnt">000</span>
+</div>
+<div class="cur" id="cur" aria-hidden="true"><i></i><b id="curTxt">İzle</b></div>
+<div class="progress" id="prog"></div>
+
+<header class="header" id="hdr">
+  <a class="brand" href="#top" aria-label="urvedigital, başa dön"><img src="gorseller/logo.png" width="725" height="137" alt="urvedigital"></a>
+  <nav class="nav" aria-label="Ana menü"><a href="#calismalar">Çalışmalar</a><a href="#hizmetler">Hizmetler</a><a href="#surec">Süreç</a><a href="#iletisim">İletişim</a></nav>
+  <a class="hcta" href="#iletisim"><i></i>Proje başlat</a>
+  <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobil menü">
+  <a href="#calismalar" style="--i:0"><span>Çalışmalar</span></a><a href="#hizmetler" style="--i:1"><span>Hizmetler</span></a><a href="#surec" style="--i:2"><span>Süreç</span></a><a href="#iletisim" style="--i:3"><span>İletişim</span></a>
+  <small><span style="text-transform:none">merhaba@urvedigital.com.tr</span><br>İstanbul · <span lang="en">worldwide</span></small>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-label="urvedigital">
+  <div class="reel" id="reel">
+    <img src="gorseller/w-massa.jpg" alt="" class="on">
+    <img src="gorseller/w-etz.jpg" alt="">
+    <img src="gorseller/w-manga.jpg" alt="">
+    <img src="gorseller/w-kariyerkure.jpg" alt="">
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vf" aria-hidden="true"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span><span class="rec"><i></i>REC</span><span class="tc" id="tc">00:00:00:00</span><span class="meta" lang="en">4K · 25 FPS · ISO 800</span><span class="cross"></span></div>
+  <div class="hero-in">
+    <span class="label fade" style="--d:.05s"><span class="n">®</span> İstanbul — Yaratıcı Ajans</span>
+    <h1 aria-label="Görüyoruz. Görünür kılıyoruz."><span class="ln"><span style="--i:0">Görüyoruz.</span></span><span class="ln"><span style="--i:1">Görünür <em>kılıyoruz.</em></span></span></h1>
+    <div class="hero-foot">
+      <p class="fade" style="--d:.7s"><b>Marka filmi, video prodüksiyon ve sosyal medya içerikleri.</b> Stratejiden üretime, markanızın nasıl görüneceğini tasarlıyoruz.</p>
+      <a class="btn mag fade" style="--d:.85s" href="#calismalar">Çalışmaları izle<span class="ar"><span>↘</span></span></a>
+      <span class="scroll-cue fade" style="--d:1s"><i></i>Kaydır</span>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tr"><span>Marka filmi</span><span>aftermovie</span><span>Video prodüksiyon</span><span>sosyal medya</span><span>Strateji</span><span>tasarım</span><span>Marka filmi</span><span>aftermovie</span><span>Video prodüksiyon</span><span>sosyal medya</span><span>Strateji</span><span>tasarım</span></div></div>
+
+<!-- MANIFESTO -->
+<section class="section paper mani" id="manifesto">
+  <div class="wrap mani-grid">
+    <span class="label"><span class="n">(01)</span> Manifesto</span>
+    <div>
+      <p class="big" id="mani">Sadece içerik üretmiyoruz. Markanızın nasıl <em>görüneceğini</em> tasarlıyoruz. Stratejiden üretime, dijital varlıktan marka iletişimine kadar markanızın her detayında varız. urvede, markalar sadece görünmez. <em>İz bırakır.</em></p>
+      <div class="sign"><span lang="en">Ghost mode: off</span><span>İstanbul · <span lang="en">worldwide</span></span><span lang="en">#urvecreative</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="section" id="calismalar">
+  <div class="wrap">
+    <div class="w-head">
+      <div><span class="label"><span class="n">(02)</span> Seçilmiş çalışmalar</span><h2 class="rv">Çalışmalar<sup id="wcount">06</sup></h2></div>
+      <div class="filters" role="group" aria-label="Filtre"><button type="button" data-f="all" aria-pressed="true">Tümü</button><button type="button" data-f="h" aria-pressed="false">Yatay</button><button type="button" data-f="v" aria-pressed="false">Dikey</button></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- FEATURED FILM -->
+<section class="film" id="film" aria-label="Öne çıkan film">
+  <div class="bgw"><img src="gorseller/w-massa.jpg" width="1440" height="810" alt="Felipe Massa, İstanbul Park pistinde" loading="lazy" id="filmImg"></div>
+  <div class="mask" id="filmMask"></div>
+  <div class="in">
+    <div>
+      <span class="label"><span class="n">(03)</span> Öne çıkan film · 2026</span>
+      <h2 class="rv" style="margin-top:14px">Bazı dönüşler, <em>filme dönüşür.</em></h2>
+      <p class="rv" style="--d:.1s">İstanbul Park’ın rekor sahibi Felipe Massa yeniden İstanbul’daydı. TGA etkinlikleri boyunca her anına eşlik ettik ve bu yolculuğu bir filme dönüştürdük.</p>
+      <div class="credits rv" style="--d:.2s"><span>Film<b lang="en">Felipe Massa — Returned to Istanbul</b></span><span>Etkinlik<b>Ayyıldız</b></span><span>Prodüksiyon<b lang="en">urvedigital</b></span></div>
+    </div>
+    <button class="bigplay" type="button" data-open="massa" aria-label="Filmi izle"><svg class="t" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="cp" d="M50 50m-40 0a40 40 0 1 1 80 0a40 40 0 1 1-80 0"/></defs><text><textPath href="#cp">FİLMİ İZLE · WATCH THE FILM · </textPath></text></svg><span class="dot"><i></i></span></button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section paper" id="hizmetler">
+  <div class="wrap">
+    <div class="svc-head"><div><span class="label"><span class="n">(04)</span> Hizmetler</span><h2 style="margin-top:14px">Ne <em>yapıyoruz?</em></h2></div><p>Neyi, nasıl ve nerede göstereceğini bilmek gerekir. Markaların dijital dünyadaki yerini strateji, tasarım ve yaratıcılıkla kuruyoruz.</p></div>
+    <div class="svcs" id="svcs">
+      <div class="srv" data-img="gorseller/w-massa.jpg"><button type="button" aria-expanded="false"><span class="no">01</span><h3>Marka filmi</h3><span class="tags">Konsept · Senaryo · Çekim · Kurgu</span><span class="pm"></span></button><div class="body"><div><div class="in"><p>Markanızın hikâyesini tek bir filmde anlatıyoruz. Fikir aşamasından final kurguya kadar tüm süreci birlikte kuruyoruz.</p><ul><li>Konsept ve senaryo</li><li>Çekim ekibi</li><li>Kurgu ve renk</li><li>Ses tasarımı</li></ul><span class="thumb"><img src="gorseller/w-massa.jpg" alt="" loading="lazy"></span></div></div></div></div>
+      <div class="srv" data-img="gorseller/w-etz.jpg"><button type="button" aria-expanded="false"><span class="no">02</span><h3>Video prodüksiyon</h3><span class="tags">Etkinlik · Aftermovie · Röportaj</span><span class="pm"></span></button><div class="body"><div><div class="in"><p>Zirveler, lansmanlar ve etkinlikler için aftermovie ve prodüksiyon. Anı yakalıyor, ritmi kurguyla kuruyoruz.</p><ul><li>Aftermovie</li><li>Etkinlik çekimi</li><li>Drone</li><li>Röportaj</li></ul><span class="thumb"><img src="gorseller/w-etz.jpg" alt="" loading="lazy"></span></div></div></div></div>
+      <div class="srv" data-img="gorseller/w-istadental-1.jpg"><button type="button" aria-expanded="false"><span class="no">03</span><h3>Sosyal medya içerik</h3><span class="tags">Reels · Dikey video · Seri içerik</span><span class="pm"></span></button><div class="body"><div><div class="in"><p>Dikey formatta düşünen, markanın diline uygun, akışta durduran içerikler üretiyoruz.</p><ul><li>Reels ve dikey video</li><li>İçerik planı</li><li>Çekim günü</li><li>Çok dilli kurgu</li></ul><span class="thumb"><img src="gorseller/w-istadental-1.jpg" alt="" loading="lazy"></span></div></div></div></div>
+      <div class="srv" data-img="gorseller/m-goruyoruz.jpg"><button type="button" aria-expanded="false"><span class="no">04</span><h3>Strateji &amp; tasarım</h3><span class="tags">Marka iletişimi · Dijital varlık</span><span class="pm"></span></button><div class="body"><div><div class="in"><p>Stratejiden üretime; dijital varlıktan marka iletişimine kadar markanızın nasıl görüneceğini tasarlıyoruz.</p><ul><li>Marka iletişimi</li><li>Dijital strateji</li><li>Görsel kimlik</li><li>Kampanya kurgusu</li></ul><span class="thumb"><img src="gorseller/m-goruyoruz.jpg" alt="" loading="lazy"></span></div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="float" id="float" aria-hidden="true"></div>
+
+<!-- PROCESS -->
+<section class="section proc" id="surec">
+  <div class="wrap">
+    <span class="label"><span class="n">(05)</span> Süreç</span>
+    <h2 class="rv" style="margin-top:14px">Fikirden <em>ekrana.</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step rv"><span class="bar"></span><span class="k">01 / 04</span><h3>Görmek<em>keşif</em></h3><p>Markayı, hedefi ve hikâyeyi dinliyoruz. Neyin görünmesi gerektiğini birlikte buluyoruz.</p></div>
+    <div class="step rv" style="--d:.1s"><span class="bar" style="--d:.15s"></span><span class="k">02 / 04</span><h3>Kurgulamak<em>strateji</em></h3><p>Konsept, senaryo ve çekim planı. Neyi, nasıl ve nerede göstereceğimize karar veriyoruz.</p></div>
+    <div class="step rv" style="--d:.2s"><span class="bar" style="--d:.3s"></span><span class="k">03 / 04</span><h3>Çekmek<em>prodüksiyon</em></h3><p>Set, ekip ve ekipman. Anı yakalıyoruz.</p></div>
+    <div class="step rv" style="--d:.3s"><span class="bar" style="--d:.45s"></span><span class="k">04 / 04</span><h3>İz bırakmak<em>yayın</em></h3><p>Kurgu, renk, ses ve her platform için doğru format. Sonra ekranda.</p></div>
+  </div>
+  <div class="wrap clients">
+    <span class="label"><span class="n">(06)</span> Birlikte çalıştıklarımız</span>
+    <ul class="cl">
+      <li class="rv"><b>Istadental</b><small>Sosyal medya</small></li>
+      <li class="rv" style="--d:.05s"><b>Kariyerküre</b><small>Aftermovie</small></li>
+      <li class="rv" style="--d:.1s"><b>ETZ · Eğitim Teknolojileri Zirvesi</b><small>Aftermovie</small></li>
+      <li class="rv" style="--d:.15s"><b>maNga · FüzyoN</b><small>Aftermovie</small></li>
+      <li class="rv" style="--d:.2s"><b>Ayyıldız</b><small>Etkinlik filmi</small></li>
+      <li class="rv" style="--d:.25s"><b>Felipe Massa · TGA</b><small>Film</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section paper contact" id="iletisim">
+  <div class="wrap">
+    <span class="label"><span class="n">(07)</span> İletişim</span>
+    <a class="cta-big mag-soft" href="mailto:merhaba@urvedigital.com.tr" style="margin-top:14px">Birlikte <em>yaratalım</em><span class="arr">↗</span></a>
+    <div class="cta-grid">
+      <div class="cinfo">
+        <p style="max-width:40ch;color:var(--ink-muted)">Uzun zamandır işin içindeyiz. Artık sıra bizde. Projenizi anlatın, size 24 saat içinde dönelim.</p>
+        <a class="mail" href="mailto:merhaba@urvedigital.com.tr">merhaba@urvedigital.com.tr</a>
+        <div class="row"><a class="chip" href="https://www.instagram.com/urvedigital" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Instagram</a><a class="chip" href="https://www.linkedin.com/company/urve-digital/" target="_blank" rel="noopener"><svg><use href="#li"/></svg><span lang="en">LinkedIn</span></a></div>
+        <span class="label">İstanbul · <span lang="en">worldwide</span></span>
+      </div>
+      <form class="brief" id="brief" novalidate>
+        <h3>Kısa bir brif</h3>
+        <div class="q"><span>Ne üretelim?</span><div class="opts">
+          <label><input type="checkbox" name="t" value="Marka filmi"><b>Marka filmi</b></label><label><input type="checkbox" name="t" value="Aftermovie / etkinlik"><b>Aftermovie</b></label><label><input type="checkbox" name="t" value="Sosyal medya içerik"><b>Sosyal medya</b></label><label><input type="checkbox" name="t" value="Strateji & tasarım"><b>Strateji &amp; tasarım</b></label>
+        </div></div>
+        <div class="q"><span>Zaman</span><div class="opts">
+          <label><input type="radio" name="z" value="Bu ay"><b>Bu ay</b></label><label><input type="radio" name="z" value="1–3 ay"><b>1–3 ay</b></label><label><input type="radio" name="z" value="Henüz belli değil" checked><b>Belli değil</b></label>
+        </div></div>
+        <div class="f">
+          <input type="text" name="ad" placeholder="Ad soyad *" autocomplete="name">
+          <input type="text" name="marka" placeholder="Marka / şirket" autocomplete="organization">
+          <textarea name="not" placeholder="Projeden kısaca bahsedin *"></textarea>
+        </div>
+        <div class="send"><small>Gönder’e basınca e-posta uygulamanız<br>hazır brifle açılır.</small><button class="btn mag" type="submit">Brifi gönder<span class="ar"><span>↗</span></span></button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="frow"><span>© <span id="yil">2026</span> <span lang="en">urvedigital</span>. Tüm hakları saklıdır.</span><span class="ghost" lang="en">Ghost mode: off.</span><a href="#top">Yukarı çık ↑</a><span><span lang="en">Koi</span> Ajans tarafından hazırlanmıştır</span></div>
+  <div class="giant" aria-hidden="true"><img src="gorseller/logo.png" width="725" height="137" alt=""></div>
+</footer>
+<a class="top" id="toTop" href="#top" aria-label="Yukarı çık">↑</a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="bg" data-close></div>
+  <div class="box">
+    <div class="top-row"><span><span id="mCat"></span><br><b id="mTitle"></b></span><button class="x" type="button" data-close aria-label="Kapat">✕</button></div>
+    <div class="scr" id="mScr"></div>
+    <a class="src" id="mSrc" href="#" target="_blank" rel="noopener">Kaynağında aç ↗</a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const root = document.documentElement, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+$('#yil').textContent = new Date().getFullYear();
+const toast = t => { const e = $('#toast'); e.textContent = t; e.classList.add('on'); setTimeout(() => e.classList.remove('on'), 3200); };
+
+/* çalışmalar (mevcut siteden + Instagram) */
+const W = [
+  { id: 'massa', t: 'Felipe Massa', s: 'Returned to Istanbul', c: 'Marka filmi', y: '2026', o: 'h', cls: 'feat', img: 'w-massa.jpg', p: 'ig', e: 'Dd1zNYKNlrL' },
+  { id: 'kariyer', t: 'Kariyerküre', s: 'Aftermovie', c: 'Prodüksiyon', y: '2025', o: 'h', img: 'w-kariyerkure.jpg', p: 'yt', e: 'jdTJEytT4NQ' },
+  { id: 'ista1', t: 'İstadental', s: 'Natural Teeth', c: 'Sosyal medya', y: '2025', o: 'v', img: 'w-istadental-1.jpg', p: 'ig', e: 'DaOCVnpMmz8' },
+  { id: 'ista2', t: 'İstadental', s: 'Aile Gülüşü', c: 'Sosyal medya', y: '2025', o: 'v', img: 'w-istadental-2.jpg', p: 'ig', e: 'DalNa-bsDFW' },
+  { id: 'etz', t: 'ETZ', s: 'Aftermovie', c: 'Prodüksiyon', y: '2025', o: 'h', img: 'w-etz.jpg', p: 'ig', e: 'DZZwJeXt5t9' },
+  { id: 'manga', t: 'maNga · FüzyoN', s: 'Aftermovie', c: 'Prodüksiyon', y: '2025', o: 'h', img: 'w-manga.jpg', p: 'ig', e: 'DaxVYvkpuL2' }
+];
+/* düzen: feat | h(4)+v(2) | v(2)+h(4) | half+half */
+const ORDER = ['massa', 'kariyer', 'ista1', 'ista2', 'etz', 'manga'];
+/* sıra: feat | kariyer+ista1 | ista2+etz | manga+CTA */
+const grid = $('#grid');
+grid.innerHTML = ORDER.map((id, i) => { const w = W.find(x => x.id === id); return `<button class="work ${w.o} ${w.cls || ''} rv" style="--d:${(i % 2) * .08}s" type="button" data-open="${w.id}" data-o="${w.o}"><span class="fr"><img src="gorseller/${w.img}" alt="${w.t} — ${w.s}" loading="lazy"><span class="pl"><i></i>${w.p === 'yt' ? 'YouTube' : 'Instagram'}</span></span><span class="meta"><span>${String(i + 1).padStart(2, '0')} · ${w.c}</span><span>${w.y}</span></span><h3>${w.t} <em class="s">— ${w.s}</em></h3></button>`; }).join('') + `<a class="next rv" href="#iletisim" data-o="x"><b>Sıradaki film <em class="s">sizin olabilir.</em></b><span>Proje başlat<i>↗</i></span></a>`;
+$$('.filters button').forEach(b => b.onclick = () => {
+  $$('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  let n = 0; $('.next', grid).classList.toggle('gone', b.dataset.f !== 'all');
+  $$('.work', grid).forEach(w => { const show = b.dataset.f === 'all' || w.dataset.o === b.dataset.f; w.classList.toggle('gone', !show); if (show) { n++; w.classList.remove('in'); requestAnimationFrame(() => requestAnimationFrame(() => w.classList.add('in'))); } });
+  $('#wcount').textContent = String(n).padStart(2, '0');
+});
+
+/* video penceresi */
+const modal = $('#modal'), scr = $('#mScr');
+const openW = id => {
+  const w = W.find(x => x.id === id); if (!w) return;
+  const vert = w.o === 'v';
+  modal.classList.toggle('v', vert || w.p === 'ig'); modal.classList.toggle('ig', w.p === 'ig');
+  $('#mCat').textContent = `${w.c} · ${w.y}`; $('#mTitle').textContent = `${w.t} — ${w.s}`;
+  const src = w.p === 'yt' ? `https://www.youtube-nocookie.com/embed/${w.e}?autoplay=1&rel=0&modestbranding=1&playsinline=1` : `https://www.instagram.com/p/${w.e}/embed/`;
+  $('#mSrc').href = w.p === 'yt' ? `https://www.youtube.com/watch?v=${w.e}` : `https://www.instagram.com/p/${w.e}/`;
+  scr.innerHTML = `<iframe src="${src}" title="${w.t}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>`;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+};
+const closeW = () => { modal.classList.remove('open'); document.body.style.overflow = ''; setTimeout(() => scr.innerHTML = '', 500); };
+document.addEventListener('click', e => { const o = e.target.closest('[data-open]'); if (o) { e.preventDefault(); openW(o.dataset.open); } if (e.target.closest('[data-close]')) closeW(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') { closeW(); menu(false); } });
+
+/* ön yükleyici */
+const loader = $('#loader'), cnt = $('#cnt');
+const start = () => { root.classList.add('go'); };
+let seen = false; try { seen = sessionStorage.getItem('urve'); sessionStorage.setItem('urve', 1); } catch { }
+if (reduce || seen) { loader.remove(); start(); }
+else { const t0 = performance.now(), D = 1500; const tick = t => { const p = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - p, 3); cnt.textContent = String(Math.round(e * 100)).padStart(3, '0'); if (p < 1) requestAnimationFrame(tick); else { loader.classList.add('out'); setTimeout(start, 250); setTimeout(() => loader.remove(), 1200); } }; requestAnimationFrame(tick); }
+
+/* hero: kayan kareler + timecode */
+const slides = $$('#reel img'); let si = 0;
+if (!reduce) setInterval(() => { slides[si].classList.remove('on'); si = (si + 1) % slides.length; slides[si].classList.add('on'); }, 3800);
+const tc = $('#tc'), t0 = performance.now();
+const tcTick = () => { const ms = performance.now() - t0, f = Math.floor(ms / 40) % 25, s = Math.floor(ms / 1000); tc.textContent = [Math.floor(s / 3600), Math.floor(s / 60) % 60, s % 60, f].map(n => String(n).padStart(2, '0')).join(':'); if (!reduce) requestAnimationFrame(tcTick); };
+tcTick();
+
+/* manifesto: kaydırdıkça kelime kelime */
+const mani = $('#mani');
+const splitW = el => { [...el.childNodes].forEach(n => { if (n.nodeType === 3) { const f = document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) f.append(w); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; f.append(s); } }); n.replaceWith(f); } else if (n.nodeType === 1) splitW(n); }); };
+splitW(mani); const words = $$('.w', mani);
+
+/* görünür olunca */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+$$('.rv, .clip').forEach(el => io.observe(el));
+
+/* hizmet akordeonu + imleci takip eden görsel */
+$$('.srv').forEach(s => $('button', s).onclick = () => { const o = !s.classList.contains('open'); $$('.srv').forEach(x => { x.classList.remove('open'); $('button', x).setAttribute('aria-expanded', 'false'); }); if (o) { s.classList.add('open'); $('button', s).setAttribute('aria-expanded', 'true'); } });
+$$('.srv')[0].classList.add('open'); $('button', $$('.srv')[0]).setAttribute('aria-expanded', 'true');
+const fl = $('#float');
+fl.innerHTML = $$('.srv').map(s => `<img src="${s.dataset.img}" alt="">`).join('');
+if (fine) {
+  let fx = 0, fy = 0, tx = 0, ty = 0;
+  $$('.srv').forEach((s, i) => { s.addEventListener('mouseenter', () => { fl.classList.add('on'); $$('img', fl).forEach((im, k) => im.classList.toggle('on', k === i)); }); s.addEventListener('mouseleave', () => fl.classList.remove('on')); });
+  addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  (function loop() { fx += (tx - fx) * .12; fy += (ty - fy) * .12; fl.style.left = fx + 'px'; fl.style.top = fy + 'px'; requestAnimationFrame(loop); })();
+}
+
+/* özel imleç + mıknatıslı butonlar */
+if (fine && !reduce) {
+  const cur = $('#cur'), ct = $('#curTxt'); let cx = innerWidth / 2, cy = innerHeight / 2, x = cx, y = cy;
+  addEventListener('mousemove', e => { cx = e.clientX; cy = e.clientY; }, { passive: true });
+  (function loop() { x += (cx - x) * .2; y += (cy - y) * .2; cur.style.transform = `translate(${x}px,${y}px)`; requestAnimationFrame(loop); })();
+  document.addEventListener('mouseover', e => { const w = e.target.closest('.work,.bigplay'); cur.classList.toggle('big', !!w); if (w) ct.textContent = 'İzle'; });
+  $$('.mag').forEach(b => { b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; }); b.addEventListener('mouseleave', () => { b.style.transition = 'transform .6s var(--ease)'; b.style.transform = ''; setTimeout(() => b.style.transition = '', 600); }); });
+}
+
+/* brif → e-posta */
+$('#brief').addEventListener('submit', e => { e.preventDefault(); const f = e.target;
+  if (!f.ad.value.trim() || !f.not.value.trim()) { toast('Lütfen adınızı ve kısa bir not yazın.'); (f.ad.value.trim() ? f.not : f.ad).focus(); return; }
+  const t = $$('input[name=t]:checked', f).map(x => x.value).join(', ') || 'Belirtilmedi', z = (f.querySelector('input[name=z]:checked') || {}).value || '';
+  const body = `Merhaba urvedigital,\n\nAd soyad: ${f.ad.value.trim()}\nMarka / şirket: ${f.marka.value.trim() || '-'}\nİhtiyaç: ${t}\nZaman: ${z}\n\n${f.not.value.trim()}`;
+  location.href = `mailto:merhaba@urvedigital.com.tr?subject=${encodeURIComponent('Yeni proje: ' + (f.marka.value.trim() || f.ad.value.trim()))}&body=${encodeURIComponent(body)}`;
+});
+
+/* menü */
+const burger = $('.burger');
+const menu = v => { document.body.classList.toggle('menu-open', v); burger.setAttribute('aria-expanded', v); burger.setAttribute('aria-label', v ? 'Menüyü kapat' : 'Menüyü aç'); };
+burger.onclick = () => menu(!document.body.classList.contains('menu-open'));
+$$('.mnav a').forEach(a => a.addEventListener('click', () => menu(false)));
+
+/* yumuşak kaydırma (çapa bağlantıları) */
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a || a.getAttribute('href').length < 2) return; const t = $(a.getAttribute('href')); if (!t) return; e.preventDefault(); scrollTo({ top: t.getBoundingClientRect().top + scrollY - (a.getAttribute('href') === '#top' ? 0 : 0), behavior: reduce ? 'auto' : 'smooth' }); });
+
+/* kaydırma: header, ilerleme, manifesto, film parallax + perde */
+const hdr = $('#hdr'), pg = $('#prog'), fImg = $('#filmImg'), fMask = $('#filmMask'), film = $('#film'), toTopBtn = $('#toTop'); let lastY = 0, ticking = false;
+const onScroll = () => {
+  const y = scrollY, H = root.scrollHeight - innerHeight;
+  hdr.classList.toggle('hide', y > lastY && y > innerHeight * .6 && !document.body.classList.contains('menu-open')); lastY = y;
+  pg.style.transform = `scaleX(${H > 0 ? y / H : 0})`;
+  toTopBtn.classList.toggle('show', y > innerHeight * 1.5);
+  const mr = mani.getBoundingClientRect(), mp = Math.min(1, Math.max(0, (innerHeight * .85 - mr.top) / (mr.height + innerHeight * .35)));
+  const lit = Math.round(mp * words.length); words.forEach((w, i) => w.classList.toggle('lit', i < lit || reduce));
+  const fr = film.getBoundingClientRect();
+  if (fr.bottom > 0 && fr.top < innerHeight) {
+    const p = Math.min(1, Math.max(0, (innerHeight - fr.top) / (innerHeight * .9)));
+    fMask.style.clipPath = reduce ? 'inset(0 0 100% 0)' : `inset(0 ${(1 - p) * 0}% ${p * 100}% 0)`;
+    if (!reduce) fImg.style.transform = `translateY(${(fr.top / innerHeight) * -8}%)`;
+  }
+  ticking = false;
+};
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+onScroll();
+</script>
+</body>
+</html>
