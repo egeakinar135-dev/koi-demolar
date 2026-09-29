@@ -431,7 +431,7 @@ $$('.wa-link').forEach(a => { a.href = `https://wa.me/${WA}?text=${encodeURIComp
 const HRS = { 0: [11.5, 18.5], 6: [10, 22] }, now = new Date(), day = now.getDay(), [o, c] = HRS[day] || [9.5, 22], h = now.getHours() + now.getMinutes() / 60;
 const fmt = x => `${String(Math.floor(x)).padStart(2, '0')}.${x % 1 ? '30' : '00'}`;
 const st = $('#status'), open = h >= o && h < c;
-st.classList.toggle('open', open); $('span', st).textContent = open ? `Şu an açığız · ${fmt(c)}’a kadar` : `Şu an kapalıyız · Gebze, Hacıhalil`;
+st.classList.toggle('open', open); $('span', st).textContent = open ? `Şu an açığız · ${fmt(c)}${c % 1 ? '’a' : '’ye'} kadar` : `Şu an kapalıyız · Gebze, Hacıhalil`;
 const today = $(`#hours tr[data-d="${day}"]`); if (today) today.classList.add('today');
 
 /* açılış */
