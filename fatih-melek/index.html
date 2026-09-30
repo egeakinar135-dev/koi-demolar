@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fatih Melek | Pop, Eurovision &amp; songs · Barcelona</title>
+<meta name="description" content="Fatih Melek: Barcelona-based pop music creator. Eurovision parodies and vlogs, pop rankings, original songs and screenplays.">
+<meta property="og:title" content="Fatih Melek · Take it easy 🧿">
+<meta property="og:description" content="Stuff I wrote, recorded and shot: Eurovision parodies, pop rankings, original songs.">
+<meta property="og:image" content="gorseller/profil.jpg">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#12072B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23FF2E88'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='30' fill='%23fff' text-anchor='middle'%3EFM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');try{var l=localStorage.getItem('fm-lang')||((navigator.language||'').toLowerCase().startsWith('tr')?'tr':'en');if(l==='tr'){document.documentElement.classList.add('tr');document.documentElement.lang='tr'}}catch(e){}</script>
+<style>
+:root{
+  --bg:#12072B; --bg-2:#1C0E3D; --bg-3:#2A1656; --pink:#FF2E88; --blue:#2EE6FF; --gold:#FFD23F; --lime:#B8FF3B; --white:#FFF8FD;
+  --text:#FFF8FD; --muted:rgb(255 248 253 / .66); --line:rgb(255 248 253 / .14);
+  --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1); --header-h:70px; --pad:clamp(16px,4.6vw,64px);
+  --disp:'Unbounded',system-ui,sans-serif; --sans:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:var(--header-h);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.04rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1;text-wrap:balance;overflow-wrap:normal}
+h2{font-size:clamp(2.2rem,6vw,5rem)}
+h3{font-size:clamp(1.05rem,1.8vw,1.35rem);letter-spacing:-.01em;line-height:1.2;font-weight:600}
+p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
+span[data-l]{display:inline}
+html:not(.tr) [data-l=tr],html.tr [data-l=en]{display:none!important}
+.wrap{max-width:1320px;margin-inline:auto;padding-inline:var(--pad)}
+.section{position:relative;padding-block:clamp(90px,11vw,150px)}
+.tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);font:600 .72rem/1 var(--disp);letter-spacing:.12em;text-transform:uppercase}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink)}
+.lead{max-width:54ch;color:var(--muted);font-size:clamp(1.02rem,1.4vw,1.15rem)}
+.head{display:grid;gap:20px 60px;margin-bottom:clamp(40px,6vw,70px)}
+@media (min-width:960px){.head{grid-template-columns:1.2fr .8fr;align-items:end}}
+.grad{background:linear-gradient(90deg,var(--pink),var(--gold) 50%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font:600 .82rem/1 var(--disp);letter-spacing:.02em;white-space:nowrap;transition:transform .45s var(--spring),box-shadow .45s,background .3s,color .3s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 12px 30px -10px var(--pink)}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--line)}.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--blue);color:var(--blue)}
+.btn-gold{background:var(--gold);color:var(--bg)}
+
+/* header */
+.header{position:fixed;inset:0 0 auto;z-index:60;height:var(--header-h);display:flex;align-items:center;gap:16px;padding-inline:var(--pad);transition:transform .5s var(--ease),background .4s}
+.header.solid{background:rgb(18 7 43 / .8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.header.hide{transform:translateY(-100%)}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto;font:900 1rem/1 var(--disp);letter-spacing:-.02em}
+.logo span{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--pink);font-size:.85rem;transition:transform .6s var(--spring)}
+.logo:hover span{transform:rotate(-12deg) scale(1.1)}
+.nav{display:none;gap:4px;font:600 .74rem/1 var(--disp)}
+.nav a{padding:10px 14px;border-radius:999px;transition:background .3s,color .3s}
+.nav a:hover,.nav a.act{background:var(--white);color:var(--bg)}
+.lang{display:flex;padding:3px;border-radius:999px;border:1px solid var(--line);font:600 .66rem/1 var(--disp)}
+.lang button{width:36px;height:30px;border-radius:999px;transition:background .3s,color .3s}
+html:not(.tr) .lang [data-set=en],html.tr .lang [data-set=tr]{background:var(--gold);color:var(--bg)}
+@media (min-width:1000px){.nav{display:flex}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:calc(var(--header-h) + 30px) 0 60px;overflow:hidden}
+.beams{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.beams i{position:absolute;left:50%;bottom:-10%;width:36vmax;height:130vh;transform-origin:50% 100%;background:linear-gradient(0deg,var(--c),transparent 75%);opacity:.22;filter:blur(8px);clip-path:polygon(46% 100%,54% 100%,100% 0,0 0);animation:sweep var(--t) ease-in-out infinite alternate}
+.beams i:nth-child(1){--c:var(--pink);--t:7s;--a:-38deg;--b:-8deg}
+.beams i:nth-child(2){--c:var(--blue);--t:9s;--a:30deg;--b:4deg}
+.beams i:nth-child(3){--c:var(--gold);--t:11s;--a:-14deg;--b:22deg}
+.beams i:nth-child(4){--c:var(--pink);--t:8s;--a:40deg;--b:12deg}
+@keyframes sweep{from{transform:translateX(-50%) rotate(var(--a))}to{transform:translateX(-50%) rotate(var(--b))}}
+.hero-grid{position:relative;display:grid;gap:40px;align-items:center}
+@media (min-width:980px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero .hi{font:600 .8rem/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin-top:18px;font-size:clamp(3.4rem,11vw,9.2rem);font-weight:900;line-height:.86;letter-spacing:-.05em}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .l>span{display:inline-block;transform:translateY(110%) rotate(8deg);transition:transform 1.1s var(--spring);transition-delay:calc(var(--i) * 110ms + .2s)}
+.go .hero h1 .l>span{transform:none}
+.fade{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.go .fade{opacity:1;transform:none}
+html:not(.js) .fade,html:not(.js) .hero h1 .l>span{opacity:1;transform:none}
+.hero .roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .roles>span{padding:9px 14px;border-radius:999px;background:var(--bg-3);font:500 .9rem/1 var(--sans)}
+.hero .roles>span:nth-child(1){background:var(--pink)}.hero .roles>span:nth-child(2){background:var(--blue);color:var(--bg)}.hero .roles>span:nth-child(3){background:var(--gold);color:var(--bg)}
+.hero .lead{margin-top:24px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pic{position:relative;justify-self:center;width:min(100%,430px)}
+.pic .frame{position:relative;aspect-ratio:4/5;border-radius:36px;overflow:hidden;transform:rotate(3deg) scale(.9);opacity:0;transition:transform 1.3s var(--spring) .4s,opacity .8s .4s;box-shadow:0 40px 80px -30px rgb(255 46 136 / .55)}
+.go .pic .frame{transform:rotate(3deg);opacity:1}
+.pic .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.pic .frame::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 2px rgb(255 255 255 / .2)}
+.eye{position:absolute;left:-26px;bottom:14%;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle,#fff 0 16%,#0B1E5A 17% 28%,#6FD0FF 29% 44%,#fff 45% 60%,#1B4FD8 61%);box-shadow:0 14px 30px -10px rgb(27 79 216 / .7);animation:float 5s ease-in-out infinite}
+.pts{position:absolute;right:-18px;top:10%;display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:var(--gold);color:var(--bg);font:900 1.9rem/1 var(--disp);text-align:center;transform:rotate(-12deg);animation:float 6s ease-in-out infinite reverse;box-shadow:0 14px 30px -10px rgb(255 210 63 / .7)}
+.pts small{display:block;font:800 .58rem/1.1 var(--disp);letter-spacing:.06em}
+@keyframes float{50%{translate:0 -12px}}
+.loc{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);padding:10px 16px;border-radius:999px;background:var(--white);color:var(--bg);font:700 .78rem/1 var(--disp);white-space:nowrap;box-shadow:0 12px 24px -12px rgb(0 0 0 / .5)}
+
+/* stats scoreboard */
+.board{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:860px){.board{grid-template-columns:repeat(5,1fr)}}
+.stat{position:relative;padding:22px 20px;border-radius:22px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden}
+.stat b{display:block;font:900 clamp(2rem,4vw,3rem)/1 var(--disp);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat>span{display:block;margin-top:8px;color:var(--muted);font-size:.9rem}
+.stat::before{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:var(--c);opacity:.25;filter:blur(18px)}
+
+/* scoreboard of parodies */
+.sb{border-radius:28px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden}
+.sb-h{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 22px;background:linear-gradient(90deg,var(--pink),#8A2BE2);font:800 .8rem/1 var(--disp);letter-spacing:.08em;text-transform:uppercase}
+.sb-h span{font-weight:600;opacity:.8}
+.row{position:relative;display:grid;grid-template-columns:44px 78px 1fr auto;gap:14px;align-items:center;padding:12px 22px;border-top:1px solid var(--line);transition:background .3s}
+.row:hover{background:var(--bg-3)}
+.row .rk{font:900 1.2rem/1 var(--disp);color:var(--muted);font-variant-numeric:tabular-nums}
+.row:nth-child(2) .rk{color:var(--gold)}
+.row .th{aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--bg-3)}
+.row .th img{width:100%;height:100%;object-fit:cover}
+.row h3{font-size:clamp(.92rem,1.4vw,1.05rem)}
+.row .bar{position:relative;margin-top:8px;height:6px;border-radius:6px;background:rgb(255 255 255 / .08);overflow:hidden}
+.row .bar i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--gold));transform-origin:left;transform:scaleX(0);transition:transform 1.4s var(--ease);transition-delay:calc(var(--i) * 90ms + .2s)}
+.sb.in .row .bar i{transform:scaleX(var(--w))}
+.row .pt{min-width:84px;padding:10px 12px;border-radius:12px;background:var(--bg);text-align:center;font:900 1rem/1 var(--disp);font-variant-numeric:tabular-nums}
+.row .pt small{display:block;margin-top:4px;font:500 .64rem/1 var(--sans);color:var(--muted)}
+.row:nth-child(2) .pt{background:var(--gold);color:var(--bg)}.row:nth-child(2) .pt small{color:var(--bg)}
+@media (max-width:620px){.row{grid-template-columns:30px 1fr auto;padding:12px 14px}.row .th{display:none}}
+
+/* rankings vinyl */
+.vinyls{display:grid;gap:18px}
+@media (min-width:700px){.vinyls{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.vinyls{grid-template-columns:repeat(3,1fr)}}
+.vy{position:relative;display:flex;align-items:center;gap:18px;padding:18px;border-radius:24px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--spring),border-color .3s}
+.vy:hover{transform:translateY(-6px);border-color:var(--c)}
+.disc{position:relative;flex:none;width:96px;height:96px;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d1d 3px 4px);box-shadow:0 10px 20px -8px rgb(0 0 0 / .6);transition:transform 1s var(--ease)}
+.disc::after{content:"";position:absolute;inset:32%;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 5px rgb(0 0 0 / .15)}
+.disc::before{content:"";position:absolute;inset:47%;z-index:1;border-radius:50%;background:var(--bg-2)}
+.vy:hover .disc{animation:spin 1.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vy small{display:block;font:700 .66rem/1 var(--disp);letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.vy h3{margin-top:8px}
+.vy p{margin-top:6px;color:var(--muted);font-size:.9rem}
+
+/* parody video grid */
+.vids{display:grid;gap:16px}
+@media (min-width:700px){.vids{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.vids{grid-template-columns:repeat(3,1fr)}}
+.vid{position:relative;display:block;border-radius:22px;overflow:hidden;background:var(--bg-2);border:1px solid var(--line);transition:transform .5s var(--spring)}
+.vid:hover{transform:translateY(-6px) rotate(-.6deg)}
+.vid .im{position:relative;aspect-ratio:16/9;overflow:hidden}
+.vid .im img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.vid:hover .im img{transform:scale(1.06)}
+.vid .play{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:62px;height:62px;margin:-31px;border-radius:50%;background:rgb(255 255 255 / .92);color:var(--pink);transform:scale(.8);opacity:0;transition:transform .5s var(--spring),opacity .3s}
+.vid:hover .play{transform:none;opacity:1}
+.vid .play svg{width:22px;height:22px;margin-left:3px}
+.vid .yr{position:absolute;left:12px;top:12px;padding:6px 10px;border-radius:999px;background:var(--gold);color:var(--bg);font:800 .7rem/1 var(--disp)}
+.vid .bd{padding:16px 18px 18px}
+.vid .bd p{margin-top:6px;color:var(--muted);font-size:.86rem}
+
+/* music */
+.music{display:grid;gap:40px}
+@media (min-width:1000px){.music{grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}}
+.spot{border-radius:22px;overflow:hidden;background:#121212;min-height:380px}
+.spot iframe{display:block;width:100%;height:452px;border:0}
+.credits{display:grid;gap:10px;margin-top:26px}
+.cr{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--bg-2);border:1px solid var(--line)}
+.cr b{font:800 1.3rem/1 var(--disp);color:var(--c);min-width:42px}
+.cr strong{display:block;font-weight:700}
+.cr div>span{display:block;color:var(--muted);font-size:.86rem}
+.eq{display:inline-flex;align-items:flex-end;gap:3px;height:18px;margin-left:auto}
+.eq i{width:3px;height:100%;border-radius:2px;background:var(--c);transform-origin:bottom;animation:eq 1s ease-in-out infinite;animation-delay:calc(var(--k) * -.23s)}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+
+/* life gallery */
+.life{columns:2 150px;column-gap:12px}
+@media (min-width:900px){.life{columns:4}}
+.life figure{position:relative;margin:0 0 12px;border-radius:20px;overflow:hidden;break-inside:avoid}
+.life img{width:100%;transition:transform 1s var(--ease)}
+.life figure:hover img{transform:scale(1.05)}
+.life figcaption{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:999px;background:rgb(18 7 43 / .75);backdrop-filter:blur(6px);font:600 .74rem/1 var(--sans)}
+
+/* writing */
+.write{display:grid;gap:14px}
+@media (min-width:860px){.write{grid-template-columns:1fr 1fr}}
+.wcard{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:260px;padding:30px;border-radius:28px;overflow:hidden;transition:transform .5s var(--spring)}
+.wcard:hover{transform:translateY(-6px)}
+.wcard h3{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800}
+.wcard p{margin-top:10px;max-width:40ch;opacity:.85}
+.wcard .go-l{display:inline-flex;align-items:center;gap:8px;font:700 .8rem/1 var(--disp)}
+.wcard .go-l svg{width:18px;height:18px;transition:transform .4s var(--spring)}
+.wcard:hover .go-l svg{transform:translateX(6px)}
+
+/* links */
+.links{display:grid;gap:10px}
+@media (min-width:700px){.links{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.links{grid-template-columns:repeat(3,1fr)}}
+.lnk{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:20px;background:var(--bg-2);border:1px solid var(--line);transition:background .3s,transform .5s var(--spring),border-color .3s}
+.lnk:hover{background:var(--c);border-color:var(--c);transform:translateY(-4px) rotate(-.6deg);color:var(--fg,#fff)}
+.lnk i{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:14px;background:rgb(255 255 255 / .08)}
+.lnk i svg{width:24px;height:24px}
+.lnk b{display:block;font:700 1rem/1.2 var(--disp)}
+.lnk div>span{display:block;margin-top:3px;font-size:.86rem;opacity:.7}
+.lnk>svg{width:18px;height:18px;margin-left:auto;opacity:.6}
+
+/* footer */
+.footer{padding:clamp(70px,9vw,110px) 0 50px;border-top:1px solid var(--line);overflow:hidden}
+.fbig{font:900 clamp(2.6rem,10vw,9rem)/.95 var(--disp);letter-spacing:-.05em}
+.frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 30px;margin-top:34px;color:var(--muted);font-size:.88rem}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .pop{opacity:0;transform:scale(.85) rotate(-3deg);transition:opacity .7s var(--ease),transform .9s var(--spring);transition-delay:var(--d,0s)}
+.js .pop.in{opacity:1;transform:none}
+
+/* confetti */
+.cf{position:fixed;z-index:200;width:9px;height:14px;pointer-events:none;border-radius:2px;animation:cf 1.6s cubic-bezier(.2,.7,.4,1) forwards}
+@keyframes cf{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .pop,.fade,.hero h1 .l>span,.pic .frame{opacity:1!important;transform:none!important}
+  .sb .row .bar i{transform:scaleX(var(--w))!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z" fill="currentColor"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9v6l5-3z" fill="currentColor"/></symbol>
+  <symbol id="tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.5 3 2.5 4.5 5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="sp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 9.5c3.5-1 7.5-.6 10.5 1M7.5 13c3-.8 6-.4 8.5 1M8 16.3c2.3-.5 4.5-.3 6.5.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16zM14 6l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="header" id="hdr">
+  <a class="logo" href="#top"><span>FM</span>Fatih Melek</a>
+  <nav class="nav" aria-label="Menu"><a href="#eurovision">Eurovision</a><a href="#rankings"><span data-l="en" lang="en">Rankings</span><span data-l="tr" lang="tr">Sıralamalar</span></a><a href="#music"><span data-l="en" lang="en">Songs</span><span data-l="tr" lang="tr">Şarkılar</span></a><a href="#writing"><span data-l="en" lang="en">Writing</span><span data-l="tr" lang="tr">Yazılar</span></a><a href="#links"><span data-l="en" lang="en">Links</span><span data-l="tr" lang="tr">Bağlantılar</span></a></nav>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button></div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="beams" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hi fade" style="--d:.05s"><span data-l="en" lang="en">Hello from Barcelona 📍</span><span data-l="tr" lang="tr">Barcelona'dan merhaba 📍</span></p>
+      <h1 aria-label="Fatih Melek"><span class="l"><span style="--i:0">Fatih</span></span><span class="l"><span style="--i:1" class="grad">Melek</span></span></h1>
+      <div class="roles fade" style="--d:.6s"><span><span data-l="en" lang="en">Pop lover</span><span data-l="tr" lang="tr">Pop aşığı</span></span><span>Eurovision</span><span><span data-l="en" lang="en">Songwriter</span><span data-l="tr" lang="tr">Söz yazarı</span></span><span><span data-l="en" lang="en">Screenwriter</span><span data-l="tr" lang="tr">Senarist</span></span></div>
+      <p class="lead fade" style="--d:.75s"><span data-l="en" lang="en">Stuff I wrote, recorded and shot: Eurovision parodies and vlogs, pop album rankings, original songs and screenplays. Take it easy 🧿</span><span data-l="tr" lang="tr">Yazdığım, kaydettiğim ve çektiğim her şey: Eurovision parodileri ve vlogları, pop albüm sıralamaları, şarkılarım ve senaryolarım. Take it easy 🧿</span></p>
+      <div class="btns fade" style="--d:.9s"><a class="btn btn-pink" href="#eurovision" id="douze"><span data-l="en" lang="en">Douze points ✨</span><span data-l="tr" lang="tr">Douze points ✨</span></a><a class="btn btn-line" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>@fatihmelek3</a></div>
+    </div>
+    <div class="pic">
+      <div class="frame"><img src="gorseller/selfie.jpg" width="563" height="1000" alt="Fatih Melek" fetchpriority="high"></div>
+      <span class="eye" aria-hidden="true"></span>
+      <span class="pts" aria-hidden="true"><span>12<small>POINTS</small></span></span>
+      <span class="loc">📍 Barcelona</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="board" id="board">
+      <div class="stat pop" style="--c:var(--pink)"><b data-n="32" data-s="K">0</b><span><span data-l="en" lang="en">Instagram followers</span><span data-l="tr" lang="tr">Instagram takipçisi</span></span></div>
+      <div class="stat pop" style="--c:var(--blue);--d:.06s"><b data-n="1018">0</b><span><span data-l="en" lang="en">Instagram posts</span><span data-l="tr" lang="tr">Instagram gönderisi</span></span></div>
+      <div class="stat pop" style="--c:var(--gold);--d:.12s"><b data-n="71">0</b><span><span data-l="en" lang="en">YouTube videos</span><span data-l="tr" lang="tr">YouTube videosu</span></span></div>
+      <div class="stat pop" style="--c:var(--lime);--d:.18s"><b data-n="17">0</b><span><span data-l="en" lang="en">songs on Spotify</span><span data-l="tr" lang="tr">Spotify'da şarkı</span></span></div>
+      <div class="stat pop" style="--c:var(--pink);--d:.24s"><b data-n="3">0</b><span><span data-l="en" lang="en">Eurovisions vlogged live</span><span data-l="tr" lang="tr">yerinden vlogladığım Eurovision</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="eurovision" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv"><i></i>Eurovision</span><h2 class="rv"><span data-l="en" lang="en">The <span class="grad">scoreboard</span></span><span data-l="tr" lang="tr"><span class="grad">Puan</span> tablosu</span></h2></div><p class="lead rv" style="--d:.1s"><span data-l="en" lang="en">My Eurovision parodies and vlogs, ranked by YouTube views. From Lisbon's "Cluck Cluck, Bling Bling" to live reactions in Tel Aviv and Rotterdam.</span><span data-l="tr" lang="tr">Eurovision parodilerim ve vloglarım, YouTube izlenmesine göre sıralı. "Cluck Cluck, Bling Bling"den Tel Aviv ve Rotterdam'daki canlı tepkilere.</span></p></div>
+    <div class="sb rv" id="sb"><div class="sb-h">Fatih Melek · Televote<span><span data-l="en" lang="en">views</span><span data-l="tr" lang="tr">izlenme</span></span></div></div>
+    <div class="head" style="margin:clamp(70px,9vw,110px) 0 36px"><div><h2 class="rv" style="font-size:clamp(1.8rem,4vw,3.2rem)"><span data-l="en" lang="en">Parodies &amp; vlogs</span><span data-l="tr" lang="tr">Parodiler ve vloglar</span></h2></div></div>
+    <div class="vids" id="vids"></div>
+  </div>
+</section>
+
+<section class="section" id="rankings">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv"><i></i><span data-l="en" lang="en">Pop rankings</span><span data-l="tr" lang="tr">Pop sıralamaları</span></span><h2 class="rv"><span data-l="en" lang="en">Banger after <span class="grad">banger</span>.</span><span data-l="tr" lang="tr">Hepsi <span class="grad">hit</span>.</span></h2></div><p class="lead rv" style="--d:.1s"><span data-l="en" lang="en">Album anniversaries, tour setlists, every VMAs performance, ranked. Which are your favorites?</span><span data-l="tr" lang="tr">Albüm yıl dönümleri, turne listeleri, VMA performansları; hepsi sıralandı. Sizin favorileriniz hangileri?</span></p></div>
+    <div class="vinyls">
+      <a class="vy pop" style="--c:var(--pink)" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><span class="disc"></span><div><small>Kylie Minogue</small><h3>Fever · 25</h3><p><span data-l="en" lang="en">Ranking the ever-fresh masterpiece</span><span data-l="tr" lang="tr">Hiç eskimeyen başyapıtın sıralaması</span></p></div></a>
+      <a class="vy pop" style="--c:var(--gold);--d:.06s" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><span class="disc"></span><div><small>Madonna</small><h3>Confessions II · Top 10</h3><p><span data-l="en" lang="en">Every song here is a work of art</span><span data-l="tr" lang="tr">Buradaki her şarkı bir sanat eseri</span></p></div></a>
+      <a class="vy pop" style="--c:var(--blue);--d:.12s" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><span class="disc"></span><div><small>Madonna · MTV</small><h3><span data-l="en" lang="en">Every VMAs performance</span><span data-l="tr" lang="tr">Tüm VMA performansları</span></h3><p>She put the M in MTV 👑</p></div></a>
+      <a class="vy pop" style="--c:var(--lime)" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><span class="disc"></span><div><small>Madonna</small><h3>True Blue · 40</h3><p><span data-l="en" lang="en">A birthday ranking</span><span data-l="tr" lang="tr">Doğum günü sıralaması</span></p></div></a>
+      <a class="vy pop" style="--c:var(--pink);--d:.06s" href="https://www.youtube.com/shorts/VHlQB-9XctY" target="_blank" rel="noopener"><span class="disc"></span><div><small>Britney Spears</small><h3>…Baby One More Time · 25</h3><p><span data-l="en" lang="en">Ranking every track</span><span data-l="tr" lang="tr">Tüm şarkıların sıralaması</span></p></div></a>
+      <a class="vy pop" style="--c:var(--gold);--d:.12s" href="https://www.youtube.com/shorts/2PcuwpBzpHE" target="_blank" rel="noopener"><span class="disc"></span><div><small>Taylor Swift</small><h3>1989 (Taylor's Version)</h3><p><span data-l="en" lang="en">My original ranking of the songs</span><span data-l="tr" lang="tr">Şarkıların orijinal sıralamam</span></p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="music" style="background:var(--bg-2)">
+  <div class="wrap music">
+    <div>
+      <span class="tag rv"><i></i><span data-l="en" lang="en">Original music</span><span data-l="tr" lang="tr">Şarkılarım</span></span>
+      <h2 class="rv"><span data-l="en" lang="en">Songs I <span class="grad">wrote</span> &amp; sang.</span><span data-l="tr" lang="tr"><span class="grad">Yazdığım</span> ve söylediğim şarkılar.</span></h2>
+      <p class="lead rv" style="--d:.1s;margin-top:22px"><span data-l="en" lang="en">17 songs on one playlist: from my own demos to songs recorded by other artists.</span><span data-l="tr" lang="tr">Tek listede 17 şarkı: kendi demolarımdan başka sanatçıların seslendirdiği şarkılara.</span></p>
+      <div class="credits">
+        <div class="cr rv" style="--c:var(--pink)"><b>11</b><div><strong>Eylem</strong><span><span data-l="en" lang="en">Album</span><span data-l="tr" lang="tr">Albüm</span> "Bugün Burda" · Hayat Devam Eder, Kaldır Elleri, Helal Olsun…</span></div><span class="eq"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i></span></div>
+        <div class="cr rv" style="--c:var(--blue);--d:.06s"><b>2</b><div><strong>Şebnem Bamsey</strong><span>"İki x İki" · Ne Olur Geri Dönme, Sonu Belli</span></div><span class="eq"><i style="--k:1"></i><i style="--k:2"></i><i style="--k:0"></i></span></div>
+        <div class="cr rv" style="--c:var(--gold);--d:.12s"><b>3</b><div><strong>Falling Deeper · Dance All Night · Flying High</strong><span>Serhat Durmuş, Ekin Ekinci, Eren AB, Hakan Akkuş, Serra Arıtürk</span></div><span class="eq"><i style="--k:2"></i><i style="--k:0"></i><i style="--k:1"></i></span></div>
+        <div class="cr rv" style="--c:var(--lime);--d:.18s"><b>2</b><div><strong><span data-l="en" lang="en">My demos</span><span data-l="tr" lang="tr">Demolarım</span></strong><span>Kahir · Fahri Sevgili</span></div><span class="eq"><i style="--k:0"></i><i style="--k:2"></i><i style="--k:1"></i></span></div>
+      </div>
+    </div>
+    <div class="spot rv" style="--d:.1s"><iframe src="https://open.spotify.com/embed/playlist/6NYfBxwzbktuLI2CuJkGMe?utm_source=generator&amp;theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Fatih Melek · Tüm Şarkılar"></iframe></div>
+  </div>
+</section>
+
+<section class="section" id="life">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv"><i></i>Barcelona</span><h2 class="rv"><span data-l="en" lang="en">Take it <span class="grad">easy</span> 🧿</span><span data-l="tr" lang="tr">Take it <span class="grad">easy</span> 🧿</span></h2></div><p class="lead rv" style="--d:.1s"><span data-l="en" lang="en">Sun, sea, gym and good music. Life in Barcelona.</span><span data-l="tr" lang="tr">Güneş, deniz, spor ve iyi müzik. Barcelona'da hayat.</span></p></div>
+    <div class="life">
+      <figure class="pop"><img src="gorseller/plaj.jpg" alt="Barcelona beach" loading="lazy"><figcaption>🌊 Barceloneta</figcaption></figure>
+      <figure class="pop" style="--d:.06s"><img src="gorseller/dogumgunu.jpg" alt="Birthday" loading="lazy"><figcaption>♌️ Leo season</figcaption></figure>
+      <figure class="pop" style="--d:.12s"><img src="gorseller/havuz.jpg" alt="Pool" loading="lazy"><figcaption>💦 Floating</figcaption></figure>
+      <figure class="pop" style="--d:.18s"><img src="gorseller/takim.jpg" alt="Wedding" loading="lazy"><figcaption>🕺 #wedding</figcaption></figure>
+      <figure class="pop"><img src="gorseller/profil.jpg" alt="Fatih Melek in Barcelona" loading="lazy"><figcaption>📍 Barcelona</figcaption></figure>
+      <figure class="pop" style="--d:.06s"><img src="gorseller/mavi.jpg" alt="Fatih Melek" loading="lazy"><figcaption>☀️ Alegria</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="writing" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv"><i></i><span data-l="en" lang="en">Writing</span><span data-l="tr" lang="tr">Yazılar</span></span><h2 class="rv"><span data-l="en" lang="en">Words, <span class="grad">too</span>.</span><span data-l="tr" lang="tr">Kelimeler de <span class="grad">var</span>.</span></h2></div></div>
+    <div class="write">
+      <a class="wcard rv" style="background:var(--pink)" href="https://www.wattpad.com/user/fatihmelek3" target="_blank" rel="noopener"><div><svg style="width:40px;height:40px"><use href="#pen"/></svg><h3 style="margin-top:22px"><span data-l="en" lang="en">Screenplays</span><span data-l="tr" lang="tr">Senaryolar</span></h3><p><span data-l="en" lang="en">My screenplays, published on Wattpad.</span><span data-l="tr" lang="tr">Wattpad'de yayımladığım senaryolarım.</span></p></div><span class="go-l">Wattpad<svg><use href="#arr"/></svg></span></a>
+      <a class="wcard rv" style="background:var(--blue);color:var(--bg);--d:.08s" href="https://www.youtube.com/watch?v=tLh8jFo9wU4" target="_blank" rel="noopener"><div><svg style="width:40px;height:40px"><use href="#yt"/></svg><h3 style="margin-top:22px">Yanlış Anlaşılmış Şarkı Sözleri</h3><p><span data-l="en" lang="en">Misheard lyrics: a Turkish pop classic on my channel.</span><span data-l="tr" lang="tr">Kanalımda bir klasik: yanlış anlaşılmış şarkı sözleri.</span></p></div><span class="go-l">YouTube<svg><use href="#arr"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="links">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv"><i></i><span data-l="en" lang="en">Links</span><span data-l="tr" lang="tr">Bağlantılar</span></span><h2 class="rv"><span data-l="en" lang="en">Find me <span class="grad">everywhere</span>.</span><span data-l="tr" lang="tr">Her <span class="grad">yerdeyim</span>.</span></h2></div><p class="lead rv" style="--d:.1s"><span data-l="en" lang="en">For collaborations, send me a DM on Instagram.</span><span data-l="tr" lang="tr">İş birlikleri için Instagram'dan DM atabilirsiniz.</span></p></div>
+    <div class="links">
+      <a class="lnk rv" style="--c:#E1306C" href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener"><i><svg><use href="#ig"/></svg></i><div><b>Instagram</b><span>@fatihmelek3 · 32K</span></div><svg><use href="#arr"/></svg></a>
+      <a class="lnk rv" style="--c:#FF0033;--d:.05s" href="https://www.youtube.com/fatihmelek" target="_blank" rel="noopener"><i><svg><use href="#yt"/></svg></i><div><b>YouTube</b><span><span data-l="en" lang="en">Eurovision videos</span><span data-l="tr" lang="tr">Eurovision videoları</span> · 6.76K</span></div><svg><use href="#arr"/></svg></a>
+      <a class="lnk rv" style="--c:#1DB954;--d:.1s" href="https://open.spotify.com/playlist/6NYfBxwzbktuLI2CuJkGMe" target="_blank" rel="noopener"><i><svg><use href="#sp"/></svg></i><div><b>Spotify</b><span><span data-l="en" lang="en">All my music</span><span data-l="tr" lang="tr">Tüm şarkılarım</span></span></div><svg><use href="#arr"/></svg></a>
+      <a class="lnk rv" style="--c:#25F4EE;--fg:var(--bg)" href="https://www.tiktok.com/@fatihmelek3" target="_blank" rel="noopener"><i><svg><use href="#tt"/></svg></i><div><b>TikTok</b><span>@fatihmelek3</span></div><svg><use href="#arr"/></svg></a>
+      <a class="lnk rv" style="--c:#FFFFFF;--fg:var(--bg);--d:.05s" href="https://twitter.com/fatihmelek" target="_blank" rel="noopener"><i><svg><use href="#x"/></svg></i><div><b>X / Twitter</b><span>@fatihmelek</span></div><svg><use href="#arr"/></svg></a>
+      <a class="lnk rv" style="--c:#1DB954;--d:.1s" href="https://open.spotify.com/user/11180018730" target="_blank" rel="noopener"><i><svg><use href="#sp"/></svg></i><div><b><span data-l="en" lang="en">Spotify playlists</span><span data-l="tr" lang="tr">Spotify listeleri</span></b><span><span data-l="en" lang="en">Curated by me</span><span data-l="tr" lang="tr">Benim hazırladıklarım</span></span></div><svg><use href="#arr"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fbig"><span class="grad">Take it easy</span> 🧿</div>
+    <div class="frow"><span>© <span id="yil">2026</span> Fatih Melek · Barcelona</span><a href="https://www.instagram.com/fatihmelek3/" target="_blank" rel="noopener">@fatihmelek3</a></div>
+  </div>
+</footer>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const html = document.documentElement, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#yil').textContent = new Date().getFullYear();
+const setLang = l => { html.classList.toggle('tr', l === 'tr'); html.lang = l; try { localStorage.setItem('fm-lang', l); } catch { } };
+$$('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.set)));
+requestAnimationFrame(() => html.classList.add('go'));
+
+/* scoreboard (YouTube views) */
+const V = [
+ ['UwX_AwDpaaY', 'Cluck Cluck, Bling Bling', 'Eurovision 2018 parody', 93, '2018'],
+ ['k9dylrOB2Ns', "That's How a Comeback Goes Wrong", 'Eurovision parody', 77, '2018'],
+ ['xdhcy-w9y9Y', 'Say No No No', 'Eurovision 2019 parody', 68, '2019'],
+ ['x5f3DVnlPKw', 'Rotterdam Vlog · Grand Final', 'Eurovision 2021 vlog', 48, '2021'],
+ ['05qS4Grw02Q', 'Tel Aviv Vlog · The Final', 'Eurovision 2019 vlog', 36, '2019'],
+ ['idEKAN7xxZ4', 'Your Song (...Contest)', 'A love song for Eurovision', 20, '2018'],
+ ['YHbKY4JjTHU', "Don't Socialize", 'Eurovision 2020 parody', 11, '2020'],
+ ['KFBhoY2IHLk', 'Right of the Board', 'Eurovision 2021 parody', 8.1, '2021']
+];
+const max = V[0][3];
+$('#sb').insertAdjacentHTML('beforeend', V.map(([id, t, s, n], i) => `<a class="row" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener"><span class="rk">${String(i + 1).padStart(2, '0')}</span><span class="th"><img src="gorseller/yt-${id}.jpg" alt="" loading="lazy"></span><div><h3>${t}</h3><div class="bar"><i style="--w:${n / max};--i:${i}"></i></div></div><span class="pt">${n}K<small>views</small></span></a>`).join(''));
+$('#vids').innerHTML = V.filter((_, i) => i < 6).map(([id, t, s, n, y], i) => `<a class="vid pop" style="--d:${(i % 3) * .06}s" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener"><div class="im"><img src="gorseller/yt-${id}.jpg" alt="${t}" loading="lazy"><span class="yr">${y}</span><span class="play"><svg><use href="#play"/></svg></span></div><div class="bd"><h3>${t}</h3><p>${s}</p></div></a>`).join('');
+
+/* reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -6% 0px' });
+$$('.rv, .pop').forEach(el => io.observe(el));
+
+/* counters */
+const cio = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; cio.unobserve(e.target); $$('b[data-n]', e.target).forEach(b => { const n = +b.dataset.n, s = b.dataset.s || ''; if (reduce) { b.textContent = n.toLocaleString('en') + s; return; } const t0 = performance.now(); const f = t => { const p = Math.min(1, (t - t0) / 1600), v = Math.round(n * (1 - Math.pow(1 - p, 3))); b.textContent = v.toLocaleString('en') + s; if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }); }), { threshold: .4 });
+cio.observe($('#board'));
+
+/* confetti on "douze points" */
+const burst = (x, y) => { if (reduce) return; const C = ['#FF2E88', '#2EE6FF', '#FFD23F', '#B8FF3B', '#fff']; for (let i = 0; i < 44; i++) { const c = document.createElement('i'); c.className = 'cf'; const a = Math.random() * Math.PI * 2, d = 80 + Math.random() * 220; c.style.cssText = `left:${x}px;top:${y}px;background:${C[i % C.length]};--dx:${Math.cos(a) * d}px;--dy:${Math.sin(a) * d + 120}px;--r:${Math.random() * 720}deg`; document.body.appendChild(c); setTimeout(() => c.remove(), 1700); } };
+$('#douze').addEventListener('click', e => { const r = e.currentTarget.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2); });
+$('.pts').addEventListener('click', e => burst(e.clientX, e.clientY));
+
+/* header */
+const hdr = $('#hdr'), secs = $$('.nav a').map(a => [a, $(a.getAttribute('href'))]); let lastY = 0, tk = false;
+addEventListener('scroll', () => { if (tk) return; tk = true; requestAnimationFrame(() => { const y = scrollY, H = innerHeight; hdr.classList.toggle('solid', y > 20); hdr.classList.toggle('hide', y > lastY && y > H); lastY = y;
+  let act = null; secs.forEach(([a, s]) => { if (s && s.getBoundingClientRect().top < H * .4) act = a; }); secs.forEach(([a]) => a.classList.toggle('act', a === act)); tk = false; }); }, { passive: true });
+</script>
+</body>
+</html>
