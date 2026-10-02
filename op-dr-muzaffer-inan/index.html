@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Op. Dr. Muzaffer İnan · KBB ve Burun Estetiği · İstanbul</title>
+<meta name="description" content="Op. Dr. Muzaffer İnan, Kulak Burun Boğaz uzmanı. Erkek rinoplastisi, revizyon rinoplasti ve yüz estetiği. BHT Clinic İstanbul Tema Hastanesi, Atakent.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d1217">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1217; --bg-2:#131a21; --bg-3:#1a232c; --ink:#eef1f3; --muted:#9aa6b1; --line:rgb(238 241 243 / .12);
+  --steel:#6fa3c8; --sand:#d8b98a; --paper:#f1eee8; --ink-d:#151b21; --muted-d:#5e6873; --line-d:rgb(21 27 33 / .12);
+  --wa:#25D366; --ease:cubic-bezier(.22,1,.36,1); --ease2:cubic-bezier(.65,0,.35,1);
+  --f-b:'Archivo',system-ui,sans-serif; --f-s:'Instrument Serif',Georgia,serif;
+  --pad:clamp(16px,5vw,56px); --sec:clamp(80px,12vw,150px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:300 17px/1.7 var(--f-b);overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--f-b);font-weight:700;line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+em{font-family:var(--f-s);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--sand)}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
+.sec{padding-block:var(--sec)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 11.5px/1.4 var(--f-b);letter-spacing:.3em;text-transform:uppercase;color:var(--steel)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font-size:clamp(2.4rem,5.6vw,4.6rem);margin-top:16px}
+.lead{color:var(--muted);font-size:clamp(1rem,1.35vw,1.12rem);max-width:56ch;margin-top:18px}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:999px;font:600 14px/1 var(--f-b);letter-spacing:.06em;overflow:hidden;isolation:isolate;transition:color .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateX(-101%);transition:transform .55s var(--ease)}
+.btn:hover::before{transform:none}
+.btn svg{width:18px;height:18px}
+.btn-s{background:var(--sand);color:var(--bg)}
+.btn-s::before{background:var(--ink)}
+.btn-o{border:1px solid rgb(238 241 243 / .3)}
+.btn-o::before{background:var(--ink)}
+.btn-o:hover{color:var(--bg)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa::before{background:#1aa452}
+.ic{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.light{background:var(--paper);color:var(--ink-d)}
+.light .lead{color:var(--muted-d)}
+.light em{color:#9a6d33}
+.light .eyebrow{color:#2f6f99}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,transform .5s var(--ease),border-color .4s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgb(13 18 23 / .82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--line)}
+.hdr.hide{transform:translateY(-100%)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:82px}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font:700 14px var(--f-b);letter-spacing:.04em}
+.logo b{display:block;font:700 16px/1.1 var(--f-b);letter-spacing:-.01em}
+.logo small{display:block;font:500 10px/1.3 var(--f-b);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{position:relative;font-size:14px;color:var(--muted);transition:color .3s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--sand);transform:scaleX(0);transition:transform .5s var(--ease)}
+.nav a:hover,.nav a.act{color:var(--ink)}
+.nav a:hover::after,.nav a.act::after{transform:scaleX(1)}
+.hdr .btn{padding:12px 20px;font-size:13px}
+.burger{display:none;margin-left:auto;width:48px;height:48px;border-radius:50%;border:1px solid rgb(238 241 243 / .3);place-items:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:1.4px;background:var(--ink);transition:transform .4s var(--ease),background .2s}
+.burger span{position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+.mpanel{position:fixed;inset:0;z-index:45;background:var(--bg);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:100px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease2)}
+.mpanel a{font:700 clamp(2.4rem,10vw,3.4rem)/1.15 var(--f-b);letter-spacing:-.03em;opacity:0;transform:translateY(24px);transition:transform .6s var(--ease),opacity .6s}
+.mpanel .btn{margin-top:26px;align-self:flex-start;font-size:14px}
+.menu-open{overflow:hidden}
+.menu-open .mpanel{clip-path:inset(0)}
+.menu-open .mpanel a{opacity:1;transform:none;transition-delay:calc(.3s + var(--i,0) * 60ms)}
+@media (max-width:1000px){.nav,.hdr .btn{display:none}.burger{display:grid}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden}
+.hero .grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask:radial-gradient(70% 60% at 70% 50%,#000,transparent);-webkit-mask:radial-gradient(70% 60% at 70% 50%,#000,transparent);opacity:.5}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,80px);align-items:center;width:100%}
+.hero h1{font-size:clamp(3rem,6.2vw,5.8rem);margin-top:22px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:block}
+html.js .hero h1 .ln>span{transform:translateY(110%)}
+html.js .hero.go h1 .ln>span{transform:none;transition:transform 1.3s var(--ease);transition-delay:calc(var(--i) * 120ms + .1s)}
+html.js .hero .fx{opacity:0;transform:translateY(20px)}
+html.js .hero.go .fx{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:calc(var(--d) * 110ms + .6s)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.tags span{font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.tags span:first-child{border-color:var(--sand);color:var(--sand)}
+.prof{position:relative;justify-self:center;width:min(100%,440px);aspect-ratio:4/5}
+.prof svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.prof .pl{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+.prof .gl{stroke:var(--steel);stroke-width:.8;stroke-dasharray:4 5;opacity:0}
+.prof .ang{fill:rgb(216 185 138 / .14);stroke:var(--sand);stroke-width:1;opacity:0}
+.prof .tx{font:600 12px var(--f-b);letter-spacing:.14em;fill:var(--sand);opacity:0}
+.hero.go .prof .pl,html:not(.js) .prof .pl{stroke-dashoffset:0;transition:stroke-dashoffset 2.6s var(--ease2) .3s}
+.hero.go .prof .gl,.hero.go .prof .ang,.hero.go .prof .tx,html:not(.js) .prof .gl,html:not(.js) .prof .ang,html:not(.js) .prof .tx{opacity:1;transition:opacity 1s 2.2s}
+.prof .ph{position:absolute;right:-6%;bottom:2%;width:46%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 30px 60px -20px rgb(0 0 0 / .6)}
+.prof .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+html.js .prof .ph{transform:scale(.6);opacity:0}
+html.js .hero.go .prof .ph{transform:none;opacity:1;transition:transform 1s var(--ease) 1.4s,opacity .8s 1.4s}
+.scroll{position:absolute;left:var(--pad);bottom:28px;font:600 10.5px var(--f-b);letter-spacing:.34em;color:var(--muted);display:flex;align-items:center;gap:12px}
+.scroll::after{content:"";width:48px;height:1px;background:var(--line);background:linear-gradient(90deg,var(--sand),transparent);animation:cue 2s var(--ease2) infinite;transform-origin:left}
+@keyframes cue{0%{transform:scaleX(0)}60%{transform:scaleX(1)}100%{transform:scaleX(1);opacity:0}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.prof{width:min(86%,380px);margin-top:10px}.scroll{display:none}}
+
+/* reveal */
+html.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:calc(var(--d,0) * 90ms)}
+html.js .rv.in{opacity:1;transform:none}
+html.js .split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+html.js .split .w>span{display:inline-block;transform:translateY(105%);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i) * 55ms)}
+html.js .split.in .w>span{transform:none}
+
+/* stats strip */
+.strip{border-block:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:30px 22px}
+.strip div+div{border-left:1px solid var(--line)}
+.strip b{display:block;font:700 clamp(2rem,4vw,3rem)/1 var(--f-b);letter-spacing:-.04em}
+.strip b em{font-size:1.05em}
+.strip span{font-size:13px;color:var(--muted)}
+@media (max-width:800px){.strip .wrap{grid-template-columns:1fr 1fr}.strip div:nth-child(3){border-left:0}.strip div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* focus */
+.fc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.fc-g{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;margin-top:clamp(36px,5vw,56px)}
+.fc{position:relative;padding:30px 28px;border-radius:22px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),border-color .4s}
+.fc:hover{transform:translateY(-6px);border-color:rgb(216 185 138 / .45)}
+.fc .n{font:400 1.1rem var(--f-s);font-style:italic;color:var(--sand)}
+.fc h3{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-top:14px}
+.fc p{color:var(--muted);font-size:15.5px;margin-top:10px}
+.fc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.fc li{font-size:13px;padding:7px 12px;border-radius:999px;background:var(--bg-3)}
+.fc.big{grid-row:span 2;background:linear-gradient(160deg,#1c2a36,#121a21);display:flex;flex-direction:column}
+.fc.big svg{width:100%;max-width:300px;margin:24px 0 0 auto;opacity:.9}
+.fc.big svg path{fill:none;stroke:var(--sand);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2s var(--ease2)}
+.fc.big.in svg path{stroke-dashoffset:0}
+.fc.big svg path+path{stroke:var(--steel);transition-delay:.4s}
+@media (max-width:960px){.fc-g{grid-template-columns:1fr 1fr}.fc.big{grid-column:1/-1;grid-row:auto}}
+@media (max-width:560px){.fc-g{grid-template-columns:1fr}}
+
+/* male vs female */
+.mf-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.mf-fig{position:relative;border-radius:24px;background:#fff;border:1px solid var(--line-d);padding:clamp(18px,3vw,30px)}
+.mf-fig svg{width:100%;height:auto;overflow:visible}
+.mf-fig .face{fill:none;stroke:var(--ink-d);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:d .8s var(--ease)}
+.mf-fig .g{stroke:#9a6d33;stroke-width:1;stroke-dasharray:4 4}
+.mf-fig .arc{fill:rgb(154 109 51 / .14);stroke:#9a6d33;stroke-width:1}
+.mf-fig .v{font:600 15px var(--f-b);fill:#2f6f99}
+.seg{display:inline-flex;padding:5px;border-radius:999px;background:#fff;border:1px solid var(--line-d);margin-top:26px}
+.seg button{padding:11px 20px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted-d);transition:background .3s,color .3s}
+.seg button.on{background:var(--ink-d);color:#fff}
+.pts{list-style:none;margin-top:22px;display:grid;gap:10px}
+.pts li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:15.5px;color:var(--muted-d)}
+.pts li b{color:var(--ink-d);font-weight:600}
+.pts li::before{content:"";width:8px;height:8px;margin-top:9px;border-radius:50%;background:#9a6d33}
+.small{font-size:13px;color:var(--muted-d);margin-top:16px}
+@media (max-width:860px){.mf-g{grid-template-columns:1fr}}
+
+/* ENT explorer */
+.ent-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:start;margin-top:clamp(36px,5vw,56px)}
+.head-fig{position:sticky;top:110px;max-width:420px;width:100%;margin-inline:auto}
+.head-fig svg{width:100%;height:auto;overflow:visible}
+.head-fig .hl{fill:none;stroke:var(--muted);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.zn{fill:rgb(111 163 200 / .06);stroke:var(--steel);stroke-width:1;stroke-dasharray:4 4;opacity:.5;cursor:pointer;transition:fill .4s,opacity .4s}
+.zn:hover{opacity:.9}
+.zn.on{fill:rgb(216 185 138 / .2);stroke:var(--sand);opacity:1;stroke-dasharray:none}
+.ztxt{font:600 12px var(--f-b);letter-spacing:.16em;fill:var(--ink);pointer-events:none}
+.ent-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.ent-tabs button{padding:11px 18px;border-radius:999px;border:1px solid var(--line);font-weight:600;font-size:14px;color:var(--muted);transition:background .3s,color .3s,border-color .3s}
+.ent-tabs button.on{background:var(--sand);color:var(--bg);border-color:var(--sand)}
+.ent-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:22px;border-top:1px solid var(--line)}
+.ent-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px;display:flex;align-items:center;gap:12px;animation:fi .5s var(--ease) both;animation-delay:calc(var(--k) * 35ms)}
+.ent-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--steel);flex-shrink:0}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+@media (max-width:860px){.ent-g{grid-template-columns:1fr}.head-fig{position:relative;top:0;max-width:300px}.ent-list{grid-template-columns:1fr}}
+
+/* about */
+.ab-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,100px);align-items:start}
+.ab-img{position:sticky;top:110px}
+.ab-img .p{border-radius:200px 200px 16px 16px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-3)}
+.ab-img .p img{width:100%;height:100%;object-fit:cover}
+.ab-img .cap{margin-top:14px;font-size:13px;color:var(--muted-d)}
+.tl{list-style:none;position:relative;padding-left:120px;margin-top:34px}
+.tl::before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:1px;background:var(--line-d)}
+.tl .fill{position:absolute;left:96px;top:8px;width:1px;height:calc(100% - 16px);background:#9a6d33;transform-origin:top;transform:scaleY(var(--tp,0))}
+.tl li{position:relative;padding-bottom:30px}
+.tl li::before{content:"";position:absolute;left:-28px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:1px solid var(--muted-d);transition:background .5s,border-color .5s}
+.tl li.on::before{background:#9a6d33;border-color:#9a6d33}
+.tl .y{position:absolute;left:-120px;width:84px;text-align:right;top:2px;font:600 14px var(--f-b);color:#2f6f99}
+.tl h3{font-size:1.35rem;letter-spacing:-.02em}
+.tl p{font-size:15px;color:var(--muted-d)}
+@media (max-width:860px){.ab-g{grid-template-columns:1fr}.ab-img{position:relative;top:0;max-width:340px}.tl{padding-left:28px}.tl::before,.tl .fill{left:6px}.tl li::before{left:-26px}.tl .y{position:static;display:block;text-align:left;width:auto}}
+
+/* process */
+.pr-g{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--line)}
+.pst{padding:30px 22px 10px 0;position:relative}
+.pst+.pst{padding-left:22px;border-left:1px solid var(--line)}
+.pst .n{font:400 3.4rem/1 var(--f-s);font-style:italic;color:var(--sand)}
+.pst h3{font-size:1.4rem;margin-top:12px;letter-spacing:-.02em}
+.pst p{color:var(--muted);font-size:15px;margin-top:8px}
+.pst .bar{position:absolute;left:0;top:-1px;height:1px;width:100%;background:var(--sand);transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease);transition-delay:calc(var(--d) * 250ms)}
+.pr-g.in .bar{transform:scaleX(1)}
+@media (max-width:900px){.pr-g{grid-template-columns:1fr 1fr}.pst:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:540px){.pr-g{grid-template-columns:1fr}.pst+.pst{border-left:0;padding-left:0;border-top:1px solid var(--line)}}
+
+/* intl */
+.intl{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:clamp(28px,4vw,48px);border-radius:28px;background:linear-gradient(135deg,#1c2a36,#121a21);border:1px solid var(--line);overflow:hidden;position:relative}
+.intl h3{font-size:clamp(1.8rem,3.4vw,2.8rem)}
+.intl p{color:var(--muted);margin-top:10px;max-width:46ch}
+.globe{justify-self:end;width:min(240px,60vw);aspect-ratio:1;border-radius:50%;border:1px solid var(--line);position:relative;overflow:hidden}
+.globe i{position:absolute;inset:0;border-radius:50%;border:1px solid rgb(111 163 200 / .4)}
+.globe i:nth-child(1){transform:scaleX(.25)}.globe i:nth-child(2){transform:scaleX(.55)}.globe i:nth-child(3){transform:scaleX(.85)}
+.globe i:nth-child(4){transform:scaleY(.3)}.globe i:nth-child(5){inset:30% -5%;border-radius:50%;transform:none}
+.globe .rot{position:absolute;inset:0;animation:sp 14s linear infinite}
+.globe .rot i{transform:none}
+@keyframes sp{to{transform:rotate(360deg)}}
+.globe b{position:absolute;left:58%;top:36%;width:12px;height:12px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 0 rgb(216 185 138 / .6);animation:png 2s infinite}
+@keyframes png{70%{box-shadow:0 0 0 18px rgb(216 185 138 / 0)}100%{box-shadow:0 0 0 0 rgb(216 185 138 / 0)}}
+@media (max-width:760px){.intl{grid-template-columns:1fr}.globe{justify-self:start}}
+
+/* contact */
+.ct-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:stretch;margin-top:clamp(36px,5vw,56px)}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.row small{font:600 11px var(--f-b);letter-spacing:.24em;text-transform:uppercase;color:var(--steel);padding-top:4px}
+.row b{font-weight:500;font-size:1.05rem}
+.row a:hover{color:var(--sand)}
+.ct .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{border-radius:20px;overflow:hidden;min-height:440px;position:relative;border:1px solid var(--line)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.9) contrast(.9)}
+.disc{margin-top:26px;font-size:13px;color:var(--muted)}
+@media (max-width:860px){.ct-g{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:2px}}
+.ftr{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13.5px}
+.ftr .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;transform:translateY(120px);transition:transform .8s var(--ease)}
+.wa.on{transform:none}
+.wa .b{width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px -8px rgb(37 211 102 / .5)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.menu-open .wa{display:none}
+@media (max-width:760px){.ftr{padding-bottom:100px}body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></symbol></defs></svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Op. Dr. Muzaffer İnan ana sayfa"><span class="mk">Mİ</span><span><b>Op. Dr. Muzaffer İnan</b><small>KBB · Burun Estetiği</small></span></a>
+    <nav class="nav" aria-label="Ana menü"><a href="#odak">Odak</a><a href="#erkek">Erkek Rinoplastisi</a><a href="#kbb">KBB</a><a href="#hakkinda">Hakkında</a><a href="#iletisim">İletişim</a></nav>
+    <a class="btn btn-s" href="https://wa.me/905417641481?text=Merhaba%20Dr.%20Muzaffer%20%C4%B0nan%2C%20muayene%20randevusu%20almak%20istiyorum." target="_blank" rel="noopener">Randevu</a>
+    <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<div class="mpanel" id="mpanel">
+  <a href="#odak" style="--i:0">Odak</a><a href="#erkek" style="--i:1">Erkek Rinoplastisi</a><a href="#kbb" style="--i:2">KBB</a><a href="#hakkinda" style="--i:3">Hakkında</a><a href="#iletisim" style="--i:4">İletişim</a>
+  <a class="btn btn-wa" href="https://wa.me/905417641481" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a>
+</div>
+
+<main id="top">
+<section class="hero" id="hero">
+  <span class="grid" aria-hidden="true"></span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow fx" style="--d:0">KBB Uzmanı · İstanbul</span>
+      <h1><span class="ln"><span style="--i:0">Her burun</span></span><span class="ln"><span style="--i:1">farklı,</span></span><span class="ln"><span style="--i:2">her yüz <em>kendine</em></span></span><span class="ln"><span style="--i:3">özgü.</span></span></h1>
+      <p class="lead fx" style="--d:1">Op. Dr. Muzaffer İnan; erkek rinoplastisi, revizyon rinoplasti ve yüz estetiği alanlarında çalışan Kulak Burun Boğaz uzmanı. Burnu nefes fonksiyonuyla birlikte ele alan bir yaklaşım.</p>
+      <div class="cta fx" style="--d:2">
+        <a class="btn btn-s" href="https://wa.me/905417641481?text=Merhaba%20Dr.%20Muzaffer%20%C4%B0nan%2C%20muayene%20randevusu%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp'tan Randevu</a>
+        <a class="btn btn-o" href="#erkek">Erkek Rinoplastisi</a>
+      </div>
+      <div class="tags fx" style="--d:3"><span>Male rhinoplasty</span><span>Revizyon</span><span>Yüz estetiği</span><span>KBB</span></div>
+    </div>
+    <div class="prof" aria-hidden="true">
+      <svg viewBox="0 0 400 500">
+        <path class="pl" pathLength="1" d="M210 20 C 180 60 168 100 176 140 C 180 158 186 168 190 178 C 200 204 232 246 250 268 C 258 278 252 288 238 290 C 230 292 228 300 232 306 C 236 314 232 322 222 324 C 230 334 228 346 216 352 C 222 364 218 378 204 386 C 190 396 186 420 196 450 C 202 470 200 488 192 500"/>
+        <line class="gl" x1="190" y1="178" x2="250" y2="268"/><line class="gl" x1="232" y1="304" x2="250" y2="268"/>
+        <path class="ang" d="M232 304 L250 268 L262 292 Z"/>
+        <text class="tx" x="268" y="300">ORAN</text>
+        <line class="gl" x1="110" y1="178" x2="300" y2="178"/>
+        <text class="tx" x="112" y="170">PROFİL</text>
+      </svg>
+      <div class="ph"><img src="gorseller/portre.jpg" width="529" height="530" alt="Op. Dr. Muzaffer İnan"></div>
+    </div>
+  </div>
+  <span class="scroll" aria-hidden="true">KAYDIR</span>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="rv"><b>2011</b><span>Cerrahpaşa Tıp Fakültesi</span></div>
+    <div class="rv" style="--d:1"><b>2016</b><span>KBB uzmanlığı · Okmeydanı</span></div>
+    <div class="rv" style="--d:2"><b data-c="104" data-s="B">104B</b><span>Instagram takipçisi</span></div>
+    <div class="rv" style="--d:3"><b><em>TR · EN</em></b><span>Uluslararası hastalar</span></div>
+  </div>
+</div>
+
+<section class="sec" id="odak">
+  <div class="wrap">
+    <div class="fc-head">
+      <div><span class="eyebrow rv">Odak alanları</span><h2 class="h2 split" data-split>Burun, yüz ve <em>nefes.</em></h2></div>
+      <p class="lead rv" style="--d:2">Hangi yöntemin uygun olduğu muayene sonrasında, kişinin burun yapısına ve beklentisine göre belirlenir.</p>
+    </div>
+    <div class="fc-g">
+      <article class="fc big rv"><span class="n">01</span><h3>Erkek rinoplastisi</h3><p>Erkek yüzünde burun, daha düz bir sırt ve daha dar bir burun-dudak açısıyla planlanır. Amaç, yüzün karakterini koruyan doğal bir sonuç.</p><ul><li>Kalın cilt</li><li>Travma sonrası burun</li><li>Eğri burun</li></ul>
+        <svg viewBox="0 0 300 180" aria-hidden="true"><path pathLength="1" d="M10 20 C 60 30 100 60 150 110 C 170 130 160 150 140 150 C 130 152 132 162 138 166"/><path pathLength="1" d="M10 40 C 70 50 120 80 165 118 C 180 132 172 148 152 150"/></svg></article>
+      <article class="fc rv" style="--d:1"><span class="n">02</span><h3>Revizyon rinoplasti</h3><p>Daha önce ameliyat olmuş burunlarda estetik ya da fonksiyonel sorunların giderilmesine yönelik ikincil ameliyat.</p></article>
+      <article class="fc rv" style="--d:2"><span class="n">03</span><h3>Yüz estetiği</h3><p>Yüz oranlarını tamamlayan cerrahi ve medikal uygulamalar.</p><ul><li>Göz kapağı</li><li>Gamze</li><li>Alın daraltma</li><li>Dolgu</li></ul></article>
+      <article class="fc rv" style="--d:1"><span class="n">04</span><h3>Fonksiyonel burun</h3><p>Septum eğriliği, konka büyümesi ve nazal valf sorunları; gerektiğinde estetikle aynı seansta.</p></article>
+      <article class="fc rv" style="--d:2"><span class="n">05</span><h3>Kulak Burun Boğaz</h3><p>Sinüzit, bademcik, horlama, kulak ve ses hastalıklarında tanı ve tedavi.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="light sec" id="erkek">
+  <div class="wrap mf-g">
+    <div class="mf-fig rv"><svg viewBox="0 0 320 300" id="mfSvg" aria-label="Erkek ve kadın burun profili karşılaştırması"></svg></div>
+    <div>
+      <span class="eyebrow rv">Erkek rinoplastisi</span>
+      <h2 class="h2 split" data-split>Erkek burnu <em>farklı</em> planlanır.</h2>
+      <p class="lead rv" style="--d:2">Burun estetiğinde erkek ve kadın yüzleri için farklı oranlar hedeflenir. Düğmeye dokunun, profil ve açı değişsin.</p>
+      <div class="seg rv" style="--d:3" id="mfSeg"><button class="on" data-m="m" type="button">Erkek</button><button data-m="f" type="button">Kadın</button></div>
+      <ul class="pts rv" style="--d:3" id="mfPts"></ul>
+      <p class="small rv">Değerler literatürde sık kullanılan genel aralıklardır; her yüz için uygun oran muayenede belirlenir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kbb">
+  <div class="wrap">
+    <span class="eyebrow rv">Kulak Burun Boğaz</span>
+    <h2 class="h2 split" data-split>Bölgeye dokunun, <em>ilgilendiği</em> hastalıkları görün.</h2>
+    <div class="ent-g">
+      <div class="head-fig rv">
+        <svg viewBox="0 0 300 340" id="headSvg" aria-label="Kulak, burun ve boğaz bölgeleri">
+          <path class="hl" d="M150 28 C 96 28 70 72 70 128 C 70 180 92 222 118 244 C 132 256 168 256 182 244 C 208 222 230 180 230 128 C 230 72 204 28 150 28 Z"/>
+          <path class="hl" d="M70 120 C 56 114 50 132 54 146 C 58 160 66 166 72 162"/>
+          <path class="hl" d="M230 120 C 244 114 250 132 246 146 C 242 160 234 166 228 162"/>
+          <path class="hl" d="M150 112 C 150 142 142 158 138 168 C 144 174 156 174 162 168"/>
+          <path class="hl" d="M130 202 C 142 196 158 196 170 202"/>
+          <path class="hl" d="M122 248 L 118 320 M178 248 L 182 320"/>
+          <path class="hl" d="M110 130 C 120 124 132 124 140 130 M160 130 C 168 124 180 124 190 130"/>
+          <ellipse class="zn" data-z="kulak" cx="242" cy="142" rx="22" ry="32"/>
+          <ellipse class="zn" data-z="burun" cx="150" cy="148" rx="28" ry="38"/>
+          <ellipse class="zn" data-z="bogaz" cx="150" cy="286" rx="42" ry="30"/>
+          <text class="ztxt" x="250" y="98" text-anchor="middle">KULAK</text>
+          <text class="ztxt" x="150" y="78" text-anchor="middle">BURUN</text>
+          <text class="ztxt" x="150" y="325" text-anchor="middle">BOĞAZ</text>
+        </svg>
+      </div>
+      <div>
+        <div class="ent-tabs rv" id="entTabs" role="tablist"><button data-z="burun" type="button" class="on">Burun ve sinüs</button><button data-z="kulak" type="button">Kulak</button><button data-z="bogaz" type="button">Boğaz ve baş-boyun</button></div>
+        <ul class="ent-list" id="entList" aria-live="polite"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light sec" id="hakkinda">
+  <div class="wrap ab-g">
+    <div class="ab-img rv"><div class="p"><img src="gorseller/portre.jpg" width="529" height="530" alt="Op. Dr. Muzaffer İnan" loading="lazy"></div><p class="cap">Op. Dr. Muzaffer İnan</p></div>
+    <div>
+      <span class="eyebrow rv">Hakkında</span>
+      <h2 class="h2 split" data-split>Midyat'tan <em>İstanbul'a.</em></h2>
+      <p class="lead rv" style="--d:2">1987'de Mardin Midyat'ta doğdu. İlk ve orta öğrenimini orada tamamladıktan sonra İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi'ne yerleşti; KBB uzmanlığının ardından eğitim ve araştırma hastanelerinde çalıştı.</p>
+      <ol class="tl" id="tl">
+        <span class="fill" aria-hidden="true"></span>
+        <li><span class="y">1987</span><h3>Midyat, Mardin</h3><p>İlk ve orta öğrenim.</p></li>
+        <li><span class="y">2005–2011</span><h3>Cerrahpaşa Tıp Fakültesi</h3><p>İstanbul Üniversitesi.</p></li>
+        <li><span class="y">2011–2016</span><h3>Okmeydanı EAH</h3><p>Kulak Burun Boğaz uzmanlık eğitimi.</p></li>
+        <li><span class="y">2016–2018</span><h3>Süleymaniye EAH</h3><p>KBB uzmanı.</p></li>
+        <li><span class="y">2018–2020</span><h3>İstanbul EAH</h3><p>KBB uzmanı.</p></li>
+        <li><span class="y">Bugün</span><h3>BHT Clinic İstanbul Tema Hastanesi</h3><p>Rinoplasti, revizyon ve yüz estetiği.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="surec">
+  <div class="wrap">
+    <span class="eyebrow rv">Süreç</span>
+    <h2 class="h2 split" data-split>Muayeneden <em>kontrole.</em></h2>
+    <div class="pr-g" id="prg">
+      <div class="pst" style="--d:0"><span class="bar"></span><span class="n">01</span><h3>Muayene</h3><p>Burnun dış yapısı ve iç anatomisi değerlendirilir; nefes sorunları tespit edilir.</p></div>
+      <div class="pst" style="--d:1"><span class="bar"></span><span class="n">02</span><h3>Planlama</h3><p>Beklentiler ve yüz oranları birlikte konuşulur; yöntem netleşir.</p></div>
+      <div class="pst" style="--d:2"><span class="bar"></span><span class="n">03</span><h3>Ameliyat</h3><p>Hastane ortamında, genel anestezi altında uygulanır.</p></div>
+      <div class="pst" style="--d:3"><span class="bar"></span><span class="n">04</span><h3>Takip</h3><p>İyileşme süreci kontrollerle izlenir; uzun dönem takip yapılır.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="intl rv">
+      <div><span class="eyebrow">International patients</span><h3>Yurt dışından gelen hastalar için <em>İngilizce</em> iletişim.</h3><p>Paylaşımları ve iletişimi Türkçe ve İngilizce; ön görüşme WhatsApp üzerinden yapılabilir.</p><a class="btn btn-s" style="margin-top:22px" href="https://wa.me/905417641481?text=Hello%20Dr.%20Muzaffer%20%C4%B0nan%2C%20I%20would%20like%20to%20ask%20about%20a%20consultation." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Contact on WhatsApp</a></div>
+      <div class="globe" aria-hidden="true"><div class="rot"><i></i><i></i><i></i></div><i></i><i></i><b></b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ct" id="iletisim" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow rv">İletişim</span>
+    <h2 class="h2 split" data-split>Bir mesajla <em>başlayalım.</em></h2>
+    <div class="ct-g">
+      <div class="rv">
+        <div class="rows">
+          <div class="row"><small>WhatsApp</small><b><a href="https://wa.me/905417641481" target="_blank" rel="noopener">+90 541 764 14 81</a></b></div>
+          <div class="row"><small>Hastane</small><b>BHT Clinic İstanbul Tema Hastanesi · Atakent, 4. Cd. No: 36, 34307 Küçükçekmece / İstanbul</b></div>
+          <div class="row"><small>Online randevu</small><b><a href="https://www.doktortakvimi.com/muzaffer-inan/kulak-burun-bogaz/istanbul" target="_blank" rel="noopener">Doktor Takvimi profili →</a></b></div>
+          <div class="row"><small>Instagram</small><b><a href="https://www.instagram.com/op.dr.muzaffer_inan/" target="_blank" rel="noopener">@op.dr.muzaffer_inan</a></b></div>
+        </div>
+        <div class="cta"><a class="btn btn-wa" href="https://wa.me/905417641481?text=Merhaba%20Dr.%20Muzaffer%20%C4%B0nan%2C%20muayene%20randevusu%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp'tan Yaz</a><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&destination=%C4%B0stanbul+Tema+Hastanesi+Atakent" target="_blank" rel="noopener">Yol Tarifi</a></div>
+      </div>
+      <div class="map rv" style="--d:2"><iframe title="BHT Clinic İstanbul Tema Hastanesi konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%C4%B0stanbul%20Tema%20Hastanesi%20Atakent%20K%C3%BC%C3%A7%C3%BCk%C3%A7ekmece&z=15&output=embed"></iframe></div>
+    </div>
+    <p class="disc rv">Sitedeki bilgiler genel bilgilendirme amaçlıdır; tanı ve tedavi yerine geçmez. Uygun yöntem muayene sonrasında hekim tarafından belirlenir.</p>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap"><span>© 2026 Op. Dr. Muzaffer İnan</span><span>Koi Ajans tarafından hazırlanmıştır</span></div></footer>
+<a class="wa" id="wa" href="https://wa.me/905417641481?text=Merhaba%20Dr.%20Muzaffer%20%C4%B0nan%2C%20muayene%20randevusu%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp'tan randevu al"><span class="b"><svg><use href="#wa"/></svg></span></a>
+
+<script>
+document.documentElement.classList.add('js');
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const NS = 'http://www.w3.org/2000/svg';
+requestAnimationFrame(() => setTimeout(() => $('#hero').classList.add('go'), 60));
+setTimeout(() => $('#wa').classList.add('on'), 1500);
+
+/* split */
+$$('[data-split]').forEach(h => { let i = 0; const walk = n => [...n.childNodes].map(c => c.nodeType === 3 ? c.textContent.split(/(\s+)/).map(w => w.trim() ? `<span class="w"><span style="--i:${i++}">${w}</span></span>` : w).join('') : `<${c.tagName.toLowerCase()}>${walk(c)}</${c.tagName.toLowerCase()}>`).join(''); h.innerHTML = walk(h); });
+
+/* male vs female profile */
+const MF = {
+  m: { tip: [228, 176], ang: 95, pts: [['Burun-dudak açısı', 'yaklaşık 90–95°'], ['Burun sırtı', 'daha düz, belirgin'], ['Burun ucu', 'daha az kalkık, güçlü'], ['Genel hedef', 'karakteri koruyan doğal görünüm']] },
+  f: { tip: [234, 162], ang: 105, pts: [['Burun-dudak açısı', 'yaklaşık 95–110°'], ['Burun sırtı', 'hafif kavisli olabilir'], ['Burun ucu', 'biraz daha kalkık'], ['Genel hedef', 'yumuşak ve dengeli hatlar']] }
+};
+const mf = $('#mfSvg');
+const drawMF = k => { const d = MF[k], [tx, ty] = d.tip, sn = [196, 200], lip = [200, 236];
+  const dorsum = k === 'm' ? `M120 20 C 132 60 150 100 ${tx - 8} ${ty - 22}` : `M120 20 C 130 60 160 96 ${tx - 10} ${ty - 18}`;
+  const a1 = Math.atan2(ty + 14 - sn[1], tx - 6 - sn[0]), a2 = Math.atan2(lip[1] - sn[1], lip[0] - sn[0]);
+  const p1 = [sn[0] + Math.cos(a1) * 34, sn[1] + Math.sin(a1) * 34], p2 = [sn[0] + Math.cos(a2) * 34, sn[1] + Math.sin(a2) * 34];
+  mf.innerHTML = `<path class="face" d="${dorsum} C ${tx} ${ty - 10} ${tx + 4} ${ty + 6} ${tx - 6} ${ty + 14} C ${tx - 14} ${ty + 20} 204 196 ${sn[0]} ${sn[1]} C 192 210 198 218 ${lip[0]} ${lip[1]} C 206 246 200 256 190 262 C 196 272 194 284 184 296"/>
+    <line class="g" x1="${sn[0]}" y1="${sn[1]}" x2="${sn[0] + Math.cos(a1) * 80}" y2="${sn[1] + Math.sin(a1) * 80}"/><line class="g" x1="${sn[0]}" y1="${sn[1]}" x2="${sn[0] + Math.cos(a2) * 80}" y2="${sn[1] + Math.sin(a2) * 80}"/>
+    <path class="arc" d="M${sn[0]} ${sn[1]} L${p1[0]} ${p1[1]} A34 34 0 0 1 ${p2[0]} ${p2[1]} Z"/><text class="v" x="${sn[0] + 44}" y="${sn[1] + 14}">~${d.ang}°</text>`;
+  $('#mfPts').innerHTML = d.pts.map(p => `<li><span><b>${p[0]}:</b> ${p[1]}</span></li>`).join(''); };
+drawMF('m');
+$('#mfSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; $$('#mfSeg button').forEach(x => x.classList.toggle('on', x === b)); drawMF(b.dataset.m); });
+
+/* ENT explorer */
+const ENT = {
+  burun: ['Burun tıkanıklığı', 'Burun eğriliği', 'Septum deviasyonu', 'Konka büyümesi', 'Nazal valv yetmezliği', 'Sinüzit', 'Nazal polip', 'Saman nezlesi (alerjik rinit)', 'Burun kanaması', 'Burun kırıkları', 'Koku kaybı (anosmi)', 'Geniz akıntısı'],
+  kulak: ['Orta kulak iltihabı', 'Kulak zarı delinmesi', 'Orta kulakta sıvı toplanması', 'Kulak çınlaması (tinnitus)', 'Baş dönmeleri', 'İşitme bozuklukları', 'Kronik otit', 'Kolesteatom', 'Otoskleroz', 'Kepçe kulak', 'Kulak kiri', 'Dış kulak iltihabı'],
+  bogaz: ['Bademcik hastalığı', 'Geniz eti', 'Horlama', 'Uyku apnesi', 'Ses kısıklığı', 'Faranjit', 'Tükürük bezi kist ve tümörleri', 'Baş ve boyun kanserleri', 'Gırtlak kanseri', 'Yüz felci', 'Ağız kokusu', 'Çocuk KBB hastalıkları']
+};
+const entList = $('#entList');
+const showEnt = z => { $$('#entTabs button').forEach(b => b.classList.toggle('on', b.dataset.z === z)); $$('.zn').forEach(e => e.classList.toggle('on', e.dataset.z === z)); entList.innerHTML = ENT[z].map((x, k) => `<li style="--k:${k}">${x}</li>`).join(''); };
+showEnt('burun');
+$('#entTabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showEnt(b.dataset.z); });
+$('#headSvg').addEventListener('click', e => { const z = e.target.closest('.zn'); if (z) showEnt(z.dataset.z); });
+
+/* counters */
+const count = el => { if (reduce) return; const to = +el.dataset.c, s = el.dataset.s, t0 = performance.now(); const f = t => { const p = Math.min(1, (t - t0) / 1300); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))) + s; if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); };
+
+/* observer */
+const io = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return; const t = en.target; t.classList.add('in'); const c = t.querySelector('[data-c]'); if (c) count(c); io.unobserve(t); }), { threshold: .15, rootMargin: '0px 0px -6% 0px' });
+$$('.rv, [data-split], #prg').forEach(el => io.observe(el));
+
+/* menu */
+const burger = $('#burger');
+const closeMenu = () => { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); };
+burger.onclick = () => { const o = document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded', o); };
+$$('#mpanel a').forEach(a => a.addEventListener('click', closeMenu));
+addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+/* scroll */
+const hdr = $('#hdr'), tl = $('#tl'), tlis = $$('#tl li'), secs = $$('.nav a').map(a => [a, $(a.getAttribute('href'))]);
+let lastY = 0, tk = false;
+const onScroll = () => { const y = scrollY, H = innerHeight;
+  hdr.classList.toggle('solid', y > 30); hdr.classList.toggle('hide', y > lastY && y > H && !document.body.classList.contains('menu-open')); lastY = y;
+  const r = tl.getBoundingClientRect(); tl.style.setProperty('--tp', reduce ? 1 : Math.min(1, Math.max(0, (H * .6 - r.top) / r.height))); tlis.forEach(li => li.classList.toggle('on', reduce || li.getBoundingClientRect().top < H * .6));
+  let act = null; secs.forEach(([a, s]) => { if (s.getBoundingClientRect().top < H * .4) act = a; }); secs.forEach(([a]) => a.classList.toggle('act', a === act));
+  tk = false; };
+addEventListener('scroll', () => { if (!tk) { tk = true; requestAnimationFrame(onScroll); } }, { passive: true });
+onScroll();
+</script>
+</body>
+</html>
