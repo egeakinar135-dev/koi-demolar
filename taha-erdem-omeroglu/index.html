@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taha Erdem Ömeroğlu · Fashion Designer</title>
+<meta name="description" content="Taha Erdem Ömeroğlu, moda tasarımcısı. Murder Underwater koleksiyonu, konsept çalışmalar ve yaratıcı yönetim. Somewhere between past lives and imagined tomorrows.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0c0a09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0a09; --ink2:#161311; --ink3:#211c19; --bone:#efe9df; --mut:#9a918a; --line:rgb(239 233 223 / .14);
+  --red:#8e1b1b; --red2:#b3271f; --denim:#7fa3c9;
+  --ease:cubic-bezier(.22,1,.36,1); --ease2:cubic-bezier(.76,0,.24,1); --slow:cubic-bezier(.16,1,.3,1);
+  --f-d:'Bodoni Moda',Didot,Georgia,serif; --f-b:'Inter Tight',system-ui,sans-serif;
+  --pad:clamp(16px,4.5vw,64px); --hh:64px;
+}
+@media (min-width:960px){:root{--hh:76px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{background:var(--ink);color:var(--bone);font:300 16px/1.7 var(--f-b);overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:500;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--f-d);font-weight:400;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+em{font-style:italic}
+.wrap{max-width:1400px;margin-inline:auto;padding-inline:var(--pad)}
+.sec{padding-block:clamp(90px,13vw,190px)}
+.mono{font:500 11px/1.4 var(--f-b);letter-spacing:.28em;text-transform:uppercase}
+.lbl{display:flex;align-items:center;gap:14px;color:var(--mut)}
+.lbl b{font-weight:500;color:var(--bone)}
+.lbl::after{content:"";flex:1;height:1px;background:var(--line);max-width:120px}
+.h2{font-size:clamp(2.8rem,7.4vw,7rem);margin-top:22px}
+.h2 em{color:var(--red2)}
+.lead{color:var(--mut);max-width:48ch;margin-top:22px;font-size:clamp(1rem,1.25vw,1.1rem)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:14px;padding:18px 30px;border:1px solid var(--bone);font:500 11.5px var(--f-b);letter-spacing:.24em;text-transform:uppercase;overflow:hidden;isolation:isolate;transition:color .6s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--bone);z-index:-1;transform:translateY(101%);transition:transform .7s var(--ease)}
+.btn:hover{color:var(--ink)}
+.btn:hover::before{transform:none}
+.btn svg{width:16px;height:16px}
+
+/* cursor */
+.cur{position:fixed;left:0;top:0;z-index:450;pointer-events:none;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--bone);mix-blend-mode:difference;transition:width .5s var(--ease),height .5s var(--ease),margin .5s var(--ease);display:none}
+.cur span{position:absolute;inset:0;display:grid;place-items:center;font:500 10px var(--f-b);letter-spacing:.2em;color:var(--ink);opacity:0;transition:opacity .3s}
+.cur.view{width:88px;height:88px;margin:-44px 0 0 -44px;mix-blend-mode:normal}
+.cur.view span{opacity:1}
+@media (hover:hover) and (pointer:fine){.cur{display:block}}
+
+/* intro: curtain */
+#intro{display:none}
+html.js #intro{display:block;position:fixed;inset:0;z-index:400;pointer-events:none}
+#intro .c{position:absolute;top:0;bottom:0;width:50.5%;background:repeating-linear-gradient(90deg,#6e1212 0 18px,#8e1b1b 18px 34px,#7a1515 34px 52px);box-shadow:inset 0 0 120px rgb(0 0 0 / .6);transition:transform 1.6s var(--ease2)}
+#intro .l{left:0;transform-origin:left}#intro .r{right:0}
+#intro.open .l{transform:translateX(-102%)}#intro.open .r{transform:translateX(102%)}
+#intro .t{position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:2;transition:opacity .6s}
+#intro.open .t{opacity:0}
+#intro .t b{display:block;font:400 italic clamp(2rem,6vw,4rem)/1 var(--f-d);color:var(--bone);opacity:0;animation:inU 1s var(--ease) .2s forwards}
+#intro .t small{display:block;margin-top:16px;opacity:0;animation:inU 1s var(--ease) .5s forwards}
+@keyframes inU{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;height:var(--hh);z-index:60;display:flex;align-items:center;mix-blend-mode:difference;transition:transform .7s var(--ease)}
+.hdr.hide{transform:translateY(-100%)}
+.hdr .wrap{display:flex;align-items:center;gap:30px;width:100%}
+.logo{font:500 italic 1.35rem var(--f-d);letter-spacing:-.01em;flex-shrink:0}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{position:relative;font:500 11px var(--f-b);letter-spacing:.24em;text-transform:uppercase;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.nav a:hover::after,.nav a.act::after{transform:scaleX(1);transform-origin:left}
+.burger{display:none;margin-left:auto;font:500 11px var(--f-b);letter-spacing:.24em;text-transform:uppercase;padding:10px 0}
+.mpanel{position:fixed;inset:0;z-index:55;background:var(--red);display:flex;flex-direction:column;justify-content:center;padding:100px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease2)}
+.mpanel a{font:400 italic clamp(2.6rem,12vw,4.4rem)/1.15 var(--f-d);opacity:0;transform:translateY(30px);transition:transform .8s var(--ease),opacity .8s}
+.menu-open{overflow:hidden}
+.menu-open .mpanel{clip-path:inset(0 0 0 0)}
+.menu-open .mpanel a{opacity:1;transform:none;transition-delay:calc(.3s + var(--i) * 70ms)}
+@media (max-width:900px){.nav{display:none}.burger{display:block}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:calc(var(--hh) + 20px) 0 30px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.hero .top{display:flex;justify-content:space-between;gap:20px;color:var(--mut)}
+.hero .name{position:relative;z-index:3;font:400 clamp(3.6rem,13.6vw,15rem)/.86 var(--f-d);letter-spacing:-.045em;text-transform:none;margin-top:auto}
+.hero .name .row{display:block;overflow:hidden;padding:.16em 0 .08em;margin-top:-.16em}
+.hero .name .row:nth-child(2){padding-left:12vw}
+.hero .name .ch{display:inline-block}
+html.js .hero .name .ch{transform:translateY(110%) rotate(6deg)}
+html.js .hero.go .name .ch{transform:none;transition:transform 1.4s var(--slow);transition-delay:calc(var(--i) * 45ms + .1s)}
+.hero .name em{color:var(--red2)}
+.hero .ph{position:absolute;z-index:2;right:var(--pad);top:calc(var(--hh) + 6vh);width:clamp(240px,27vw,420px);aspect-ratio:3/4;overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.2) translateY(var(--py,0));transition:transform 2.4s var(--slow)}
+html.js .hero .ph{clip-path:inset(100% 0 0 0)}
+html.js .hero.go .ph{clip-path:inset(0 0 0 0);transition:clip-path 1.8s var(--ease2) .5s}
+.hero.go .ph img{transform:scale(1) translateY(var(--py,0))}
+.hero .tag{position:absolute;z-index:3;right:var(--pad);top:calc(var(--hh) + 6vh + clamp(240px,27vw,420px) * 4 / 3 + 16px);width:clamp(240px,27vw,420px);display:flex;justify-content:space-between;color:var(--mut)}
+.hero .bot{position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.hero .bot p{font:400 italic clamp(1.2rem,2vw,1.7rem)/1.3 var(--f-d);max-width:30ch}
+html.js .hero .fx{opacity:0;transform:translateY(16px)}
+html.js .hero.go .fx{opacity:1;transform:none;transition:opacity 1.2s,transform 1.4s var(--ease);transition-delay:calc(var(--d) * 120ms + 1.1s)}
+@media (max-width:900px){.hero .ph{position:relative;right:auto;top:auto;width:72%;margin:30px 0 0 auto}.hero .tag{position:relative;right:auto;top:auto;width:72%;margin:10px 0 0 auto}.hero .name{margin-top:-8vw}.hero .name .row:nth-child(2){padding-left:6vw}}
+
+/* reveal */
+html.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease),transform 1.4s var(--ease);transition-delay:calc(var(--d,0) * 100ms)}
+html.js .rv.in{opacity:1;transform:none}
+.sh{display:block;overflow:hidden;padding-bottom:.06em}
+.sh>span{display:inline-block}
+html.js .rvt .sh>span{transform:translateY(110%)}
+html.js .rvt.in .sh>span{transform:none;transition:transform 1.3s var(--slow);transition-delay:calc(var(--i,0) * 120ms)}
+
+/* manifesto */
+.mf{max-width:1180px;margin-inline:auto}
+.mf p{font:400 clamp(2rem,4.6vw,4.4rem)/1.18 var(--f-d);letter-spacing:-.02em}
+.mf .w{display:inline-block;opacity:.12;transition:opacity .5s,color .5s}
+.mf .w.on{opacity:1}
+.mf em .w.on{color:var(--red2)}
+.mf .src{display:flex;justify-content:space-between;gap:20px;margin-top:40px;color:var(--mut)}
+
+/* collection horizontal */
+.col{position:relative;background:var(--bone);color:var(--ink)}
+.col-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.col-head{display:flex;justify-content:space-between;align-items:end;gap:30px;padding-inline:var(--pad)}
+.col-head .h2{font-size:clamp(2.6rem,6.6vw,6.4rem);margin-top:10px}
+.col-head .h2 em{color:#1f3c63}
+.col-head .lbl{color:#6d655e}.col-head .lbl b{color:var(--ink)}.col-head .lbl::after{background:rgb(12 10 9 / .2)}
+.col-count{font:400 italic clamp(2rem,4vw,3.4rem) var(--f-d);color:#6d655e;white-space:nowrap}
+.col-count b{font-weight:400;color:var(--ink)}
+.col-track{display:flex;align-items:flex-end;gap:clamp(16px,2vw,30px);padding:clamp(30px,4vw,50px) var(--pad) 0;will-change:transform}
+.look{flex-shrink:0;position:relative}
+.look .im{height:min(56svh,560px);overflow:hidden;background:#d9d2c6}
+.look img{height:100%;width:auto;object-fit:cover;transition:transform 1.4s var(--slow)}
+.look:hover img{transform:scale(1.05)}
+.look figcaption{display:flex;justify-content:space-between;gap:20px;margin-top:12px;color:#6d655e}
+.look figcaption b{color:var(--ink);font-weight:500}
+.look:nth-child(even) .im{height:min(46svh,460px)}
+.col-txt{flex-shrink:0;width:min(420px,80vw);align-self:center;padding-right:2vw}
+.col-txt p{font:400 italic clamp(1.4rem,2.2vw,2rem)/1.35 var(--f-d)}
+.col-txt ul{list-style:none;margin-top:26px;border-top:1px solid rgb(12 10 9 / .18)}
+.col-txt li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgb(12 10 9 / .18);font-size:14.5px}
+.col-txt li span{color:#6d655e}
+.col-bar{height:1px;background:rgb(12 10 9 / .16);margin:34px var(--pad) 0;position:relative}
+.col-bar i{position:absolute;left:0;top:-1px;height:3px;width:100%;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:left}
+@media (max-width:899px){.col{height:auto!important}.col-pin{position:relative;height:auto;padding-block:90px}.col-track{transform:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px;scroll-padding-inline:var(--pad)}.col-track::-webkit-scrollbar{display:none}.look{scroll-snap-align:start}.look .im,.look:nth-child(even) .im{height:62vh}.col-bar{display:none}.col-head{flex-direction:column;align-items:flex-start}}
+
+/* backstage */
+.bs{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(20px,3vw,40px);align-items:center}
+.bs .a{overflow:hidden}
+.bs .a img{width:100%;transform:scale(1.15) translateY(var(--py,0))}
+.bs .b{overflow:hidden;margin-top:30px}
+.bs .b img{width:100%}
+.bs blockquote{font:400 italic clamp(1.6rem,2.8vw,2.6rem)/1.28 var(--f-d)}
+.bs blockquote::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--red2);margin-bottom:10px}
+.bs .src{margin-top:20px;color:var(--mut)}
+.wipe{clip-path:inset(0 100% 0 0)}
+html:not(.js) .wipe{clip-path:none}
+.wipe{transition:clip-path 1.6s var(--ease2)}
+.wipe.in{clip-path:inset(0 0 0 0)}
+@media (max-width:900px){.bs{grid-template-columns:1fr}}
+
+/* worn by */
+.wb{border-block:1px solid var(--line)}
+.wb-row{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:baseline;padding:clamp(20px,2.6vw,34px) 0;border-bottom:1px solid var(--line);transition:padding .7s var(--ease),color .5s}
+.wb-row:last-child{border-bottom:0}
+.wb-row:hover{padding-left:20px;color:var(--red2)}
+.wb-row h3{font-size:clamp(2rem,5vw,4.6rem);font-style:italic}
+.wb-row .n{color:var(--mut)}
+.wb-row .k{color:var(--mut);text-align:right}
+@media (max-width:700px){.wb-row{grid-template-columns:40px 1fr}.wb-row .k{grid-column:2;text-align:left}}
+
+/* concepts */
+.cp-head{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+.cp-tabs{display:flex;flex-direction:column;gap:2px;margin-top:40px;border-top:1px solid var(--line)}
+.cp-tabs button{display:grid;grid-template-columns:50px 1fr;gap:14px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);text-align:left;color:var(--mut);transition:color .5s,padding .6s var(--ease)}
+.cp-tabs button:hover{padding-left:10px}
+.cp-tabs button.on{color:var(--bone)}
+.cp-tabs button b{font:400 italic clamp(1.3rem,2vw,1.8rem)/1.25 var(--f-d)}
+.cp-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);margin-top:clamp(40px,5vw,60px);align-items:start}
+.cp-stage{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--ink2)}
+.cp-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 0 100% 0);transform:scale(1.08);transition:clip-path 1.2s var(--ease2),transform 2s var(--slow)}
+.cp-stage img.on{clip-path:inset(0 0 0 0);transform:none;z-index:2}
+.cp-stage img.prev{clip-path:inset(0 0 0 0);z-index:1}
+.cp-thumbs{display:flex;gap:10px;margin-top:12px}
+.cp-thumbs button{flex:1;aspect-ratio:4/5;overflow:hidden;opacity:.35;transition:opacity .5s}
+.cp-thumbs button.on{opacity:1}
+.cp-thumbs img{width:100%;height:100%;object-fit:cover}
+.cp-note{margin-top:28px;color:var(--mut);font-size:13.5px;max-width:44ch}
+.cp-note b{color:var(--bone);font-weight:500}
+@media (max-width:900px){.cp-head,.cp-g{grid-template-columns:1fr}}
+
+/* seen together */
+.st{background:var(--red);color:var(--bone);position:relative;overflow:hidden}
+.st .h2 em{color:#f3c9b6}
+.st-g{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.4vw,18px);margin-top:clamp(40px,5vw,70px);align-items:start}
+.st-g figure{overflow:hidden}
+.st-g img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--slow)}
+.st-g figure:hover img{transform:scale(1.05)}
+.st-g .a{grid-column:1/5;aspect-ratio:3/4;margin-top:80px}
+.st-g .b{grid-column:5/9;aspect-ratio:3/4}
+.st-g .c{grid-column:9/13;aspect-ratio:3/4;margin-top:140px}
+.st-g .t{grid-column:1/7;align-self:center}
+.st-g .d{grid-column:7/10;aspect-ratio:3/4;margin-top:-60px}
+.st-g .e{grid-column:10/13;aspect-ratio:3/4}
+.st .lead{color:#f0d4c8}
+.st .lbl{color:#f0d4c8}.st .lbl b{color:var(--bone)}
+@media (max-width:900px){.st-g{grid-template-columns:1fr 1fr}.st-g>*{grid-column:auto!important;margin-top:0!important}.st-g .t{grid-column:1/-1!important}}
+
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,110px);align-items:center}
+.ab-ph{position:relative}
+.ab-ph .a{aspect-ratio:3/4;overflow:hidden}
+.ab-ph .a img{width:100%;height:100%;object-fit:cover}
+.ab-ph .b{position:absolute;left:-10%;bottom:-8%;width:42%;aspect-ratio:3/4;overflow:hidden;border:6px solid var(--ink)}
+.ab-ph .b img{width:100%;height:100%;object-fit:cover}
+.tl{list-style:none;margin-top:34px;border-top:1px solid var(--line)}
+.tl li{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tl li span{color:var(--mut)}
+.tl li p{font-size:15.5px}
+.tl li p em{font-family:var(--f-d);font-size:1.15em}
+@media (max-width:900px){.ab{grid-template-columns:1fr}.ab-ph{max-width:420px;margin:0 auto 40px}.tl li{grid-template-columns:1fr;gap:4px}}
+
+/* off duty marquee */
+.od{overflow:hidden;padding-block:20px}
+.od .run{display:flex;gap:18px;width:max-content;animation:mq 70s linear infinite}
+.od:hover .run{animation-play-state:paused}
+.od figure{width:clamp(200px,20vw,300px);flex-shrink:0}
+.od figure:nth-child(odd){transform:translateY(30px)}
+.od .im{aspect-ratio:3/4;overflow:hidden}
+.od img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .7s,transform 1.2s var(--slow)}
+.od figure:hover img{filter:none;transform:scale(1.04)}
+.od figcaption{margin-top:10px;color:var(--mut)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* contact */
+.ct{text-align:center;position:relative;overflow:hidden}
+.ct .big{display:block;font:400 clamp(3.4rem,12vw,13rem)/.9 var(--f-d);letter-spacing:-.045em;margin-top:30px;transition:color .6s}
+.ct .big em{color:var(--red2)}
+.ct a.big:hover{color:var(--red2)}
+.ct .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:50px}
+.ct .lead{margin-inline:auto}
+.ftr{border-top:1px solid var(--line);padding:24px 0}
+.ftr .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--mut)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:300;background:rgb(12 10 9 / .96);display:grid;place-items:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-height:86svh;width:auto;transform:scale(.96);transition:transform .7s var(--ease)}
+.lb.open img{transform:none}
+.lb .x{position:absolute;top:20px;right:24px}
+.lb .cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:var(--mut)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  html.js #intro{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="arr" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol></defs></svg>
+<div class="cur" id="cur" aria-hidden="true"><span>VIEW</span></div>
+<div id="intro" aria-hidden="true"><div class="c l"></div><div class="c r"></div><div class="t"><div><b>Taha Erdem Ömeroğlu</b><small class="mono">Fashion designer</small></div></div></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Taha Erdem Ömeroğlu ana sayfa">T.E.Ö.</a>
+    <nav class="nav" aria-label="Ana menü"><a href="#koleksiyon">Murder Underwater</a><a href="#konsept">Konsept</a><a href="#seen">Seen Together</a><a href="#hakkinda">Hakkında</a><a href="#iletisim">İletişim</a></nav>
+    <button class="burger" id="burger" aria-expanded="false">Menü</button>
+  </div>
+</header>
+<div class="mpanel" id="mpanel">
+  <a href="#koleksiyon" style="--i:0">Murder Underwater</a><a href="#konsept" style="--i:1">Konsept</a><a href="#seen" style="--i:2">Seen Together</a><a href="#hakkinda" style="--i:3">Hakkında</a><a href="#iletisim" style="--i:4">İletişim</a>
+</div>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="wrap top mono fx" style="--d:0"><span>Fashion designer</span><span>Portfolio · 2026</span></div>
+  <figure class="ph"><img src="gorseller/taha-sahne.jpg" width="1125" height="1500" alt="Taha Erdem Ömeroğlu kırmızı perde önünde beyaz kıyafetle" fetchpriority="high"></figure>
+  <div class="wrap">
+    <h1 class="name" aria-label="Taha Erdem Ömeroğlu" id="name"><span class="row" data-t="Taha Erdem"></span><span class="row" data-t="Ömeroğlu" data-em="1"></span></h1>
+    <div class="bot">
+      <p class="fx" style="--d:1">Somewhere between past lives and imagined tomorrows.</p>
+      <a class="btn fx" style="--d:3" href="#koleksiyon">Koleksiyonu Gör <svg><use href="#arr"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap mf">
+    <div class="lbl mono rv"><b>01</b>Manifesto</div>
+    <p id="mf" style="margin-top:34px">"Viral olmak için tasarlamak" gibi bir motivasyonum yok. Ben koleksiyonun bütününe odaklanıyorum; hızın içinde kaybolmak yerine <em>zamana dayanan</em> bir üretim dili kurmaya çalışıyorum.</p>
+    <div class="src mono rv"><span>— Taha Erdem Ömeroğlu</span><span>Manchette TR röportajından</span></div>
+  </div>
+</section>
+
+<section class="col" id="koleksiyon">
+  <div class="col-pin">
+    <div class="col-head">
+      <div><div class="lbl mono"><b>02</b>Koleksiyon</div><h2 class="h2">Murder <em>Underwater</em></h2></div>
+      <div class="col-count"><b id="lkN">01</b> / 06</div>
+    </div>
+    <div class="col-track" id="track">
+      <div class="col-txt"><p>Tamamen kendi hikâyesinden doğan, bilinçli bir üretim süreci. Terzilik, kumaş işçiliği ve hikâye anlatıcılığına dayanan bir tasarım dili.</p>
+        <ul><li><span>Malzeme</span>Denim, saten, inci detaylar</li><li><span>Çıkış</span>Podyum · Defile</li><li><span>Basın</span>Manchette TR</li></ul></div>
+      <figure class="look" data-v="Look 01"><div class="im"><img src="gorseller/look-1.jpg" width="549" height="1500" alt="Murder Underwater look 01, inci iskelet detaylı denim takım" loading="lazy"></div><figcaption class="mono"><b>Look 01</b><span>Denim · inci</span></figcaption></figure>
+      <figure class="look" data-v="Look 02"><div class="im"><img src="gorseller/look-2.jpg" width="994" height="1500" alt="Murder Underwater look 02, mavi etekli elbise" loading="lazy"></div><figcaption class="mono"><b>Look 02</b><span>Denim korse · etek</span></figcaption></figure>
+      <figure class="look" data-v="Look 03"><div class="im"><img src="gorseller/look-3.jpg" width="560" height="1500" alt="Murder Underwater look 03, yamalı denim takım" loading="lazy"></div><figcaption class="mono"><b>Look 03</b><span>Yamalı denim</span></figcaption></figure>
+      <figure class="look" data-v="Look 04"><div class="im"><img src="gorseller/look-4.jpg" width="1006" height="1500" alt="Murder Underwater look 04, bakır saten palto" loading="lazy"></div><figcaption class="mono"><b>Look 04</b><span>Saten palto</span></figcaption></figure>
+      <figure class="look" data-v="Look 05"><div class="im"><img src="gorseller/look-5.jpg" width="705" height="1500" alt="Murder Underwater look 05, bakır ve beyaz ceket" loading="lazy"></div><figcaption class="mono"><b>Look 05</b><span>Saten · denim</span></figcaption></figure>
+      <figure class="look" data-v="Look 06"><div class="im"><img src="gorseller/look-6.jpg" width="622" height="1500" alt="Murder Underwater look 06, beyaz ve yamalı denim" loading="lazy"></div><figcaption class="mono"><b>Look 06</b><span>Beyaz · yamalı denim</span></figcaption></figure>
+    </div>
+    <div class="col-bar"><i id="colBar"></i></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap bs">
+    <div>
+      <div class="a wipe" id="bsA"><img src="gorseller/backstage-1.jpg" width="1500" height="966" alt="Defile kulisi, Taha Erdem Ömeroğlu bir modelle" loading="lazy"></div>
+      <div class="b wipe" id="bsB"><img src="gorseller/backstage-2.jpg" width="1500" height="485" alt="Kulis, şapkalı modeller" loading="lazy"></div>
+    </div>
+    <div>
+      <div class="lbl mono rv"><b>03</b>Kulis</div>
+      <blockquote class="rv" style="--d:1;margin-top:30px">Çizdiğim şeylerin gerçekten hayata geçebildiğini gördüğüm noktada, kendimi tamamen bu dünyanın içine attım.</blockquote>
+      <p class="src mono rv" style="--d:2">Manchette TR · Röportaj: Lâl Ece Ersoy &amp; Irmak Sandal</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="lbl mono rv"><b>04</b>Worn by</div>
+    <h2 class="h2 rv rvt"><span class="sh"><span>O denim takım,</span></span><span class="sh"><span style="--i:1"><em>üç farklı sahnede.</em></span></span></h2>
+    <div class="wb" style="margin-top:50px">
+      <div class="wb-row rv"><span class="mono n">i.</span><h3>Hande Yener</h3><span class="mono k">Sahne</span></div>
+      <div class="wb-row rv"><span class="mono n">ii.</span><h3>Baran Mengüç</h3><span class="mono k">Sahne</span></div>
+      <div class="wb-row rv"><span class="mono n">iii.</span><h3>Mina Solak</h3><span class="mono k">Manifest</span></div>
+    </div>
+    <p class="lead rv">Aynı denim takımın tamamen farklı karakterlerde bu kadar organik durması koleksiyonun en çok konuşulan anlarından biri oldu. Taha daha önce de celebrity styling projelerinde yer aldı.</p>
+  </div>
+</section>
+
+<section class="sec" id="konsept" style="padding-top:0">
+  <div class="wrap">
+    <div class="cp-head">
+      <div><div class="lbl mono rv"><b>05</b>Konsept serileri</div><h2 class="h2 rv rvt"><span class="sh"><span>Past lives,</span></span><span class="sh"><span style="--i:1"><em>imagined tomorrows.</em></span></span></h2></div>
+      <p class="lead rv" style="--d:2">Yaratıcı yönetim ve tasarımı Taha'ya ait; görseller yapay zekâ ile birlikte üretilmiş konsept çalışmalar.</p>
+    </div>
+    <div class="cp-g">
+      <div>
+        <div class="cp-tabs rv" id="cpTabs">
+          <button class="on" type="button" data-s="0"><span class="mono">I</span><b>"There is always something left to adjust."</b></button>
+          <button type="button" data-s="1"><span class="mono">II</span><b>"What if the mirror remembers more than we do?"</b></button>
+          <button type="button" data-s="2"><span class="mono">III</span><b>"I'll take my couch over a crowded bar any night."</b></button>
+        </div>
+        <p class="cp-note rv"><b>Creative direction &amp; design by Taha Erdem Ömeroğlu.</b> Created in collaboration with AI.</p>
+      </div>
+      <div class="rv" style="--d:1">
+        <div class="cp-stage" id="cpStage"></div>
+        <div class="cp-thumbs" id="cpThumbs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="st sec" id="seen">
+  <div class="wrap">
+    <div class="lbl mono rv"><b>06</b>Etkinlik</div>
+    <div class="st-g">
+      <div class="t"><h2 class="h2 rv rvt"><span class="sh"><span>Seen</span></span><span class="sh"><span style="--i:1"><em>together.</em></span></span></h2><p class="lead rv" style="--d:2">"Yine inanılmaz bir ekip, Seen Together ve izleyici." Yaratıcılar topluluğu ANTTS ile birlikte; kırmızı perdeler, mühürlü davetiyeler ve uzun bir akşam yemeği.</p><p class="mono rv" style="--d:3;margin-top:20px;color:#f0d4c8">Team @anttsglobal · Photo @mertgrkm</p></div>
+      <figure class="d rv"><img src="gorseller/seen-3.jpg" width="1125" height="1500" alt="Mühürlü davetiye" loading="lazy"></figure>
+      <figure class="e rv" style="--d:1"><img src="gorseller/taha-sahne-2.jpg" width="1125" height="1500" alt="Taha Erdem Ömeroğlu kırmızı perde önünde" loading="lazy"></figure>
+      <figure class="a rv"><img src="gorseller/seen-2.jpg" width="1125" height="1500" alt="Etkinlikte konuşma" loading="lazy"></figure>
+      <figure class="b rv" style="--d:1"><img src="gorseller/seen-1.jpg" width="1130" height="1500" alt="Seen Together akşam yemeği" loading="lazy"></figure>
+      <figure class="c rv" style="--d:2"><img src="gorseller/seen-4.jpg" width="1125" height="1500" alt="Etkinlik basılı materyalleri" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hakkinda">
+  <div class="wrap ab">
+    <div class="ab-ph rv">
+      <div class="a"><img src="gorseller/aksam.jpg" width="1125" height="1500" alt="Taha Erdem Ömeroğlu" loading="lazy"></div>
+      <div class="b"><img src="gorseller/balkon.jpg" width="1125" height="1500" alt="Taha balkonda" loading="lazy"></div>
+    </div>
+    <div>
+      <div class="lbl mono rv"><b>07</b>Hakkında</div>
+      <h2 class="h2 rv rvt"><span class="sh"><span>Bir öğretmenin</span></span><span class="sh"><span style="--i:1"><em>tek cümlesiyle.</em></span></span></h2>
+      <p class="lead rv" style="--d:2">Ortaokulda bir öğretmeninin "Sen tasarımla ilgilenmelisin, bir şeyler üretiyorsun." demesi ilk kırılma noktalarından biri oldu. On altı-on yedi yaşlarında tasarıma olan ilgisi iyice arttı.</p>
+      <ul class="tl rv" style="--d:3">
+        <li><span class="mono">Başlangıç</span><p>Modanın eğitimi alınabilen ve profesyonel olarak ilerlenebilen bir alan olduğunu keşfetti.</p></li>
+        <li><span class="mono">Süreç</span><p>Atölye süreci ve okul hazırlıkları, zamanla iş üretim tarafına evrildi.</p></li>
+        <li><span class="mono">Koleksiyon</span><p><em>Murder Underwater</em>, celebrity styling projeleri.</p></li>
+        <li><span class="mono">Topluluk</span><p>ANTTS, creatives who choose to do, not watch.</p></li>
+        <li><span class="mono">İlham</span><p>Jacquemus'un görsel zekâsı ve kendi dünyasını kurma biçimi.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:clamp(60px,8vw,110px)">
+  <div class="wrap"><div class="lbl mono rv" style="margin-bottom:30px"><b>08</b>Off duty</div></div>
+  <div class="od"><div class="run" id="od">
+    <figure><div class="im"><img src="gorseller/kapadokya.jpg" width="1125" height="1500" alt="Kapadokya, alacakaranlık" loading="lazy"></div><figcaption class="mono">Kapadokya</figcaption></figure>
+    <figure><div class="im"><img src="gorseller/balon.jpg" width="1125" height="1500" alt="Balon turu" loading="lazy"></div><figcaption class="mono">Balon</figcaption></figure>
+    <figure><div class="im"><img src="gorseller/ada.jpg" width="1125" height="1500" alt="Ada ve sahilleri" loading="lazy"></div><figcaption class="mono">Ada ve sahilleri</figcaption></figure>
+    <figure><div class="im"><img src="gorseller/deniz.jpg" width="1200" height="1500" alt="Gün batımında deniz" loading="lazy"></div><figcaption class="mono">Training season's over</figcaption></figure>
+    <figure><div class="im"><img src="gorseller/k2-b.jpg" width="1200" height="1500" alt="Konsept görsel" loading="lazy"></div><figcaption class="mono">Konsept · II</figcaption></figure>
+    <figure><div class="im"><img src="gorseller/k3-b.jpg" width="1200" height="1500" alt="Konsept görsel" loading="lazy"></div><figcaption class="mono">Konsept · III</figcaption></figure>
+  </div></div>
+</section>
+
+<section class="ct sec" id="iletisim">
+  <div class="wrap">
+    <div class="lbl mono rv" style="justify-content:center"><b>09</b>İletişim</div>
+    <a class="big rv" style="--d:1" href="https://ig.me/m/itstahaerdem" target="_blank" rel="noopener">Let's <em>create.</em></a>
+    <p class="lead rv" style="--d:2">İş birliği, styling ve tasarım projeleri için Instagram'dan mesaj gönderebilirsin.</p>
+    <div class="cta rv" style="--d:3"><a class="btn" href="https://ig.me/m/itstahaerdem" target="_blank" rel="noopener">Mesaj Gönder <svg><use href="#arr"/></svg></a><a class="btn" href="https://www.instagram.com/itstahaerdem/" target="_blank" rel="noopener">@itstahaerdem</a><a class="btn" href="https://www.instagram.com/anttsglobal/" target="_blank" rel="noopener">@anttsglobal</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap mono"><span>© 2026 Taha Erdem Ömeroğlu</span><span>Koi Ajans tarafından hazırlanmıştır</span></div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Görsel"><button class="x mono" id="lbX" type="button">Kapat ✕</button><img id="lbI" alt=""><span class="cap mono" id="lbC"></span></div>
+
+<script>
+document.documentElement.classList.add('js');
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+
+/* name split */
+let ci = 0; $$('#name .row').forEach(r => { const t = r.dataset.t; r.innerHTML = [...t].map(c => c === ' ' ? ' ' : `<span class="ch" style="--i:${ci++}">${c}</span>`).join(''); if (r.dataset.em) r.innerHTML = `<em>${r.innerHTML}</em>`; });
+
+/* intro */
+const hero = $('#hero'), intro = $('#intro');
+let seen = false; try { seen = sessionStorage.getItem('teo') === '1'; sessionStorage.setItem('teo', '1'); } catch (e) {}
+const go = () => hero.classList.add('go');
+if (reduce || seen) { intro.remove(); go(); } else { setTimeout(() => { intro.classList.add('open'); setTimeout(go, 500); setTimeout(() => intro.remove(), 1800); }, 1500); }
+
+/* manifesto words */
+const mf = $('#mf');
+const wrapW = n => { [...n.childNodes].forEach(c => { if (c.nodeType === 3) { const f = document.createDocumentFragment(); c.textContent.split(/(\s+)/).forEach(t => { if (!t) return; if (/^\s+$/.test(t)) f.append(t); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = t; f.append(s); } }); c.replaceWith(f); } else if (c.nodeType === 1) wrapW(c); }); };
+wrapW(mf); const mfW = $$('#mf .w'); if (reduce) mfW.forEach(w => w.classList.add('on'));
+
+/* concepts */
+const CP = [['k1-a', 'k1-b', 'k1-c'], ['k2-a', 'k2-b', 'k2-c'], ['k3-a', 'k3-b', 'k3-c']];
+const stage = $('#cpStage'), thumbs = $('#cpThumbs'); let cs = 0, cImg = 0, cT;
+const showImg = i => { const ims = [...stage.querySelectorAll('img')]; ims.forEach((im, k) => { im.classList.toggle('prev', k === cImg && k !== i); im.classList.toggle('on', k === i); }); [...thumbs.children].forEach((b, k) => b.classList.toggle('on', k === i)); cImg = i; };
+const showSet = s => { cs = s; cImg = 0; $$('#cpTabs button').forEach((b, k) => b.classList.toggle('on', k === s));
+  stage.innerHTML = CP[s].map((f, k) => `<img src="gorseller/${f}.jpg" width="1200" height="1500" alt="Konsept serisi ${s + 1}, görsel ${k + 1}"${k ? ' loading="lazy"' : ''}>`).join('');
+  thumbs.innerHTML = CP[s].map((f, k) => `<button type="button" aria-label="Görsel ${k + 1}"><img src="gorseller/${f}.jpg" width="1200" height="1500" alt="" loading="lazy"></button>`).join('');
+  requestAnimationFrame(() => requestAnimationFrame(() => showImg(0)));
+  [...thumbs.children].forEach((b, k) => b.addEventListener('click', () => { showImg(k); auto(); })); };
+const auto = () => { clearInterval(cT); if (!reduce) cT = setInterval(() => showImg((cImg + 1) % 3), 3800); };
+$('#cpTabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { showSet(+b.dataset.s); auto(); } });
+showSet(0); auto();
+
+/* lightbox on looks */
+const lb = $('#lb'), lbI = $('#lbI');
+$$('.look').forEach(l => l.addEventListener('click', () => { const im = l.querySelector('img'); lbI.src = im.src; lbI.alt = im.alt; $('#lbC').textContent = 'Murder Underwater · ' + l.dataset.v; lb.classList.add('open'); }));
+const closeLb = () => lb.classList.remove('open');
+$('#lbX').onclick = closeLb; lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+/* cursor */
+const cur = $('#cur');
+if (matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce) {
+  let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; });
+  (function loop() { cx += (mx - cx) * .2; cy += (my - cy) * .2; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
+  document.addEventListener('pointerover', e => cur.classList.toggle('view', !!e.target.closest('.look,.cp-stage,.st-g figure,.od figure')));
+}
+
+/* reveal */
+const io = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return; en.target.classList.add('in'); io.unobserve(en.target); }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+$$('.rv').forEach(el => io.observe(el));
+const ioW = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return; en.target.querySelectorAll('.wipe').forEach((w, i) => setTimeout(() => w.classList.add('in'), i * 250)); ioW.unobserve(en.target); }), { threshold: .1 });
+$$('.bs').forEach(el => ioW.observe(el));
+
+/* menu */
+const burger = $('#burger');
+const closeMenu = () => { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); burger.textContent = 'Menü'; };
+burger.onclick = () => { const o = document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded', o); burger.textContent = o ? 'Kapat' : 'Menü'; };
+$$('#mpanel a').forEach(a => a.addEventListener('click', closeMenu));
+addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenu(); closeLb(); } });
+
+/* scroll */
+const hdr = $('#hdr'), col = $('#koleksiyon'), track = $('#track'), bar = $('#colBar'), lkN = $('#lkN'), heroImg = $('.hero .ph img'), bsA = $('#bsA img'), wide = matchMedia('(min-width:900px)');
+const secs = $$('.nav a').map(a => [a, $(a.getAttribute('href'))]);
+let tMax = 0;
+const size = () => { if (wide.matches && !reduce) { tMax = Math.max(0, track.scrollWidth - innerWidth); col.style.height = (innerHeight + tMax * 1.1) + 'px'; } else { col.style.height = ''; track.style.transform = ''; } };
+let lastY = 0, tk = false;
+const onScroll = () => { const y = scrollY, H = innerHeight;
+  hdr.classList.toggle('hide', y > lastY && y > H && !document.body.classList.contains('menu-open')); lastY = y;
+  if (!reduce) {
+    heroImg.style.setProperty('--py', (y * .12).toFixed(1) + 'px');
+    const r = mf.getBoundingClientRect(), p = clamp((H * .85 - r.top) / (r.height + H * .3)), k = Math.round(p * mfW.length); mfW.forEach((w, i) => w.classList.toggle('on', i < k));
+    const br = bsA.parentElement.getBoundingClientRect(); bsA.style.setProperty('--py', ((br.top + br.height / 2 - H / 2) * -.08).toFixed(1) + 'px');
+    if (wide.matches) { const cr = col.getBoundingClientRect(), cp = clamp(-cr.top / (col.offsetHeight - H)); track.style.transform = `translateX(${-cp * tMax}px)`; bar.style.setProperty('--p', cp); lkN.textContent = String(Math.min(6, Math.floor(cp * 5.99) + 1)).padStart(2, '0'); }
+  }
+  let act = null; secs.forEach(([a, s]) => { if (s.getBoundingClientRect().top < H * .4) act = a; }); secs.forEach(([a]) => a.classList.toggle('act', a === act));
+  tk = false; };
+addEventListener('scroll', () => { if (!tk) { tk = true; requestAnimationFrame(onScroll); } }, { passive: true });
+addEventListener('resize', () => { size(); onScroll(); });
+addEventListener('load', () => { size(); onScroll(); });
+size(); onScroll();
+</script>
+</body>
+</html>
