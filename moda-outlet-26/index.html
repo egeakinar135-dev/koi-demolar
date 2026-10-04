@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moda Outlet 26 · Eskişehir Giyim Mağazası</title>
+<meta name="description" content="Eskişehir'in yeni giyim mağazası Moda Outlet 26. Trençkot, ikili takım, keten gömlek, eşofman ve daha fazlası. Emek Mah. Ertaş Blv. No:40/B, Odunpazarı.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F4EFE7; --paper:#FAF7F2; --sand:#E7DED0; --camel:#B08A5E; --camel-d:#8A6A44;
+  --ink:#141210; --ink-2:#5E5750; --line:rgba(20,18,16,.14);
+  --header-h:64px; --ease:cubic-bezier(.2,.8,.2,1); --io:cubic-bezier(.7,0,.2,1);
+  --serif:"Bodoni Moda",Didot,Georgia,serif; --script:"Great Vibes",cursive; --sans:Jost,system-ui,sans-serif;
+}
+@media (min-width:960px){:root{--header-h:78px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--ivory);line-height:1.65;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;text-wrap:balance}
+main{overflow-x:clip}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(1240px,100% - 72px)}}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--camel-d)}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font-size:clamp(2.4rem,6vw,5rem);letter-spacing:-.01em;margin:.3em 0 .35em}
+.h2 em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--camel);font-size:1.15em;line-height:1}
+.lead{font-size:clamp(1.02rem,1.4vw,1.14rem);color:var(--ink-2);font-weight:300;max-width:54ch}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:16px 28px;font-size:.82rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;overflow:hidden;isolation:isolate;transition:color .5s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:right;transition:transform .6s var(--io)}
+.btn:hover::after{transform:scaleX(1);transform-origin:left}
+.btn-ink{background:var(--ink);color:var(--ivory)}
+.btn-ink::after{background:var(--camel)}
+.btn-line{border:1px solid var(--ink)}
+.btn-line::after{background:var(--ink)}
+.btn-line:hover{color:var(--ivory)}
+.btn svg{width:18px;height:18px;flex:none}
+
+html.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1.1s var(--ease)}
+html.js .rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:300;background:var(--ink);color:var(--ivory);display:grid;place-items:center;transition:transform 1.1s var(--io)}
+#intro.out{transform:translateY(-100%)}
+#intro .lg{text-align:center;transition:opacity .4s,transform .8s var(--ease)}
+#intro.out .lg{opacity:0;transform:translateY(-40px)}
+#intro svg.hg{width:130px;height:auto;display:block;margin:0 auto -6px;overflow:visible}
+#intro svg.hg path{fill:none;stroke:var(--ivory);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.3s var(--ease) .1s forwards}
+#intro .sc{font-family:var(--script);font-size:clamp(4.4rem,14vw,7.5rem);line-height:1.2;display:block;clip-path:inset(0 100% 0 0);animation:wipe 1.2s var(--io) .7s forwards}
+#intro .bar{display:inline-block;background:var(--ivory);color:var(--ink);font-family:var(--serif);letter-spacing:.6em;padding:6px 10px 6px 22px;font-size:clamp(.9rem,2.4vw,1.2rem);transform:scaleX(0);animation:barin .8s var(--io) 1.5s forwards}
+#intro .bar b{font-weight:600}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes barin{to{transform:scaleX(1)}}
+
+/* header */
+.header{position:fixed;inset:0 0 auto;height:var(--header-h);z-index:90;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-inline:clamp(16px,4vw,48px);transition:background .5s,box-shadow .5s}
+.header.sc{background:rgba(244,239,231,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1;min-width:0}
+.logo .s{font-family:var(--script);font-size:2rem;line-height:.9}
+.logo .b{background:var(--ink);color:var(--ivory);font-family:var(--serif);font-size:.6rem;letter-spacing:.5em;padding:3px 4px 3px 9px;margin-top:2px}
+.nav{display:none}
+.nav a{font-size:.78rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--io)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr-cta{display:none!important}
+@media (min-width:960px){.nav{display:flex;gap:clamp(22px,2.6vw,42px)}.hdr-cta{display:inline-flex!important;padding:12px 20px}}
+.burger{width:48px;height:48px;display:grid;place-items:center;flex:none;position:relative;z-index:2}
+.burger i{display:block;width:26px;height:1.5px;background:currentColor;position:relative;transition:.4s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;height:1.5px;background:currentColor;transition:.4s}
+.burger i::before{top:-8px;width:26px}.burger i::after{top:8px;width:16px}
+.menu-open .burger{color:var(--ivory)}
+.menu-open .burger i{background:transparent}.menu-open .burger i::before{top:0;transform:rotate(45deg)}.menu-open .burger i::after{top:0;width:26px;transform:rotate(-45deg)}
+@media (min-width:960px){.burger{display:none}}
+.mmenu{position:fixed;inset:0;z-index:85;background:var(--ink);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + 20px) 28px 40px;transform:translateY(-100%);transition:transform .9s var(--io)}
+.menu-open .mmenu{transform:none}
+.menu-open .logo{color:var(--ivory)}.menu-open .logo .b{background:var(--ivory);color:var(--ink)}
+.mmenu a{font-family:var(--serif);font-size:clamp(2.4rem,10vw,3.4rem);line-height:1.25;opacity:0;transform:translateY(30px);transition:.7s var(--ease)}
+.menu-open .mmenu a{opacity:1;transform:none}
+.menu-open .mmenu a:nth-child(1){transition-delay:.3s}.menu-open .mmenu a:nth-child(2){transition-delay:.36s}.menu-open .mmenu a:nth-child(3){transition-delay:.42s}.menu-open .mmenu a:nth-child(4){transition-delay:.48s}
+.mmenu p{margin-top:30px;color:var(--camel);letter-spacing:.14em;font-size:.85rem}
+body.menu-open{overflow:hidden}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:calc(var(--header-h) + 20px) 0 40px;display:flex;align-items:center;overflow:hidden}
+.hero-in{position:relative;display:grid;gap:30px;align-items:center}
+@media (min-width:960px){.hero-in{grid-template-columns:1fr auto 1fr;gap:clamp(20px,3vw,50px)}}
+.big{font-family:var(--serif);font-size:clamp(3.4rem,8.4vw,8rem);line-height:1.08;letter-spacing:-.02em}
+.big .row{display:block;overflow:hidden;padding:.04em 0 .1em;margin:-.04em 0 -.1em}
+.big .ch{display:inline-block}
+html.js .big .ch{transform:translateY(115%)}
+html.js .hero.go .big .ch{transform:none;transition:transform 1.2s var(--ease);transition-delay:calc(var(--i)*45ms + .1s)}
+.big i{font-style:italic;color:var(--camel-d)}
+.right{text-align:left}
+@media (min-width:960px){.right{text-align:right}}
+.hero-img{position:relative;width:min(380px,78vw);aspect-ratio:3/4.4;margin-inline:auto}
+.hero-img .frame{position:absolute;inset:0;overflow:hidden}
+html.js .hero-img .frame{clip-path:inset(100% 0 0 0)}
+html.js .hero.go .hero-img .frame{clip-path:inset(0);transition:clip-path 1.5s var(--io) .3s}
+.hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.3);transition:transform 2.4s var(--ease) .3s}
+.hero.go .hero-img img{transform:scale(1)}
+.hero-img .tagc{position:absolute;right:-30px;top:16%;width:90px;transform-origin:50% 0;animation:swing 4s ease-in-out infinite;z-index:2;opacity:0;transition:opacity .8s 1.6s}
+.hero.go .hero-img .tagc{opacity:1}
+@keyframes swing{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.hero-img .cap{position:absolute;left:-14px;bottom:28px;background:var(--ivory);padding:10px 16px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;z-index:2}
+.hero-meta{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+@media (min-width:960px){.hero-meta{align-items:flex-end}}
+html.js .hero .fd{opacity:0;transform:translateY(20px)}
+html.js .hero.go .fd{opacity:1;transform:none;transition:opacity 1s var(--ease) 1s,transform 1s var(--ease) 1s}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:.84rem;font-weight:500}
+.status i{width:9px;height:9px;border-radius:50%;background:#2E9D5B;box-shadow:0 0 0 0 rgba(46,157,91,.5);animation:ping 2s infinite}
+.status.closed i{background:#B5463A;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
+.rating{display:inline-flex;align-items:center;gap:10px;font-size:.84rem;color:var(--ink-2)}
+.rating b{font-family:var(--serif);font-size:1.5rem;color:var(--ink);font-weight:500}
+.rating span.st{color:var(--camel);letter-spacing:2px}
+.trail-img{position:fixed;left:0;top:0;width:150px;aspect-ratio:3/4;object-fit:cover;pointer-events:none;z-index:5;animation:trail 1.1s var(--ease) forwards;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+@keyframes trail{0%{opacity:0;scale:.6}15%{opacity:1;scale:1}70%{opacity:1}100%{opacity:0;scale:.9}}
+.hint{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);display:none}
+@media (pointer:fine) and (min-width:960px){.hint{display:block}}
+
+/* marquee */
+.marq{background:var(--ink);color:var(--ivory);padding:22px 0;overflow:hidden}
+.marq .track{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marq span{font-family:var(--serif);font-size:clamp(1.8rem,4.4vw,3.4rem);line-height:1.2;padding-inline:26px;white-space:nowrap;display:flex;align-items:center;gap:52px}
+.marq span:nth-child(odd){font-style:italic}
+.marq span::after{content:"";width:34px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 28'%3E%3Cpath d='M34 10V6a4 4 0 1 1 4 4M34 10 4 24h60z' fill='none' stroke='%23B08A5E' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.sec{position:relative;padding:clamp(90px,12vw,160px) 0}
+.statement{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3.3rem);line-height:1.28;max-width:24ch;margin-top:24px}
+.statement .w{color:rgba(20,18,16,.13);transition:color .35s}
+.statement .w.on{color:var(--ink)}
+.statement .w.hl.on{color:var(--camel-d);font-style:italic}
+.intro-grid{display:grid;gap:40px;align-items:end}
+@media (min-width:960px){.intro-grid{grid-template-columns:1.3fr .7fr;gap:70px}}
+.intro-img{position:relative;aspect-ratio:3/4;overflow:hidden}
+.intro-img img{width:100%;height:120%;object-fit:cover;will-change:transform}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.badges span{border:1px solid var(--line);padding:9px 16px;font-size:.78rem;letter-spacing:.08em;font-weight:500;transition:background .4s,color .4s}
+.badges span:hover{background:var(--ink);color:var(--ivory)}
+
+/* collection pinned */
+.coll{background:var(--paper)}
+.c-sticky{overflow:hidden;padding:clamp(90px,10vw,120px) 0 60px}
+.c-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:46px}
+.c-count{font-family:var(--serif);font-size:1rem;letter-spacing:.1em}
+.c-count b{font-size:2.2rem;font-weight:400}
+.c-track{display:flex;gap:24px;padding-inline:max(16px,calc((100vw - 1240px)/2));will-change:transform}
+.cc{flex:none;width:min(360px,78vw);position:relative}
+.cc .im{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--sand)}
+.cc .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease),filter .8s}
+.cc:hover .im img{transform:scale(1.07)}
+.cc .im::after{content:attr(data-n);position:absolute;right:14px;top:8px;font-family:var(--serif);font-style:italic;font-size:3.4rem;color:var(--ivory);text-shadow:0 2px 20px rgba(0,0,0,.25);line-height:1.2}
+.cc h3{font-size:1.9rem;margin:18px 0 6px}
+.cc p{color:var(--ink-2);font-weight:300;font-size:.95rem}
+.cc .wa{display:inline-flex;gap:8px;margin-top:12px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:gap .4s var(--ease)}
+.cc .wa:hover{gap:16px}
+@media (max-width:899px){.c-track{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-padding-inline:16px}.c-track::-webkit-scrollbar{display:none}.cc{scroll-snap-align:start}}
+
+/* rail */
+.rail-sec{overflow:hidden}
+.rail{position:relative;margin-top:70px;padding-top:30px}
+.rod{position:absolute;left:0;right:0;top:30px;height:6px;background:linear-gradient(#cdbfa9,#9c8a70);border-radius:3px;box-shadow:0 4px 10px -4px rgba(0,0,0,.4)}
+.hangers{display:flex;gap:clamp(16px,2.4vw,34px);overflow-x:auto;scrollbar-width:none;padding:0 max(16px,calc((100vw - 1240px)/2)) 40px;cursor:grab}
+.hangers::-webkit-scrollbar{display:none}
+.hangers.drag{cursor:grabbing}
+.hanger{flex:none;width:clamp(190px,20vw,250px);transform-origin:50% 0;will-change:transform;position:relative;padding-top:6px}
+.hanger svg{display:block;width:62%;margin:-14px auto 0;overflow:visible;position:relative;z-index:1}
+.hanger .card{margin-top:-8px;background:#fff;padding:10px 10px 16px;box-shadow:0 30px 40px -28px rgba(0,0,0,.5);cursor:zoom-in}
+.hanger .card img{width:100%;aspect-ratio:3/4.2;object-fit:cover;pointer-events:none}
+.hanger .card span{display:block;margin-top:10px;font-family:var(--serif);font-size:1.05rem;line-height:1.3}
+.hanger .card small{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--camel-d);margin-top:2px}
+.rail-note{text-align:center;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+
+/* band */
+.band{position:relative;height:min(80vh,680px);overflow:hidden;display:grid;place-items:center;text-align:center;color:var(--ivory)}
+.band img{position:absolute;inset:-14% 0;width:100%;height:128%;object-fit:cover;will-change:transform;filter:brightness(.55)}
+.band blockquote{position:relative;z-index:1;padding-inline:16px}
+.band .sc{font-family:var(--script);font-size:clamp(3.4rem,10vw,8rem);line-height:1.2;display:block}
+.band small{display:block;margin-top:14px;font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--sand)}
+
+/* stories */
+.st-grid{display:grid;gap:50px;align-items:center}
+@media (min-width:960px){.st-grid{grid-template-columns:1fr 1fr;gap:80px}}
+.phone{position:relative;width:min(320px,82vw);aspect-ratio:9/18.5;margin-inline:auto;border-radius:42px;background:var(--ink);padding:12px;box-shadow:0 50px 80px -40px rgba(0,0,0,.6)}
+.screen{position:relative;width:100%;height:100%;border-radius:32px;overflow:hidden;background:#222}
+.screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .6s,transform 5s linear}
+.screen img.on{opacity:1;transform:scale(1)}
+.bars{position:absolute;left:12px;right:12px;top:12px;display:flex;gap:4px;z-index:2}
+.bars i{flex:1;height:2.5px;background:rgba(255,255,255,.35);border-radius:2px;overflow:hidden;position:relative}
+.bars i b{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.bars i.done b{transform:scaleX(1)}
+.bars i.cur b{animation:fill var(--dur,4.5s) linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+.st-top{position:absolute;left:12px;right:12px;top:24px;z-index:2;display:flex;align-items:center;gap:8px;color:#fff;font-size:.8rem;font-weight:500}
+.st-top .av{width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ink);font-family:var(--script);font-size:1.1rem}
+.st-cap{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 22px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;z-index:2;font-size:.95rem;line-height:1.4}
+.tapzone{position:absolute;top:0;bottom:0;width:50%;z-index:3}
+.tapzone.l{left:0}.tapzone.r{right:0}
+.notch{position:absolute;left:50%;top:20px;width:90px;height:24px;border-radius:20px;background:var(--ink);transform:translateX(-50%);z-index:4}
+
+/* why */
+.why{background:var(--ink);color:var(--ivory)}
+.why .kicker{color:var(--camel)}
+.why .h2 em{color:var(--camel)}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(244,239,231,.14);margin-top:50px;border:1px solid rgba(244,239,231,.14)}
+@media (min-width:860px){.nums{grid-template-columns:repeat(4,1fr)}}
+.num{background:var(--ink);padding:34px 24px;transition:background .5s}
+.num:hover{background:#1e1b18}
+.num b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,5.4vw,4.4rem);line-height:1.12}
+.num>span{font-size:.86rem;color:rgba(244,239,231,.65);font-weight:300}
+.perks{display:grid;gap:14px;margin-top:40px}
+@media (min-width:860px){.perks{grid-template-columns:repeat(4,1fr)}}
+.perk{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid rgba(244,239,231,.14);font-size:.95rem}
+.perk i{font-style:normal;font-family:var(--serif);font-style:italic;color:var(--camel);font-size:1.4rem}
+
+/* visit */
+.v-grid{display:grid;gap:44px}
+@media (min-width:960px){.v-grid{grid-template-columns:1fr 1fr;gap:70px;align-items:start}}
+.hours{list-style:none;margin-top:26px;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);font-size:.98rem;transition:padding .4s var(--ease)}
+.hours li.today{font-weight:600;padding-inline:12px;background:var(--sand)}
+.addr{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.3;margin-top:8px}
+.v-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.map{position:relative;aspect-ratio:4/3.4;overflow:hidden;filter:grayscale(1) contrast(1.05);transition:filter .8s}
+.map:hover{filter:none}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.phone-big{display:inline-block;font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:22px;border-bottom:1px solid var(--ink);line-height:1.3}
+
+footer{background:var(--ink);color:rgba(244,239,231,.6);padding:40px 0 110px;font-size:.84rem}
+.f-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer .logo{color:var(--ivory)}footer .logo .b{background:var(--ivory);color:var(--ink)}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:80;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transform:scale(0);transition:transform .5s var(--ease)}
+.wa-float.show{transform:scale(1)}
+.wa-float:hover{transform:scale(1.1) rotate(-8deg)}
+.wa-float svg{width:30px;height:30px}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(20,18,16,.92);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .4s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:min(560px,100%);max-height:84svh;transform:scale(.94);transition:transform .5s var(--ease)}
+.lb.on img{transform:none}
+.lb p{color:var(--ivory);text-align:center;margin-top:12px;font-family:var(--serif);font-size:1.2rem}
+.lb button{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;background:var(--ivory);font-size:1.5rem;color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html.js .rv,html.js .hero .fd,html.js .big .ch{opacity:1!important;transform:none!important}
+  html.js .hero-img .frame{clip-path:none!important}
+  #intro{display:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.2 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></symbol>
+<symbol id="hg" viewBox="0 0 120 52"><path d="M60 20v-6a6 6 0 1 1 6 6M60 20 6 46h108z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<div id="intro" aria-hidden="true"><div class="lg">
+  <svg class="hg" viewBox="0 0 120 52"><path d="M60 20v-6a6 6 0 1 1 6 6M60 20 6 46h108z"/></svg>
+  <span class="sc">Moda</span>
+  <span class="bar">OUTLET <b>26</b></span>
+</div></div>
+
+<header class="header" id="hdr">
+  <a href="#top" class="logo" aria-label="Moda Outlet 26 ana sayfa"><span class="s">Moda</span><span class="b">OUTLET 26</span></a>
+  <nav class="nav" aria-label="Ana menü"><a href="#koleksiyon">Koleksiyon</a><a href="#askida">Yeni Gelenler</a><a href="#secimler">Kombinler</a><a href="#ziyaret">Ziyaret</a></nav>
+  <a class="btn btn-ink hdr-cta" href="https://wa.me/905363959062?text=Merhaba%2C%20Moda%20Outlet%2026%20%C3%BCr%C3%BCnleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Bilgi Alın</a>
+  <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false"><i></i></button>
+</header>
+<div class="mmenu" id="mmenu"><a href="#koleksiyon">Koleksiyon</a><a href="#askida">Yeni Gelenler</a><a href="#secimler">Kombinler</a><a href="#ziyaret">Ziyaret</a><p>Ertaş Blv. No:40/B · Odunpazarı</p></div>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="kicker fd">Eskişehir · Odunpazarı</span>
+        <h1 class="big" aria-label="Yeni Sezon Moda Outlet 26"><span class="row" data-split>Yeni</span><span class="row" data-split><i>Sezon</i></span></h1>
+      </div>
+      <div class="hero-img">
+        <div class="frame"><img src="gorseller/hero.jpg" alt="Bej uzun pardesülü şık kadın" fetchpriority="high"></div>
+        <svg class="tagc" viewBox="0 0 90 140" aria-hidden="true"><line x1="45" y1="0" x2="45" y2="34" stroke="#141210" stroke-width="1"/><path d="M20 34h50l8 12v86H12V46z" fill="#F4EFE7" stroke="#141210" stroke-width="1.2"/><circle cx="45" cy="48" r="4" fill="none" stroke="#141210"/><text x="45" y="92" text-anchor="middle" font-family="Great Vibes" font-size="26" fill="#141210">Moda</text><text x="45" y="116" text-anchor="middle" font-family="Bodoni Moda" font-size="12" letter-spacing="3" fill="#8A6A44">26</text></svg>
+        <span class="cap">Kadın giyim</span>
+      </div>
+      <div class="right">
+        <p class="big" style="font-size:clamp(3rem,6vw,5.6rem)"><span class="row" data-split>Moda</span><span class="row" data-split>Outlet</span></p>
+        <div class="hero-meta fd">
+          <span class="status" id="status"><i></i><span id="statusT">Bugün 10.00–21.00</span></span>
+          <span class="rating"><b>5,0</b><span class="st">★★★★★</span>Google · 22 değerlendirme</span>
+          <a class="btn btn-line" href="#koleksiyon" style="align-self:inherit">Koleksiyonu Keşfet</a>
+        </div>
+      </div>
+    </div>
+    <span class="hint">Fareyi gezdirin</span>
+  </section>
+
+  <div class="marq" aria-hidden="true"><div class="track" id="mq"></div></div>
+
+  <section class="sec" id="hakkimizda">
+    <div class="wrap intro-grid">
+      <div>
+        <span class="kicker rv">Biz kimiz?</span>
+        <p class="statement" id="stmt">Eskişehir'in yeni giyim mağazası. Şıklığı ve rahatlığı bir arada sevenler için, uygun fiyatı ve kaliteyi Odunpazarı'nda aynı askıda buluşturuyoruz.</p>
+        <div class="badges rv"><span>Kadın girişimci işletmesi</span><span>Mağazadan teslim alma</span><span>Teslimat</span><span>Hızlı alışveriş</span></div>
+      </div>
+      <figure class="intro-img rv"><img src="gorseller/musteri-1.jpg" alt="Moda Outlet 26 mağazasının içinden, askılarda ürünler" loading="lazy" data-par="50"></figure>
+    </div>
+  </section>
+
+  <section class="coll" id="koleksiyon">
+    <div class="c-sticky" id="cSt">
+      <div class="wrap c-head">
+        <div><span class="kicker rv">Koleksiyon</span><h2 class="h2 rv">Sezonun <em>favorileri</em></h2></div>
+        <span class="c-count"><b id="cNum">01</b> / 06</span>
+      </div>
+      <div class="c-track" id="cTr">
+        <article class="cc"><div class="im" data-n="01"><img src="gorseller/trenc-1.jpg" alt="Trençkotlu kadın" loading="lazy"></div><h3>Trençkot</h3><p>Sezonun en şık parçası. Kısa trençkotta dört farklı renk seçeneği.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20tren%C3%A7kot%20modelleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+        <article class="cc"><div class="im" data-n="02"><img src="gorseller/takim.jpg" alt="İkili takım kombini" loading="lazy"></div><h3>İkili Takım</h3><p>Yumuşacık dokusuyla kışın da sıcacık. Şıklığı ve rahatlığı bir arada sevenlere.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20ikili%20tak%C4%B1m%20modelleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+        <article class="cc"><div class="im" data-n="03"><img src="gorseller/gomlek.jpg" alt="Açık mavi işlemeli gömlek" loading="lazy"></div><h3>Keten Gömlek &amp; Ceket</h3><p>Yaz şıklığı için keten gömlekler ve giy çık rahatlığında keten ceketler.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20keten%20g%C3%B6mlek%20ve%20ceketleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+        <article class="cc"><div class="im" data-n="04"><img src="gorseller/sweat.jpg" alt="Kahverengi kapüşonlu sweat" loading="lazy"></div><h3>Eşofman &amp; Sweat</h3><p>Kapüşonlu sweatler ve kalın şardonlu tek altlar; bay ve bayan modelleri.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20e%C5%9Fofman%20ve%20sweat%20modelleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+        <article class="cc"><div class="im" data-n="05"><img src="gorseller/bluz-etek.jpg" alt="Mavi bluz ve puantiyeli etek kombini" loading="lazy"></div><h3>Etek, Tunik &amp; Bluz</h3><p>Taşlı gömleklerden puantiyeli eteklere, günlük şıklığı tamamlayan parçalar.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20etek%20ve%20tunik%20modelleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+        <article class="cc"><div class="im" data-n="06"><img src="gorseller/sokak.jpg" alt="Beyaz pantolon ve trençkotla şık sokak kombini" loading="lazy"></div><h3>Tensel Pantolon</h3><p>Akışkan dokusuyla trençkot ve tunikle kusursuz uyum.</p><a class="wa" href="https://wa.me/905363959062?text=Merhaba%2C%20tensel%20pantolon%20modelleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi alın →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec rail-sec" id="askida">
+    <div class="wrap" style="text-align:center">
+      <span class="kicker rv">Yeni gelenler</span>
+      <h2 class="h2 rv">Askıda <em>sizi bekliyor</em></h2>
+      <p class="lead rv" style="margin-inline:auto">Mağazamıza yeni gelen ürünler. Askıyı sürükleyin, büyütmek için ürüne dokunun.</p>
+    </div>
+    <div class="rail">
+      <span class="rod"></span>
+      <div class="hangers" id="hangers">
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/yesil-trenc.jpg" alt="Yeşil trençkot" loading="lazy"><span>Kısa Trençkot</span><small>Yeni sezon</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/kapusonlu.jpg" alt="Kapüşonlu sweat modelleri" loading="lazy"><span>Kapüşonlu Sweat</span><small>Yeni geldi</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/yeni-koleksiyon.jpg" alt="İşlemeli yeni koleksiyon ürünleri" loading="lazy"><span>İşlemeli Gömlek</span><small>New collection</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/tek-alt.jpg" alt="Kalın şardonlu tek alt" loading="lazy"><span>Şardonlu Tek Alt</span><small>Bay &amp; bayan</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/sweat.jpg" alt="Kahverengi sweat" loading="lazy"><span>Taşlı Detay Sweat</span><small>Yeni ürün</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/gomlek.jpg" alt="Açık mavi gömlek" loading="lazy"><span>Keten Gömlek</span><small>Yaz şıklığı</small></div></div>
+        <div class="hanger"><svg viewBox="0 0 120 52"><use href="#hg" color="#141210"/></svg><div class="card"><img src="gorseller/bluz-etek.jpg" alt="Bluz ve etek kombini" loading="lazy"><span>Bluz &amp; Etek</span><small>Kombin</small></div></div>
+      </div>
+      <p class="rail-note">← Sürükleyin →</p>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Slogan">
+    <img src="gorseller/raf.jpg" alt="" loading="lazy" data-par="90">
+    <blockquote class="rv"><span class="sc">Kalite asla tesadüf değildir</span><small>Moda Outlet 26</small></blockquote>
+  </section>
+
+  <section class="sec" id="secimler">
+    <div class="wrap st-grid">
+      <div>
+        <span class="kicker rv">Mağazadan</span>
+        <h2 class="h2 rv">Müşterilerimizin <em>seçimleri</em></h2>
+        <p class="lead rv">Mağazamızda hazırlanan kombinlerden kareler. Hikâyelere dokunarak ilerleyin.</p>
+        <div class="rv" style="margin-top:30px;display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn-ink" href="https://www.instagram.com/modaoutlet26/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>@modaoutlet26</a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="phone">
+          <span class="notch"></span>
+          <div class="screen" id="screen">
+            <img src="gorseller/musteri-2.jpg" alt="Müşterinin trençkot kombini" data-c="Müşterimizin şık kombini hazır! 🤎" loading="lazy">
+            <img src="gorseller/musteri-1.jpg" alt="Müşterinin trençkot kombini, mağaza içi" data-c="Sezonun en şık parçası: trençkot ✨" loading="lazy">
+            <img src="gorseller/musteri-3.jpg" alt="Müşterinin ceket kombini" data-c="Müşterimizin seçimiyle harika bir kombin 🤍" loading="lazy">
+            <img src="gorseller/musteri-4.jpg" alt="Müşterinin pembe ceket kombini" data-c="Müşterimizin seçimi olay oldu 🌸" loading="lazy">
+            <div class="bars" id="bars"></div>
+            <div class="st-top"><span class="av">M</span>modaoutlet26</div>
+            <p class="st-cap" id="stCap"></p>
+            <button class="tapzone l" id="tapL" aria-label="Önceki"></button><button class="tapzone r" id="tapR" aria-label="Sonraki"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec why" id="neden">
+    <div class="wrap">
+      <span class="kicker rv">Neden Moda Outlet 26?</span>
+      <h2 class="h2 rv">Uygun fiyat, <em>gerçek kalite</em></h2>
+      <div class="nums">
+        <div class="num rv"><b><span data-count="5" data-dec="1">5,0</span></b><span>Google puanı · 22 değerlendirme</span></div>
+        <div class="num rv d1"><b><span data-count="7">7</span> gün</b><span>Haftanın her günü açık</span></div>
+        <div class="num rv d2"><b><span data-count="2750" data-fmt>2.750</span></b><span>Instagram takipçisi</span></div>
+        <div class="num rv d3"><b>Yeni</b><span>Her hafta yeni ürünler</span></div>
+      </div>
+      <div class="perks">
+        <div class="perk rv"><i>i.</i>Mağazadan teslim alma</div>
+        <div class="perk rv d1"><i>ii.</i>Teslimat seçeneği</div>
+        <div class="perk rv d2"><i>iii.</i>Hızlı alışveriş</div>
+        <div class="perk rv d3"><i>iv.</i>Kadın girişimci işletmesi</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ziyaret">
+    <div class="wrap v-grid">
+      <div>
+        <span class="kicker rv">Ziyaret</span>
+        <h2 class="h2 rv">Mağazamıza <em>bekleriz</em></h2>
+        <p class="addr rv">Emek Mah. Ertaş Blv. No:40/B<br>Odunpazarı / Eskişehir</p>
+        <a class="phone-big rv" href="tel:+905363959062">0536 395 90 62</a>
+        <ul class="hours rv" id="hours">
+          <li data-d="1"><span>Pazartesi</span><span>10.00–21.00</span></li>
+          <li data-d="2"><span>Salı</span><span>10.00–21.00</span></li>
+          <li data-d="3"><span>Çarşamba</span><span>10.00–21.00</span></li>
+          <li data-d="4"><span>Perşembe</span><span>10.00–21.00</span></li>
+          <li data-d="5"><span>Cuma</span><span>10.00–21.00</span></li>
+          <li data-d="6"><span>Cumartesi</span><span>10.00–21.00</span></li>
+          <li data-d="0"><span>Pazar</span><span>11.00–21.00</span></li>
+        </ul>
+        <div class="v-btns rv">
+          <a class="btn btn-ink" href="https://www.google.com/maps/dir/?api=1&destination=Moda+Outlet+26+Eski%C5%9Fehir&destination_place_id=ChIJc-_FEts9zBQRsFHNOGvJ368" target="_blank" rel="noopener">Yol Tarifi</a>
+          <a class="btn btn-line" href="https://wa.me/905363959062?text=Merhaba%2C%20Moda%20Outlet%2026%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a>
+        </div>
+      </div>
+      <div class="map rv"><iframe title="Moda Outlet 26 harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Moda+Outlet+26,+Ertaş+Blv.+No:40,+Odunpazarı,+Eskişehir&z=16&output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap f-in">
+  <span class="logo"><span class="s">Moda</span><span class="b">OUTLET 26</span></span>
+  <span>Emek Mah. Ertaş Blv. No:40/B, Odunpazarı / Eskişehir · <a href="https://www.instagram.com/modaoutlet26/" target="_blank" rel="noopener">@modaoutlet26</a></span>
+  <span style="opacity:.6">Koi Ajans tarafından hazırlanmıştır</span>
+</div></footer>
+
+<a class="wa-float" id="waf" href="https://wa.me/905363959062?text=Merhaba%2C%20Moda%20Outlet%2026%20%C3%BCr%C3%BCnleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp'tan yazın"><svg><use href="#wa"/></svg></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><div><img id="lbI" src="" alt=""><p id="lbT"></p></div><button id="lbX" aria-label="Kapat">×</button></div>
+
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches,FINE=matchMedia('(pointer:fine)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* split */
+let ci=0;$$('[data-split]').forEach(r=>{const host=r.firstElementChild&&r.firstElementChild.tagName==='I'?r.firstElementChild:r;const t=host.textContent;host.textContent='';[...t].forEach(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;s.style.setProperty('--i',ci++);host.append(s)})});
+
+/* intro */
+const intro=$('#intro'),hero=$('#hero');let seen=false;try{seen=sessionStorage.getItem('mo-intro')==='1'}catch(e){}
+const go=()=>hero.classList.add('go');
+if(seen||RM){intro.remove();go()}else{document.body.style.overflow='hidden';setTimeout(()=>{intro.classList.add('out');document.body.style.overflow='';setTimeout(go,300);try{sessionStorage.setItem('mo-intro','1')}catch(e){}},2500);setTimeout(()=>intro.remove(),3700)}
+
+/* status */
+const days=[{o:660,c:1260},{o:600,c:1260},{o:600,c:1260},{o:600,c:1260},{o:600,c:1260},{o:600,c:1260},{o:600,c:1260}];
+const fmt=m=>String(Math.floor(m/60)).padStart(2,'0')+'.'+String(m%60).padStart(2,'0');
+function status(){
+  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Istanbul',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+  const g=k=>p.find(x=>x.type===k).value,d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),m=+g('hour')*60+ +g('minute');
+  const t=days[d],el=$('#status'),tx=$('#statusT');
+  if(m>=t.o&&m<t.c){el.classList.remove('closed');tx.textContent=`Şu an açık · ${fmt(t.c)}'e kadar`}
+  else{el.classList.add('closed');const nd=m<t.o?d:(d+1)%7;tx.textContent=`Şu an kapalı · ${m<t.o?'bugün':'yarın'} ${fmt(days[nd].o)}'da açılır`}
+  $$('#hours li').forEach(li=>li.classList.toggle('today',+li.dataset.d===d));
+}
+status();setInterval(status,60000);
+
+/* header */
+const hdr=$('#hdr'),waf=$('#waf');const onS=()=>{hdr.classList.toggle('sc',scrollY>30);waf.classList.toggle('show',scrollY>innerHeight*.6)};addEventListener('scroll',onS,{passive:true});onS();
+const bg=$('#burger');const setM=o=>{document.body.classList.toggle('menu-open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç')};
+bg.addEventListener('click',()=>setM(!document.body.classList.contains('menu-open')));$$('#mmenu a').forEach(a=>a.addEventListener('click',()=>setM(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape'){setM(false);lbC()}});
+
+/* marquee */
+const m=['Trençkot','İkili takım','Keten gömlek','Eşofman','Tunik','Etek','Tensel pantolon','Yeni sezon'];const h=m.map(t=>`<span>${t}</span>`).join('');$('#mq').innerHTML=h+h+h+h;
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});$$('.rv').forEach(el=>io.observe(el));
+
+/* counters */
+$$('[data-count]').forEach(el=>new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting||RM)return;o.disconnect();const to=+el.dataset.count,dec=el.hasAttribute('data-dec'),f=el.hasAttribute('data-fmt'),t0=performance.now();(function t(n){const k=Math.min(1,(n-t0)/1700),v=to*(1-Math.pow(1-k,3));el.textContent=dec?v.toFixed(1).replace('.',','):f?Math.round(v).toLocaleString('tr-TR'):Math.round(v);if(k<1)requestAnimationFrame(t)})(t0)}),{threshold:.5}).observe(el));
+
+/* statement */
+const st=$('#stmt'),hl=['yeni','Şıklığı','rahatlığı','kaliteyi','askıda'];st.innerHTML=st.textContent.trim().split(/\s+/).map(w=>`<span class="w${hl.some(x=>w.startsWith(x))?' hl':''}">${w}</span>`).join(' ');const ws=[...st.querySelectorAll('.w')];
+
+/* collection pinned */
+const cSec=$('#koleksiyon'),cSt=$('#cSt'),cTr=$('#cTr'),cNum=$('#cNum'),cards=[...cTr.children];let pin=false,dist=0;
+function setupC(){pin=innerWidth>=900&&!RM;if(pin){dist=Math.max(0,cTr.scrollWidth-innerWidth);cSec.style.height=(cSt.offsetHeight+dist)+'px';cSt.style.position='sticky';cSt.style.top='0'}else{cSec.style.height='';cSt.style.position='';cTr.style.transform=''}}
+
+/* hangers swing */
+const hs=$$('.hanger');let lastY=scrollY,vel=0,ang=0,av=0;
+function swing(){const dy=scrollY-lastY;lastY=scrollY;vel+=dy*.04;const f=-ang*.06-av*.12+vel;av+=f;ang+=av;vel*=.5;ang=Math.max(-14,Math.min(14,ang));hs.forEach((h,i)=>{h.style.transform=`rotate(${ang*(i%2?1:-1)*(0.7+i%3*.15)}deg)`});requestAnimationFrame(swing)}
+if(!RM)swing();
+hs.forEach(h=>h.addEventListener('mouseenter',()=>{if(RM)return;h.animate([{transform:h.style.transform},{transform:'rotate(7deg)'},{transform:'rotate(-5deg)'},{transform:'rotate(3deg)'},{transform:h.style.transform}],{duration:1400,easing:'ease-out'})}));
+
+/* scroll frame */
+const pars=$$('[data-par]');
+function frame(){const vh=innerHeight;
+  const b=st.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh*.82-b.top)/(b.height+vh*.3))),on=Math.round(p*ws.length);ws.forEach((w,i)=>w.classList.toggle('on',i<on));
+  if(pin){const r=cSec.getBoundingClientRect(),k=Math.min(1,Math.max(0,-r.top/dist||0));cTr.style.transform=`translate3d(${-k*dist}px,0,0)`;cNum.textContent=String(Math.min(cards.length,1+Math.round(k*(cards.length-1)))).padStart(2,'0')}
+  if(RM)return;pars.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const k=(r.top+r.height/2-vh/2)/vh;el.style.transform=`translate3d(0,${k*-(+el.dataset.par)}px,0)`});
+}
+let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{frame();tk=false})}},{passive:true});
+addEventListener('resize',()=>{setupC();frame()});addEventListener('load',()=>{setupC();frame()});setupC();frame();
+
+/* image trail */
+if(FINE&&!RM){const pool=['yesil-trenc','sweat','gomlek','bluz-etek','kapusonlu','yeni-koleksiyon','trenc-1','takim'].map(n=>'gorseller/'+n+'.jpg');pool.forEach(s=>{const i=new Image();i.src=s});
+  let lx=0,ly=0,k=0;hero.addEventListener('mousemove',e=>{if(Math.hypot(e.clientX-lx,e.clientY-ly)<110)return;lx=e.clientX;ly=e.clientY;const im=document.createElement('img');im.className='trail-img';im.src=pool[k++%pool.length];im.alt='';im.style.left=(e.clientX-75)+'px';im.style.top=(e.clientY-100)+'px';im.style.rotate=((Math.random()-.5)*14)+'deg';document.body.append(im);setTimeout(()=>im.remove(),1150)})}
+
+/* hanger drag */
+const hg=$('#hangers');let dn=false,sx=0,sl=0,mv=false;
+hg.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;dn=true;mv=false;sx=e.clientX;sl=hg.scrollLeft;hg.classList.add('drag')});
+addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)mv=true;hg.scrollLeft=sl-dx;vel-=dx*.002});
+addEventListener('pointerup',()=>{dn=false;hg.classList.remove('drag')});
+
+/* lightbox */
+const lb=$('#lb'),lbI=$('#lbI'),lbT=$('#lbT');
+$$('.hanger .card').forEach(c=>c.addEventListener('click',()=>{if(mv)return;const im=c.querySelector('img');lbI.src=im.src;lbI.alt=im.alt;lbT.textContent=c.querySelector('span').textContent;lb.classList.add('on')}));
+function lbC(){lb.classList.remove('on')}$('#lbX').addEventListener('click',lbC);lb.addEventListener('click',e=>{if(e.target===lb)lbC()});
+
+/* stories */
+const sImgs=$$('#screen img'),bars=$('#bars'),cap=$('#stCap');bars.innerHTML=sImgs.map(()=>'<i><b></b></i>').join('');const bi=[...bars.children];let si=0,tm=null,running=false;
+function show(i){si=(i+sImgs.length)%sImgs.length;sImgs.forEach((im,j)=>im.classList.toggle('on',j===si));bi.forEach((b,j)=>{b.classList.toggle('done',j<si);b.classList.remove('cur');if(j===si){void b.offsetWidth;b.classList.add('cur')}});cap.textContent=sImgs[si].dataset.c;clearTimeout(tm);if(running&&!RM)tm=setTimeout(()=>show(si+1),4500)}
+$('#tapR').addEventListener('click',()=>show(si+1));$('#tapL').addEventListener('click',()=>show(si-1));
+new IntersectionObserver(es=>es.forEach(e=>{running=e.isIntersecting;if(running)show(si);else clearTimeout(tm)}),{threshold:.4}).observe($('#screen'));
+show(0);
+})();
+</script>
+</body>
+</html>
