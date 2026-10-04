@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="gorseller/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="gorseller/hero-m.webp 2048w, gorseller/hero.webp 3840w" imagesizes="100vw" fetchpriority="high">
 <script>document.documentElement.classList.add('js');history.scrollRestoration='manual'</script>
 <style>
 :root{
@@ -105,7 +105,8 @@ em{font-style:italic}
 /* ---------- veil + loader + cursor ---------- */
 .veil{position:fixed;inset:0;width:100%;height:100%;z-index:45;pointer-events:none;visibility:hidden}
 .loader{position:fixed;inset:0;z-index:90;background:var(--paper) var(--paper-tex);color:var(--ink);display:none;place-items:center}
-.js .loader{display:grid}
+.js .loader{display:grid;transition:opacity .9s var(--ease),visibility 0s .9s}
+.loader.gone{opacity:0;visibility:hidden}
 .loader .seal{width:74px;height:74px;background:var(--red);color:var(--ivory);display:grid;place-items:center;font:600 40px/1 "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;border-radius:6px;box-shadow:inset 0 0 0 3px var(--red),inset 0 0 0 5px rgba(244,238,224,.8);animation:breathe 2s var(--ease) infinite alternate}
 .loader .row{display:flex;justify-content:space-between;width:min(260px,70vw);margin-top:26px;font:500 10.5px/1 var(--mono);letter-spacing:.16em}
 .loader .bar{width:min(260px,70vw);height:1px;background:rgba(20,17,13,.15);margin-top:10px;position:relative;overflow:hidden}
@@ -130,9 +131,13 @@ em{font-style:italic}
 
 /* 01 hero */
 #giris .layer{background:var(--navy)}
-#giris .art{transform-origin:55% 40%}
-.ready #giris .art>img{animation:intro 2.6s var(--ease) both}
-@keyframes intro{from{transform:scale(1.16);filter:brightness(.5)}}
+#giris .art{transform-origin:55% 40%;overflow:hidden}
+.fb{position:absolute;left:0;top:0}
+.art>img.fb{width:auto;height:auto}
+.gl{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .5s}
+.gl-on>.gl{opacity:1}.gl-on>.fb{visibility:hidden}
+.ready #giris .art{animation:fly 3.4s cubic-bezier(.16,.8,.2,1) backwards}
+@keyframes fly{from{transform:perspective(1400px) translateY(10%) rotateX(26deg) rotateZ(-5deg) scale(.56);border-radius:24px;filter:brightness(.5);box-shadow:0 60px 120px -30px rgba(0,0,0,.85)}}
 #giris .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,22,40,.92) 0%,rgba(9,22,40,.72) 30%,rgba(9,22,40,0) 62%),linear-gradient(0deg,rgba(9,22,40,.85),rgba(9,22,40,0) 34%),linear-gradient(180deg,rgba(9,22,40,.55),rgba(9,22,40,0) 22%)}
 .spark{position:absolute;width:26px;height:26px;margin:-13px;pointer-events:none;animation:tw 3.2s ease-in-out infinite;animation-delay:var(--dl);opacity:0}
 .spark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,#fff6d8 0 8%,transparent 9%),conic-gradient(from 0deg,transparent 0 21%,rgba(255,240,200,.95) 25%,transparent 29% 46%,rgba(255,240,200,.95) 50%,transparent 54% 71%,rgba(255,240,200,.95) 75%,transparent 79% 96%,rgba(255,240,200,.95) 100%);-webkit-mask:radial-gradient(circle,#000 0 20%,transparent 62%);mask:radial-gradient(circle,#000 0 20%,transparent 62%);filter:drop-shadow(0 0 6px rgba(255,214,120,.9))}
@@ -155,7 +160,8 @@ em{font-style:italic}
 /* 02 legend */
 #efsane .layer{background:#0d1d24}
 #efsane .pan{position:absolute;left:0;top:0;will-change:transform;transform-origin:50% 50%}
-#efsane .pan img{width:100%;height:100%}
+#efsane .pan img{width:100%;height:100%;object-fit:fill}
+#efsane .pan img+img{margin-top:0}
 #efsane .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,16,20,.9) 0%,rgba(8,16,20,.6) 34%,rgba(8,16,20,0) 64%)}
 .steps{position:absolute;left:calc(var(--gut) + clamp(16px,4vw,56px));bottom:calc(24% + 34px);width:min(560px,82vw)}
 .js .step{position:absolute;left:0;bottom:0;width:100%}
@@ -341,13 +347,14 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
   <!-- 01 HERO -->
   <section class="scene fx" id="giris" style="--len:230" data-name="Giriş" data-tone="dark">
     <div class="layer">
-      <div class="art" data-iw="2400" data-ih="1422" data-px=".62" data-pxm=".6">
-        <img src="gorseller/hero.webp" width="2400" height="1422" alt="Katsushika Hokusai'nin mavi zemin üzerinde yüzen iki koi balığı gravürü" fetchpriority="high">
-        <i class="spark" style="left:47%;top:44%;--dl:.2s"></i>
-        <i class="spark" style="left:58%;top:58%;--dl:1.3s"></i>
-        <i class="spark" style="left:38%;top:72%;--dl:2.1s"></i>
-        <i class="spark" style="left:53%;top:27%;--dl:.8s"></i>
-        <i class="spark" style="left:67%;top:47%;--dl:2.6s"></i>
+      <div class="art">
+        <img class="fb" src="gorseller/hero-m.webp" srcset="gorseller/hero-m.webp 2048w, gorseller/hero.webp 3840w" sizes="100vw" width="3840" height="2276" data-iw="3840" data-ih="2276" data-px=".62" data-pxm=".6" alt="Katsushika Hokusai'nin mavi zemin üzerinde yüzen iki koi balığı gravürü" fetchpriority="high">
+        <canvas class="gl" aria-hidden="true"></canvas>
+        <i class="spark" data-u=".47" data-v=".44" style="--dl:.2s"></i>
+        <i class="spark" data-u=".58" data-v=".58" style="--dl:1.3s"></i>
+        <i class="spark" data-u=".38" data-v=".72" style="--dl:2.1s"></i>
+        <i class="spark" data-u=".53" data-v=".27" style="--dl:.8s"></i>
+        <i class="spark" data-u=".67" data-v=".47" style="--dl:2.6s"></i>
       </div>
       <div class="shade"></div>
       <div class="hero-txt">
@@ -366,7 +373,10 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
   <!-- 02 LEGEND -->
   <section class="scene fx" id="efsane" style="--len:420" data-name="Efsane" data-tone="dark" data-veil="#0d1d24">
     <div class="layer">
-      <div class="pan"><img src="gorseller/selale.webp" width="1275" height="2893" alt="Katsushika Hokusai'nin şelaleye tırmanan koi balıkları resmi" loading="lazy"></div>
+      <div class="art">
+        <div class="pan fb"><img src="gorseller/selale-m.webp" width="1200" height="3545" alt="Keisai Eisen'in şelaleye tırmanan koi balığı gravürü"></div>
+        <canvas class="gl" aria-hidden="true"></canvas>
+      </div>
       <div class="shade"></div>
       <div class="steps">
         <div class="step"><span class="tag fade">Bir Japon efsanesi</span><h2 data-split>Şelaleyi aşan koi, <em>ejderha</em> olur.</h2><p class="fade" style="--fd:1">Akıntıya karşı yüzüp şelalenin tepesine ulaşan koi, ejderhaya dönüşür. Biz de işletmeleri o tepeye taşırız.</p></div>
@@ -520,8 +530,8 @@ const half=words.map(w=>`<span>${w}${koiMark}</span>`).join('');$('.band div').i
 const scenes=$$('.scene').map(el=>({el,id:el.id,fixed:el.classList.contains('fx'),layer:el.classList.contains('fx')?$('.layer',el):null,name:el.dataset.name,tone:el.dataset.tone,veil:el.dataset.veil,start:0,end:0}));
 const byId=Object.fromEntries(scenes.map(s=>[s.id,s]));
 let bounds=[],T=0;
-function fitCover(el,iw,ih,px,py){const s=Math.max(vw/iw,vh/ih),w=iw*s,h=ih*s;
-  Object.assign(el.style,{width:w+'px',height:h+'px',left:(vw-w)*px+'px',top:(vh-h)*py+'px'})}
+function fitCover(el,iw,ih,px,py){const s=Math.max(vw/iw,vh/ih),w=iw*s,h=ih*s,x=(vw-w)*px,y=(vh-h)*py;
+  Object.assign(el.style,{width:w+'px',height:h+'px',left:x+'px',top:y+'px'});return[x,y,w,h]}
 
 /* veil (halftone dissolve) */
 const veil=$('.veil'),vx=veil.getContext('2d');let cells=null,csz=12,vLast='';
@@ -562,15 +572,45 @@ function drawHT(r){if(Math.abs(r-htLast)<.004)return;htLast=r;hx.clearRect(0,0,h
     const th=hash(x,y)*.55+(y/GH)*.45,k=clamp((r*1.5-th)/.35);if(k<=0)continue;const rad=cs*.62*Math.pow(v,.75)*k,cx=x*cs+cs/2+(y%2?cs/2:0),cy=y*cs+cs/2;
     hx.moveTo(cx+rad,cy);hx.arc(cx,cy,rad,0,6.2832)}}hx.fill()}
 
+/* WebGL depth renderer: depth map pushes near layers forward (2.5D) */
+const GDPR=Math.min(devicePixelRatio||1,1.75),tilt=[0,0],tiltT=[0,0];
+const VS='attribute vec2 p;uniform vec2 uRes;varying vec2 vP;void main(){vP=vec2((p.x*.5+.5)*uRes.x,(.5-p.y*.5)*uRes.y);gl_Position=vec4(p,0.,1.);}';
+const FS='precision highp float;varying vec2 vP;uniform vec2 uRes,uFocus,uTilt;uniform vec4 uRect;uniform float uZoom,uAmt,uTiles;uniform sampler2D uT0,uT1,uD;'+
+ 'vec2 wp(vec2 u,float d){float z=1.+(uZoom-1.)*(.65+.7*d);return uFocus+(u-uFocus)/z+uTilt*(d-.4)*uAmt;}'+
+ 'void main(){vec2 u=(vP-uRect.xy)/uRect.zw;float d=texture2D(uD,u).r;vec2 w=wp(u,d);d=texture2D(uD,w).r;w=wp(u,d);d=texture2D(uD,w).r;w=clamp(wp(u,d),.0005,.9995);'+
+ 'vec3 c=uTiles>1.5?mix(texture2D(uT0,vec2(w.x,w.y*2.)).rgb,texture2D(uT1,vec2(w.x,w.y*2.-1.)).rgb,step(.5,w.y)):texture2D(uT0,w).rgb;gl_FragColor=vec4(c,1.);}';
+const loadImg=src=>new Promise((ok,no)=>{if(src instanceof HTMLImageElement){if(src.complete&&src.naturalWidth)return ok(src);src.addEventListener('load',()=>ok(src),{once:true});src.addEventListener('error',no,{once:true});return}
+  const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=src});
+function makeGL(canvas,pick){const o={ready:false};let gl;try{gl=canvas.getContext('webgl2',{antialias:false,alpha:false})||canvas.getContext('webgl',{antialias:false,alpha:false})}catch(e){}
+  if(!gl)return o;const g2=typeof WebGL2RenderingContext!=='undefined'&&gl instanceof WebGL2RenderingContext,max=gl.getParameter(gl.MAX_TEXTURE_SIZE);
+  const sh=(t,src)=>{const x=gl.createShader(t);gl.shaderSource(x,src);gl.compileShader(x);return x},pr=gl.createProgram();
+  gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return o;gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const U={};['uRes','uRect','uZoom','uAmt','uFocus','uTilt','uT0','uT1','uD','uTiles'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+  const[srcs,depth]=pick(max);
+  Promise.all([...srcs,depth].map(loadImg)).then(imgs=>{imgs.forEach((im,i)=>{gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(gl.TEXTURE_2D,gl.createTexture());
+      gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,im);const mip=g2&&i<srcs.length;
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,mip?gl.LINEAR_MIPMAP_LINEAR:gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);if(mip)gl.generateMipmap(gl.TEXTURE_2D)});
+    if(gl.getError()){return}
+    gl.uniform1i(U.uT0,0);gl.uniform1i(U.uT1,srcs.length>1?1:0);gl.uniform1i(U.uD,srcs.length);gl.uniform1f(U.uTiles,srcs.length);o.ready=true;o.size();canvas.parentNode.classList.add('gl-on')})
+   .catch(()=>{});
+  o.size=()=>{canvas.width=Math.round(vw*GDPR);canvas.height=Math.round(vh*GDPR);gl.viewport(0,0,canvas.width,canvas.height)};
+  o.draw=(r,zoom,f,tl,amt)=>{if(!o.ready)return;const k=GDPR;gl.uniform2f(U.uRes,canvas.width,canvas.height);gl.uniform4f(U.uRect,r[0]*k,r[1]*k,r[2]*k,r[3]*k);
+    gl.uniform1f(U.uZoom,zoom);gl.uniform2f(U.uFocus,f[0],f[1]);gl.uniform2f(U.uTilt,tl[0],tl[1]);gl.uniform1f(U.uAmt,amt);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)};
+  return o}
+
 /* per-scene refs */
-const H={art:$('#giris .art'),txt:$('#giris .hero-txt'),foot:$('#giris .hero-foot'),cue:$('#giris .cue')};
-const E={pan:$('#efsane .pan'),steps:$$('#efsane .step'),sn:$('#efsane .sn'),bar:$('#efsane .stepnav b'),idx:-1,w:0,h:0};
+const H={art:$('#giris .art'),fb:$('#giris .fb'),sparks:$$('#giris .spark'),rect:[0,0,1,1],txt:$('#giris .hero-txt'),foot:$('#giris .hero-foot'),cue:$('#giris .cue')};
+const E={pan:$('#efsane .pan'),x:0,ly:0,v:0,steps:$$('#efsane .step'),sn:$('#efsane .sn'),bar:$('#efsane .stepnav b'),idx:-1,w:0,h:0};
 const V={panel:$('#gorunur .panel'),cap:$('#gorunur .caption'),txt:$('#gorunur .vis-txt'),s0:1};
 const P={col:$('#surec .col'),blks:$$('#surec .blk'),ch:0};
 const M={art:$('#manifesto .art'),man:$('#manifesto .man'),lit:-1};
 function layout(){vw=innerWidth;vh=innerHeight;mob=vw<900;T=vh*.42;
-  [H.art,M.art].forEach(a=>{const d=a.dataset;fitCover(a,+d.iw,+d.ih,+(mob&&d.pxm?d.pxm:d.px||.5),+(mob&&d.pym?d.pym:d.py||.5))});
-  E.w=Math.max(vw,vh*.95);E.h=E.w*2893/1275;Object.assign(E.pan.style,{width:E.w+'px',height:E.h+'px',left:(vw-E.w)*.55+'px'});
+  const cov=a=>{const d=a.dataset;return fitCover(a,+d.iw,+d.ih,+(mob&&d.pxm?d.pxm:d.px||.5),+(mob&&d.pym?d.pym:d.py||.5))};H.rect=cov(H.fb);cov(M.art);
+  E.w=(mob?vw*1.35:Math.max(vw,vh*.95))*1.07;E.h=E.w*7090/2400;E.x=(vw-E.w)*.5;Object.assign(E.pan.style,{width:E.w+'px',height:E.h+'px',left:E.x+'px'});
+  H.gl&&H.gl.ready&&H.gl.size();E.gl&&E.gl.ready&&E.gl.size();
   // hiroshige panel: final frame + zoom fixed point on the koi's eye
   let W,Hh,L,Tp;if(!mob){Hh=Math.min(vh*.76,vw*.42/.6667);W=Hh*.6667;L=vw-W-Math.max(vw*.09,70);Tp=(vh-Hh)/2}
   else{W=Math.min(vw*.6,vh*.4*.6667);Hh=W/.6667;L=(vw-W)/2;Tp=64+18}
@@ -586,10 +626,17 @@ function layout(){vw=innerWidth;vh=innerHeight;mob=vw<900;T=vh*.42;
   veilLayout();htLayout();buildClouds();starsLayout();pondLayout()}
 
 /* scene updates */
-function upHero(p,t){const q=clamp((p-.1)/.8);H.art.style.transform=RM?'':`scale(${1+Math.pow(q,1.8)*2.6})`;
+function upHero(p,t){const q=clamp((p-.08)/.84),zoom=RM?1:1+Math.pow(q,1.5)*1.5,F=[.55,.42],amt=.024+q*.026,gl=H.gl&&H.gl.ready;
+  if(gl){H.art.style.transform=RM?'':`perspective(1400px) rotateX(${q*7}deg) scale(${1+q*.1})`;H.gl.draw(H.rect,zoom,F,tilt,amt)}
+  else H.art.style.transform=RM?'':`scale(${1+Math.pow(q,1.8)*1.8})`;
+  const z=gl?1+(zoom-1)*1.35:1;H.sparks.forEach(s=>{const sx=F[0]+(+s.dataset.u-F[0]-(gl?tilt[0]*.6*amt:0))*z,sy=F[1]+(+s.dataset.v-F[1]-(gl?tilt[1]*.6*amt:0))*z;
+    s.style.left=H.rect[0]+sx*H.rect[2]+'px';s.style.top=H.rect[1]+sy*H.rect[3]+'px';s.style.display=q>.18?'none':''});
   const k=clamp((p-.05)/.22);H.txt.style.opacity=1-k;H.txt.style.translate=`0 ${-k*70}px`;H.foot.style.opacity=1-clamp((p-.02)/.15);H.cue.style.opacity=1-clamp(p/.06);
   placeClouds(heroClouds,RM?0:p,t)}
-function upLegend(p){const e=RM?.5:eio(clamp((p-.03)/.94));E.pan.style.transform=`translate3d(0,${lerp(-(E.h-vh),0,e)}px,0) scale(${lerp(1.06,1,e)})`;
+function upLegend(p){const e=RM?.5:eio(clamp((p-.03)/.94)),y=lerp(vh-E.h*.986,-E.h*.006,e);
+  if(E.gl&&E.gl.ready){E.v+=(clamp((y-E.ly)/25,-1.4,1.4)-E.v)*.07;E.ly=y;
+    E.gl.draw([E.x,y,E.w,E.h],1+Math.sin(e*Math.PI)*.16,[(vw/2-E.x)/E.w,(vh/2-y)/E.h],[tilt[0],tilt[1]-E.v],.034)}
+  else E.pan.style.transform=`translate3d(0,${y}px,0) scale(${lerp(1.06,1,e)})`;
   const i=p<.25?0:p<.5?1:p<.75?2:3;if(i!==E.idx){E.steps.forEach((s,j)=>{s.classList.toggle('in',j===i);s.classList.toggle('out',j!==i&&j<i)});E.idx=i;E.sn.textContent='0'+(i+1)}
   E.bar.parentNode.style.setProperty('--sp',clamp(p/.98))}
 function upVis(p){const q=RM?1:eio(clamp(p/.55)),s=Math.pow(V.s0,1-q);V.panel.style.transform=`scale(${s})`;
@@ -665,8 +712,9 @@ new IntersectionObserver(es=>es.forEach(e=>{sOn=e.isIntersecting;if(sOn&&!sT0)sT
 new IntersectionObserver(es=>es.forEach(e=>pOn=e.isIntersecting)).observe($('#son'));
 
 /* main loop */
-let last=performance.now();
-function frame(t){const dt=t-last;last=t;ty=scrollY;
+let last=performance.now();const coarse=matchMedia('(pointer:coarse)').matches;
+addEventListener('pointermove',e=>{if(!coarse){tiltT[0]=(e.clientX/vw-.5)*2;tiltT[1]=(e.clientY/vh-.5)*2}});
+function frame(t){const dt=t-last;last=t;ty=scrollY;if(coarse){tiltT[0]=Math.sin(t*.0005)*.7;tiltT[1]=Math.cos(t*.00037)*.5}tilt[0]+=(tiltT[0]-tilt[0])*.06;tilt[1]+=(tiltT[1]-tilt[1])*.06;
   sy=RM?ty:sy+(ty-sy)*(1-Math.pow(1-(matchMedia('(pointer:coarse)').matches?.3:.12),dt/16.7));if(Math.abs(ty-sy)<.3)sy=ty;
   let act=scenes[0];for(const s of scenes)if(sy>=s.start)act=s;
   let tone=act.tone;
@@ -705,11 +753,16 @@ const cur=$('.cur');if(matchMedia('(pointer:fine)').matches){let cx=0,cy=0,mx=0,
 
 /* boot */
 let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(layout,150)});
+const big=max=>innerWidth>=900&&max>=4096;
+if(!RM){H.gl=makeGL($('#giris .gl'),max=>[[H.fb],'gorseller/hero-derinlik.png']);
+  E.gl=makeGL($('#efsane .gl'),max=>[big(max)?['gorseller/selale-1.webp','gorseller/selale-2.webp']:['gorseller/selale-m.webp'],'gorseller/selale-derinlik.png'])}
+if(innerWidth>=900&&!(E.gl&&E.gl.size))E.pan.innerHTML='<img src="gorseller/selale-1.webp" alt="Keisai Eisen\'in şelaleye tırmanan koi balığı gravürü" style="height:50%"><img src="gorseller/selale-2.webp" alt="" style="height:50%">';
+setTimeout(()=>{if(innerWidth>=900&&!(E.gl&&E.gl.ready)&&E.pan.children.length<2)E.pan.innerHTML='<img src="gorseller/selale-1.webp" alt="Keisai Eisen\'in şelaleye tırmanan koi balığı gravürü" style="height:50%"><img src="gorseller/selale-2.webp" alt="" style="height:50%">'},4000);
 layout();requestAnimationFrame(frame);
-const loader=$('.loader'),lnum=$('.lnum'),lbar=$('.loader .bar');const pre=['hero','selale','hiroshige','kuniyoshi'];let got=0,done=false;
+const loader=$('.loader'),lnum=$('.lnum'),lbar=$('.loader .bar');const pre=[H.fb,'gorseller/hero-derinlik.png','gorseller/selale-derinlik.png',innerWidth>=900?'gorseller/selale-1.webp':'gorseller/selale-m.webp','gorseller/hiroshige.webp'];let got=0,done=false;
 const finish=()=>{if(done)return;done=true;lbar.style.setProperty('--lp',1);lnum.textContent='100';
-  setTimeout(()=>{animVeil(0,1,420,'#efe7d6',()=>{loader.remove();document.body.classList.add('ready');H.txt.classList.add('in');H.foot.classList.add('in');animVeil(1,0,1100,'#efe7d6')})},250)};
-pre.forEach(n=>{const i=new Image();i.onload=i.onerror=()=>{got++;lbar.style.setProperty('--lp',got/pre.length);lnum.textContent=String(Math.round(got/pre.length*100)).padStart(3,'0');if(got===pre.length)finish()};i.src=`gorseller/${n}.webp`});
+  setTimeout(()=>{loader.classList.add('gone');document.body.classList.add('ready');setTimeout(()=>{H.txt.classList.add('in');H.foot.classList.add('in')},1500);setTimeout(()=>loader.remove(),1000)},300)};
+pre.forEach(n=>loadImg(n).catch(()=>{}).then(()=>{got++;lbar.style.setProperty('--lp',got/pre.length);lnum.textContent=String(Math.round(got/pre.length*100)).padStart(3,'0');if(got===pre.length)finish()}));
 setTimeout(finish,7000);
 })();
 </script>
