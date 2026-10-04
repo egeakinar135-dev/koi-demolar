@@ -214,7 +214,7 @@ html:not(.js) .pol{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(-
 /* ---------- movement ---------- */
 .moves{display:grid;gap:18px;margin-top:44px;perspective:1000px}
 @media (min-width:860px){.moves{grid-template-columns:repeat(3,1fr)}}
-.card{position:relative;padding:32px 28px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),opacity .8s var(--ease);transform-style:preserve-3d}
+.card{position:relative;padding:32px 28px;border-radius:var(--radius);background:var(--surface);color:var(--text);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),opacity .8s var(--ease);transform-style:preserve-3d}
 .card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgb(233 184 114 / .22),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
 .card:hover{box-shadow:var(--shadow)}
 .card:hover::after{opacity:1}
@@ -282,46 +282,6 @@ html:not(.js) .pol{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(-
 .prin.is-in .chk path,html:not(.js) .prin .chk path{stroke-dashoffset:0}
 .prin h3{font-size:1.45rem;margin-top:18px}
 .prin p{font-size:.95rem}
-.rulebook{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px;padding:20px 22px;border-radius:18px;background:rgb(233 184 114 / .18);font-size:.9rem;color:var(--muted)}
-.rulebook b{color:var(--text)}
-
-/* ---------- official ---------- */
-.off-grid{display:grid;gap:14px;margin-top:44px}
-@media (min-width:700px){.off-grid{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1040px){.off-grid{grid-template-columns:repeat(3,1fr)}}
-.off{position:relative;display:flex;flex-direction:column;gap:6px;min-height:170px;padding:24px;border-radius:20px;border:1px solid var(--on-dark-line);background:rgb(255 255 255 / .04);text-decoration:none;overflow:hidden;transition:transform .5s var(--ease),border-color .4s,background .4s}
-.off::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgb(233 184 114 / .16),transparent 60%);transform:translateY(100%);transition:transform .6s var(--ease)}
-.off:hover{transform:translateY(-6px);border-color:var(--sun)}
-.off:hover::before{transform:none}
-.off>*{position:relative}
-.off small{font:600 .7rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sun)}
-.off h3{font-size:1.5rem;margin-top:8px}
-.off p{font-size:.9rem;color:var(--on-dark-muted)}
-.off .arr{position:absolute;top:22px;right:22px;width:40px;height:40px;border-radius:50%;border:1px solid var(--on-dark-line);display:grid;place-items:center;overflow:hidden}
-.off .arr svg{width:16px;height:16px;fill:none;stroke:var(--on-dark);stroke-width:2;transition:transform .5s var(--ease)}
-.off:hover .arr svg{animation:arr .6s var(--ease)}
-@keyframes arr{49%{transform:translate(160%,-160%)}50%{transform:translate(-160%,160%)}100%{transform:none}}
-.off .dom{margin-top:auto;padding-top:14px;font-size:.78rem;color:var(--on-dark-muted);letter-spacing:.04em}
-.off-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin-top:30px;padding:24px;border-radius:20px;border:1px dashed rgb(233 184 114 / .5)}
-.off-cta p{max-width:52ch;color:var(--on-dark-muted);font-size:.92rem}
-
-/* redirect dialog */
-.go{width:min(520px,calc(100% - 32px));padding:0;border:0;border-radius:24px;background:var(--surface);color:var(--text);box-shadow:0 40px 90px -30px rgb(0 0 0 / .6)}
-.go::backdrop{background:rgb(8 20 26 / .7);backdrop-filter:blur(6px)}
-.go[open]{animation:pop .55s var(--spring)}
-@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.94)}}
-.go-in{padding:clamp(24px,5vw,38px);text-align:center}
-.go-ic{width:72px;height:72px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:var(--sea);color:var(--sun);animation:spinIn 1s var(--ease)}
-.go-ic svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
-@keyframes spinIn{from{transform:rotate(-180deg) scale(.4)}}
-.go h3{font-size:clamp(1.5rem,4vw,1.9rem)}
-.go-t{margin-top:10px;font-weight:600;color:var(--sea)}
-.go-note{margin-top:10px;font-size:.88rem;color:var(--muted)}
-.go-bar{height:4px;margin-top:22px;border-radius:4px;background:var(--line);overflow:hidden}
-.go-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--sun));transform-origin:0 50%;transform:scaleX(0)}
-.go.run .go-bar i{transform:scaleX(1);transition:transform 3.2s linear}
-.go-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
-.go small{display:block;margin-top:14px;font-size:.8rem;color:var(--muted)}
 
 /* ---------- contact ---------- */
 .contact-grid{display:grid;gap:40px}
@@ -419,13 +379,13 @@ fieldset{border:0;padding:0;margin:0}
 <header class="header" id="top">
   <a class="logo" href="#top" aria-label="Gizem Özdemir, başa dön"><b>G</b><span>Gizem Özdemir</span></a>
   <nav class="nav" aria-label="Ana menü">
-    <a href="#hikayem">Hikâyem</a><a href="#ulkeler">Rota</a><a href="#galeri">Galeri</a><a href="#ilkeler">İlkelerim</a><a href="#herbalife">Herbalife</a>
+    <a href="#hikayem">Hikâyem</a><a href="#ulkeler">Rota</a><a href="#galeri">Galeri</a><a href="#ilkeler">İlkelerim</a><a href="#iletisim">İletişim</a>
   </nav>
   <a class="btn btn-main head-cta mag" href="#iletisim">Benimle Tanış</a>
   <button class="burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
 </header>
 <nav class="mnav" id="mnav" aria-label="Mobil menü">
-  <a href="#hikayem" style="--i:0">Hikâyem</a><a href="#ulkeler" style="--i:1">Rota</a><a href="#galeri" style="--i:2">Galeri</a><a href="#ilkeler" style="--i:3">İlkelerim</a><a href="#herbalife" style="--i:4">Herbalife</a>
+  <a href="#hikayem" style="--i:0">Hikâyem</a><a href="#ulkeler" style="--i:1">Rota</a><a href="#galeri" style="--i:2">Galeri</a><a href="#ilkeler" style="--i:3">İlkelerim</a><a href="#iletisim" style="--i:4">İletişim</a>
   <a class="btn btn-sun" href="#iletisim" style="--i:5">Benimle Tanış</a>
   <small>Herbalife Bağımsız Distribütörü · @gizzozdemir</small>
 </nav>
@@ -444,7 +404,7 @@ fieldset{border:0;padding:0;margin:0}
       <span class="w" aria-hidden="true"><span style="--i:0">Hareket</span></span> <span class="w" aria-hidden="true"><span style="--i:1">et,</span></span> <span class="w" aria-hidden="true"><span style="--i:2">keşfet,</span></span> <span class="w" aria-hidden="true"><span style="--i:3"><em>dengede</em></span></span> <span class="w" aria-hidden="true"><span style="--i:4"><em>kal.</em></span></span>
     </h1>
     <p class="rotline fade-up" style="--d:.7s">Benim için her gün biraz <span class="rot" id="rot"><b class="on">seyahat.</b><b>spor.</b><b>disiplin.</b><b>denge.</b></span></p>
-    <p class="hero-sub fade-up" style="--d:.85s">Ben Gizem. Yeni rotaları, sporu ve düzenli bir rutini seviyorum. Herbalife Bağımsız Distribütörüyüm; merak edenleri resmî kaynaklarla, dürüstçe bilgilendiririm.</p>
+    <p class="hero-sub fade-up" style="--d:.85s">Ben Gizem. Yeni rotaları, sporu ve düzenli bir rutini seviyorum. Herbalife Bağımsız Distribütörüyüm; merak edenleri dürüstçe bilgilendiririm.</p>
     <div class="hero-btns fade-up" style="--d:1s">
       <a class="btn btn-main mag" href="#iletisim">Benimle Tanış</a>
       <a class="btn btn-ghost mag" href="#ilkeler">Etik İlkelerim</a>
@@ -535,7 +495,7 @@ fieldset{border:0;padding:0;margin:0}
   <div class="b b1"><div class="track"><span>Seyahat</span><span>Spor</span><span>Dürüstlük</span><span>Yeni rotalar</span><span>Seyahat</span><span>Spor</span><span>Dürüstlük</span><span>Yeni rotalar</span></div></div>
 </div>
 
-<section class="section" id="ilkeler">
+<section class="section dark" id="ilkeler">
   <div class="wrap">
     <span class="eyebrow reveal">Etik İlkelerim</span>
     <h2 class="split">Önce <em>dürüstlük</em></h2>
@@ -545,20 +505,9 @@ fieldset{border:0;padding:0;margin:0}
       <article class="card prin tilt reveal" style="--i:1"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Kazanç vaadi yok</h3><p>Garantili, kolay ya da hızlı kazanç vaat etmem. Sonuç; emeğe, zamana ve beceriye bağlıdır.</p></article>
       <article class="card prin tilt reveal" style="--i:2"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Sağlık iddiası yok</h3><p>Ürünlerin bir hastalığı tedavi ettiğini söylemem. Kilo rakamı vermem, öncesi-sonrası fotoğrafı paylaşmam.</p></article>
       <article class="card prin tilt reveal"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Önce hekimin</h3><p>Bir sağlık sorunun varsa ya da tedavi görüyorsan, beslenmende değişiklik yapmadan önce hekimine danışmanı isterim.</p></article>
-      <article class="card prin tilt reveal" style="--i:1"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Doğru kaynak</h3><p>Ürün içerikleri, etiketler ve iş fırsatı için seni doğrudan Herbalife’ın resmî sitesine yönlendiririm.</p></article>
+      <article class="card prin tilt reveal" style="--i:1"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Doğru bilgi</h3><p>Ürünler hakkında yalnızca etiket ve kullanım talimatlarındaki bilgileri paylaşırım; bilmediğim konuda yorum yapmam.</p></article>
       <article class="card prin tilt reveal" style="--i:2"><div class="chk"><svg viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8.5"/></svg></div><h3>Baskı yok</h3><p>Karar tamamen senin. Israr etmem, acele ettirmem; paylaştığın bilgileri kimseyle paylaşmam.</p></article>
     </div>
-    <div class="rulebook reveal"><span><b>Kuralları kendin oku:</b> Herbalife Türkiye Faaliyet Kuralları herkese açıktır.</span><a class="btn btn-line ext" href="https://assets.herbalifenutrition.com/content/dam/regional/emea/tr_tr/consumable_content/policy-and-compliance/2021/06-Jun/Rules_of_Conduct_tr-TR.pdf/_jcr_content/renditions/original" data-t="Faaliyet Kuralları (PDF)" target="_blank" rel="noopener">Faaliyet Kuralları <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11L11 5M6 5h5v5"/></svg></a></div>
-  </div>
-</section>
-
-<section class="section dark" id="herbalife">
-  <div class="wrap">
-    <span class="eyebrow reveal">Resmî Kaynak</span>
-    <h2 class="split">Herbalife’ı <em>kendi sitesinden</em> tanı</h2>
-    <p class="lead reveal" style="--i:2">Bu sitede ürün satışı ya da ürün tanıtımı yapılmaz. Ürünler, şirket ve iş fırsatı hakkındaki doğru ve güncel bilgi Herbalife’ın resmî sitesinde; bağlantılar seni doğrudan oraya götürür.</p>
-    <div class="off-grid" id="offGrid"></div>
-    <div class="off-cta reveal"><p>Herbalife Türkiye’nin resmî sitesine gitmek için tıkla. Kişisel sitemden ayrılıp herbalife.com’a geçeceksin.</p><a class="btn btn-sun mag ext" href="https://www.herbalife.com/tr-tr" data-t="herbalife.com/tr-tr" target="_blank" rel="noopener">Resmî Siteye Git <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11L11 5M6 5h5v5"/></svg></a></div>
   </div>
 </section>
 
@@ -570,7 +519,7 @@ fieldset{border:0;padding:0;margin:0}
       <p class="lead reveal" style="--i:2">Soruların mı var, sadece tanışmak mı istiyorsun? Yaz, en kısa sürede dönerim.</p>
       <ol class="steps">
         <li class="reveal"><b>01</b><div><h3>Bana yaz</h3><p>Formu doldur ya da Instagram’dan mesaj at.</p></div></li>
-        <li class="reveal" style="--i:1"><b>02</b><div><h3>Tanışalım</h3><p>Kısa bir online görüşmede resmî bilgileri birlikte inceleriz.</p></div></li>
+        <li class="reveal" style="--i:1"><b>02</b><div><h3>Tanışalım</h3><p>Kısa bir online görüşmede sorularını açıkça yanıtlarım.</p></div></li>
         <li class="reveal" style="--i:2"><b>03</b><div><h3>Kararı sen ver</h3><p>Acele yok, baskı yok. Sana uymuyorsa bunu da açıkça söylerim.</p></div></li>
       </ol>
       <div class="links">
@@ -615,7 +564,7 @@ fieldset{border:0;padding:0;margin:0}
         <a class="logo" href="#top"><b>G</b><span>Gizem Özdemir</span></a>
         <p style="margin-top:14px">Seyahat, spor ve denge. Instagram: <a href="https://instagram.com/gizzozdemir" target="_blank" rel="noopener">@gizzozdemir</a></p>
       </div>
-      <p class="legal"><b>Herbalife Bağımsız Distribütörü.</b> Bu site Gizem Özdemir’in kişisel sitesidir; Herbalife’ın resmî sitesi değildir ve Herbalife tarafından işletilmez. Bu sitede ürün satışı yapılmaz. Paylaşılan seyahat ve deneyimler kişiseldir; kazanç, sonuç ya da sağlık vaadi içermez. Herbalife iş fırsatında kazanç garantisi yoktur; sonuç kişinin emeğine, zamanına ve becerisine bağlıdır. Sağlık sorununuz varsa beslenmenizi değiştirmeden önce hekiminize danışın. Herbalife adı ve markaları Herbalife’a aittir. Resmî bilgi: <a class="ext" href="https://www.herbalife.com/tr-tr" data-t="herbalife.com/tr-tr" target="_blank" rel="noopener">herbalife.com/tr-tr</a> · <a class="ext" href="https://www.herbalife.com/content/dam/global-reusable-assets/documents/pd-statement-typical-distributor-earnings-tr-tr.pdf" data-t="Ortalama Kazanç Beyanı (PDF)" target="_blank" rel="noopener">Ortalama Kazanç Beyanı</a></p>
+      <p class="legal"><b>Herbalife Bağımsız Distribütörü.</b> Bu site Gizem Özdemir’in kişisel sitesidir; Herbalife’ın resmî sitesi değildir ve Herbalife tarafından işletilmez. Bu sitede ürün satışı yapılmaz. Paylaşılan seyahat ve deneyimler kişiseldir; kazanç, sonuç ya da sağlık vaadi içermez. Herbalife iş fırsatında kazanç garantisi yoktur; sonuç kişinin emeğine, zamanına ve becerisine bağlıdır. Sağlık sorununuz varsa beslenmenizi değiştirmeden önce hekiminize danışın. Herbalife adı ve markaları Herbalife’a aittir.</p>
     </div>
     <div class="foot-bottom"><span>© <span id="yil">2026</span> Gizem Özdemir</span><span>Koi Ajans tarafından hazırlanmıştır</span></div>
   </div>
@@ -627,18 +576,6 @@ fieldset{border:0;padding:0;margin:0}
 <dialog class="lb" id="lb" aria-label="Fotoğraf">
   <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
   <button class="x" aria-label="Kapat">✕</button><button class="pv" aria-label="Önceki">‹</button><button class="nx" aria-label="Sonraki">›</button>
-</dialog>
-
-<dialog class="go" id="go" aria-labelledby="goH">
-  <div class="go-in">
-    <div class="go-ic"><svg viewBox="0 0 30 30"><path d="M13 7H7v16h16v-6M17 7h6v6M23 7L13 17"/></svg></div>
-    <h3 id="goH">Herbalife’ın resmî sitesine <em>geçiyorsun</em></h3>
-    <p class="go-t" id="goT"></p>
-    <p class="go-note">Bu sayfa Herbalife’a aittir; içeriğinden Herbalife sorumludur. Gizem’in kişisel sitesinden ayrılıyorsun.</p>
-    <div class="go-bar"><i></i></div>
-    <div class="go-btns"><a class="btn btn-main" id="goA" href="https://www.herbalife.com/tr-tr" target="_blank" rel="noopener">Hemen Git</a><button class="btn btn-line" id="goX" type="button">Vazgeç</button></div>
-    <small id="goC">Birkaç saniye içinde otomatik açılacak.</small>
-  </div>
 </dialog>
 
 <script>
@@ -656,23 +593,6 @@ const C = [['mu','Mauritius','Hint Okyanusu'],['pt','Portekiz','2024 ve 2025',1]
 $('#stamps').innerHTML = C.map(([c, n, t, f], i) => `<article class="stamp${f ? ' fav' : ''}" style="--i:${i % 5};--r:${[-5, 3, -2, 5, -4][i % 5]}deg"><span class="no">${String(i + 1).padStart(2, '0')}</span><img src="gorseller/bayrak/${c}.svg" width="48" height="34" alt="${n} bayrağı" loading="lazy"><h3>${n}</h3><p>${t}</p></article>`).join('');
 const tk = C.map(([c, n]) => `<span><img src="gorseller/bayrak/${c}.svg" alt="">${n}</span>`).join('');
 $('#flagTicker').innerHTML = tk + tk;
-
-/* resmî Herbalife bağlantıları */
-const H = 'https://www.herbalife.com/tr-tr/', ARR = '<span class="arr"><svg viewBox="0 0 16 16"><path d="M4 12L12 4M5 4h7v7"/></svg></span>';
-const O = [['Şirket','Herbalife hakkında','Şirketin geçmişi, değerleri ve dünyadaki varlığı.',H+'herbalife-hakkinda/sirketimiz'],['Ürünler','Tüm ürünler','Ürün içerikleri, etiketler ve kullanım bilgileri.',H+'u/category/all-products'],['İş fırsatı','Distribütörlük','Herbalife’ın kendi anlatımıyla iş fırsatı.',H+'is-firsati'],['Şeffaflık','Ortalama Kazanç Beyanı','Distribütör kazançlarına dair resmî beyan (PDF).','https://www.herbalife.com/content/dam/global-reusable-assets/documents/pd-statement-typical-distributor-earnings-tr-tr.pdf'],['Topluluk','Bağımsız distribütörler','Distribütörlük nedir, nasıl işler?',H+'herbalife-hakkinda/distributorlerimiz'],['Sorular','Sık sorulan sorular','Merak edilenlere Herbalife’ın yanıtları.',H+'sik-sorulan-sorular']];
-$('#offGrid').innerHTML = O.map(([k, t, p, u], i) => `<a class="off ext reveal" style="--i:${i % 3}" href="${u}" data-t="${t}" target="_blank" rel="noopener"><small>${k}</small><h3>${t}</h3><p>${p}</p><span class="dom">herbalife.com ↗</span>${ARR}</a>`).join('');
-
-/* yönlendirme ekranı */
-const go = $('#go'); let goTimer;
-const goClose = () => { clearTimeout(goTimer); go.classList.remove('run'); go.close(); };
-$$('.ext').forEach(a => a.addEventListener('click', e => {
-  e.preventDefault(); $('#goT').textContent = a.dataset.t; $('#goA').href = a.href; go.showModal();
-  requestAnimationFrame(() => requestAnimationFrame(() => go.classList.add('run')));
-  goTimer = setTimeout(() => { const w = open(a.href, '_blank', 'noopener'); if (!w) location.href = a.href; goClose(); }, 3300);
-}));
-$('#goA').onclick = goClose; $('#goX').onclick = goClose;
-go.addEventListener('cancel', () => clearTimeout(goTimer));
-go.addEventListener('click', e => { if (e.target === go) goClose(); });
 
 /* galeri */
 const G = [['kotor-1','Kotor’a ikinci gelişim'],['ksamil','Ksamil’den selam'],['budva','Budva geceleri'],['kotor-3','Kotor Körfezi'],['ulcinj','Ulcinj’in eski sokakları'],['yaz-3','Adriyatik akşamı'],['kotor-4','Kotor’da pencereden'],['yaz-5','Yaz 2026'],['kotor-5','Kotor eski şehir'],['yaz-6','Turkuaz sular'],['kotor-6','Kotor surlarında'],['yaz-2','Sahil'],['yaz-7','Yaz akşamları']];
