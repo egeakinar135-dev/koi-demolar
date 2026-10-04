@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dyt. Kübra Ödemiş · Diyetisyen</title>
+<meta name="description" content="Diyetisyen Kübra Ödemiş. Marmara Üniversitesi Beslenme ve Diyetetik mezunu. Antalya ve İstanbul.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F1E7; --paper:#FBF8F2; --sage:#8FA78A; --sage-d:#4F6B4F; --forest:#23382B;
+  --peach:#F2B79A; --peach-l:#F9DCCB; --butter:#F3DE9C; --sky:#BFD9E3;
+  --ink:#1E2A22; --ink-2:#56625A;
+  --header-h:64px; --ease:cubic-bezier(.2,.8,.2,1); --io:cubic-bezier(.7,0,.2,1);
+  --serif:Fraunces,Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+}
+@media (min-width:960px){:root{--header-h:78px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.14;text-wrap:balance}
+main{overflow-x:clip}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(1200px,100% - 64px)}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--peach)}
+.h2{font-size:clamp(2.2rem,5.2vw,4.1rem);letter-spacing:-.015em;margin:.35em 0 .3em}
+.h2 i{font-style:italic;color:var(--sage-d)}
+.lead{font-size:clamp(1.02rem,1.4vw,1.14rem);color:var(--ink-2);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .35s var(--ease),background .35s,color .35s,box-shadow .35s}
+.btn:hover{transform:translateY(-3px)}
+.btn-dark{background:var(--forest);color:var(--cream);box-shadow:0 14px 30px -16px rgba(35,56,43,.7)}
+.btn-dark:hover{background:var(--sage-d)}
+.btn-soft{background:#fff;color:var(--forest);border:1px solid rgba(35,56,43,.15)}
+.btn-soft:hover{background:var(--peach-l)}
+.btn svg{width:18px;height:18px;flex:none}
+
+html.js .rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+html.js .rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:300;background:var(--cream);display:grid;place-items:center;transition:clip-path 1s var(--io);clip-path:circle(150% at 50% 50%)}
+#intro.out{clip-path:circle(0% at 50% 50%)}
+#intro .ic{text-align:center}
+#intro svg{width:120px;height:120px;margin:0 auto}
+#intro .leaf{fill:none;stroke:var(--sage-d);stroke-width:2;stroke-linecap:round;stroke-dasharray:300;stroke-dashoffset:300;animation:draw 1.4s var(--ease) forwards}
+#intro .leaf2{animation-delay:.3s}
+#intro .fillc{fill:var(--peach);transform-origin:60px 60px;transform:scale(0);animation:pop .8s var(--ease) .9s forwards}
+#intro h1{font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.6rem);margin-top:14px;opacity:0;animation:up .8s var(--ease) 1s forwards}
+#intro h1 i{color:var(--sage-d)}
+#intro small{display:block;letter-spacing:.3em;font-size:.72rem;font-weight:700;color:var(--ink-2);text-transform:uppercase;opacity:0;animation:up .8s var(--ease) 1.2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1)}}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* header */
+.header{position:fixed;inset:0 0 auto;height:var(--header-h);z-index:90;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-inline:clamp(16px,4vw,44px);transition:background .4s,box-shadow .4s}
+.header.sc{background:rgba(246,241,231,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(35,56,43,.08)}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:1.3rem;white-space:nowrap;min-width:0;line-height:1.2}
+.logo .mk{width:34px;height:34px;flex:none}
+.logo small{font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-d);display:block;font-weight:700}
+.nav{display:none}
+.nav a{font-size:.92rem;font-weight:500;position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--peach);transform:scaleX(0);transition:transform .4s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-cta{display:none!important}
+@media (min-width:960px){.nav{display:flex;gap:clamp(18px,2.2vw,34px)}.hdr-cta{display:inline-flex!important;padding:11px 20px}}
+.burger{width:46px;height:46px;border-radius:50%;background:var(--forest);display:grid;place-items:center;flex:none;position:relative;z-index:2}
+.burger i{display:block;width:18px;height:2px;background:var(--cream);border-radius:2px;position:relative;transition:.35s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--cream);border-radius:2px;transition:.35s}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+.menu-open .burger i{background:transparent}.menu-open .burger i::before{top:0;transform:rotate(45deg)}.menu-open .burger i::after{top:0;transform:rotate(-45deg)}
+@media (min-width:960px){.burger{display:none}}
+.mmenu{position:fixed;inset:0;z-index:85;background:var(--sage);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + 20px) 28px 40px;clip-path:circle(0 at calc(100% - 40px) 32px);transition:clip-path .8s var(--io);visibility:hidden}
+.menu-open .mmenu{clip-path:circle(150% at calc(100% - 40px) 32px);visibility:visible}
+.mmenu a{font-family:var(--serif);font-size:clamp(2.2rem,9vw,3.2rem);line-height:1.25;color:var(--forest);opacity:0;transform:translateY(20px);transition:.6s var(--ease)}
+.menu-open .mmenu a{opacity:1;transform:none}
+.menu-open .mmenu a:nth-child(2){transition-delay:.06s}.menu-open .mmenu a:nth-child(3){transition-delay:.12s}.menu-open .mmenu a:nth-child(4){transition-delay:.18s}.menu-open .mmenu a:nth-child(5){transition-delay:.24s}
+body.menu-open{overflow:hidden}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:calc(var(--header-h) + 30px) 0 60px;display:flex;align-items:center;overflow:hidden}
+.blobbg{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;animation:drift 18s ease-in-out infinite}
+.blobbg.b1{width:46vw;height:46vw;max-width:620px;max-height:620px;background:var(--peach-l);right:-8vw;top:-6vw}
+.blobbg.b2{width:34vw;height:34vw;max-width:460px;max-height:460px;background:#D9E6D3;left:-10vw;bottom:-8vw;animation-delay:-6s}
+@keyframes drift{50%{transform:translate(40px,30px) scale(1.08)}}
+.hero-grid{position:relative;display:grid;gap:44px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;background:#fff;font-size:.85rem;font-weight:600;box-shadow:0 10px 30px -18px rgba(35,56,43,.5)}
+.tag b{width:28px;height:28px;border-radius:50%;background:var(--sage);display:grid;place-items:center;color:#fff;font-size:.9rem}
+.hero h1{font-size:clamp(2.8rem,7.4vw,6rem);letter-spacing:-.025em;margin:22px 0 20px;line-height:1.08}
+.hero h1 .ln{display:block;overflow:hidden;padding:.04em 0 .12em;margin:-.04em 0 -.12em}
+.hero h1 .ln>span{display:block}
+html.js .hero h1 .ln>span{transform:translateY(110%)}
+html.js .hero.go h1 .ln>span{transform:none;transition:transform 1.2s var(--ease)}
+.hero.go h1 .ln:nth-child(2)>span{transition-delay:.1s}.hero.go h1 .ln:nth-child(3)>span{transition-delay:.2s}
+.hero h1 i{font-style:italic;color:var(--sage-d);font-weight:300}
+.hero h1 .squig{position:relative;white-space:nowrap}
+.hero h1 .squig svg{position:absolute;left:0;bottom:-.08em;width:100%;height:.3em;overflow:visible}
+.hero h1 .squig path{fill:none;stroke:var(--peach);stroke-width:6;stroke-linecap:round;stroke-dasharray:500;stroke-dashoffset:500}
+.hero.go h1 .squig path{stroke-dashoffset:0;transition:stroke-dashoffset 1.4s var(--ease) 1s}
+html.js .hero .fd{opacity:0;transform:translateY(20px)}
+html.js .hero.go .fd{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
+html.js .hero.go .fd.f1{transition-delay:.5s}html.js .hero.go .fd.f2{transition-delay:.65s}html.js .hero.go .fd.f3{transition-delay:.8s}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:40px}
+.facts div{font-size:.86rem;color:var(--ink-2);line-height:1.35}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:1.7rem;color:var(--forest);line-height:1.15}
+.hv{position:relative;width:min(500px,100%);margin-inline:auto;aspect-ratio:.86}
+.pill{position:absolute;inset:4% 12% 0;border-radius:240px 240px 240px 240px;overflow:hidden;background:var(--peach-l)}
+html.js .pill{clip-path:inset(50% 50% 50% 50% round 240px)}
+html.js .hero.go .pill{clip-path:inset(0 0 0 0 round 240px);transition:clip-path 1.5s var(--io) .2s}
+.pill img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.25);transition:transform 2.2s var(--ease) .2s}
+.hero.go .pill img{transform:scale(1.02)}
+.ring{position:absolute;inset:-2% 6% -6%;border:1.5px dashed rgba(79,107,79,.35);border-radius:260px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fl{position:absolute;display:grid;place-items:center;width:70px;height:70px;border-radius:50%;background:#fff;box-shadow:0 18px 30px -16px rgba(35,56,43,.45);font-size:2rem;animation:bob 5s ease-in-out infinite;opacity:0;transition:opacity .8s}
+.hero.go .fl{opacity:1}
+.fl.f1{left:2%;top:16%;transition-delay:1.1s}.fl.f2{right:2%;top:30%;animation-delay:-1.6s;transition-delay:1.25s}.fl.f3{left:6%;bottom:12%;animation-delay:-3s;transition-delay:1.4s}.fl.f4{right:8%;bottom:4%;width:56px;height:56px;font-size:1.5rem;animation-delay:-2s;transition-delay:1.55s}
+@keyframes bob{50%{translate:0 -12px}}
+.card-mini{position:absolute;left:-4%;top:58%;background:var(--forest);color:var(--cream);padding:14px 18px;border-radius:18px;font-size:.84rem;line-height:1.35;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);opacity:0;transform:translateY(20px);transition:1s var(--ease) 1.3s;max-width:210px}
+.hero.go .card-mini{opacity:1;transform:none}
+.card-mini b{display:block;font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--butter)}
+
+/* marquee */
+.marq{background:var(--forest);color:var(--cream);padding:20px 0;overflow:hidden}
+.marq .track{display:flex;width:max-content;animation:mq 36s linear infinite}
+.marq span{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.6rem,3.6vw,2.6rem);padding-inline:26px;white-space:nowrap;display:flex;align-items:center;gap:52px;line-height:1.2}
+.marq span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--peach)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.sec{position:relative;padding:clamp(90px,12vw,150px) 0}
+
+/* about */
+.about{display:grid;gap:50px;align-items:center}
+@media (min-width:960px){.about{grid-template-columns:.9fr 1.1fr;gap:80px}}
+.stack{position:relative;aspect-ratio:.9;max-width:480px;width:100%;margin-inline:auto}
+.stack figure{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 30px 50px -30px rgba(35,56,43,.55);transition:transform .8s var(--ease)}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack .s1{inset:0 22% 18% 0;transform:rotate(-4deg)}
+.stack .s2{inset:30% 0 0 34%;transform:rotate(5deg);border:6px solid var(--cream)}
+.stack:hover .s1{transform:rotate(-7deg) translate(-10px,-6px)}
+.stack:hover .s2{transform:rotate(8deg) translate(10px,6px)}
+.stack .stamp{position:absolute;left:-2%;bottom:6%;width:110px;height:110px;border-radius:50%;background:var(--butter);display:grid;place-items:center;z-index:2;animation:spin 22s linear infinite}
+.stack .stamp svg{width:100%;height:100%}
+.stack .stamp text{font-size:9px;font-weight:700;letter-spacing:2.4px;fill:var(--forest);font-family:var(--sans)}
+.stack .stamp em{position:absolute;font-size:1.8rem;font-style:normal;animation:spin 22s linear infinite reverse}
+.reading{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.34;margin-top:20px}
+.reading .w{color:rgba(30,42,34,.15);transition:color .35s}
+.reading .w.on{color:var(--ink)}
+.reading .w.hl.on{color:var(--sage-d);font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips span{padding:8px 15px;border-radius:999px;background:#fff;font-size:.85rem;font-weight:500;border:1px solid rgba(35,56,43,.1)}
+
+/* plate */
+.plate-sec{background:var(--paper)}
+.plate-grid{display:grid;gap:50px;align-items:center}
+@media (min-width:960px){.plate-grid{grid-template-columns:1fr 1fr;gap:70px}}
+.plate-wrap{position:relative;max-width:500px;width:100%;margin-inline:auto;aspect-ratio:1}
+.plate-wrap svg{width:100%;height:100%;overflow:visible}
+.plate-wrap .seg{cursor:pointer;transition:transform .5s var(--ease),filter .4s;transform-origin:250px 250px}
+.plate-wrap .seg:hover,.plate-wrap .seg.act{transform:scale(1.045);filter:brightness(1.04) drop-shadow(0 10px 14px rgba(0,0,0,.15))}
+.plate-wrap .seg path{stroke:var(--paper);stroke-width:6}
+html.js .plate-wrap .seg{opacity:0;transform:scale(.6) rotate(-30deg)}
+html.js .plate-wrap.in .seg{opacity:1;transform:none;transition:opacity .6s,transform 1s var(--ease)}
+html.js .plate-wrap.in .seg:nth-of-type(2){transition-delay:.12s}html.js .plate-wrap.in .seg:nth-of-type(3){transition-delay:.24s}html.js .plate-wrap.in .seg:nth-of-type(4){transition-delay:.36s}
+html.js .plate-wrap.in .seg.act,html.js .plate-wrap.in .seg:hover{transform:scale(1.045)}
+.plate-wrap .lbl{font-family:var(--serif);font-size:20px;fill:var(--forest);pointer-events:none}
+.plate-wrap .emo{font-size:34px;pointer-events:none}
+.cup{position:absolute;right:-2%;top:2%;width:22%;aspect-ratio:1;border-radius:50%;background:var(--sky);display:grid;place-items:center;font-size:2rem;cursor:pointer;border:6px solid var(--paper);box-shadow:0 14px 26px -16px rgba(0,0,0,.4);transition:transform .5s var(--ease)}
+.cup:hover,.cup.act{transform:scale(1.08)}
+.pinfo{min-height:190px}
+.pinfo .pi{display:none}
+.pinfo .pi.on{display:block;animation:up .6s var(--ease)}
+.pinfo h3{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:8px}
+.pinfo p{color:var(--ink-2);max-width:46ch}
+.ptabs{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.ptabs button{padding:9px 16px;border-radius:999px;border:1px solid rgba(35,56,43,.18);font-size:.86rem;font-weight:600;transition:background .3s,color .3s}
+.ptabs button.act{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.note{font-size:.8rem;color:var(--ink-2);margin-top:22px;opacity:.85}
+
+/* science */
+.sci{background:var(--forest);color:var(--cream);overflow:hidden}
+#mol{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.sci .eyebrow{color:var(--butter)}.sci .eyebrow::before{background:var(--butter)}
+.sci .h2 i{color:var(--peach)}
+.sci-grid{position:relative;display:grid;gap:50px;align-items:center}
+@media (min-width:960px){.sci-grid{grid-template-columns:1.1fr .9fr;gap:70px}}
+.sci .lead{color:rgba(246,241,231,.75)}
+.quote{margin-top:30px;padding:24px 26px;border-left:3px solid var(--peach);background:rgba(255,255,255,.05);border-radius:0 18px 18px 0;font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.18rem;line-height:1.5}
+.quote small{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--butter)}
+.topic{margin-top:22px;font-size:.92rem;color:rgba(246,241,231,.8)}
+.topic b{color:var(--butter);font-weight:600}
+.polaroids{position:relative;height:520px;max-width:460px;width:100%;margin-inline:auto}
+.pol{position:absolute;width:62%;background:#fff;padding:10px 10px 40px;border-radius:6px;box-shadow:0 30px 50px -24px rgba(0,0,0,.6);transition:transform .8s var(--ease);cursor:grab;touch-action:none}
+.pol img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px;pointer-events:none}
+.pol span{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-family:var(--serif);font-style:italic;color:var(--ink);font-size:1rem}
+.pol.p1{left:0;top:4%;transform:rotate(-8deg)}
+.pol.p2{right:0;top:0;transform:rotate(6deg)}
+.pol.p3{left:18%;top:30%;transform:rotate(-2deg)}
+.pol.dragging{cursor:grabbing;transition:none;z-index:5}
+.drag-hint{text-align:center;font-size:.8rem;color:rgba(246,241,231,.6);margin-top:12px}
+
+/* journey */
+.tl{position:relative;margin-top:60px}
+.tl::before{content:"";position:absolute;left:19px;top:0;bottom:0;width:2px;background:rgba(35,56,43,.12)}
+.tl .prog{position:absolute;left:19px;top:0;width:2px;background:var(--sage-d);height:0}
+@media (min-width:860px){.tl::before,.tl .prog{left:50%;margin-left:-1px}}
+.ti{position:relative;padding-left:62px;margin-bottom:56px}
+.ti .dot{position:absolute;left:8px;top:6px;width:24px;height:24px;border-radius:50%;background:var(--cream);border:2px solid var(--sage-d);transition:background .4s,transform .5s var(--ease)}
+.ti.in .dot{background:var(--peach);transform:scale(1.15)}
+.ti .card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px -30px rgba(35,56,43,.5);transition:transform .5s var(--ease)}
+.ti .card:hover{transform:translateY(-6px)}
+.ti .card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 25%}
+.ti .card .cb{padding:22px 24px 24px}
+.ti small{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d)}
+.ti h3{font-size:1.55rem;margin:6px 0 8px}
+.ti p{color:var(--ink-2);font-size:.95rem}
+@media (min-width:860px){
+  .ti{width:50%;padding-left:0;padding-right:56px}
+  .ti:nth-child(odd){margin-left:50%;padding-right:0;padding-left:56px}
+  .ti .dot{left:auto;right:-12px}
+  .ti:nth-child(odd) .dot{right:auto;left:-12px}
+  .ti{margin-bottom:-40px}
+  .ti:last-child{margin-bottom:0}
+}
+
+/* water */
+.water{text-align:center;background:linear-gradient(180deg,var(--cream),#E7F0F2)}
+.glasses{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:40px auto 20px;max-width:640px}
+.gl{width:56px;height:76px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gl svg{width:100%;height:100%}
+.gl .wv{transform:translateY(80px);transition:transform 1s var(--ease)}
+.gl.full .wv{transform:translateY(16px)}
+.gl .wv path{animation:wave 2.4s linear infinite}
+@keyframes wave{to{transform:translateX(-40px)}}
+.gl:hover{transform:translateY(-4px)}
+.gl{transition:transform .3s var(--ease)}
+.wcount{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4rem);color:var(--forest);line-height:1.1}
+.wmsg{color:var(--ink-2);min-height:1.6em}
+
+/* recipe */
+.rec{display:grid;gap:40px;align-items:center}
+@media (min-width:960px){.rec{grid-template-columns:1fr 1fr;gap:70px}}
+.rec-imgs{position:relative;aspect-ratio:1;max-width:520px;width:100%;margin-inline:auto}
+.rec-imgs img{position:absolute;border-radius:24px;object-fit:cover;box-shadow:0 30px 50px -30px rgba(0,0,0,.5)}
+.rec-imgs .r1{left:0;top:0;width:66%;height:80%}
+.rec-imgs .r2{right:0;bottom:0;width:52%;height:58%;border:6px solid var(--cream);will-change:transform}
+.ing{list-style:none;margin-top:18px;columns:1}
+@media (min-width:600px){.ing{columns:2;column-gap:28px}}
+.ing li{break-inside:avoid;border-bottom:1px solid rgba(35,56,43,.1)}
+.ing label{display:flex;gap:12px;align-items:center;padding:10px 0;cursor:pointer;font-size:.95rem}
+.ing input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;border-radius:6px;border:1.5px solid var(--sage-d);display:grid;place-items:center;transition:background .3s}
+.ing input::after{content:"✓";color:#fff;font-size:.75rem;transform:scale(0);transition:transform .3s var(--ease)}
+.ing input:checked{background:var(--sage-d)}
+.ing input:checked::after{transform:scale(1)}
+.ing input:checked+span{text-decoration:line-through;color:rgba(30,42,34,.4)}
+.steps{display:flex;align-items:center;gap:14px;margin-top:22px;padding:16px 18px;border-radius:16px;background:var(--peach-l);font-size:.92rem}
+.steps b{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--forest)}
+.credit{font-size:.82rem;color:var(--ink-2);margin-top:14px}
+.credit a{border-bottom:1px solid currentColor}
+.ring-prog{width:56px;height:56px;flex:none}
+.ring-prog circle{fill:none;stroke-width:5}
+.ring-prog .bg{stroke:rgba(35,56,43,.12)}
+.ring-prog .fg{stroke:var(--sage-d);stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset .6s var(--ease)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:46px}
+@media (min-width:860px){.gal{grid-template-columns:repeat(4,1fr);gap:16px}}
+.gal figure{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;cursor:zoom-in}
+.gal figure:nth-child(3n+2){transform:translateY(30px)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.07)}
+.gal figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(251,248,242,.92);border-radius:12px;padding:8px 12px;font-size:.78rem;font-weight:600;line-height:1.3;transform:translateY(calc(100% + 12px));transition:transform .5s var(--ease)}
+.gal figure:hover figcaption{transform:none}
+@media (hover:none){.gal figcaption{transform:none}}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(20,28,22,.9);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .4s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:min(900px,100%);max-height:84svh;border-radius:14px;transform:scale(.94);transition:transform .5s var(--ease)}
+.lb.on img{transform:none}
+.lb p{color:var(--cream);text-align:center;margin-top:12px;font-size:.9rem}
+.lb button{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;background:var(--cream);font-size:1.4rem}
+
+/* contact */
+.contact{background:var(--sage);overflow:hidden}
+.contact .eyebrow{color:var(--forest)}.contact .eyebrow::before{background:var(--cream)}
+.c-big{font-size:clamp(2.8rem,8vw,6.4rem);line-height:1.08;letter-spacing:-.02em;color:var(--forest)}
+.c-big i{font-style:italic;font-weight:300;color:var(--cream)}
+.c-grid{display:grid;gap:18px;margin-top:50px}
+@media (min-width:860px){.c-grid{grid-template-columns:repeat(3,1fr)}}
+.cc{background:var(--cream);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .5s var(--ease),box-shadow .5s;min-height:200px}
+.cc:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:0 30px 50px -30px rgba(0,0,0,.45)}
+.cc .ic{width:46px;height:46px;border-radius:14px;background:var(--forest);color:var(--cream);display:grid;place-items:center}
+.cc .ic svg{width:22px;height:22px}
+.cc small{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sage-d);margin-top:auto}
+.cc b{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.25;word-break:break-word}
+.cc p{font-size:.88rem;color:var(--ink-2)}
+footer{background:var(--forest);color:rgba(246,241,231,.7);padding:34px 0 100px;font-size:.86rem}
+.f-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer .logo{color:var(--cream)}footer .logo small{color:var(--butter)}
+.ig-float{position:fixed;right:18px;bottom:18px;z-index:80;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transform:scale(0);transition:transform .5s var(--ease)}
+.ig-float.show{transform:scale(1)}
+.ig-float:hover{transform:scale(1.1) rotate(-8deg)}
+.ig-float svg{width:28px;height:28px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html.js .rv,html.js .hero .fd,html.js .hero h1 .ln>span,html.js .plate-wrap .seg{opacity:1!important;transform:none!important}
+  html.js .pill{clip-path:none!important}
+  #intro{display:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mk" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#23382B"/><path d="M20 30c0-9 3-15 10-18-1 8-4 14-10 18zM20 30c0-7-2-12-8-15 0 7 3 12 8 15z" fill="#F2B79A"/><circle cx="20" cy="31" r="1.6" fill="#F6F1E7"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3-8-5.3zM5.2 7l6.8 4.5L18.8 7H5.2z"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></symbol>
+</defs></svg>
+
+<div id="intro" aria-hidden="true"><div class="ic">
+  <svg viewBox="0 0 120 120"><circle class="fillc" cx="60" cy="60" r="16"/><path class="leaf" d="M60 96c0-28 10-46 32-56-3 25-13 43-32 56z"/><path class="leaf leaf2" d="M60 96c0-22-7-37-25-46 1 21 10 37 25 46z"/></svg>
+  <h1>Kübra <i>Ödemiş</i></h1><small>Diyetisyen</small>
+</div></div>
+
+<header class="header" id="hdr">
+  <a href="#top" class="logo"><svg class="mk"><use href="#mk"/></svg><span>Kübra Ödemiş<small>Diyetisyen</small></span></a>
+  <nav class="nav" aria-label="Ana menü">
+    <a href="#hakkinda">Hakkında</a><a href="#tabak">Dengeli Tabak</a><a href="#bilim">Bilim</a><a href="#yolculuk">Yolculuk</a><a href="#iletisim">İletişim</a>
+  </nav>
+  <a class="btn btn-dark hdr-cta" href="https://www.instagram.com/dytkubraodemis/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Bana Yazın</a>
+  <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false"><i></i></button>
+</header>
+<div class="mmenu" id="mmenu">
+  <a href="#hakkinda">Hakkında</a><a href="#tabak">Dengeli Tabak</a><a href="#bilim">Bilim</a><a href="#yolculuk">Yolculuk</a><a href="#iletisim">İletişim</a>
+</div>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <span class="blobbg b1"></span><span class="blobbg b2"></span>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag fd f1"><b>🌿</b>Diyetisyen · Antalya &amp; İstanbul</span>
+        <h1><span class="ln"><span>Bilimle</span></span><span class="ln"><span><i>beslen,</i></span></span><span class="ln"><span><span class="squig">keyifle<svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 12 C 40 2, 70 20, 110 10 S 180 2, 220 12 S 280 16, 296 8"/></svg></span> yaşa.</span></span></h1>
+        <p class="lead fd f2">Merhaba, ben Kübra. Marmara Üniversitesi Beslenme ve Diyetetik mezunu bir diyetisyenim. Akademiden mutfağa, beslenmeyi bilimsel temeliyle ve hayatın keyfiyle birlikte anlatıyorum.</p>
+        <div class="ctas fd f3">
+          <a class="btn btn-dark" href="https://www.instagram.com/dytkubraodemis/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Instagram'dan Yazın</a>
+          <a class="btn btn-soft" href="#hakkinda">Beni Tanıyın</a>
+        </div>
+        <div class="facts fd f3">
+          <div><b>Marmara</b>Üniversitesi mezunu</div>
+          <div><b>DKFZ</b>Erasmus stajı, Heidelberg</div>
+          <div><b><span data-count="110">110</span>B+</b>Instagram takipçisi</div>
+        </div>
+      </div>
+      <div class="hv" id="hv">
+        <span class="ring"></span>
+        <div class="pill"><img src="gorseller/hero.jpg" alt="Diyetisyen Kübra Ödemiş" fetchpriority="high"></div>
+        <span class="fl f1" data-d="22">🥑</span><span class="fl f2" data-d="30">🍓</span><span class="fl f3" data-d="18">🥗</span><span class="fl f4" data-d="36">🫐</span>
+        <div class="card-mini" data-d="12"><b>Dengeli tabak</b>Yasaklar değil, sürdürülebilir alışkanlıklar.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marq" aria-hidden="true"><div class="track" id="mq"></div></div>
+
+  <section class="sec" id="hakkinda">
+    <div class="wrap about">
+      <div class="stack rv">
+        <figure class="s1"><img src="gorseller/onluk.jpg" alt="Kübra Ödemiş beyaz önlükle" loading="lazy"></figure>
+        <figure class="s2"><img src="gorseller/mezuniyet.jpg" alt="Kübra Ödemiş Marmara Üniversitesi mezuniyet töreninde" loading="lazy"></figure>
+        <span class="stamp" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="c" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><text><textPath href="#c">DİYETİSYEN · KÜBRA ÖDEMİŞ ·</textPath></text></svg><em>🌿</em></span>
+      </div>
+      <div>
+        <span class="eyebrow rv">Hakkımda</span>
+        <p class="reading" id="reading">Dört yıllık lisans eğitimimi Marmara Üniversitesi'nde tamamladım. Almanya Kanser Araştırma Enstitüsü'nde epidemiyoloji alanında staj yaptım, kongrelerde ve etkinliklerde görev aldım. Bugün Antalya ve İstanbul'da, bilimsel bilgiyi günlük hayata taşıyan bir diyetisyen olarak çalışıyorum.</p>
+        <div class="chips rv">
+          <span>🎓 Marmara Üniversitesi</span><span>🔬 DKFZ · Heidelberg</span><span>🤖 Beslenmede yapay zekâ</span><span>📍 Antalya · İstanbul</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec plate-sec" id="tabak">
+    <div class="wrap plate-grid">
+      <div class="plate-wrap" id="plate">
+        <svg viewBox="0 0 500 500" role="img" aria-label="Dengeli tabak modeli">
+          <circle cx="250" cy="250" r="238" fill="#fff" stroke="#E8E1D3" stroke-width="2"/>
+          <circle cx="250" cy="250" r="214" fill="#FBF8F2"/>
+          <g class="seg" data-k="0"><path d="M250 250 L250 50 A200 200 0 0 0 50 250 Z" fill="#A9C3A0"/></g>
+          <g class="seg" data-k="1"><path d="M250 250 L50 250 A200 200 0 0 0 250 450 Z" fill="#F3DE9C"/></g>
+          <g class="seg" data-k="2"><path d="M250 250 L250 450 A200 200 0 0 0 450 250 Z" fill="#F2B79A"/></g>
+          <g class="seg" data-k="3"><path d="M250 250 L450 250 A200 200 0 0 0 250 50 Z" fill="#C9DDB8"/></g>
+          <text class="emo" x="150" y="150" text-anchor="middle">🥦</text><text class="lbl" x="150" y="190" text-anchor="middle">Sebze</text>
+          <text class="emo" x="150" y="345" text-anchor="middle">🌾</text><text class="lbl" x="150" y="385" text-anchor="middle">Tahıl</text>
+          <text class="emo" x="350" y="345" text-anchor="middle">🍳</text><text class="lbl" x="350" y="385" text-anchor="middle">Protein</text>
+          <text class="emo" x="350" y="150" text-anchor="middle">🍎</text><text class="lbl" x="350" y="190" text-anchor="middle">Meyve</text>
+        </svg>
+        <button class="cup" data-k="4" aria-label="Süt grubu">🥛</button>
+      </div>
+      <div>
+        <span class="eyebrow rv">Dengeli tabak</span>
+        <h2 class="h2 rv">Tabağınızda <i>neler olmalı?</i></h2>
+        <p class="lead rv">Tabağın bir bölümüne dokunun. Her besin grubunun neden önemli olduğunu kısaca anlatalım.</p>
+        <div class="ptabs rv" id="ptabs">
+          <button data-k="0" class="act">Sebze</button><button data-k="3">Meyve</button><button data-k="1">Tahıl</button><button data-k="2">Protein</button><button data-k="4">Süt grubu</button>
+        </div>
+        <div class="pinfo rv" id="pinfo">
+          <div class="pi on" data-k="0"><h3>🥦 Sebzeler</h3><p>Lif, vitamin ve mineral kaynağı. Farklı renklerde sebzeler seçmek, tabağa çeşitlilik ve doygunluk katar.</p></div>
+          <div class="pi" data-k="3"><h3>🍎 Meyveler</h3><p>Vitamin, mineral ve lif içerir. Mevsiminde ve bütün olarak tüketmek en keyifli yoludur.</p></div>
+          <div class="pi" data-k="1"><h3>🌾 Tahıllar</h3><p>Enerjinin temel kaynağı. Tam tahıllı seçenekler lif bakımından daha zengindir.</p></div>
+          <div class="pi" data-k="2"><h3>🍳 Protein</h3><p>Et, tavuk, balık, yumurta ve kuru baklagiller; dokuların yapı taşı olan proteini sağlar.</p></div>
+          <div class="pi" data-k="4"><h3>🥛 Süt grubu</h3><p>Süt, yoğurt ve peynir; kalsiyum ve protein kaynağıdır. Öğünlerin yanında küçük bir porsiyon yeterli olabilir.</p></div>
+        </div>
+        <p class="note">Bu bölüm genel bilgilendirme amaçlıdır. Kişiye özel beslenme planı için bir diyetisyene danışın.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sci" id="bilim">
+    <canvas id="mol"></canvas>
+    <div class="wrap sci-grid">
+      <div>
+        <span class="eyebrow rv">Bilim tarafı</span>
+        <h2 class="h2 rv">Heidelberg'de <i>üç ay</i></h2>
+        <p class="lead rv">Erasmus kapsamında Almanya Kanser Araştırma Enstitüsü'nün (DKFZ) epidemiyoloji departmanında staj yaptım. Dinamik ve multidisipliner bir ekipte, görerek öğrendim.</p>
+        <p class="topic rv">Çalışma konusu: <b>"Persistent Organic Pollutants and Adipose Related Cancer Types"</b></p>
+        <blockquote class="quote rv">"Meslek hayatımın her evresinde kullanabileceğim değerde akademik deneyim kazandım."<small>Kübra Ödemiş</small></blockquote>
+      </div>
+      <div class="rv">
+        <div class="polaroids" id="pols">
+          <figure class="pol p1"><img src="gorseller/erasmus-1.jpg" alt="Almanya'dan bir sokak" loading="lazy"><span>Almanya</span></figure>
+          <figure class="pol p2"><img src="gorseller/erasmus-2.jpg" alt="Nehir kıyısında gün batımı" loading="lazy"><span>Erasmus anıları</span></figure>
+          <figure class="pol p3"><img src="gorseller/erasmus-3.jpg" alt="Tarihi bir pencerenin önünde" loading="lazy"><span>Heidelberg günleri</span></figure>
+        </div>
+        <p class="drag-hint">Fotoğrafları sürükleyebilirsiniz</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="yolculuk">
+    <div class="wrap">
+      <div style="text-align:center"><span class="eyebrow rv">Yolculuk</span><h2 class="h2 rv">Öğrenmeye <i>hiç ara vermeden</i></h2></div>
+      <div class="tl" id="tl"><span class="prog" id="tlp"></span>
+        <div class="ti rv"><span class="dot"></span><div class="card"><img src="gorseller/kongre-1.jpg" alt="XI. Uluslararası Beslenme ve Diyetetik Kongresi" loading="lazy"><div class="cb"><small>Hacettepe Üniversitesi · Ankara</small><h3>XI. Uluslararası Beslenme ve Diyetetik Kongresi</h3><p>Panel ve sempozyumlarla dolu üç gün; birçok diyetisyen hocam ve meslektaş adayıyla tanışma fırsatı.</p></div></div></div>
+        <div class="ti rv"><span class="dot"></span><div class="card"><img src="gorseller/etkinlik-1.jpg" alt="Şehre Fit Bir Dönüş etkinliği, Kanyon" loading="lazy"><div class="cb"><small>Etkinlikler</small><h3>Sahada, insanlarla</h3><p>Fit Weekend İstanbul gibi etkinliklerde görev aldım; söyleşiler, standlar ve egzersiz saatleriyle insanlara beslenmeyi yerinde anlattım.</p></div></div></div>
+        <div class="ti rv"><span class="dot"></span><div class="card"><img src="gorseller/marmara.jpg" alt="Kübra Ödemiş Marmara Üniversitesi'nde" loading="lazy"><div class="cb"><small>Marmara Üniversitesi</small><h3>Beslenme ve Diyetetikte Yapay Zekâ</h3><p>24–25 Ekim'de üniversitemde düzenlenen etkinlikte görev aldım. İlerleyen teknolojiye yetişmeyi mesleğimin bir sorumluluğu olarak görüyorum.</p></div></div></div>
+        <div class="ti rv"><span class="dot"></span><div class="card"><img src="gorseller/tez.jpg" alt="Bitirme tezi sunumu" loading="lazy"><div class="cb"><small>Lisans</small><h3>Bitirme tezi ve mezuniyet</h3><p>Dört yıllık lisans eğitimimin son adımı olarak bitirme tezimi sundum. Tez danışmanım Dr. Öğr. Üyesi Zehra M. Çelik.</p></div></div></div>
+        <div class="ti rv"><span class="dot"></span><div class="card"><img src="gorseller/portre-2.jpg" alt="Kübra Ödemiş" loading="lazy"><div class="cb"><small>Bugün</small><h3>Diyetisyen · Antalya &amp; İstanbul</h3><p>Akademide edindiğim birikimi bugün işimde kullanıyorum; beslenmeyi sosyal medyada da anlaşılır ve keyifli bir dille anlatıyorum.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec water" id="su">
+    <div class="wrap">
+      <span class="eyebrow rv">Küçük bir hatırlatma</span>
+      <h2 class="h2 rv">Bugün kaç bardak <i>su içtiniz?</i></h2>
+      <div class="glasses" id="glasses"></div>
+      <div class="wcount"><span id="wc">0</span> bardak</div>
+      <p class="wmsg" id="wm">Bardaklara dokunarak işaretleyin.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="mutfak">
+    <div class="wrap rec">
+      <div class="rec-imgs rv"><img class="r1" src="gorseller/mutfak.jpg" alt="Kübra Ödemiş mutfakta kek hazırlığında" loading="lazy"><img class="r2" src="gorseller/kek.jpg" alt="Muzlu kakaolu kek" loading="lazy" data-par="40"></div>
+      <div>
+        <span class="eyebrow rv">Mutfaktan</span>
+        <h2 class="h2 rv">Muzlu kakaolu <i>kek</i></h2>
+        <p class="lead rv">Banana bread sevenlere pratik bir tarif. Malzemeleri hazırladıkça işaretleyin.</p>
+        <ul class="ing rv" id="ing"></ul>
+        <div class="steps rv"><svg class="ring-prog" viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="23"/><circle class="fg" id="rp" cx="28" cy="28" r="23" stroke-dasharray="144.5" stroke-dashoffset="144.5"/></svg><span><b>170°C</b> önceden ısıtılmış fırında 15–20 dakika pişirin. Üzerine biraz şekersiz kakaolu fıstık ezmesiyle servis edin.</span></div>
+        <p class="credit rv">Tarif: <a href="https://www.instagram.com/orcunkurum/" target="_blank" rel="noopener">@orcunkurum</a> · İçinde yağlı tohumlar bulunur; alerjiniz varsa denemeyin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kareler" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow rv">Kareler</span>
+      <h2 class="h2 rv">Hayatın <i>tadından</i></h2>
+      <div class="gal" id="gal">
+        <figure class="rv"><img src="gorseller/kongre-2.jpg" alt="Kongre sponsor panosu önünde" loading="lazy"><figcaption>Beslenme ve Diyetetik Kongresi</figcaption></figure>
+        <figure class="rv"><img src="gorseller/kase.jpg" alt="Meyveli yoğurt kasesi" loading="lazy"><figcaption>Meyveli yoğurt kasesi</figcaption></figure>
+        <figure class="rv d1"><img src="gorseller/etkinlik-2.jpg" alt="Şehre Fit Bir Dönüş etkinliğinde" loading="lazy"><figcaption>Şehre Fit Bir Dönüş · Kanyon</figcaption></figure>
+        <figure class="rv d2"><img src="gorseller/avokado.jpg" alt="Avokado" loading="lazy"><figcaption>Avokado</figcaption></figure>
+        <figure class="rv d3"><img src="gorseller/mezuniyet-2.jpg" alt="Mezuniyet töreni" loading="lazy"><figcaption>Marmara Üniversitesi mezuniyeti</figcaption></figure>
+        <figure class="rv"><img src="gorseller/etkinlik-3.jpg" alt="Etkinlikte vücut analiz cihazları standı" loading="lazy"><figcaption>Etkinlikten</figcaption></figure>
+        <figure class="rv d1"><img src="gorseller/tabak.jpg" alt="Sebzeli bir tabak" loading="lazy"><figcaption>Renkli bir tabak</figcaption></figure>
+        <figure class="rv d2"><img src="gorseller/portre-3.jpg" alt="Kübra Ödemiş" loading="lazy"><figcaption>İş başında</figcaption></figure>
+        <figure class="rv d3"><img src="gorseller/kase-2.jpg" alt="Bir kase" loading="lazy"><figcaption>Günün kasesi</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="iletisim">
+    <div class="wrap">
+      <span class="eyebrow rv">İletişim</span>
+      <h2 class="c-big rv">Haydi <i>tanışalım.</i></h2>
+      <div class="c-grid">
+        <a class="cc rv" href="https://www.instagram.com/dytkubraodemis/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#ig"/></svg></span><small>Diyetisyen hesabı</small><b>@dytkubraodemis</b><p>Sorularınız için DM'den yazabilirsiniz.</p></a>
+        <a class="cc rv d1" href="https://www.instagram.com/kubrodemis/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#ig"/></svg></span><small>Kişisel hesap · 110B+</small><b>@kubrodemis</b><p>Beslenme serileri, "what I eat" ve günlük hayat.</p></a>
+        <a class="cc rv d2" href="mailto:kubraodemis@thepeoplebase.com"><span class="ic"><svg><use href="#mail"/></svg></span><small>İş birlikleri</small><b>kubraodemis@ thepeoplebase.com</b><p>Marka ve reklam iş birlikleri için.</p></a>
+      </div>
+      <p class="rv" style="margin-top:28px;display:flex;align-items:center;gap:8px;color:var(--forest);font-weight:600"><svg style="width:18px;height:18px"><use href="#pin"/></svg>Antalya · İstanbul</p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap f-in">
+  <span class="logo"><svg class="mk"><use href="#mk"/></svg><span>Kübra Ödemiş<small>Diyetisyen</small></span></span>
+  <span>Marmara Üniversitesi Beslenme ve Diyetetik</span>
+  <span style="opacity:.6">Koi Ajans tarafından hazırlanmıştır</span>
+</div></footer>
+
+<a class="ig-float" id="igf" href="https://www.instagram.com/dytkubraodemis/" target="_blank" rel="noopener" aria-label="Instagram'dan yazın"><svg><use href="#ig"/></svg></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><div><img id="lbImg" src="" alt=""><p id="lbT"></p></div><button id="lbX" aria-label="Kapat">×</button></div>
+
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches,FINE=matchMedia('(pointer:fine)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* intro */
+const intro=$('#intro'),hero=$('#hero');let seen=false;try{seen=sessionStorage.getItem('ko-intro')==='1'}catch(e){}
+const go=()=>hero.classList.add('go');
+if(seen||RM){intro.remove();go()}else{document.body.style.overflow='hidden';setTimeout(()=>{intro.classList.add('out');document.body.style.overflow='';setTimeout(go,200);try{sessionStorage.setItem('ko-intro','1')}catch(e){}},2200);setTimeout(()=>intro.remove(),3300)}
+
+/* header/menu */
+const hdr=$('#hdr'),igf=$('#igf');
+const onS=()=>{hdr.classList.toggle('sc',scrollY>30);igf.classList.toggle('show',scrollY>innerHeight*.6)};addEventListener('scroll',onS,{passive:true});onS();
+const bg=$('#burger');const setM=o=>{document.body.classList.toggle('menu-open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç')};
+bg.addEventListener('click',()=>setM(!document.body.classList.contains('menu-open')));$$('#mmenu a').forEach(a=>a.addEventListener('click',()=>setM(false)));addEventListener('keydown',e=>{if(e.key==='Escape'){setM(false);closeLb()}});
+
+/* marquee */
+const m=['Bilim','Denge','Keyif','Sürdürülebilirlik','Renkli tabaklar','Bol su'];const h=m.map(t=>`<span>${t}</span>`).join('');$('#mq').innerHTML=h+h+h+h;
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,#plate').forEach(el=>io.observe(el));
+
+/* counter */
+$$('[data-count]').forEach(el=>{new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting||RM)return;o.disconnect();const to=+el.dataset.count,t0=performance.now();(function t(n){const k=Math.min(1,(n-t0)/1600);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(t)})(t0)}),{threshold:.5}).observe(el)});
+
+/* reading */
+const rd=$('#reading'),hl=['Marmara','Üniversitesi\'nde','Kanser','Araştırma','Enstitüsü\'nde','epidemiyoloji','bilimsel','günlük','hayata'];
+rd.innerHTML=rd.textContent.trim().split(/\s+/).map(w=>`<span class="w${hl.includes(w)?' hl':''}">${w}</span>`).join(' ');const ws=[...rd.querySelectorAll('.w')];
+
+/* scroll */
+const pars=$$('[data-par]'),tl=$('#tl'),tlp=$('#tlp');
+function frame(){const vh=innerHeight;
+  const b=rd.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh*.82-b.top)/(b.height+vh*.3))),on=Math.round(p*ws.length);ws.forEach((w,i)=>w.classList.toggle('on',i<on));
+  const t=tl.getBoundingClientRect();tlp.style.height=Math.min(t.height,Math.max(0,vh*.6-t.top))+'px';
+  if(RM)return;pars.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const k=(r.top+r.height/2-vh/2)/vh;el.style.transform=`translate3d(0,${k*-(+el.dataset.par)}px,0)`});
+}
+let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{frame();tk=false})}},{passive:true});addEventListener('resize',frame);frame();
+
+/* hero parallax */
+if(FINE&&!RM){const hv=$('#hv');hero.addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;hv.querySelectorAll('[data-d]').forEach(el=>{const d=+el.dataset.d;el.style.transform=`translate(${-x*d}px,${-y*d}px)`})})}
+
+/* plate */
+const segs=$$('#plate .seg'),cup=$('#plate .cup'),tabs=$$('#ptabs button'),pis=$$('#pinfo .pi');
+function setK(k){segs.forEach(s=>s.classList.toggle('act',+s.dataset.k===k));cup.classList.toggle('act',k===4);tabs.forEach(t=>t.classList.toggle('act',+t.dataset.k===k));pis.forEach(p=>p.classList.toggle('on',+p.dataset.k===k))}
+segs.forEach(s=>{s.addEventListener('click',()=>setK(+s.dataset.k));if(FINE)s.addEventListener('mouseenter',()=>setK(+s.dataset.k))});
+cup.addEventListener('click',()=>setK(4));tabs.forEach(t=>t.addEventListener('click',()=>setK(+t.dataset.k)));setK(0);
+
+/* molecules */
+const cv=$('#mol'),cx=cv.getContext('2d');let pts=[],W,H,run=false;
+function sz(){const r=cv.parentElement.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*devicePixelRatio;cv.height=H*devicePixelRatio;cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:Math.min(70,Math.round(W*H/16000))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:1.5+Math.random()*2.5}))}
+function dr(){cx.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){cx.strokeStyle=`rgba(243,222,156,${(1-d/130)*.35})`;cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+  for(const p of pts){cx.fillStyle='rgba(242,183,154,.9)';cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}
+  if(run)requestAnimationFrame(dr)}
+sz();addEventListener('resize',sz);
+if(!RM)new IntersectionObserver(es=>es.forEach(e=>{run=e.isIntersecting;if(run)requestAnimationFrame(dr)})).observe(cv.parentElement);
+
+/* polaroid drag */
+let z=3;$$('.pol').forEach(p=>{let sx,sy,ox=0,oy=0,base=getComputedStyle(p).transform;
+  p.addEventListener('pointerdown',e=>{p.setPointerCapture(e.pointerId);p.classList.add('dragging');p.style.zIndex=++z;sx=e.clientX-ox;sy=e.clientY-oy});
+  p.addEventListener('pointermove',e=>{if(!p.classList.contains('dragging'))return;ox=e.clientX-sx;oy=e.clientY-sy;p.style.transform=`translate(${ox}px,${oy}px) rotate(${ox*.04}deg)`});
+  p.addEventListener('pointerup',()=>p.classList.remove('dragging'));
+});
+
+/* water */
+const G=$('#glasses'),wc=$('#wc'),wm=$('#wm');let n=0;
+try{const s=JSON.parse(localStorage.getItem('ko-water')||'null');if(s&&s.d===new Date().toDateString())n=s.n}catch(e){}
+const msgs=['Bardaklara dokunarak işaretleyin.','Güzel bir başlangıç 💧','Devam!','Harika gidiyorsun 🌿','Gün boyu küçük yudumlar 🫧'];
+G.innerHTML=Array.from({length:10},(_,i)=>`<button class="gl" data-i="${i}" aria-label="${i+1}. bardak"><svg viewBox="0 0 56 76"><defs><clipPath id="g${i}"><path d="M6 4h44l-5 66a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4z"/></clipPath></defs><g clip-path="url(#g${i})"><g class="wv"><path d="M0 4 Q10 0 20 4 T40 4 T60 4 T80 4 T100 4 V90 H0Z" fill="#8FC3D6"/></g></g><path d="M6 4h44l-5 66a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4z" fill="none" stroke="#4F6B4F" stroke-width="2"/></svg></button>`).join('');
+const gls=[...G.children];
+function wset(v){n=v;gls.forEach((g,i)=>g.classList.toggle('full',i<n));wc.textContent=n;wm.textContent=n?msgs[Math.min(4,Math.ceil(n/2.5))]:msgs[0];try{localStorage.setItem('ko-water',JSON.stringify({d:new Date().toDateString(),n}))}catch(e){}}
+gls.forEach((g,i)=>g.addEventListener('click',()=>wset(n===i+1?i:i+1)));wset(n);
+
+/* recipe */
+const ing=['2 adet yumurta','3 yemek kaşığı %100 fıstık ezmesi','2 yemek kaşığı un (yulaf, tam buğday, fındık ya da badem unu)','2 büyük muz (biri içine, biri üstüne)','2 yemek kaşığı kek karışımı ya da kakao','2 yemek kaşığı pirinç proteini (isteğe bağlı)','Yarım su bardağı süt'];
+const ul=$('#ing');ul.innerHTML=ing.map(x=>`<li><label><input type="checkbox"><span>${x}</span></label></li>`).join('');
+const rp=$('#rp'),cbs=$$('#ing input');cbs.forEach(c=>c.addEventListener('change',()=>{const k=cbs.filter(x=>x.checked).length/cbs.length;rp.style.strokeDashoffset=144.5*(1-k)}));
+
+/* lightbox */
+const lb=$('#lb'),li=$('#lbImg'),lt=$('#lbT');
+$$('#gal figure').forEach(f=>f.addEventListener('click',()=>{const im=f.querySelector('img');li.src=im.src;li.alt=im.alt;lt.textContent=f.querySelector('figcaption')?.textContent||'';lb.classList.add('on')}));
+function closeLb(){lb.classList.remove('on')}
+$('#lbX').addEventListener('click',closeLb);lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+})();
+</script>
+</body>
+</html>
