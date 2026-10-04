@@ -114,8 +114,8 @@ html:not(.js) .intro{display:none}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--on-dark);overflow:hidden;background:var(--sea);padding:calc(var(--header-h) + 24px) 0 clamp(96px,13vh,140px)}
 .hero-bg{position:absolute;inset:-6% 0 0;will-change:transform}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.14);transition:transform 2.4s var(--ease)}
-.loaded .hero-bg img{transform:scale(1)}
+.hero-bg img,.hero-bg video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.14);transition:transform 2.4s var(--ease)}
+.loaded .hero-bg img,.loaded .hero-bg video{transform:scale(1)}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(10 26 32 / .5),transparent 60%),linear-gradient(180deg,rgb(14 58 74 / .55) 0%,rgb(14 58 74 / .05) 30%,rgb(10 30 38 / .55) 60%,rgb(10 26 32 / .94) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
 .disclose{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgb(246 239 230 / .14);border:1px solid rgb(246 239 230 / .3);backdrop-filter:blur(8px);font:600 .72rem/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase}
@@ -228,6 +228,28 @@ html:not(.js) .pol{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(-
 .js .pc .pc-stamp{opacity:0;transform:scale(1.9)}
 .js .pc.is-in .pc-stamp{opacity:1;transform:none;transition:opacity .3s,transform .55s var(--spring);transition-delay:calc(var(--i,0) * 90ms + .9s)}
 @media (max-width:600px){.pc{padding:7px}.pc figcaption{font-size:1rem;padding:9px 2px 2px}.pc figcaption span{display:none}.pc-stamp{top:14px;right:14px;font-size:.55rem}}
+
+/* ---------- stage ---------- */
+.stagesec{background:var(--surface);border-block:1px solid var(--line)}
+.sg{display:grid;gap:44px}
+@media (min-width:960px){.sg{grid-template-columns:.85fr 1.15fr;align-items:center;gap:60px}}
+.sg-tag{margin-top:24px;display:inline-flex;gap:10px;align-items:center;padding:10px 16px;border-radius:999px;background:var(--bg);font-size:.9rem;color:var(--muted)}
+.sg-tag b{color:var(--text);font-weight:600}
+.sg-media{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.sv{position:relative;margin:0;border-radius:20px;overflow:hidden;background:var(--line);box-shadow:var(--shadow);aspect-ratio:4/5.6}
+.sv:nth-child(2){margin-top:60px}.sv:nth-child(3){margin-top:24px}
+.sv video,.sv img{display:block;width:100%;height:100%;object-fit:cover;transition:scale .9s var(--ease)}
+.sv:hover video,.sv:hover img{scale:1.06}
+.sv .clip{height:100%}
+.sv figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 10px;background:linear-gradient(transparent,rgb(10 26 32 / .8));color:var(--on-dark);font:italic 400 .95rem/1.2 var(--serif)}
+@media (max-width:640px){.sg-media{grid-template-columns:repeat(2,1fr)}.sv.sp{display:none}.sv:nth-child(2){margin-top:40px}}
+.card.mcard{padding:0}
+.mm{position:relative;aspect-ratio:4/4.6;overflow:hidden;background:var(--line)}
+.mm video,.mm img{display:block;width:100%;height:100%;object-fit:cover;transition:scale 1s var(--ease)}
+.mcard:hover .mm video,.mcard:hover .mm img{scale:1.06}
+.mcard .mt{padding:20px 24px 26px}
+.mcard h3{margin-top:0}
+.card.mcard .n{z-index:2;color:var(--on-dark);text-shadow:0 2px 12px rgb(0 0 0 / .4)}
 
 /* ---------- movement ---------- */
 .moves{display:grid;gap:18px;margin-top:44px;perspective:1000px}
@@ -410,7 +432,7 @@ fieldset{border:0;padding:0;margin:0}
 
 <main>
 <section class="hero" aria-label="Giriş">
-  <div class="hero-bg"><img src="gorseller/hero.jpg" width="1275" height="1700" alt="Gizem Özdemir, Kotor Körfezi'nde taş bir kemerin altından yürürken" fetchpriority="high"></div>
+  <div class="hero-bg"><video src="video/hero.mp4" poster="gorseller/poster-hero.jpg" muted loop playsinline preload="auto" aria-label="Kotor Körfezi’nden manzaralar"></video></div>
   <div class="stack" aria-hidden="true">
     <figure class="pol" style="--i:0"><img src="gorseller/ksamil.jpg" width="825" height="1100" alt=""><span>Ksamil</span></figure>
     <figure class="pol" style="--i:1"><img src="gorseller/ulcinj.jpg" width="825" height="1100" alt=""><span>Ulcinj</span></figure>
@@ -447,7 +469,7 @@ fieldset{border:0;padding:0;margin:0}
       <h2 class="split">Bir öğrencinin <em>verdiği karar</em></h2>
       <p class="lead reveal" style="--i:2">Mimari Dekoratif Sanatlar okurken karşıma bir fırsat çıktı, değerlendirdim. Bugün dönüp baktığımda emekle, sabırla ve öğrenerek geçen yılları görüyorum.</p>
       <figure class="story-photo reveal" style="--i:3">
-        <div class="clip"><img src="gorseller/kotor-5.jpg" width="825" height="1100" alt="Gizem Özdemir Kotor eski şehirde" loading="lazy"></div>
+        <div class="clip"><img src="gorseller/lizbon-3.jpg" width="880" height="1100" alt="Gizem Özdemir Portekiz’de tarihi bir manastırın önünde" loading="lazy"></div>
         <figcaption>“Yaşadığım her ana binlerce kez şükürler olsun.”</figcaption>
       </figure>
     </div>
@@ -456,9 +478,27 @@ fieldset{border:0;padding:0;margin:0}
       <li class="reveal"><time>18 yaşında</time><h3>ÇOMÜ’de bir öğrenci</h3><p>Çanakkale Onsekiz Mart Üniversitesi, Mimari Dekoratif Sanatlar. Yolculuk bir üniversite öğrencisinin merakıyla başladı.</p></li>
       <li class="reveal"><time>7 yıl önce</time><h3>Herbalife Bağımsız Distribütörü oldum</h3><p>Kendi temposumda yürüttüğüm bir iş. Bu süreçte iletişimi, planlamayı ve en çok da disiplini öğrendim.</p></li>
       <li class="reveal"><time>Mart 2024 · Portekiz</time><h3>8. yurt dışı seyahatim</h3><p>“Hiç vaktim yok” dediğim günlerden, bavulu toplayıp Portekiz’e uçtuğum güne.</p></li>
+      <li class="reveal"><time>Mart 2025 · Amsterdam</time><h3>Dev bir Fit Camp</h3><p>Kocaman bir salonda müzik, hareket ve enerji. O günden kalan her kareyi hâlâ seviyorum.</p></li>
+      <li class="reveal"><time>Mart 2025 · Kuzey Makedonya</time><h3>İlk yurt dışı kayağım</h3><p>O sezonun ilk kayağı, üstelik gece ve ilk kez yurt dışında. İnanılmaz eğlendim.</p></li>
       <li class="reveal"><time>Yaz 2026 · Adriyatik</time><h3>Karadağ ve Arnavutluk</h3><p>Budva’nın geceleri, Ulcinj’in 2.500 yıllık sokakları, ikinci kez Kotor ve bir ay dolmadan yeniden Ksamil.</p></li>
       <li class="reveal"><time>Bugün</time><h3>Türkiye ve Kuzey Makedonya arasında</h3><p>Sabah sporu, deniz kenarı ve gün batımı. En sevdiğim ritim bu.</p></li>
     </ol>
+  </div>
+</section>
+
+<section class="section stagesec" id="sahne">
+  <div class="wrap sg">
+    <div class="sg-text">
+      <span class="eyebrow reveal">Sahneden</span>
+      <h2 class="split">Etkinliklerin <em>enerjisi</em></h2>
+      <p class="lead reveal" style="--i:2">Kamplar, eğitimler ve büyük buluşmalar. Aynı hedefe yürüyen insanlarla aynı salonda olmak bambaşka bir motivasyon.</p>
+      <p class="sg-tag reveal" style="--i:3"><b>Amsterdam</b> Fit Camp · Mart 2025</p>
+    </div>
+    <div class="sg-media">
+      <figure class="sv reveal"><video src="video/sahne-1.mp4" poster="gorseller/poster-sahne-1.jpg" muted loop playsinline preload="metadata" aria-label="Gizem Özdemir Fit Camp’te kalabalığın içinde"></video><figcaption>Sahne önü</figcaption></figure>
+      <figure class="sv reveal" style="--i:1"><video src="video/sahne-2.mp4" poster="gorseller/poster-sahne-2.jpg" muted loop playsinline preload="metadata" aria-label="Fit Camp salonu ve sahne"></video><figcaption>Salonun enerjisi</figcaption></figure>
+      <figure class="sv sp reveal" style="--i:2"><div class="clip"><img src="gorseller/sahne-portre.jpg" width="880" height="1100" alt="Gizem Özdemir Fit Camp’te" loading="lazy"></div><figcaption>Amsterdam</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -495,9 +535,9 @@ fieldset{border:0;padding:0;margin:0}
     <h2 class="split">Spor, benim <em>rutinim</em></h2>
     <p class="lead reveal" style="--i:2">Yolda olmak rutini bozmak demek değil. Nereye gidersem gideyim, hareket günümün bir parçası.</p>
     <div class="moves">
-      <article class="card tilt reveal"><span class="n">01</span><div class="ic"><svg viewBox="0 0 34 34"><path d="M4 13v8M8 10v14M26 10v14M30 13v8M8 17h18"/></svg></div><h3>Fitness</h3><p>Salon, ağırlık ve istikrar. Güne enerjiyle başlamanın en sevdiğim yolu.</p></article>
-      <article class="card tilt reveal" style="--i:1"><span class="n">02</span><div class="ic"><svg viewBox="0 0 34 34"><g class="ball"><circle cx="17" cy="15" r="10"/><path d="M8.5 9.5c4 2.5 4 8.5 0 11M25.5 9.5c-4 2.5-4 8.5 0 11"/></g><path d="M10 31h14"/></svg></div><h3>Tenis</h3><p>Kort, raket ve biraz rekabet. Hem kafayı boşaltıyor hem de odağı güçlendiriyor.</p></article>
-      <article class="card tilt reveal" style="--i:2"><span class="n">03</span><div class="ic"><svg viewBox="0 0 34 34"><circle cx="19" cy="5.5" r="2.5"/><path d="M17 11l-4 8 5 3 1 9M17 11l4 5 5 1M13 19l-4 1M18 22l-4 9"/></svg></div><h3>Yürüyerek keşif</h3><p>Kotor’un taş merdivenleri, Ulcinj’in dar sokakları. Şehirleri yürüyerek tanıyorum.</p></article>
+      <article class="card mcard tilt reveal"><span class="n">01</span><div class="mm"><video src="video/fitcamp.mp4" poster="gorseller/poster-fitcamp.jpg" muted loop playsinline preload="metadata" aria-label="Gizem Özdemir Fit Camp’te kalabalıkla hareket ederken"></video></div><div class="mt"><h3>Fitness</h3><p>Salon, ağırlık, tenis kortu ve kalabalık bir Fit Camp. Hareketin her hali.</p></div></article>
+      <article class="card mcard tilt reveal" style="--i:1"><span class="n">02</span><div class="mm"><video src="video/kayak.mp4" poster="gorseller/poster-kayak.jpg" muted loop playsinline preload="metadata" aria-label="Gizem Özdemir gece kayağında"></video></div><div class="mt"><h3>Kayak</h3><p>Kuzey Makedonya’da gece kayağı. Karda düşüp kalkmak da işin keyfi.</p></div></article>
+      <article class="card mcard tilt reveal" style="--i:2"><span class="n">03</span><div class="mm"><video src="video/kesif.mp4" poster="gorseller/poster-kesif.jpg" muted loop playsinline preload="metadata" aria-label="Kotor’un taş merdivenlerinden körfez manzarası"></video></div><div class="mt"><h3>Yürüyerek keşif</h3><p>Kotor’un taş merdivenleri, Ulcinj’in dar sokakları. Şehirleri yürüyerek tanıyorum.</p></div></article>
     </div>
     <p class="manifesto" id="manifesto" aria-label="Artık çok geç uyumayı bırak. Saatlerce dizi izlemeyi bırak. Seni geriye çeken alışkanlıkları bırak. Bir tane hayatın var, zamanını iyi kullan."></p>
     <p class="manifesto-by reveal">Gizem, Portekiz’den</p>
@@ -628,7 +668,7 @@ const tk = C.map(([c, n]) => `<span><img src="gorseller/bayrak/${c}.svg" alt="">
 $('#flagTicker').innerHTML = tk + tk;
 
 /* galeri */
-const G = [['kotor-1','Kotor’a ikinci gelişim'],['ksamil','Ksamil’den selam'],['kotor-3','Kotor Körfezi'],['ulcinj','Ulcinj’in eski sokakları'],['yaz-3','Adriyatik akşamı'],['kotor-4','Kotor’da pencereden'],['yaz-5','Yaz 2026'],['kotor-5','Kotor eski şehir'],['kotor-6','Kotor surlarında'],['yaz-2','Sahil'],['yaz-7','Yaz akşamları']];
+const G = [['kotor-1','Kotor’a ikinci gelişim'],['lizbon-1','Portekiz · Mart 2024'],['karadag-1','Karadağ · Haziran 2026'],['kayak-1','Kuzey Makedonya · Mart 2025'],['ksamil','Ksamil’den selam'],['lizbon-3','Portekiz’de mimari'],['kotor-3','Kotor Körfezi'],['karadag-2','Karadağ’ın taş sokakları'],['kayak-2','Pistte bir gün'],['ulcinj','Ulcinj’in eski sokakları'],['lizbon-2','Portekiz · Mart 2024'],['yaz-3','Adriyatik akşamı'],['kayak-3','Gece kayağı'],['karadag-3','Karadağ · Haziran 2026'],['kotor-4','Kotor’da pencereden'],['lizbon-4','Portekiz · Mart 2024'],['kayak-4','Kayak sonrası'],['yaz-5','Yaz 2026'],['kotor-5','Kotor eski şehir'],['kotor-6','Kotor surlarında'],['yaz-2','Sahil'],['yaz-7','Yaz akşamları']];
 $('#grid').innerHTML = G.map(([f, c], i) => `<button class="shot" data-cap="${c}"><span class="no">${String(i + 1).padStart(2, '0')}</span><img src="gorseller/${f}.jpg" width="825" height="1100" alt="Gizem Özdemir · ${c}" loading="lazy"></button>`).join('');
 const shots = $$('.shot'), lb = $('#lb'); let cur = 0;
 const show = n => { cur = (n + shots.length) % shots.length; const s = shots[cur]; $('#lbImg').src = $('img', s).src; $('#lbImg').alt = $('img', s).alt; $('#lbCap').textContent = s.dataset.cap; };
@@ -682,6 +722,10 @@ const intro = $('.intro');
 const start = () => { intro.classList.add('done'); document.documentElement.classList.add('loaded'); setTimeout(() => fab.classList.add('show'), 1000); setTimeout(() => intro.remove(), 1400); };
 if (reduce || sessionStorage.getItem('gz-intro')) { intro.remove(); document.documentElement.classList.add('loaded'); fab.classList.add('show'); }
 else { try { sessionStorage.setItem('gz-intro', 1); } catch { } setTimeout(start, 1900); }
+
+/* videolar: görünürken oynat */
+const vio = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting && !reduce) v.play().catch(() => {}); else v.pause(); }), { threshold: .15 });
+$$('video').forEach(v => vio.observe(v));
 
 /* görünür olunca */
 const count = el => { const to = +el.dataset.count, d = +el.dataset.dec || 0, suf = el.dataset.suf || '', t0 = performance.now();
