@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tukan Ajans | Marka ve Tasarım Atölyesi · Ataşehir</title>
+<meta name="description" content="Tukan Ajans; 2016'dan beri Ataşehir'de grafik tasarım, markalama, web sitesi, sosyal medya, açık hava reklam ve fotoğraf-video prodüksiyonu üreten marka ve tasarım atölyesi.">
+<meta property="og:title" content="Tukan Ajans | Marka ve Tasarım Atölyesi">
+<meta property="og:description" content="Dijital ama geleneksel. Geçmişten ilham alarak geleceğe yürüyoruz.">
+<meta property="og:image" content="gorseller/og.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f1eadb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23443341'/%3E%3Cpath d='M9 15c2-5 9-6 14-3l-6 2c-3 1-4 6-3 11-3-2-6-6-5-10z' fill='%23d93735'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="gorseller/tukan.webp" fetchpriority="high">
+<script>document.documentElement.classList.add('js');history.scrollRestoration='manual'</script>
+<style>
+:root{
+  --paper:#f1eadb; --paper-2:#e8dec9; --ivory:#f8f3e8; --ink:#2b1f2a; --plum:#443341; --red:#d93735; --gold:#e5bb51;
+  --jungle:#0f1a14; --leaf:#1f3326; --muted-l:rgba(43,31,42,.7); --muted-d:rgba(248,243,232,.74);
+  --fg:var(--plum); --line:rgba(68,51,65,.16);
+  --ease:cubic-bezier(.22,1,.36,1); --gut:clamp(16px,3.2vw,44px); --hdr:68px;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .16 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body[data-tone="dark"]{--fg:var(--ivory);--line:rgba(248,243,232,.18)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font:400 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:350;line-height:1.12;margin:0;letter-spacing:-.015em;text-wrap:balance;font-optical-sizing:auto}
+h1 em,h2 em,h3 em{font-style:italic;font-weight:300}
+p{margin:0}
+::selection{background:var(--red);color:var(--ivory)}
+
+/* shared */
+.tag{display:inline-flex;align-items:center;gap:8px;padding:5px 9px;border:1px solid rgba(68,51,65,.25);background:rgba(68,51,65,.05);font:500 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.dk .tag{border-color:rgba(248,243,232,.25);background:rgba(248,243,232,.07)}
+.tag i{width:6px;height:6px;border-radius:50%;background:var(--red)}
+.pill{display:inline-flex;align-items:center;gap:14px;background:var(--plum);color:var(--ivory);padding:7px 7px 7px 18px;border-radius:999px;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;border:0;cursor:pointer;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .4s}
+.pill i{width:28px;height:28px;border-radius:50%;background:var(--red);display:grid;place-items:center;overflow:hidden;font-style:normal;position:relative}
+.pill i::before,.pill i::after{content:"→";position:absolute;transition:transform .5s var(--ease)}
+.pill i::after{transform:translateX(-170%)}
+.pill:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(43,31,42,.6)}
+.pill:hover i::before{transform:translateX(170%)}.pill:hover i::after{transform:none}
+.dk .pill{background:var(--ivory);color:var(--plum)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em .03em .14em;margin:-.16em -.03em -.14em}
+.js .w>span{display:inline-block;transform:translate3d(0,120%,0);transition:transform 1.1s var(--ease);transition-delay:calc(var(--d,0)*55ms)}
+.js .in .w>span{transform:none}
+.js .out .w>span{transform:translate3d(0,-120%,0);transition-duration:.55s;transition-delay:calc(var(--d,0)*22ms)}
+.js .fade{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(.25s + var(--fd,0)*90ms)}
+.js .in .fade{opacity:1;transform:none}
+.js .out .fade{opacity:0;transform:translateY(-10px);transition-delay:0s;transition-duration:.4s}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;height:var(--hdr);z-index:60;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-inline:var(--gut);color:var(--fg);transition:color .5s}
+.brand img{height:34px;width:auto;transition:filter .5s}
+body[data-tone="dark"] .brand img{filter:brightness(0) invert(1)}
+.hdr-l{display:flex;align-items:center;gap:clamp(10px,2vw,28px)}
+.menu-btn{display:flex;align-items:center;gap:10px;background:none;border:0;padding:8px;cursor:pointer;font:500 11px/1 var(--mono);letter-spacing:.14em}
+.menu-btn b{display:grid;grid-template-columns:repeat(3,3px);gap:3px}.menu-btn b i{width:3px;height:3px;background:currentColor;border-radius:50%}
+.menu-btn em{font-style:normal}
+body[data-tone="dark"] .hdr .pill{background:var(--ivory);color:var(--plum)}
+@media (max-width:599px){.menu-btn em{display:none}.brand img{height:28px}.hdr .pill span{display:none}.hdr .pill{padding:7px}}
+
+/* menu */
+.menu{position:fixed;inset:0;z-index:80;background:var(--plum);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--hdr) + 20px) var(--gut) 40px;visibility:hidden;clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease),visibility 0s .8s}
+.menu.open{visibility:visible;clip-path:inset(0);transition:clip-path .8s var(--ease)}
+.menu ol{list-style:none;margin:0 auto;padding:0;width:min(1100px,100%)}
+.menu li{border-top:1px solid rgba(248,243,232,.16);overflow:hidden}.menu li:last-child{border-bottom:1px solid rgba(248,243,232,.16)}
+.menu a{display:flex;align-items:baseline;gap:20px;padding:clamp(6px,1.2vh,14px) 0;font:300 clamp(1.9rem,5.4vh,3.6rem)/1.12 var(--serif);transform:translateY(105%);transition:transform .8s var(--ease),color .3s,padding .5s var(--ease);transition-delay:calc(var(--i)*55ms + .15s)}
+.menu.open a{transform:none}
+.menu a small{font:500 11px/1 var(--mono);letter-spacing:.14em;color:var(--gold);min-width:28px}
+.menu a:hover{color:var(--gold);padding-left:14px}
+.menu-close{position:absolute;top:16px;right:var(--gut);background:none;border:1px solid rgba(248,243,232,.3);border-radius:999px;padding:10px 16px;cursor:pointer;font:500 11px/1 var(--mono);letter-spacing:.14em;color:var(--ivory)}
+
+/* chrome */
+.chrome{position:fixed;inset:0;z-index:50;pointer-events:none;color:var(--fg);transition:color .5s}
+.chrome .ln{position:absolute;background:var(--line);transition:background .5s}
+.chrome .l{left:var(--gut);top:0;bottom:0;width:1px}.chrome .r{right:var(--gut);top:0;bottom:0;width:1px}
+.chrome .h{left:0;right:0;top:78%;height:1px;opacity:.8}
+.chrome .x{position:absolute;width:11px;height:11px;top:78%;margin:-5px 0 0 -5px}
+.chrome .x::before,.chrome .x::after{content:"";position:absolute;background:currentColor;opacity:.8}
+.chrome .x::before{left:5px;top:0;width:1px;height:11px}.chrome .x::after{top:5px;left:0;height:1px;width:11px}
+.chrome .x1{left:var(--gut)}.chrome .x2{left:calc(100% - var(--gut))}
+.chrome .ruler{position:absolute;left:var(--gut);top:0;bottom:0;width:7px;background:repeating-linear-gradient(to bottom,currentColor 0 1px,transparent 1px 22px);background-position:0 var(--ry,0);opacity:.28}
+.chrome .chap{position:absolute;left:calc(var(--gut) + 16px);top:calc(var(--hdr) + 12px);font:500 10.5px/1 var(--mono);letter-spacing:.16em;white-space:nowrap;transition:opacity .4s}
+.chrome.flowing .chap{opacity:0}
+.chrome .pct{position:absolute;right:calc(var(--gut) + 14px);bottom:18px;font:500 10.5px/1 var(--mono);letter-spacing:.16em}
+.chrome .prog{position:absolute;right:var(--gut);top:0;width:1px;height:100%;background:currentColor;transform-origin:top;transform:scaleY(var(--pg,0))}
+@media (max-width:599px){.chrome .ruler,.chrome .h,.chrome .x,.chrome .chap{display:none}}
+
+/* veil, loader, cursor */
+.veil{position:fixed;inset:0;width:100%;height:100%;z-index:45;pointer-events:none;visibility:hidden}
+.loader{position:fixed;inset:0;z-index:90;background:var(--paper) var(--tex);display:none;place-items:center;color:var(--plum)}
+.js .loader{display:grid;transition:opacity .9s var(--ease),visibility 0s .9s}
+.loader.gone{opacity:0;visibility:hidden}
+.loader-in{display:flex;flex-direction:column;align-items:center}
+.loader img{width:min(260px,64vw);animation:breathe 2s var(--ease) infinite alternate}
+.loader .row{display:flex;justify-content:space-between;width:min(260px,64vw);margin-top:26px;font:500 10.5px/1 var(--mono);letter-spacing:.16em}
+.loader .bar{width:min(260px,64vw);height:1px;background:rgba(68,51,65,.18);margin-top:10px;position:relative;overflow:hidden}
+.loader .bar i{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--lp,0));transition:transform .4s var(--ease)}
+@keyframes breathe{to{transform:translateY(-4px)}}
+.cur{position:fixed;left:0;top:0;z-index:100;width:30px;height:30px;margin:-15px 0 0 -15px;border:1px solid #fff;border-radius:50%;pointer-events:none;mix-blend-mode:difference;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),opacity .3s;opacity:0}
+.cur::after{content:"";position:absolute;left:50%;top:50%;width:3px;height:3px;margin:-1.5px;background:#fff;border-radius:50%}
+.cur.big{width:64px;height:64px;margin:-32px 0 0 -32px}
+@media (hover:none),(pointer:coarse){.cur{display:none}}
+
+/* scenes */
+.scene{position:relative}
+.layer{position:relative;min-height:100vh;overflow:hidden}
+.js .fx{height:calc(var(--len)*1vh)}
+.js .fx>.layer{position:fixed;inset:0;min-height:0;z-index:10;visibility:hidden}
+.js .fx>.layer.on{visibility:visible}
+.flow{z-index:1}
+.art{position:absolute;inset:0;will-change:transform}
+.fb{position:absolute;left:0;top:0}
+.art>img.fb{width:auto;height:auto;object-fit:cover}
+.gl{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .5s}
+.gl-on>.gl{opacity:1}.gl-on>.fb{visibility:hidden}
+
+/* 01 hero: naturalist plate */
+#giris .layer{background:var(--paper) var(--tex)}
+.stage{position:absolute;inset:0;perspective:1300px}
+.wm{position:absolute;left:50%;top:31%;font:300 clamp(6rem,22vw,25rem)/1 var(--serif);letter-spacing:-.045em;color:var(--plum);white-space:nowrap;will-change:transform;transform:translate(-50%,-50%)}
+.wm span{display:inline-block}
+.wm b{color:var(--red);font-weight:300}
+.js .wm span{transform:translateY(30%);opacity:0;transition:transform 1.4s var(--ease),opacity 1.2s var(--ease);transition-delay:calc(.25s + var(--d)*70ms)}
+.ready .wm span{transform:none;opacity:1}
+.bird{position:absolute;will-change:transform;filter:drop-shadow(0 40px 40px rgba(43,31,42,.22))}
+.bird img{width:100%;height:auto}
+.ready .bird-in{animation:land 2.6s cubic-bezier(.16,.8,.24,1) backwards .15s}
+@keyframes land{from{transform:translate3d(38vw,-46vh,0) rotate(-24deg) scale(.55);opacity:0}40%{opacity:1}}
+.note{position:absolute;font:500 10px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-l)}
+.note.n1{top:calc(var(--hdr) + 14px);left:50%;transform:translateX(-50%)}
+.note.n2{right:calc(var(--gut) + 20px);top:calc(78% + 14px);text-align:right}
+.hero-txt{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));bottom:calc(22% + 22px);max-width:min(520px,86vw);will-change:transform,opacity}
+.hero-txt h1{font-size:clamp(2.3rem,3.9vw,4rem);margin:14px 0 12px}
+.hero-txt .sub{font:300 clamp(1.1rem,1.5vw,1.35rem)/1.4 var(--serif);color:var(--muted-l);margin-bottom:26px}
+.hero-meta{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));top:calc(78% + 14px);display:flex;gap:26px;font:500 10px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-l)}
+.fly{position:absolute;width:62px;pointer-events:none;will-change:transform}
+.fly img{width:100%;transform-origin:62% 52%;animation:flap .32s ease-in-out infinite alternate}
+@keyframes flap{to{transform:scaleX(.35) skewY(4deg)}}
+@media (max-width:899px){
+  .wm{top:calc(var(--hdr) + 15vw);font-size:30vw}
+  .hero-txt{bottom:calc(var(--gut) + 54px)}
+  .hero-txt .sub{margin-bottom:18px}
+  .hero-meta,.note{display:none}
+}
+
+/* 02 jungle */
+#orman .layer{background:var(--jungle)}
+#orman .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,13,.88) 0%,rgba(10,18,13,.55) 36%,rgba(10,18,13,0) 66%),linear-gradient(0deg,rgba(10,18,13,.6),rgba(10,18,13,0) 30%)}
+.steps{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));bottom:calc(22% + 34px);width:min(580px,82vw)}
+.js .step{position:absolute;left:0;bottom:0;width:100%}
+.step h2{font-size:clamp(2.4rem,5vw,4.9rem);margin:16px 0 18px;color:var(--ivory)}
+.step p{max-width:420px;color:var(--muted-d)}
+.stepnav{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));top:calc(78% + 18px);display:flex;align-items:center;gap:14px;font:500 10.5px/1 var(--mono);letter-spacing:.16em;color:var(--ivory)}
+.stepnav i{width:120px;height:1px;background:rgba(248,243,232,.25);position:relative}
+.stepnav i b{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(var(--sp,0))}
+@media (max-width:899px){
+  #orman .shade{background:linear-gradient(0deg,rgba(10,18,13,.95) 0%,rgba(10,18,13,.7) 45%,rgba(10,18,13,0) 75%)}
+  .steps{bottom:calc(var(--gut) + 64px)}.stepnav{top:auto;bottom:calc(var(--gut) + 18px)}
+}
+
+/* 03 services (flow) */
+#hizmetler{background:var(--paper) var(--tex);padding:calc(var(--hdr) + 48vh) calc(var(--gut) + clamp(16px,3.5vw,52px)) 0}
+.wrap{max-width:1240px;margin:0 auto}
+.svc-head{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(48px,7vw,90px)}
+.svc-head h2{font-size:clamp(2.4rem,5vw,4.8rem);margin-top:18px}
+.svc-head p{color:var(--muted-l);max-width:440px}
+.specs{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(16px,2vw,26px)}
+.spec{grid-column:span 2;position:relative;background:var(--ivory);border:1px solid rgba(68,51,65,.14);padding:20px 20px 24px;transform-style:preserve-3d;transition:transform .6s var(--ease),box-shadow .6s var(--ease);will-change:transform}
+.spec:nth-child(4),.spec:nth-child(5){grid-column:span 3}
+.spec:hover{box-shadow:0 40px 70px -40px rgba(43,31,42,.55)}
+.spec .top{display:flex;justify-content:space-between;font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-l)}
+.spec .top b{color:var(--red);font-weight:500}
+.spec figure{margin:14px 0 16px;height:clamp(220px,24vw,320px);transform:translateZ(0);transition:transform .7s var(--ease)}
+.spec figure img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(43,31,42,.18))}
+.spec:hover figure{transform:translateZ(46px) scale(1.04)}
+.spec .lat{font:italic 400 13px/1.4 var(--serif);color:var(--muted-l);border-top:1px solid rgba(68,51,65,.14);padding-top:12px}
+.spec h3{font-size:clamp(1.5rem,2vw,1.9rem);margin:8px 0 8px}
+.spec p{font-size:14px;color:var(--muted-l)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{font:500 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border:1px solid rgba(68,51,65,.2);border-radius:999px}
+.js .rv{opacity:0;transform:translateY(50px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv figure img{clip-path:inset(100% 0 0 0);transition:clip-path 1.4s var(--ease);transition-delay:calc(var(--i,0)*90ms + .15s)}
+.js .rv.in figure img{clip-path:inset(-10% -10% -20% -10%)}
+.band{margin:clamp(80px,12vw,150px) calc(-1 * (var(--gut) + clamp(16px,3.5vw,52px))) 0;background:var(--plum);color:var(--ivory);transform:rotate(-2deg) scale(1.04);padding:18px 0;overflow:hidden}
+.band div{display:flex;width:max-content;animation:mq 36s linear infinite}
+.band span{display:flex;align-items:center;gap:28px;padding-right:28px;font:italic 300 clamp(1.8rem,3.4vw,3rem)/1.15 var(--serif);white-space:nowrap}
+.band span i{width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:16px 0 0 -2px var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.svc-end{height:58vh}
+@media (max-width:1099px){.specs{grid-template-columns:repeat(2,1fr)}.spec,.spec:nth-child(4),.spec:nth-child(5){grid-column:span 1}.spec:nth-child(5){grid-column:span 2}}
+@media (max-width:699px){.svc-head{grid-template-columns:1fr;gap:18px}.specs{grid-template-columns:1fr}.spec:nth-child(5){grid-column:span 1}#hizmetler{padding-inline:calc(var(--gut) + 12px)}.band{margin-inline:calc(-1 * (var(--gut) + 12px))}}
+
+/* 04 fruit trees (frame zoom) */
+#meyve .layer{background:var(--paper-2) var(--tex)}
+.panel{position:absolute;will-change:transform;box-shadow:0 0 0 12px var(--ivory),0 0 0 13px rgba(68,51,65,.22),0 50px 90px -40px rgba(43,31,42,.55)}
+.panel img{width:100%;height:100%;object-fit:cover}
+.caption{position:absolute;font:500 10px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-l)}
+.vis-txt{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));top:50%;transform:translateY(-50%);width:min(500px,42vw)}
+.vis-txt h2{font-size:clamp(2.4rem,4.6vw,4.4rem);margin:16px 0 16px}
+.vis-txt p{color:var(--muted-l)}
+.proc{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid rgba(68,51,65,.16);counter-reset:s}
+.proc li{display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(68,51,65,.16);font:400 clamp(1.05rem,1.4vw,1.25rem)/1.3 var(--serif)}
+.proc li span{font:500 10.5px/1 var(--mono);color:var(--red)}
+.js .proc li{opacity:0;transform:translateX(-14px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(.5s + var(--i)*110ms)}
+.js .in .proc li{opacity:1;transform:none}
+@media (max-width:899px){
+  .vis-txt{top:auto;bottom:calc(var(--gut) + 6px);transform:none;width:auto;left:calc(var(--gut) + 12px);right:calc(var(--gut) + 12px)}
+  .vis-txt h2{font-size:clamp(1.9rem,8.4vw,2.6rem);margin:10px 0 4px}
+  .vis-txt p{display:none}.proc{margin-top:10px}.proc li{padding:7px 0;font-size:1rem}
+}
+
+/* 05 manifesto */
+#manifesto .layer{background:var(--jungle)}
+#manifesto .art{transform-origin:52% 80%}
+#manifesto .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+#manifesto .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,14,10,.96) 0%,rgba(8,14,10,.78) 42%,rgba(8,14,10,.2) 78%),linear-gradient(90deg,rgba(8,14,10,.55),rgba(8,14,10,0) 60%)}
+.man{position:absolute;left:calc(var(--gut) + clamp(16px,3.5vw,52px));right:calc(var(--gut) + clamp(16px,3.5vw,52px));bottom:clamp(40px,9vh,96px);display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,80px);align-items:end;color:var(--ivory)}
+.yrs{font:300 clamp(7rem,17vw,15rem)/.85 var(--serif);letter-spacing:-.05em;color:var(--gold)}
+.yrs small{display:block;font:500 10.5px/1.6 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted-d);margin-top:16px}
+.man h2{font-size:clamp(2.4rem,5vw,4.8rem);margin:16px 0 18px}
+.scrub{font:300 clamp(1.25rem,2vw,1.9rem)/1.35 var(--serif);max-width:34ch}
+.mw{opacity:.2;transition:opacity .35s}.mw.lit{opacity:1}
+@media (max-width:899px){.man{grid-template-columns:1fr;gap:6px;bottom:calc(var(--gut) + 26px)}.yrs{font-size:6.5rem}.yrs small{margin-top:6px}}
+
+/* 06 contact (flow) */
+#iletisim{background:radial-gradient(110% 80% at 70% 30%,#1d3324 0%,var(--jungle) 62%);color:var(--ivory);min-height:100vh;padding:calc(var(--hdr) + 46vh) calc(var(--gut) + clamp(16px,3.5vw,52px)) 14vh;overflow:hidden}
+#iletisim canvas{position:absolute;inset:0;width:100%;height:100%}
+.contact{position:relative;max-width:1240px;margin:0 auto}
+.contact h2{font-size:clamp(2.8rem,6.4vw,6.4rem);margin:18px 0 18px;max-width:13ch}
+.contact .lead{font:300 clamp(1.15rem,1.6vw,1.45rem)/1.4 var(--serif);color:var(--muted-d);margin-bottom:clamp(36px,6vw,64px)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(248,243,232,.18)}
+.cgrid a,.cgrid div{display:block;padding:24px 24px 26px 0;border-bottom:1px solid rgba(248,243,232,.18)}
+.cgrid small{display:block;font:500 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.cgrid strong{font:350 clamp(1.25rem,1.9vw,1.75rem)/1.25 var(--serif)}
+.cgrid a strong{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease)}
+.cgrid a:hover strong{background-size:100% 1px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px}
+.pill.ghost{background:transparent;border:1px solid rgba(248,243,232,.35);color:var(--ivory)}
+@media (max-width:899px){.cgrid{grid-template-columns:1fr}}
+
+/* 07 footer: butterflies */
+#son{position:relative;height:100svh;min-height:600px;background:var(--paper) var(--tex);overflow:hidden;touch-action:pan-y}
+#son canvas{position:absolute;inset:0;width:100%;height:100%}
+.son-mid{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;width:90%}
+.son-mid img{width:clamp(280px,52vw,760px);margin:0 auto}
+.son-mid p{font:italic 300 clamp(1.4rem,2.6vw,2.4rem)/1.3 var(--serif);margin-top:26px;color:var(--plum)}
+.son-mid small{display:block;margin-top:12px;font:500 10px/1 var(--mono);letter-spacing:.18em;color:var(--muted-l);text-transform:uppercase}
+.son-foot{position:absolute;left:calc(var(--gut) + 16px);right:calc(var(--gut) + 16px);bottom:18px;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:end;font:500 10px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted-l)}
+.son-foot>:nth-child(3){text-align:right}
+.son-foot .credit{grid-column:1/-1;text-transform:none;letter-spacing:.03em;text-align:center;opacity:.75}
+@media (max-width:699px){.son-foot{grid-template-columns:1fr}.son-foot>:nth-child(2),.son-foot>:nth-child(3){display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .js .w>span,.js .fade,.js .rv,.js .wm span,.js .proc li{transform:none;opacity:1}
+  .js .rv figure img{clip-path:none}
+}
+</style>
+</head>
+<body data-tone="light">
+
+<div class="loader" aria-hidden="true"><div class="loader-in">
+  <img src="gorseller/logo.svg" alt="">
+  <div class="row"><span>MARKA VE TASARIM ATÖLYESİ</span><span class="lnum">000</span></div>
+  <div class="bar"><i></i></div>
+</div></div>
+<canvas class="veil" aria-hidden="true"></canvas>
+<div class="cur" aria-hidden="true"></div>
+<div class="chrome" aria-hidden="true">
+  <i class="ln l"></i><i class="ln r"></i><i class="ln h"></i><i class="x x1"></i><i class="x x2"></i><i class="ruler"></i><i class="prog"></i>
+  <span class="chap">— 01 · TUKAN</span><span class="pct">000</span>
+</div>
+
+<header class="hdr">
+  <div class="hdr-l">
+    <a class="brand" href="#giris" data-go="giris" aria-label="Tukan Ajans ana sayfa"><img src="gorseller/logo.svg" alt="Tukan Ajans" width="179" height="45"></a>
+    <button class="menu-btn" type="button" aria-label="Menüyü aç" aria-expanded="false"><b><i></i><i></i><i></i><i></i><i></i><i></i></b><em>MENÜ</em></button>
+  </div>
+  <a class="pill" href="tel:+908503468034"><span>Beni Arayın</span> <i></i></a>
+</header>
+
+<nav class="menu" aria-label="Bölümler">
+  <button class="menu-close" type="button">Kapat ✕</button>
+  <ol>
+    <li><a href="#giris" data-go="giris" style="--i:0"><small>01</small>Tukan</a></li>
+    <li><a href="#orman" data-go="orman" style="--i:1"><small>02</small>Felsefe</a></li>
+    <li><a href="#hizmetler" data-go="hizmetler" style="--i:2"><small>03</small>Hizmetler</a></li>
+    <li><a href="#meyve" data-go="meyve" style="--i:3"><small>04</small>Süreç</a></li>
+    <li><a href="#manifesto" data-go="manifesto" style="--i:4"><small>05</small>Manifesto</a></li>
+    <li><a href="#iletisim" data-go="iletisim" style="--i:5"><small>06</small>İletişim</a></li>
+  </ol>
+</nav>
+
+<main>
+  <!-- 01 HERO -->
+  <section class="scene fx" id="giris" style="--len:240" data-name="Tukan" data-tone="light">
+    <div class="layer">
+      <div class="stage">
+        <div class="wm" aria-hidden="true"><span style="--d:0">T</span><span style="--d:1">u</span><span style="--d:2">k</span><span style="--d:3">a</span><span style="--d:4">n</span><span style="--d:5"><b>.</b></span></div>
+        <div class="bird"><div class="bird-in"><img src="gorseller/tukan.webp" width="1586" height="1536" alt="John Gould'un elle boyanmış tukan litografı, Ramphastos osculans" fetchpriority="high"></div></div>
+        <div class="fly" aria-hidden="true"><img src="gorseller/kelebek.webp" alt=""></div>
+      </div>
+      <span class="note n1">Pl. I — Ramphastos osculans</span>
+      <span class="note n2">J. &amp; E. Gould · 1854<br>National Gallery of Art</span>
+      <div class="hero-txt">
+        <span class="tag fade"><i></i>Marka ve Tasarım Atölyesi</span>
+        <h1 data-split>Dijital ama <em>geleneksel.</em></h1>
+        <p class="sub fade" style="--fd:1">Geçmişten ilham alarak geleceğe yürüyoruz.</p>
+        <a class="pill fade" style="--fd:2" href="#iletisim" data-go="iletisim">Projenizi Konuşalım <i></i></a>
+      </div>
+      <div class="hero-meta"><span>2016'dan beri</span><span>Ataşehir · İstanbul</span></div>
+    </div>
+  </section>
+
+  <!-- 02 JUNGLE -->
+  <section class="scene fx" id="orman" style="--len:400" data-name="Felsefe" data-tone="dark" data-veil="#0f1a14">
+    <div class="layer dk">
+      <div class="art">
+        <img class="fb" src="gorseller/orman-m.webp" srcset="gorseller/orman-m.webp 2048w, gorseller/orman.webp 3000w" sizes="100vw" width="3000" height="3272" data-iw="3000" data-ih="3272" data-px=".5" data-py=".55" alt="Henri Rousseau'nun Ekvator Ormanı tablosu" loading="lazy">
+        <canvas class="gl" aria-hidden="true"></canvas>
+      </div>
+      <div class="shade"></div>
+      <div class="steps">
+        <div class="step"><span class="tag fade"><i></i>Tukan'ın felsefesi</span><h2 data-split>Çok uçmayı değil, <em>manzarayı</em> sever.</h2><p class="fade" style="--fd:1">Meyve veren ağaçları olsun, bir ömür aynı ormanda kalsın ister. Biz de markalarla uzun soluklu yürürüz.</p></div>
+        <div class="step"><span class="tag fade">01 · Analiz</span><h2 data-split>Önce ormanı <em>tanırız.</em></h2><p class="fade" style="--fd:1">Sektörünüzü, rakiplerinizi ve müşterinizi derinlemesine inceler, verileri yorumlarız.</p></div>
+        <div class="step"><span class="tag fade">02 · Strateji</span><h2 data-split>Sonra yolu <em>çizeriz.</em></h2><p class="fade" style="--fd:1">Sürdürülebilir, gerçekçi ve mantıklı çözümler: ne yapacağımızı ve ne zaman yapacağımızı biliriz.</p></div>
+        <div class="step"><span class="tag fade">03 · Üretim</span><h2 data-split>Ve birlikte <em>büyürüz.</em></h2><p class="fade" style="--fd:1">Tasarım, üretim ve teslimatı hızla tamamlayan anahtar teslim tanıtım çözümleri.</p></div>
+      </div>
+      <div class="stepnav"><span class="sn">01</span><i><b></b></i><span>04</span></div>
+    </div>
+  </section>
+
+  <!-- 03 SERVICES (flow) -->
+  <section class="scene flow" id="hizmetler" data-name="Hizmetler" data-tone="light" data-veil="#f1eadb">
+    <div class="wrap">
+      <div class="svc-head">
+        <div class="rv"><span class="tag"><i></i>Hizmetler · Numune koleksiyonu</span><h2>Markanız için <em>eksiksiz</em> bir koleksiyon.</h2></div>
+        <p class="rv" style="--i:1">Markanız ve ürününüz için gereken tüm tanıtım materyallerini tespit ediyor; tasarım, üretim ve teslimat süreçlerini hızla tamamlıyoruz.</p>
+      </div>
+      <div class="specs">
+        <article class="spec rv" style="--i:0"><div class="top"><b>No. 01</b><span>Kimlik</span></div><figure><img src="gorseller/kart-aracari.webp" width="841" height="1024" alt="Gould'un kızıl kuyruklu araçari litografı" loading="lazy"></figure><p class="lat">Pteroglossus erythropygius — Gould</p><h3>Grafik Tasarım &amp; Markalama</h3><p>Logo, kurumsal kimlik ve markanızın bütün tanıtım materyalleri.</p><ul class="chips"><li>Logo</li><li>Kimlik</li><li>Ambalaj</li></ul></article>
+        <article class="spec rv" style="--i:1"><div class="top"><b>No. 02</b><span>Dijital</span></div><figure><img src="gorseller/kart-bitorquatus.webp" width="726" height="1032" alt="Gould'un çift halkalı araçari litografı" loading="lazy"></figure><p class="lat">Pteroglossus bitorquatus — Gould</p><h3>Web Sitesi &amp; Yazılım</h3><p>Hızlı, modern ve yönetilebilir siteler; arkasındaki yazılımı da biz geliştiririz.</p><ul class="chips"><li>Tasarım</li><li>Yazılım</li><li>SEO</li></ul></article>
+        <article class="spec rv" style="--i:2"><div class="top"><b>No. 03</b><span>Sosyal</span></div><figure><img src="gorseller/kart-inscriptus.webp" width="758" height="1073" alt="Gould'un yazılı gagalı araçari litografı" loading="lazy"></figure><p class="lat">Pteroglossus inscriptus — Gould</p><h3>Sosyal Medya &amp; Analiz</h3><p>İçerik üretimi, hesap yönetimi ve verilerle beslenen düzenli raporlama.</p><ul class="chips"><li>İçerik</li><li>Yönetim</li><li>Rapor</li></ul></article>
+        <article class="spec rv" style="--i:3"><div class="top"><b>No. 04</b><span>Sokak</span></div><figure><img src="gorseller/kart-viridis.webp" width="900" height="1087" alt="Gould'un yeşil araçari litografı" loading="lazy"></figure><p class="lat">Pteroglossus viridis — Gould</p><h3>Açık Hava Reklam</h3><p>Billboard, tabela ve kampanya görselleriyle sokakta da akılda kalan bir marka.</p><ul class="chips"><li>Billboard</li><li>Tabela</li><li>Kampanya</li></ul></article>
+        <article class="spec rv" style="--i:4"><div class="top"><b>No. 05</b><span>Prodüksiyon</span></div><figure><img src="gorseller/kart-piperivora.webp" width="937" height="1090" alt="Gould'un Guyana tukancığı litografı" loading="lazy"></figure><p class="lat">Selenidera piperivora — Gould</p><h3>Fotoğraf &amp; Video</h3><p>Markanızı anlatan ürün, mekân ve tanıtım çekimleri; kurgusuyla birlikte.</p><ul class="chips"><li>Fotoğraf</li><li>Video</li><li>Kurgu</li></ul></article>
+      </div>
+    </div>
+    <div class="band" aria-hidden="true"><div></div></div>
+    <div class="svc-end"></div>
+  </section>
+
+  <!-- 04 FRUIT TREES -->
+  <section class="scene fx" id="meyve" style="--len:280" data-name="Süreç" data-tone="light" data-veil="#2b1f2a">
+    <div class="layer">
+      <div class="panel"><img src="gorseller/muz.webp" width="1900" height="2638" alt="Maria Sibylla Merian'ın muz çiçeği ve meyvesi gravürü" loading="lazy"></div>
+      <div class="caption">Maria Sibylla Merian · Muz çiçeği ve meyvesi · 1705</div>
+      <div class="vis-txt">
+        <span class="tag fade"><i></i>İyi süreç, iyi sonuç</span>
+        <h2 data-split>Meyve veren ağaçlarım <em>olsun.</em></h2>
+        <p class="fade" style="--fd:1">Bir işe başlamadan önce tüm adımları planlarız. Her proje, sabırla büyüyen bir ağaç gibi meyvesini verir.</p>
+        <ol class="proc">
+          <li style="--i:0"><span>01</span>Kreatif fikir üretimi</li>
+          <li style="--i:1"><span>02</span>Kapsamlı analiz ve yorumlama</li>
+          <li style="--i:2"><span>03</span>Strateji belirleme</li>
+          <li style="--i:3"><span>04</span>Başarılı hedefler, ölçülebilir sonuçlar</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 MANIFESTO -->
+  <section class="scene fx" id="manifesto" style="--len:260" data-name="Manifesto" data-tone="dark" data-veil="#0f1a14">
+    <div class="layer dk">
+      <div class="art"><img src="gorseller/selale.webp" width="2600" height="1987" alt="Henri Rousseau'nun Şelale tablosu" loading="lazy"></div>
+      <div class="shade"></div>
+      <div class="man">
+        <div class="yrs"><span class="cnt">10</span><small>yıl · 2016'dan beri<br>aynı ormanda</small></div>
+        <div>
+          <span class="tag fade">Manifesto</span>
+          <h2 data-split>Çok uçmayı <em>sevmiyoruz.</em></h2>
+          <p class="scrub">Markanızın bulunduğu sektörü iyi analiz ediyor, bu çerçevede sürdürülebilir ve mantıklı çözümler üretiyoruz. Sadece sizinle yürümüyor, sizinle bir oluyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 CONTACT (flow) -->
+  <section class="scene flow dk" id="iletisim" data-name="İletişim" data-tone="dark" data-veil="#0f1a14">
+    <canvas aria-hidden="true"></canvas>
+    <div class="contact rv">
+      <span class="tag"><i></i>İletişim</span>
+      <h2>Markanızı, projenizi birlikte <em>parlatalım.</em></h2>
+      <p class="lead">Tukan. Farklı. Gerçekçi.</p>
+      <div class="cgrid">
+        <a href="tel:+908503468034"><small>Telefon</small><strong>0 (850) 346 80 34</strong></a>
+        <a href="mailto:bilgi@tukanajans.com"><small>E-posta</small><strong>bilgi@tukanajans.com</strong></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=K%C3%BC%C3%A7%C3%BCkbakkalk%C3%B6y+Mah.+Selvili+Sok.+No%3A4%2F20+Ata%C5%9Fehir+%C4%B0stanbul" target="_blank" rel="noopener"><small>Atölye</small><strong>Küçükbakkalköy Mah. Selvili Sok. No:4/20, Canan Residence, Ataşehir / İstanbul</strong></a>
+      </div>
+      <div class="cta-row"><a class="pill" href="tel:+908503468034">Beni Arayın <i></i></a><a class="pill ghost" href="mailto:bilgi@tukanajans.com">E-posta Gönderin <i></i></a></div>
+    </div>
+  </section>
+
+  <!-- 07 FOOTER -->
+  <footer class="scene flow" id="son" data-name="Son" data-tone="light">
+    <canvas aria-label="İmleci takip eden Merian kelebekleri"></canvas>
+    <div class="son-mid">
+      <img src="gorseller/logo.svg" alt="Tukan Ajans · Marka ve Tasarım Atölyesi" width="179" height="45">
+      <p>Tukan. Farklı. Gerçekçi.</p>
+      <small>Kelebekler imlecinizi takip eder</small>
+    </div>
+    <div class="son-foot">
+      <span>© 2016–2026 Tukan Ajans İletişim ve Reklam Hizmetleri Ltd. Şti.</span>
+      <span>Grafik · Web · Sosyal Medya · Açık Hava · Prodüksiyon</span>
+      <span>Ataşehir · İstanbul</span>
+      <span class="credit">Görseller: John &amp; Elizabeth Gould, Henri Rousseau ve Maria Sibylla Merian'ın kamu malı eserleri (National Gallery of Art, Wikimedia Commons).</span>
+    </div>
+  </footer>
+</main>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches,coarse=matchMedia('(pointer:coarse)').matches;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),lerp=(a,b,t)=>a+(b-a)*t;
+const eio=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,eo=t=>1-Math.pow(1-t,3);
+const DPR=Math.min(devicePixelRatio||1,2);
+const rng=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+const hash=(x,y)=>{const n=Math.sin(x*127.1+y*311.7)*43758.5453;return n-Math.floor(n)};
+const noise=(x,y)=>{const xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf);
+  return lerp(lerp(hash(xi,yi),hash(xi+1,yi),u),lerp(hash(xi,yi+1),hash(xi+1,yi+1),u),v)};
+let vw=innerWidth,vh=innerHeight,ty=scrollY,sy=scrollY,mob=vw<900,T=vh*.42;
+
+/* split headings */
+$$('[data-split]').forEach(el=>{let d=0;const walk=n=>{[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{
+    if(!t)return;if(/^\s+$/.test(t)){f.append(' ');return}
+    const w=document.createElement('span');w.className='w';const i=document.createElement('span');i.textContent=t;i.style.setProperty('--d',d++);w.append(i);f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1&&c.tagName!=='BR')walk(c)})};walk(el)});
+const scrub=$('.scrub');scrub.innerHTML=scrub.textContent.split(' ').map(w=>`<span class="mw">${w}</span>`).join(' ');const mws=$$('.mw',scrub);
+const bw=['Grafik Tasarım','Markalama','Web Yazılım','Sosyal Medya','Açık Hava','Fotoğraf','Video Prodüksiyon'].map(w=>`<span>${w}<i></i></span>`).join('');$('.band div').innerHTML=bw+bw;
+
+/* timeline */
+const scenes=$$('.scene').map(el=>({el,id:el.id,fixed:el.classList.contains('fx'),layer:el.classList.contains('fx')?$('.layer',el):null,name:el.dataset.name,tone:el.dataset.tone,veil:el.dataset.veil,start:0,end:0}));
+const byId=Object.fromEntries(scenes.map(s=>[s.id,s]));let bounds=[];
+function fitCover(el,iw,ih,px,py){const s=Math.max(vw/iw,vh/ih),w=iw*s,h=ih*s,x=(vw-w)*px,y=(vh-h)*py;
+  Object.assign(el.style,{width:w+'px',height:h+'px',left:x+'px',top:y+'px'});return[x,y,w,h]}
+
+/* halftone veil */
+const veil=$('.veil'),vx=veil.getContext('2d');let cells=null,csz=12,vLast='',vo=null;
+function veilLayout(){veil.width=vw*DPR;veil.height=vh*DPR;vx.setTransform(DPR,0,0,DPR,0,0);csz=vw<700?9:12;
+  const cols=Math.ceil(vw/csz)+1,rows=Math.ceil(vh/csz)+1;cells=new Float32Array(cols*rows*3);let k=0;
+  for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){cells[k++]=x*csz+(y%2?csz/2:0);cells[k++]=y*csz;cells[k++]=clamp(.58*noise(x*.08,y*.08)+.27*Math.random()+.15*(1-y/rows))}vLast=''}
+function drawVeil(c,color){const key=c.toFixed(3)+color;if(key===vLast)return;vLast=key;vx.clearRect(0,0,vw,vh);
+  if(c<=0){veil.style.visibility='hidden';return}veil.style.visibility='visible';vx.fillStyle=color;
+  if(c>=1){vx.fillRect(0,0,vw,vh);return}const R=csz*.78,w=.38;vx.beginPath();
+  for(let i=0;i<cells.length;i+=3){const k=(c*(1+w)-cells[i+2])/w;if(k<=0)continue;const r=Math.min(1,k)*R;vx.moveTo(cells[i]+r,cells[i+1]);vx.arc(cells[i],cells[i+1],r,0,6.2832)}vx.fill()}
+function animVeil(from,to,ms,color,done){const t0=performance.now();const st=n=>{const k=clamp((n-t0)/ms);vo={c:lerp(from,to,eio(k)),color};if(k<1)requestAnimationFrame(st);else{if(to<=0)vo=null;done&&done()}};requestAnimationFrame(st)}
+
+/* WebGL depth renderer */
+const GDPR=Math.min(devicePixelRatio||1,1.75),tilt=[0,0],tiltT=[0,0];
+const VS='attribute vec2 p;uniform vec2 uRes;varying vec2 vP;void main(){vP=vec2((p.x*.5+.5)*uRes.x,(.5-p.y*.5)*uRes.y);gl_Position=vec4(p,0.,1.);}';
+const FS='precision highp float;varying vec2 vP;uniform vec2 uRes,uFocus,uTilt;uniform vec4 uRect;uniform float uZoom,uAmt;uniform sampler2D uT0,uD;'+
+ 'vec2 wp(vec2 u,float d){float z=1.+(uZoom-1.)*(.6+.8*d);return uFocus+(u-uFocus)/z+uTilt*(d-.4)*uAmt;}'+
+ 'void main(){vec2 u=(vP-uRect.xy)/uRect.zw;float d=texture2D(uD,u).r;vec2 w=wp(u,d);d=texture2D(uD,w).r;w=wp(u,d);d=texture2D(uD,w).r;w=clamp(wp(u,d),.0005,.9995);gl_FragColor=vec4(texture2D(uT0,w).rgb,1.);}';
+const loadImg=src=>new Promise((ok,no)=>{if(src instanceof HTMLImageElement){if(src.complete&&src.naturalWidth)return ok(src);src.addEventListener('load',()=>ok(src),{once:true});src.addEventListener('error',no,{once:true});return}
+  const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=src});
+function makeGL(canvas,img,depth){const o={ready:false};let gl;try{gl=canvas.getContext('webgl2',{antialias:false,alpha:false})||canvas.getContext('webgl',{antialias:false,alpha:false})}catch(e){}
+  if(!gl)return o;const g2=typeof WebGL2RenderingContext!=='undefined'&&gl instanceof WebGL2RenderingContext;
+  const sh=(t,s)=>{const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);return x},pr=gl.createProgram();
+  gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return o;gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const U={};['uRes','uRect','uZoom','uAmt','uFocus','uTilt','uT0','uD'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+  Promise.all([img,depth].map(loadImg)).then(ims=>{ims.forEach((im,i)=>{gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(gl.TEXTURE_2D,gl.createTexture());
+      gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,im);const mip=g2&&i===0;
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,mip?gl.LINEAR_MIPMAP_LINEAR:gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);if(mip)gl.generateMipmap(gl.TEXTURE_2D)});
+    if(gl.getError())return;gl.uniform1i(U.uT0,0);gl.uniform1i(U.uD,1);o.ready=true;o.size();canvas.parentNode.classList.add('gl-on')}).catch(()=>{});
+  o.size=()=>{canvas.width=Math.round(vw*GDPR);canvas.height=Math.round(vh*GDPR);gl.viewport(0,0,canvas.width,canvas.height)};
+  o.draw=(r,zoom,f,tl,amt)=>{if(!o.ready)return;const k=GDPR;gl.uniform2f(U.uRes,canvas.width,canvas.height);gl.uniform4f(U.uRect,r[0]*k,r[1]*k,r[2]*k,r[3]*k);
+    gl.uniform1f(U.uZoom,zoom);gl.uniform2f(U.uFocus,f[0],f[1]);gl.uniform2f(U.uTilt,tl[0],tl[1]);gl.uniform1f(U.uAmt,amt);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)};
+  return o}
+
+/* refs */
+const H={wm:$('.wm'),bird:$('.bird'),fly:$('.fly'),txt:$('.hero-txt'),meta:$('.hero-meta'),notes:$$('#giris .note'),b:[0,0,1,1]};
+const O={art:$('#orman .art'),fb:$('#orman .fb'),rect:[0,0,1,1],steps:$$('#orman .step'),sn:$('#orman .sn'),bar:$('#orman .stepnav i'),idx:-1};
+const V={panel:$('#meyve .panel'),cap:$('#meyve .caption'),txt:$('#meyve .vis-txt'),s0:1};
+const M={art:$('#manifesto .art'),man:$('#manifesto .man'),cnt:$('#manifesto .cnt'),lit:-1};
+function layout(){vw=innerWidth;vh=innerHeight;mob=vw<900;T=vh*.42;
+  // hero bird box (image ratio 1586:1536)
+  let bh,bwid,bx,by;if(!mob){bh=Math.min(vh*.8,vw*.5/1.0326);bwid=bh*1.0326;bx=vw*.5-bwid*.12;by=vh*.1}else{bwid=vw*.8;bh=bwid/1.0326;bx=(vw-bwid)/2+vw*.06;by=vh*.24}
+  H.b=[bx,by,bwid,bh];Object.assign(H.bird.style,{left:bx+'px',top:by+'px',width:bwid+'px',transformOrigin:`${bwid*.29}px ${bh*.205}px`});
+  const d=O.fb.dataset;O.rect=fitCover(O.fb,+d.iw,+d.ih,.5,.55);O.gl&&O.gl.ready&&O.gl.size();
+  // fruit plate frame + zoom fixed point on the red flower
+  const AR=1900/2638;let W,Hh,L,Tp;if(!mob){Hh=Math.min(vh*.78,vw*.42/AR);W=Hh*AR;L=vw-W-Math.max(vw*.09,70);Tp=(vh-Hh)/2}else{W=Math.min(vw*.56,vh*.36*AR);Hh=W/AR;L=(vw-W)/2;Tp=86}
+  Object.assign(V.panel.style,{width:W+'px',height:Hh+'px',left:L+'px',top:Tp+'px'});
+  Object.assign(V.cap.style,{left:L-12+'px',top:Tp+Hh+24+'px',width:W+24+'px',display:mob?'none':''});
+  const ex=.46,ey=.66,Xt=vw*.5,Yt=vh*.5;V.s0=Math.max(Xt/(ex*W),(vw-Xt)/((1-ex)*W),Yt/(ey*Hh),(vh-Yt)/((1-ey)*Hh))*1.04;
+  const Ex=L+ex*W,Ey=Tp+ey*Hh,Fx=(Xt-Ex*V.s0)/(1-V.s0),Fy=(Yt-Ey*V.s0)/(1-V.s0);V.panel.style.transformOrigin=`${Fx-L}px ${Fy-Tp}px`;
+  scenes.forEach((s,i)=>{const top=s.el.offsetTop,h=s.el.offsetHeight,prev=scenes[i-1];s.start=(s.fixed&&prev&&!prev.fixed)?top-vh:top;s.end=s.fixed?top+h:top+h-vh});
+  bounds=[];scenes.forEach((s,i)=>{if(i&&s.veil&&(s.fixed||scenes[i-1].fixed))bounds.push({b:s.start,color:s.veil})});
+  veilLayout();fliesLayout();bfLayout()}
+
+/* scene updates */
+let flyT=0;
+function upHero(p,t){const q=clamp((p-.06)/.86),tx=RM?0:tilt[0],tyl=RM?0:tilt[1];
+  const s=RM?1:1+Math.pow(q,1.7)*2.4;
+  H.bird.style.transform=`perspective(1300px) translate3d(${tx*26}px,${tyl*16}px,0) rotateY(${tx*7}deg) rotateX(${-tyl*5}deg) scale(${s})`;
+  H.wm.style.transform=`translate(-50%,-50%) translate3d(${-tx*12}px,${-tyl*8-q*vh*.35}px,0) rotateY(${-tx*3}deg) scale(${1+q*.25})`;H.wm.style.opacity=1-clamp((q-.15)/.35);
+  const k=clamp((p-.04)/.2);H.txt.style.opacity=1-k;H.txt.style.translate=`0 ${-k*60}px`;H.meta.style.opacity=H.notes[0].style.opacity=H.notes[1].style.opacity=1-k;
+  // butterfly drifting around the bird
+  const fx=H.b[0]+H.b[2]*(.62+.25*Math.sin(t*.00042))+tx*40,fy=H.b[1]+H.b[3]*(.18+.14*Math.sin(t*.00071+1))+tyl*24;
+  H.fly.style.transform=`translate3d(${fx}px,${fy-q*vh*.6}px,0) rotate(${Math.sin(t*.0009)*14}deg)`;H.fly.style.opacity=1-clamp(q*3)}
+function upJungle(p){const q=RM?.3:eio(clamp((p-.02)/.96)),gl=O.gl&&O.gl.ready;
+  if(gl)O.gl.draw(O.rect,1+q*1.55,[.5,.62],tilt,.03);else O.art.style.transform=`scale(${1+q*.9})`;
+  if(!gl)O.art.style.transformOrigin='50% 62%';
+  const i=p<.25?0:p<.5?1:p<.75?2:3;if(i!==O.idx){O.steps.forEach((s,j)=>{s.classList.toggle('in',j===i);s.classList.toggle('out',j!==i&&j<i)});O.idx=i;O.sn.textContent='0'+(i+1)}
+  O.bar.style.setProperty('--sp',clamp(p/.98))}
+function upFruit(p){const q=RM?1:eio(clamp(p/.55)),s=Math.pow(V.s0,1-q);V.panel.style.transform=`scale(${s})`;
+  V.txt.classList.toggle('in',p>.36);V.cap.style.opacity=clamp((q-.85)/.15);return s>1.8?'dark':'light'}
+function upMan(p){M.art.style.transform=RM?'':`scale(${lerp(2.6,1,eo(clamp(p/.55)))})`;M.man.classList.toggle('in',p>.06);
+  M.cnt.textContent=Math.round(eo(clamp((p-.05)/.4))*10);
+  const n=Math.round(clamp((p-.22)/.58)*mws.length);if(n!==M.lit){mws.forEach((w,i)=>w.classList.toggle('lit',i<n));M.lit=n}}
+const UP={giris:upHero,orman:upJungle,meyve:upFruit,manifesto:upMan};
+
+/* fireflies (contact) */
+const fc=$('#iletisim canvas'),fx=fc.getContext('2d');let flies=[],fW=0,fH=0,fOn=false;
+function fliesLayout(){const r=fc.getBoundingClientRect();fW=r.width;fH=r.height;fc.width=fW*DPR;fc.height=fH*DPR;fx.setTransform(DPR,0,0,DPR,0,0);
+  const R=rng(5);flies=Array.from({length:mob?34:70},()=>({x:R()*fW,y:R()*fH,s:.4+R()*1.2,p:R()*6.3,r:1+R()*1.8}))}
+function drawFlies(t){fx.clearRect(0,0,fW,fH);for(const f of flies){const x=f.x+Math.sin(t*.0003*f.s+f.p)*40,y=f.y+Math.cos(t*.00025*f.s+f.p*1.7)*30,a=.25+.75*Math.pow(.5+.5*Math.sin(t*.002*f.s+f.p),3);
+  const g=fx.createRadialGradient(x,y,0,x,y,f.r*7);g.addColorStop(0,`rgba(255,226,140,${a})`);g.addColorStop(.3,`rgba(229,187,81,${a*.35})`);g.addColorStop(1,'rgba(229,187,81,0)');
+  fx.fillStyle=g;fx.beginPath();fx.arc(x,y,f.r*7,0,6.2832);fx.fill()}}
+
+/* butterflies (footer) */
+const bc=$('#son canvas'),bx=bc.getContext('2d'),bfImg=new Image();bfImg.src='gorseller/kelebek.webp';let bfs=[],bW=0,bH=0,bOn=false,ptr=null,tints=[];
+function bfLayout(){const r=bc.getBoundingClientRect();bW=r.width;bH=r.height;bc.width=bW*DPR;bc.height=bH*DPR;bx.setTransform(DPR,0,0,DPR,0,0);
+  const R=rng(9);bfs=Array.from({length:mob?7:12},(_,i)=>({x:R()*bW,y:R()*bH,vx:0,vy:0,a:R()*6.3,s:(mob?58:76)+R()*44,ph:R()*6.3,sp:.9+R()*.6,tint:i%2}))}
+function makeTints(){if(tints.length||!bfImg.complete)return;[0,24].forEach(h=>{const c=document.createElement('canvas');c.width=bfImg.width;c.height=bfImg.height;const x=c.getContext('2d');
+  if(h){x.filter=`hue-rotate(${h}deg) saturate(1.2)`}x.drawImage(bfImg,0,0);tints.push(c)})}
+function drawBf(t,dt){makeTints();bx.clearRect(0,0,bW,bH);if(!tints.length)return;const ar=bfImg.height/bfImg.width;
+  for(const b of bfs){let want=b.a+Math.sin(t*.0007*b.sp+b.ph)*1.2,sp=.05*b.sp;
+    if(ptr){const dx=ptr.x-b.x,dy=ptr.y-b.y,d=Math.hypot(dx,dy);if(d<380&&d>30){want=Math.atan2(dy,dx)+Math.sin(t*.003+b.ph)*.6;sp*=1.7}}
+    const m=60;if(b.x<m)want=0;else if(b.x>bW-m)want=Math.PI;if(b.y<m)want=Math.PI/2;else if(b.y>bH-m)want=-Math.PI/2;
+    let da=((want-b.a+Math.PI*3)%(Math.PI*2))-Math.PI;b.a+=clamp(da,-1,1)*.003*dt;
+    b.x+=Math.cos(b.a)*sp*dt;b.y+=Math.sin(b.a)*sp*dt+Math.sin(t*.006*b.sp+b.ph)*.35;
+    const f=.8+.2*Math.sin(t*.012*b.sp+b.ph),w=b.s,h=w*ar,flip=Math.cos(b.a)<0?-1:1;
+    bx.save();bx.translate(b.x,b.y);bx.rotate(Math.sin(b.a)*.3*flip+Math.sin(t*.004*b.sp+b.ph)*.12);bx.scale(f*flip,.94+.06*f);
+    bx.drawImage(tints[b.tint],-w*.6,-h*.52,w,h);bx.restore()}}
+const bPt=e=>{const r=bc.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
+bc.addEventListener('pointermove',e=>ptr=bPt(e));bc.addEventListener('pointerleave',()=>ptr=null);
+bc.addEventListener('pointerdown',e=>{ptr=bPt(e);if(e.pointerType!=='mouse')setTimeout(()=>ptr=null,2600)});
+
+/* spec card 3D tilt */
+if(!coarse&&!RM)$$('.spec').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  c.style.transform=`perspective(900px) rotateY(${x*10}deg) rotateX(${-y*8}deg)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
+
+/* observers */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+$$('.flow .rv').forEach(el=>io.observe(el));
+new IntersectionObserver(es=>es.forEach(e=>fOn=e.isIntersecting)).observe($('#iletisim'));
+new IntersectionObserver(es=>es.forEach(e=>bOn=e.isIntersecting)).observe($('#son'));
+
+/* chrome */
+const chap=$('.chrome .chap'),pct=$('.chrome .pct'),chrome=$('.chrome');let curScene=null,curTone='';
+function scramble(el,txt){const ch='ABCÇDEFGĞHIİKLMNOÖPRSŞTUÜVYZ0123456789·';let f=0;clearInterval(el._t);
+  el._t=setInterval(()=>{f++;el.textContent=[...txt].map((c,i)=>c===' '||i<f*txt.length/12?c:ch[Math.random()*ch.length|0]).join('');if(f>=12){clearInterval(el._t);el.textContent=txt}},32)}
+
+/* loop */
+let last=performance.now();
+addEventListener('pointermove',e=>{if(!coarse){tiltT[0]=(e.clientX/vw-.5)*2;tiltT[1]=(e.clientY/vh-.5)*2}});
+function frame(t){const dt=Math.min(t-last,50);last=t;ty=scrollY;
+  if(coarse){tiltT[0]=Math.sin(t*.0005)*.7;tiltT[1]=Math.cos(t*.00037)*.5}tilt[0]+=(tiltT[0]-tilt[0])*.06;tilt[1]+=(tiltT[1]-tilt[1])*.06;
+  sy=RM?ty:sy+(ty-sy)*(1-Math.pow(1-(coarse?.3:.12),dt/16.7));if(Math.abs(ty-sy)<.3)sy=ty;
+  let act=scenes[0];for(const s of scenes)if(sy>=s.start-2)act=s;let tone=act.tone;
+  for(const s of scenes){if(!s.fixed)continue;const on=sy>=s.start&&sy<s.end;if(on!==s.on){s.layer.classList.toggle('on',on);s.on=on}
+    if(on){const r=UP[s.id](clamp((sy-s.start)/(s.end-s.start)),t);if(r)tone=r}}
+  let c=0,col='#000';if(!RM)for(const b of bounds){const k=clamp((1-Math.abs(sy-b.b)/T)*1.35);if(k>c){c=k;col=b.color}}
+  if(vo){c=vo.c;col=vo.color}drawVeil(c,col);
+  if(act!==curScene){curScene=act;chrome.classList.toggle('flowing',!act.fixed);const i=scenes.indexOf(act);scramble(chap,`— 0${i+1} · ${act.name.toLocaleUpperCase('tr-TR')}`)}
+  if(tone!==curTone){document.body.dataset.tone=tone;curTone=tone}
+  const mx=document.documentElement.scrollHeight-vh,pr=clamp(sy/mx);chrome.style.setProperty('--pg',pr);chrome.style.setProperty('--ry',-sy*.35+'px');pct.textContent=String(Math.round(pr*100)).padStart(3,'0');
+  if(fOn)drawFlies(t);if(bOn)drawBf(t,dt);
+  requestAnimationFrame(frame)}
+
+/* nav */
+const menu=$('.menu'),mbtn=$('.menu-btn');
+function targetOf(id){const s=byId[id];if(!s)return 0;return s.fixed?(s.start+(s.start?T+4:0)):(s.el.offsetTop+(bounds.some(b=>b.b===s.start)?T+4:0))}
+function jumpTo(id){menu.classList.remove('open');mbtn.setAttribute('aria-expanded','false');const y=targetOf(id);
+  if(RM){scrollTo(0,y);return}animVeil(0,1,380,'#443341',()=>{scrollTo({top:y,behavior:'instant'});sy=ty=y;animVeil(1,0,700,'#443341')})}
+mbtn.addEventListener('click',()=>{const o=menu.classList.toggle('open');mbtn.setAttribute('aria-expanded',o)});
+$('.menu-close').addEventListener('click',()=>{menu.classList.remove('open');mbtn.setAttribute('aria-expanded','false')});
+addEventListener('keydown',e=>{if(e.key==='Escape'){menu.classList.remove('open');mbtn.setAttribute('aria-expanded','false')}});
+$$('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();jumpTo(a.dataset.go)}));
+
+/* cursor */
+const cur=$('.cur');if(matchMedia('(pointer:fine)').matches){let cx=0,cy=0,mx=0,my=0;
+  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;cur.style.opacity=1});
+  document.addEventListener('pointerover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,.spec')));
+  (function mv(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;cur.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(mv)})()}
+
+/* boot */
+let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(layout,150)});
+if(!RM)O.gl=makeGL($('#orman .gl'),O.fb,'gorseller/orman-derinlik.png');
+layout();requestAnimationFrame(frame);
+const loader=$('.loader'),lnum=$('.lnum'),lbar=$('.loader .bar');const pre=[$('.bird img'),'gorseller/kelebek.webp',O.fb,'gorseller/orman-derinlik.png'];let got=0,done=false;
+const finish=()=>{if(done)return;done=true;lbar.style.setProperty('--lp',1);lnum.textContent='100';
+  setTimeout(()=>{loader.classList.add('gone');document.body.classList.add('ready');setTimeout(()=>{H.txt.classList.add('in')},1700);setTimeout(()=>loader.remove(),1000)},300)};
+pre.forEach(n=>{O.fb.loading='eager';loadImg(n).catch(()=>{}).then(()=>{got++;lbar.style.setProperty('--lp',got/pre.length);lnum.textContent=String(Math.round(got/pre.length*100)).padStart(3,'0');if(got===pre.length)finish()})});
+setTimeout(finish,7000);
+})();
+</script>
+</body>
+</html>
