@@ -211,6 +211,24 @@ html:not(.js) .pol{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(-
 .js .stamp.is-in{opacity:1;transform:scale(1) rotate(var(--r,-6deg));transition:opacity .35s ease,transform .55s var(--spring);transition-delay:calc(var(--i) * 70ms)}
 .fine{margin-top:28px;font-size:.84rem;color:var(--on-dark-muted);max-width:70ch;padding-left:14px;border-left:2px solid var(--sun)}
 
+/* ---------- postcards ---------- */
+.posts{background:var(--surface)}
+.pc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2.4vw,28px);margin-top:44px;perspective:1000px}
+@media (min-width:900px){.pc-grid{grid-template-columns:repeat(3,1fr)}}
+.pc{position:relative;margin:0;padding:10px;background:var(--bg);border-radius:14px;box-shadow:0 18px 40px -22px rgb(14 58 74 / .45);rotate:var(--r,0deg);transition:rotate .6s var(--ease),box-shadow .5s,opacity .8s var(--ease),transform .8s var(--ease)}
+.pc:hover{rotate:0deg;box-shadow:var(--shadow)}
+.pc .clip{border-radius:8px;overflow:hidden;aspect-ratio:4/5}
+.pc .clip img{width:100%;height:100%;object-fit:cover}
+.pc .clip img{transition:transform 1.8s var(--ease),scale .9s var(--ease)}
+.pc:hover .clip img{scale:1.08}
+.pc figcaption{display:flex;align-items:center;gap:8px;padding:12px 4px 4px;font:italic 400 1.25rem/1.2 var(--serif)}
+.pc figcaption img{width:22px;height:16px;border-radius:3px;object-fit:cover}
+.pc figcaption span{margin-left:auto;font:600 .7rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pc-stamp{position:absolute;top:20px;right:20px;padding:7px 9px;border:1.5px dashed rgb(255 248 242 / .8);border-radius:4px;background:rgb(200 85 61 / .9);color:var(--accent-ink);font:600 .62rem/1 var(--sans);letter-spacing:.14em;rotate:8deg}
+.js .pc .pc-stamp{opacity:0;transform:scale(1.9)}
+.js .pc.is-in .pc-stamp{opacity:1;transform:none;transition:opacity .3s,transform .55s var(--spring);transition-delay:calc(var(--i,0) * 90ms + .9s)}
+@media (max-width:600px){.pc{padding:7px}.pc figcaption{font-size:1rem;padding:9px 2px 2px}.pc figcaption span{display:none}.pc-stamp{top:14px;right:14px;font-size:.55rem}}
+
 /* ---------- movement ---------- */
 .moves{display:grid;gap:18px;margin-top:44px;perspective:1000px}
 @media (min-width:860px){.moves{grid-template-columns:repeat(3,1fr)}}
@@ -455,6 +473,22 @@ fieldset{border:0;padding:0;margin:0}
   </div>
 </section>
 
+<section class="section posts" aria-label="Kartpostallar">
+  <div class="wrap">
+    <span class="eyebrow reveal">Kartpostallar</span>
+    <h2 class="split">Rotamdan <em>manzaralar</em></h2>
+    <p class="lead reveal" style="--i:2">Yolumun geçtiği, bir kez görüp yeniden dönmek istediğim yerler.</p>
+    <div class="pc-grid">
+      <figure class="pc tilt reveal" style="--i:0;--r:-3deg"><div class="clip"><img src="gorseller/kart-kotor.jpg" width="640" height="800" alt="Kotor, Karadağ manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/me.svg" alt="" width="22" height="16">Kotor<span>Karadağ</span></figcaption><span class="pc-stamp">No. 01</span></figure>
+      <figure class="pc tilt reveal" style="--i:1;--r:2deg"><div class="clip"><img src="gorseller/kart-budva.jpg" width="640" height="800" alt="Budva, Karadağ manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/me.svg" alt="" width="22" height="16">Budva<span>Karadağ</span></figcaption><span class="pc-stamp">No. 02</span></figure>
+      <figure class="pc tilt reveal" style="--i:2;--r:-2deg"><div class="clip"><img src="gorseller/kart-ksamil.jpg" width="640" height="800" alt="Ksamil, Arnavutluk manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/al.svg" alt="" width="22" height="16">Ksamil<span>Arnavutluk</span></figcaption><span class="pc-stamp">No. 03</span></figure>
+      <figure class="pc tilt reveal" style="--i:0;--r:3deg"><div class="clip"><img src="gorseller/kart-perast.jpg" width="640" height="800" alt="Perast, Karadağ manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/me.svg" alt="" width="22" height="16">Perast<span>Karadağ</span></figcaption><span class="pc-stamp">No. 04</span></figure>
+      <figure class="pc tilt reveal" style="--i:1;--r:-2deg"><div class="clip"><img src="gorseller/kart-lizbon.jpg" width="640" height="800" alt="Lizbon, Portekiz manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/pt.svg" alt="" width="22" height="16">Lizbon<span>Portekiz</span></figcaption><span class="pc-stamp">No. 05</span></figure>
+      <figure class="pc tilt reveal" style="--i:2;--r:2deg"><div class="clip"><img src="gorseller/kart-ohri.jpg" width="640" height="800" alt="Ohri, K. Makedonya manzarası" loading="lazy"></div><figcaption><img src="gorseller/bayrak/mk.svg" alt="" width="22" height="16">Ohri<span>K. Makedonya</span></figcaption><span class="pc-stamp">No. 06</span></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="hareket">
   <div class="wrap">
     <span class="eyebrow reveal">Hareket</span>
@@ -471,7 +505,7 @@ fieldset{border:0;padding:0;margin:0}
 </section>
 
 <section class="band" aria-label="Kotor">
-  <img src="gorseller/kotor-2.jpg" width="825" height="1100" alt="Gizem Özdemir Kotor Körfezi'nde" loading="lazy" id="bandImg">
+  <img src="gorseller/bant-kotor.jpg" width="1800" height="1199" alt="Kotor eski şehri ve Kotor Körfezi" loading="lazy" id="bandImg">
   <div class="wrap">
     <q class="reveal">Burası o kadar güzel ki daha gitmeden tekrar gelme kararı aldım.</q>
     <small class="reveal" style="--i:1">Kotor · Karadağ · Ağustos 2026</small>
@@ -565,7 +599,7 @@ fieldset{border:0;padding:0;margin:0}
       </div>
       <p class="legal"><b>Herbalife Bağımsız Distribütörü.</b> Bu site Gizem Özdemir’in kişisel web sitesidir. Herbalife adı ve markaları Herbalife’a aittir.</p>
     </div>
-    <div class="foot-bottom"><span>© <span id="yil">2026</span> Gizem Özdemir</span><span>Koi Ajans tarafından hazırlanmıştır</span></div>
+    <div class="foot-bottom"><span>© <span id="yil">2026</span> Gizem Özdemir · Manzara fotoğrafları: Unsplash</span><span>Koi Ajans tarafından hazırlanmıştır</span></div>
   </div>
 </footer>
 
