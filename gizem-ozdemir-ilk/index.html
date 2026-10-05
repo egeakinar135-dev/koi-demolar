@@ -431,7 +431,7 @@ fieldset{border:0;padding:0;margin:0}
 </section>
 
 <section class="band" aria-label="Kotor">
-  <img src="gorseller/kotor-2.jpg" width="825" height="1100" alt="Gizem Özdemir Kotor Körfezi'nde teknenin burnunda" loading="lazy" id="bandImg">
+  <img src="gorseller/bant-kotor.jpg" width="1800" height="1199" alt="Kotor eski şehri ve Kotor Körfezi" loading="lazy" id="bandImg">
   <div class="wrap">
     <q class="reveal">Burası o kadar güzel ki daha gitmeden tekrar gelme kararı aldım.</q>
     <small class="reveal" style="--i:1">Kotor · Karadağ · Ağustos 2026</small>
@@ -525,9 +525,9 @@ fieldset{border:0;padding:0;margin:0}
         <a class="logo" href="#top"><b>G</b><span>Gizem Özdemir</span></a>
         <p style="margin-top:14px">Seyahat ederek çalışıyorum. Instagram: <a href="https://instagram.com/gizzozdemir" target="_blank" rel="noopener">@gizzozdemir</a></p>
       </div>
-      <p class="legal"><b>Herbalife Bağımsız Distribütörü.</b> Bu site Gizem Özdemir’in kişisel sitesidir; Herbalife’ın resmi sitesi değildir. Paylaşılan seyahatler ve deneyimler kişiseldir; herhangi bir kazanç ya da sonuç vaadi içermez. Herbalife iş fırsatında kazanç, kişinin emeğine ve zamanına bağlıdır. Resmi bilgi için: <a href="https://www.herbalife.com/tr-tr/is-firsati" target="_blank" rel="noopener">herbalife.com/tr-tr</a></p>
+      <p class="legal"><b>Herbalife Bağımsız Distribütörü.</b> Bu site Gizem Özdemir’in kişisel sitesidir; Herbalife’ın resmi sitesi değildir. Paylaşılan seyahatler ve deneyimler kişiseldir; herhangi bir kazanç ya da sonuç vaadi içermez. Herbalife iş fırsatında kazanç, kişinin emeğine ve zamanına bağlıdır.</p>
     </div>
-    <div class="foot-bottom"><span>© <span id="yil">2026</span> Gizem Özdemir</span><span>Koi Ajans tarafından hazırlanmıştır</span></div>
+    <div class="foot-bottom"><span>© <span id="yil">2026</span> Gizem Özdemir</span><span>Kotor manzarası: Unsplash · Koi Ajans tarafından hazırlanmıştır</span></div>
   </div>
 </footer>
 
@@ -555,7 +555,7 @@ const tk = C.map(([c, n]) => `<span><img src="gorseller/bayrak/${c}.svg" alt="">
 $('#flagTicker').innerHTML = tk + tk;
 
 /* galeri */
-const G = [['kotor-1','me','Kotor’a ikinci gelişim'],['ksamil','al','Ksamil’den selam'],['budva','me','Budva’da altın geceler'],['yaz-1','yaz','Gün batımına kadeh'],['kotor-3','me','Kotor Körfezi'],['ulcinj','me','Ulcinj’in eski sokakları'],['yaz-3','yaz','Adriyatik akşamı'],['kotor-4','me','Kotor’da pencereden'],['yaz-5','yaz','Yaz 2026'],['kotor-5','me','Kotor eski şehir'],['yaz-6','yaz','Turkuaz sular'],['kotor-6','me','Kotor surlarında'],['yaz-2','yaz','Günbatımı'],['yaz-7','yaz','Yaz geceleri']];
+const G = [['kotor-1','me','Kotor’a ikinci gelişim'],['ksamil','al','Ksamil’den selam'],['budva','me','Budva’da altın geceler'],['yaz-1','yaz','Gün batımına kadeh'],['kotor-3','me','Kotor Körfezi'],['ulcinj','me','Ulcinj’in eski sokakları'],['yaz-3','yaz','Adriyatik akşamı'],['kotor-4','me','Kotor’da pencereden'],['yaz-5','yaz','Yaz 2026'],['kotor-5','me','Kotor eski şehir'],['kotor-6','me','Kotor surlarında'],['yaz-2','yaz','Günbatımı'],['yaz-7','yaz','Yaz geceleri']];
 $('#grid').innerHTML = G.map(([f, k, c], i) => `<button class="shot reveal" style="--i:${i % 4}" data-k="${k}" data-cap="${c}" data-i="${i}"><img src="gorseller/${f}.jpg" width="825" height="1100" alt="Gizem Özdemir · ${c}" loading="lazy"></button>`).join('');
 $$('.chip').forEach(b => b.addEventListener('click', () => {
   $$('.chip').forEach(x => x.setAttribute('aria-pressed', x === b));
