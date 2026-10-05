@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Egecan Akpınar | Web Tasarım ve Yaratıcı Teknoloji</title>
-<meta name="description" content="Egecan Akpınar; Koi Ajans'ın kurucusu. İşletmeler için web siteleri tasarlıyor, yapay zekâ ile otomasyonlar ve yaratıcı kodlama projeleri üretiyor.">
+<meta name="description" content="Egecan Akpınar; web siteleri tasarlıyor, kod yazıyor, yapay zekâ ile otomasyonlar ve yaratıcı kodlama projeleri üretiyor.">
 <meta property="og:title" content="Egecan Akpınar | Web Tasarım ve Yaratıcı Teknoloji">
-<meta property="og:description" content="Tasarlarım, kodlarım, sistem kurarım. Koi Ajans kurucusu Egecan Akpınar'ın kişisel sitesi.">
+<meta property="og:description" content="Tasarlarım, kodlarım, sistem kurarım.">
 <meta property="og:image" content="gorseller/og.jpg">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:type" content="website">
@@ -229,7 +229,8 @@ em{font-style:italic}
 @media (max-width:699px){.svc-head{grid-template-columns:1fr;gap:18px}.cards{grid-template-columns:1fr;gap:44px}#hizmetler{padding-inline:calc(var(--gut) + 12px)}.band{margin-inline:calc(-1 * (var(--gut) + 12px))}}
 
 /* 05 process */
-#surec .layer{background:linear-gradient(180deg,var(--sky-top),var(--sky-bot))}
+#surec .layer{background:radial-gradient(120% 90% at 30% 15%,#15284a 0%,#0b1424 55%,#070d18 100%)}
+#surec .cloud{opacity:.18}
 #surec .ht{position:absolute;left:0;top:0;will-change:transform}
 .col{position:absolute;right:calc(var(--gut) + clamp(16px,5vw,80px));top:0;width:min(440px,40vw);will-change:transform}
 .blk{margin-bottom:24vh}
@@ -312,6 +313,9 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
 .sig em{font-style:italic}
 .sig b{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--red);margin-left:.05em;vertical-align:.1em}
 #son .son-foot{bottom:50px}
+.chrome .chap,.chrome .pct,.caption,.star-label,.stepnav span{display:none!important}
+.svc-head{grid-template-columns:1fr}
+.hero-txt .sub{margin:14px 0 28px}
 @media (max-width:899px){.steps{bottom:calc(var(--gut) + 96px)!important}.stepnav{bottom:calc(var(--gut) + 46px)!important}.vis-txt{bottom:calc(var(--gut) + 40px)!important}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
@@ -330,7 +334,6 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
     <div class="gate">
       <p>Bu hikâye müzikle daha güzel.</p>
       <div class="gate-b"><button class="pill" type="button" data-snd="1">Sesli Gir <i></i></button><button class="ghost" type="button" data-snd="0">Sessiz gir</button></div>
-      <small>Kulaklık önerilir</small>
     </div>
   </div>
 </div>
@@ -385,16 +388,12 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
       </div>
       <div class="shade"></div>
       <div class="hero-txt">
-        <span class="tag fade" style="margin-bottom:18px">Koi Ajans Kurucusu</span>
         <h1 data-split>Egecan <em>Akpınar.</em></h1>
-        <p class="sub fade">Web siteleri tasarlıyorum, kod yazıyorum,<br>fikirleri kendi kendine çalışan sistemlere dönüştürüyorum.</p>
+        <p class="sub fade">Tasarım · Kod · Yaratıcı teknoloji.</p>
         <a class="pill fade" style="--fd:1" href="#basvuru" data-go="basvuru">Tanışalım <i></i></a>
       </div>
-      <div class="hero-foot">
-        <span class="tag fade" style="--fd:2">Web Tasarım · Yaratıcı Teknoloji</span>
-        <p class="fade" style="--fd:3">Koi Ajans'ı yerel işletmelerin internette görünür olması için kurdum. Her projede tasarımı, kodu ve hikâyeyi birlikte düşünüyorum.</p>
-      </div>
-      <div class="cue"><span>KAYDIRIN</span><i></i></div>
+      <div class="hero-foot"></div>
+      <div class="cue"><i></i></div>
     </div>
   </section>
 
@@ -407,10 +406,10 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
       </div>
       <div class="shade"></div>
       <div class="steps">
-        <div class="step"><span class="tag fade">Hikâyem</span><h2 data-split>Şelaleyi aşan koi, <em>ejderha</em> olur.</h2><p class="fade" style="--fd:1">Bu efsane benim için bir pusula: akıntıya karşı yüzmek ve her gün biraz daha yükselmek. Ajansıma da bu yüzden Koi adını verdim.</p></div>
-        <div class="step"><span class="tag fade">01 · Tasarım</span><h2 data-split>Tasarlarım.</h2><p class="fade" style="--fd:1">Her işletmeye özel, telefonda kusursuz açılan ve bir hikâye anlatan web siteleri.</p></div>
-        <div class="step"><span class="tag fade">02 · Kod</span><h2 data-split>Kodlarım.</h2><p class="fade" style="--fd:1">Animasyonlar, 3D derinlik, WebGL… Bir fikri ekranda canlı hâle getiren her şey.</p></div>
-        <div class="step"><span class="tag fade">03 · Otomasyon</span><h2 data-split>Sistem <em>kurarım.</em></h2><p class="fade" style="--fd:1">Yapay zekâyla kendi kendine çalışan sistemler: içerik üretiminden yayına kadar.</p></div>
+        <div class="step"><h2 data-split>Şelaleyi aşan koi, <em>ejderha</em> olur.</h2></div>
+        <div class="step"><h2 data-split>Tasarlarım.</h2></div>
+        <div class="step"><h2 data-split>Kodlarım.</h2></div>
+        <div class="step"><h2 data-split>Sistem <em>kurarım.</em></h2></div>
       </div>
       <div class="stepnav"><span class="sn">01</span><i><b></b></i><span>04</span></div>
     </div>
@@ -420,15 +419,13 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
   <section class="scene fx" id="gorunur" style="--len:280" data-name="İşim" data-tone="light" data-veil="#101820">
     <div class="layer light">
       <div class="panel"><img src="gorseller/hiroshige.webp" width="2200" height="3300" alt="Utagawa Hiroshige'nin Edo şehri üzerinde dalgalanan dev koi flaması gravürü" loading="lazy"></div>
-      <div class="caption">Utagawa Hiroshige · Suidō Köprüsü ve Surugadai · 1857</div>
+      <div class="caption"></div>
       <div class="vis-txt">
-        <span class="tag fade">İşim</span>
         <h2 data-split>Markaları <em>görünür</em> kılmak.</h2>
-        <p class="fade" style="--fd:1">Hiroshige'nin gravüründe dev koi flaması bütün şehrin üstünde dalgalanır. Benim işim de markaları kalabalığın üstüne taşımak.</p>
-        <ul class="vis-list fade" style="--fd:2">
-          <li><span>01</span>70'ten fazla işletme için site tasarımı</li>
-          <li><span>02</span>Her gün kendi kendine yayınlanan bir YouTube kanalı</li>
-          <li><span>03</span>Kamera ve el takibiyle Reels efektleri</li>
+        <ul class="vis-list fade" style="--fd:1">
+          <li><span>01</span>70'ten fazla web sitesi tasarımı</li>
+          <li><span>02</span>El takibiyle kamera efektleri</li>
+          <li><span>03</span>WebGL ile 3D deneyimler</li>
         </ul>
       </div>
     </div>
@@ -438,14 +435,13 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
   <section class="scene flow" id="hizmetler" data-name="Neler Yapıyorum" data-tone="light" data-veil="#efe7d6">
     <div class="wrap">
       <div class="svc-head">
-        <div class="rv"><span class="tag" style="border-color:rgba(20,17,13,.2);background:rgba(20,17,13,.05)">Neler Yapıyorum</span><h2>Fikirden <em>ekrana,</em> uçtan uca.</h2></div>
-        <p class="rv" style="--i:1">Tasarım, kod, içerik ve otomasyon. Bir fikri baştan sona tek elden hayata geçiriyorum.</p>
+        <div class="rv"><h2>Fikirden <em>ekrana,</em> uçtan uca.</h2></div>
       </div>
       <div class="cards">
-        <article class="card rv" style="--i:0"><figure><div><img src="gorseller/kart-web.webp" width="800" height="1000" alt="Utagawa Kuniyoshi'nin mor salkımlar altındaki kırmızı koi gravürü" loading="lazy"></div></figure><span class="no">01</span><h3>Web Siteleri</h3><p>İşletmeler için hızlı, şık ve WhatsApp'a bağlı siteler; markalar için kaydırdıkça hikâye anlatan deneyimler.</p><ul class="chips"><li>Tasarım</li><li>Kod</li><li>SEO</li></ul></article>
-        <article class="card rv" style="--i:1"><figure><div><img src="gorseller/kart-harita.webp" width="800" height="1000" alt="Şelaleye tırmanan koi balığı gravürü" loading="lazy"></div></figure><span class="no">02</span><h3>Koi Ajans</h3><p>Kurduğum ajansla yerel işletmelerin Google'da ve sosyal medyada bulunmasını sağlıyoruz.</p><ul class="chips"><li>Ajans</li><li>Yerel SEO</li><li>Strateji</li></ul></article>
-        <article class="card rv" style="--i:2"><figure><div><img src="gorseller/kart-sosyal.webp" width="800" height="1000" alt="Ohara Koson'un suda süzülen koi balıkları resmi" loading="lazy"></div></figure><span class="no">03</span><h3>Yapay Zekâ Otomasyonu</h3><p>Tiny Paws Town: her gün kendi kendine üretilip yayınlanan bir YouTube kanalı.</p><ul class="chips"><li>YouTube</li><li>Otomasyon</li><li>Yapay Zekâ</li></ul></article>
-        <article class="card rv" style="--i:3"><figure><div><img src="gorseller/kart-video.webp" width="800" height="1000" alt="Hokusai'nin koi balığı başı detayı" loading="lazy"></div></figure><span class="no">04</span><h3>Yaratıcı Kodlama</h3><p>Kamera ve el takibiyle çalışan efektler: zamanı durdurmak, görünmez olmak.</p><ul class="chips"><li>Reels</li><li>Kamera</li><li>Efekt</li></ul></article>
+        <article class="card rv" style="--i:0"><figure><div><img src="gorseller/kart-1.webp" width="800" height="1000" alt="Şelaleye tırmanan kırmızı koi gravürü" loading="lazy"></div></figure><span class="no">01</span><h3>Web Siteleri</h3></article>
+        <article class="card rv" style="--i:1"><figure><div><img src="gorseller/kart-2.webp" width="800" height="1000" alt="Hokusai'nin Kanagawa açıklarında Büyük Dalga gravüründen detay" loading="lazy"></div></figure><span class="no">02</span><h3>Yaratıcı Kodlama</h3></article>
+        <article class="card rv" style="--i:2"><figure><div><img src="gorseller/kart-3.webp" width="800" height="1000" alt="Hokusai'nin şelaleye tırmanan koileri" loading="lazy"></div></figure><span class="no">03</span><h3>3D ve WebGL</h3></article>
+        <article class="card rv" style="--i:3"><figure><div><img src="gorseller/kart-4.webp" width="800" height="1000" alt="Kuniyoshi'nin siyah koi gravürü" loading="lazy"></div></figure><span class="no">04</span><h3>Yapay Zekâ Otomasyonu</h3></article>
       </div>
     </div>
     <div class="band" aria-hidden="true"><div></div></div>
@@ -457,13 +453,12 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
     <div class="layer">
       <div class="clouds"></div>
       <canvas class="ht" aria-hidden="true"></canvas>
-      <div class="sky-note">Noktalarla yeniden çizildi:<br>Hiroshige'nin koisi, 1857</div>
       <div class="col">
-        <div class="blk"><span class="tag">Süreç</span><h2>Bir projeyi <em>nasıl</em> yürütürüm?</h2><p>Uzun toplantılar yok. Sade, hızlı ve şeffaf bir yol.</p></div>
-        <div class="blk"><span class="big">01</span><span class="tag">Dinlemek</span><h3>Önce sizi anlarım.</h3><p>Kısa bir görüşmede fikrinizi, hedefinizi ve kitlenizi konuşuruz.</p></div>
-        <div class="blk"><span class="big">02</span><span class="tag">Tasarım</span><h3>Size özel tasarlarım.</h3><p>Renklerinize, hikâyenize ve hedefinize göre ilk taslağı hazırlar, birlikte inceleriz.</p></div>
-        <div class="blk"><span class="big">03</span><span class="tag">Kod</span><h3>Hayata geçiririm.</h3><p>Animasyonları, efektleri ve altyapıyı kodlar, her ekranda test ederim.</p></div>
-        <div class="blk"><span class="big">04</span><span class="tag">Büyüme</span><h3>Birlikte büyütürüz.</h3><p>Yayından sonra içerik, güncelleme ve otomasyonlarla projeyi geliştirmeye devam ederiz.</p></div>
+        <div class="blk"><h2>Bir projeyi <em>nasıl</em> yürütürüm?</h2></div>
+        <div class="blk"><span class="big">01</span><h3>Önce sizi anlarım.</h3></div>
+        <div class="blk"><span class="big">02</span><h3>Size özel tasarlarım.</h3></div>
+        <div class="blk"><span class="big">03</span><h3>Kodla hayata geçiririm.</h3></div>
+        <div class="blk"><span class="big">04</span><h3>Birlikte büyütürüz.</h3></div>
       </div>
     </div>
   </section>
@@ -476,7 +471,6 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
       </div>
       <div class="shade"></div>
       <div class="man">
-        <span class="tag fade">Manifesto</span>
         <h2 data-split>Büyük balıktan <em>korkmayın.</em></h2>
         <p class="scrub">Küçük bir fikir de büyük bir iz bırakabilir. Doğru tasarım, doğru kod ve biraz cesaretle her proje şelalenin tepesine ulaşabilir.</p>
       </div>
@@ -489,9 +483,7 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
     <div class="star-label"></div>
     <div class="contact">
       <div class="contact-in rv">
-        <span class="tag">İletişim</span>
         <h2>Birlikte bir şey <em>yapalım.</em></h2>
-        <p class="lead">Bir fikriniz, bir projeniz ya da sadece bir sorunuz mu var? Yazın, en kısa sürede dönüş yapayım.</p>
         <form novalidate>
           <div class="f2">
             <label class="fld"><span>Adınız</span><input name="ad" autocomplete="name" required></label>
@@ -505,7 +497,7 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
             <label><input type="checkbox" name="ihtiyac" value="Diğer"><span>Diğer</span></label>
           </fieldset>
           <label class="fld"><span>Kısaca anlatın</span><textarea name="mesaj" rows="2"></textarea></label>
-          <div class="form-foot"><small>Bilgileriniz yalnızca size dönüş yapmak için kullanılır.</small><button class="pill" type="submit">Mesajı Gönder <i></i></button></div>
+          <div class="form-foot"><span></span><button class="pill" type="submit">Mesajı Gönder <i></i></button></div>
           <div class="thanks" role="status"><div><h3>Teşekkürler!</h3><p>Mesajınız bana ulaştı. En kısa sürede dönüş yapacağım.</p></div></div>
         </form>
       </div>
@@ -518,13 +510,6 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
     <div class="son-mid">
       <h2 class="sig">Egecan <em>Akpınar</em><b></b></h2>
       <p>Akıntıya karşı, her gün biraz daha yukarı.</p>
-      <small>Balıklara dokunun, size doğru yüzerler</small>
-    </div>
-    <div class="son-foot">
-      <span>Egecan Akpınar — İstanbul</span>
-      <span class="mid">Web · Kod · Otomasyon · Koi Ajans</span>
-      <span>© 2026</span>
-      <span class="credit">Görseller: Katsushika Hokusai, Keisai Eisen, Utagawa Hiroshige, Utagawa Kuniyoshi ve Ohara Koson'un kamu malı eserleri (Wikimedia Commons, Rijksmuseum, Cleveland Museum of Art).</span>
     </div>
   </footer>
 </main>
@@ -551,7 +536,7 @@ $$('[data-split]').forEach(el=>{let d=0;const walk=n=>{[...n.childNodes].forEach
 const scrub=$('.scrub');scrub.innerHTML=scrub.textContent.split(' ').map(w=>`<span class="mw">${w}</span>`).join(' ');
 const mws=$$('.mw',scrub);
 const koiMark='<svg viewBox="0 0 24 24"><path d="M12 2.5C15 2.5 16.2 5.5 16 9C15.8 12.5 14 15.5 12.8 17.5V18.5C14.5 19.5 15.5 21 15.8 22.5C14.2 22.2 13 21.4 12 20.3C11 21.4 9.8 22.2 8.2 22.5C8.5 21 9.5 19.5 11.2 18.5V17.5C10 15.5 8.2 12.5 8 9C7.8 5.5 9 2.5 12 2.5Z" fill="#f4eee0"/><circle cx="12" cy="7" r="1.8" fill="#c8402b"/></svg>';
-const words=['Web Tasarım','Yaratıcı Kodlama','WebGL','Yapay Zekâ','Otomasyon','Koi Ajans','Reels'];
+const words=['Web Tasarım','Yaratıcı Kodlama','WebGL','Yapay Zekâ','Otomasyon','3D Deneyim','Hareket'];
 const half=words.map(w=>`<span>${w}${koiMark}</span>`).join('');$('.band div').innerHTML=half+half;
 
 /* scenes & timeline */
@@ -595,8 +580,8 @@ for(let i=0;i<bin.length;i++){const b=bin.charCodeAt(i);HV[i*2]=(b>>4)/15;if(i*2
 const ht=$('#surec .ht'),hx=ht.getContext('2d');let htW=0,htH=0,htLast=-1;
 function htLayout(){htH=mob?vw*1.55:vh*1.2;htW=htH*GW/GH;ht.width=htW*DPR;ht.height=htH*DPR;ht.style.width=htW+'px';ht.style.height=htH+'px';
   ht.style.left=(mob?(vw-htW)/2:vw*.06)+'px';hx.setTransform(DPR,0,0,DPR,0,0);htLast=-1}
-function drawHT(r){if(Math.abs(r-htLast)<.004)return;htLast=r;hx.clearRect(0,0,htW,htH);const cs=htW/GW;hx.fillStyle='#f4eee0';hx.beginPath();
-  for(let y=0;y<GH;y++){const fy=clamp(y/4)*clamp((GH-y)/(GH*.22));for(let x=0;x<GW;x++){let v=HV[y*GW+x]*fy;if(v<.05)continue;
+function drawHT(r){if(Math.abs(r-htLast)<.004)return;htLast=r;hx.clearRect(0,0,htW,htH);const cs=htW/GW;hx.fillStyle='#c9a24b';hx.beginPath();
+  for(let y=0;y<GH;y++){const fy=clamp(y/4)*clamp((GH-y)/(GH*.22));for(let x=0;x<GW;x++){let v=HV[y*GW+x]*fy*clamp(x/14)*clamp((GW-x)/6);if(v<.05)continue;
     const th=hash(x,y)*.55+(y/GH)*.45,k=clamp((r*1.5-th)/.35);if(k<=0)continue;const rad=cs*.62*Math.pow(v,.75)*k,cx=x*cs+cs/2+(y%2?cs/2:0),cy=y*cs+cs/2;
     hx.moveTo(cx+rad,cy);hx.arc(cx,cy,rad,0,6.2832)}}hx.fill()}
 
