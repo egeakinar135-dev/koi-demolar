@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Egecan Akpınar | Web Tasarım ve Yaratıcı Teknoloji</title>
-<meta name="description" content="Egecan Akpınar; web siteleri tasarlıyor, kod yazıyor, yapay zekâ ile otomasyonlar ve yaratıcı kodlama projeleri üretiyor.">
-<meta property="og:title" content="Egecan Akpınar | Web Tasarım ve Yaratıcı Teknoloji">
+<title>Egecan Akpınar | Web Sitesi Tasarımı ve Reklam</title>
+<meta name="description" content="Egecan Akpınar; işletmeler için web siteleri, reklam kampanyaları ve dijital kimlikler tasarlıyor.">
+<meta property="og:title" content="Egecan Akpınar | Web Sitesi Tasarımı ve Reklam">
 <meta property="og:description" content="Tasarlarım, kodlarım, sistem kurarım.">
 <meta property="og:image" content="gorseller/og.jpg">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c1a2b">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23efe7d6'/%3E%3Cpath d='M12 2.5C15 2.5 16.2 5.5 16 9C15.8 12.5 14 15.5 12.8 17.5V18.5C14.5 19.5 15.5 21 15.8 22.5C14.2 22.2 13 21.4 12 20.3C11 21.4 9.8 22.2 8.2 22.5C8.5 21 9.5 19.5 11.2 18.5V17.5C10 15.5 8.2 12.5 8 9C7.8 5.5 9 2.5 12 2.5Z' fill='%2314110d'/%3E%3Ccircle cx='12' cy='7' r='1.7' fill='%23c8402b'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23efe7d6%22/%3E%3Cg%20transform%3D%22translate%282%202%29%20scale%28.94%29%22%20style%3D%22color%3A%2314110d%22%3E%3Cpath%20d%3D%22M27%2052H12V12H41L55%2052M41%2012L27%2052M12%2032H34%22%20fill%3D%22none%22%20stroke%3D%22%2314110d%22%20stroke-width%3D%224.6%22%20stroke-linejoin%3D%22miter%22%20stroke-miterlimit%3D%222.2%22%20stroke-linecap%3D%22square%22/%3E%3Cpath%20d%3D%22M31.4%2040H50.6%22%20stroke%3D%22%23c8402b%22%20stroke-width%3D%224.6%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -294,6 +294,9 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
 @media (max-width:699px){.son-foot{grid-template-columns:1fr 1fr}.son-foot .mid{display:none}}
 
 /* entry gate + sound */
+.loader .mark{width:86px;height:86px;color:var(--ink);animation:breathe 2.4s var(--ease) infinite alternate}
+.gname{font:400 clamp(2.4rem,7vw,3.8rem)/1.1 var(--serif);letter-spacing:-.015em;margin-top:22px;text-align:center}
+.gtag{font:500 11px/1.6 var(--mono);letter-spacing:.16em;text-transform:uppercase;opacity:.62;margin:8px 0 4px;text-align:center}
 .gate{margin-top:34px;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .8s var(--ease),transform .8s var(--ease);pointer-events:none}
 .loader.gate-on .gate{opacity:1;transform:none;pointer-events:auto}
 .loader.gate-on .bar,.loader.gate-on .row{opacity:.35;transition:opacity .6s}
@@ -328,8 +331,10 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
 
 <div class="loader" role="dialog" aria-label="Siteye giriş">
   <div class="loader-in">
-    <div class="seal" aria-hidden="true">鯉</div>
-    <div class="row"><span>EGECAN AKPINAR</span><span class="lnum">000</span></div>
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M27 52H12V12H41L55 52M41 12L27 52M12 32H34" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linejoin="miter" stroke-miterlimit="2.2" stroke-linecap="square"/><path d="M31.4 40H50.6" stroke="#c8402b" stroke-width="4.6"/></svg>
+    <div class="gname">Egecan Akpınar</div>
+    <p class="gtag">Web sitesi tasarımı · Reklam · Dijital marka</p>
+    <div class="row"><span>YÜKLENİYOR</span><span class="lnum">000</span></div>
     <div class="bar"><i></i></div>
     <div class="gate">
       <p>Bu hikâye müzikle daha güzel.</p>
@@ -352,7 +357,7 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
 <header class="hdr">
   <div class="hdr-l">
     <a class="brand" href="#giris" data-go="giris" aria-label="Egecan Akpınar ana sayfa">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.3 8.5C6.5 9 5.5 10.5 5.3 12C6.8 11.3 7.8 10.5 8.4 9.6ZM15.7 8.5C17.5 9 18.5 10.5 18.7 12C17.2 11.3 16.2 10.5 15.6 9.6Z" fill="currentColor" opacity=".55"/><path d="M12 2.5C15 2.5 16.2 5.5 16 9C15.8 12.5 14 15.5 12.8 17.5V18.5C14.5 19.5 15.5 21 15.8 22.5C14.2 22.2 13 21.4 12 20.3C11 21.4 9.8 22.2 8.2 22.5C8.5 21 9.5 19.5 11.2 18.5V17.5C10 15.5 8.2 12.5 8 9C7.8 5.5 9 2.5 12 2.5Z" fill="currentColor"/><circle cx="12" cy="7" r="1.8" fill="#c8402b"/></svg>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M27 52H12V12H41L55 52M41 12L27 52M12 32H34" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linejoin="miter" stroke-miterlimit="2.2" stroke-linecap="square"/><path d="M31.4 40H50.6" stroke="#c8402b" stroke-width="4.6"/></svg>
       <span>EGECAN AKPINAR</span>
     </a>
     <button class="menu-btn" type="button" aria-label="Menüyü aç" aria-expanded="false"><b><i></i><i></i><i></i><i></i><i></i><i></i></b><em>MENÜ</em></button>
@@ -388,8 +393,9 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
       </div>
       <div class="shade"></div>
       <div class="hero-txt">
-        <h1 data-split>Egecan <em>Akpınar.</em></h1>
-        <p class="sub fade">Tasarım · Kod · Yaratıcı teknoloji.</p>
+        <span class="tag fade" style="margin-bottom:18px">Web Tasarım · Reklam · Dijital Marka</span>
+        <h1 data-split>Egecan <em>Akpınar</em></h1>
+        <p class="sub fade">İşletmeleri internette görünür kılan web siteleri, reklam kampanyaları ve dijital kimlikler tasarlıyorum.</p>
         <a class="pill fade" style="--fd:1" href="#basvuru" data-go="basvuru">Tanışalım <i></i></a>
       </div>
       <div class="hero-foot"></div>
@@ -508,7 +514,7 @@ form{position:relative;background:rgba(244,238,224,.06);border:1px solid rgba(24
   <footer class="scene flow" id="son" data-name="Son" data-tone="dark">
     <canvas aria-label="Fareyle ya da dokunarak etkileşime giren koi havuzu"></canvas>
     <div class="son-mid">
-      <h2 class="sig">Egecan <em>Akpınar</em><b></b></h2>
+      <h2 class="sig">Egecan <em>Akpınar</em></h2>
       <p>Akıntıya karşı, her gün biraz daha yukarı.</p>
     </div>
   </footer>
@@ -536,7 +542,7 @@ $$('[data-split]').forEach(el=>{let d=0;const walk=n=>{[...n.childNodes].forEach
 const scrub=$('.scrub');scrub.innerHTML=scrub.textContent.split(' ').map(w=>`<span class="mw">${w}</span>`).join(' ');
 const mws=$$('.mw',scrub);
 const koiMark='<svg viewBox="0 0 24 24"><path d="M12 2.5C15 2.5 16.2 5.5 16 9C15.8 12.5 14 15.5 12.8 17.5V18.5C14.5 19.5 15.5 21 15.8 22.5C14.2 22.2 13 21.4 12 20.3C11 21.4 9.8 22.2 8.2 22.5C8.5 21 9.5 19.5 11.2 18.5V17.5C10 15.5 8.2 12.5 8 9C7.8 5.5 9 2.5 12 2.5Z" fill="#f4eee0"/><circle cx="12" cy="7" r="1.8" fill="#c8402b"/></svg>';
-const words=['Web Tasarım','Yaratıcı Kodlama','WebGL','Yapay Zekâ','Otomasyon','3D Deneyim','Hareket'];
+const words=['Web Tasarım','Yaratıcı Kodlama','WebGL','Yapay Zekâ','Otomasyon','3D Deneyim','Reklam'];
 const half=words.map(w=>`<span>${w}${koiMark}</span>`).join('');$('.band div').innerHTML=half+half;
 
 /* scenes & timeline */
